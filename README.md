@@ -15,6 +15,7 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Marzo de 2026 conserva como anuladas las preguntas 17 y 20; no se les asigna una respuesta ficticia.
 - Los PDFs oficiales utilizados se conservan en `master/fuentes_oficiales/` y cada pregunta enlaza su fuente dentro del JSON.
 - Web estática preparada para publicación desde la raíz del repositorio.
+- La web calcula automáticamente el progreso del alumno en el navegador: evolución, media, fallos repetidos, preguntas pendientes de repaso y recomendaciones. También permite descargar un informe de estadísticas.
 - MASTER, manifiesto y archivos de seguridad conservados en `master/`.
 - Material del Almanaque conservado en `assets/almanaque/`.
 

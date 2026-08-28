@@ -40,7 +40,7 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 
 <section id="exams" class="hidden"><div class="card"><h2>Exámenes</h2><p class="sub">Selecciona una convocatoria para realizarla. Los exámenes sin solucionario oficial pueden completarse, pero no se califican ni muestran respuestas inventadas.</p><div id="examList"></div></div><div class="card"><h2>Mi historial</h2><p class="sub">Tus intentos corregidos se registran automáticamente para comparar tu evolución.</p><div id="historyBox"></div></div></section>
 
-<section id="stats" class="hidden"><div class="card"><h2>Cobertura de Cálculo por convocatoria</h2><p class="sub">Número de las 10 preguntas de cálculo que pertenecen a otros bloques distintos de Ortodrómica y Rectas de altura. Es un análisis histórico, no una garantía de resultado futuro.</p><div style="overflow:auto"><table class="strategytable"><thead><tr><th>Convocatoria</th><th>Modelo</th><th>Otros bloques</th><th>Ortodrómica/Rectas</th></tr></thead><tbody id="strategyRows"></tbody></table></div></div></section>
+<section id="stats" class="hidden"><div class="card"><h2>Mi progreso automático</h2><p class="sub">La web aprende de tus respuestas: repeticiones, errores, aciertos y tiempo desde el último intento. No tienes que preparar ningún informe.</p><div id="progressSummary"></div><div id="progressRecommendations" style="margin-top:12px"></div><div style="overflow:auto;margin-top:12px"><table class="strategytable"><thead><tr><th>Pregunta</th><th>Veces</th><th>Aciertos</th><th>Último estado</th><th>Próximo repaso</th></tr></thead><tbody id="progressQuestions"></tbody></table></div><button class="action" id="exportProgress" style="margin-top:14px">Descargar mi informe</button><span class="sub" style="margin-left:10px">Solo incluye tus estadísticas, no tus datos personales.</span></div><div class="card"><h2>Cobertura de Cálculo por convocatoria</h2><p class="sub">Número de las 10 preguntas de cálculo que pertenecen a otros bloques distintos de Ortodrómica y Rectas de altura. Es un análisis histórico, no una garantía de resultado futuro.</p><div style="overflow:auto"><table class="strategytable"><thead><tr><th>Convocatoria</th><th>Modelo</th><th>Otros bloques</th><th>Ortodrómica/Rectas</th></tr></thead><tbody id="strategyRows"></tbody></table></div></div></section>
 
 <section id="examRun" class="hidden"><div class="card"><button class="action" id="backExams">← Exámenes</button><h2 id="examTitle"></h2><div id="examProgress" class="progress"></div><div id="examQuestion"></div><div class="toolbar" style="margin-top:14px"><button class="action" id="examPrev">←</button><button class="action" id="examNext">→</button><button class="action" id="finishExam" style="display:none">Corregir examen</button></div><div id="examResult"></div></div></section>
 </main>
@@ -49,7 +49,7 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 (function(){
 const P=JSON.parse(document.getElementById("data").textContent),DB=P.db,$=id=>document.getElementById(id);
 const views=["home","practice","exams","stats","examRun"];
-function show(v){views.forEach(x=>$(x).classList.toggle("hidden",x!==v));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.v===v))}
+function show(v){views.forEach(x=>$(x).classList.toggle("hidden",x!==v));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.v===v));if(v==="stats")renderProgress()}
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>show(b.dataset.v));
 
 function drawChart(){
@@ -87,7 +87,7 @@ refill();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam
 
 const HISTKEY="aprobarNautica_examHistory_v1";
 function loadHistory(){try{return JSON.parse(localStorage.getItem(HISTKEY)||"[]")}catch(e){return []}}
-function saveAttempt(a){const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory()}
+function saveAttempt(a){const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory();renderProgress()}
 
 function renderHistory(){
  const h=loadHistory();
@@ -103,6 +103,28 @@ function renderHistory(){
  }</tbody></table></div>`;
 }
 renderHistory();
+
+function renderProgress(){
+ const h=loadHistory(),sum=$("progressSummary"),rec=$("progressRecommendations"),tbl=$("progressQuestions");
+ if(!sum||!rec||!tbl)return;
+ if(!h.length){sum.innerHTML='<div class="sub">Aún no hay intentos corregidos. Cuando termines uno, estas estadísticas se actualizarán solas.</div>';rec.innerHTML="";tbl.innerHTML="";return}
+ const avg=Math.round(h.reduce((s,a)=>s+(+a.percent||0),0)/h.length*10)/10;
+ const best=Math.max(...h.map(a=>+a.percent||0)),last=+h[0].percent||0;
+ const prev=h.length>1?(+h[1].percent||0):null,trend=prev===null?"Primer resultado":(last-prev>=0?`+${Math.round((last-prev)*10)/10} puntos`:`${Math.round((last-prev)*10)/10} puntos`);
+ const qmap={};h.forEach(a=>(a.answers||[]).forEach(x=>{const k=x.question_id||`${a.exam_id}-${x.number}`;const q=qmap[k]||(qmap[k]={...x,tries:0,ok:0,last:null,lastDate:null});q.tries++;if(x.correct)q.ok++;q.last=x.correct;q.lastDate=a.date;q.exam=a.exam||""}));
+ const due=Object.values(qmap).filter(q=>!q.last||q.tries<3).sort((a,b)=>(a.last?1:0)-(b.last?1:0)||b.tries-a.tries).slice(0,12);
+ const weak=Object.values(qmap).filter(q=>!q.last).slice(0,3).map(q=>`Pregunta ${q.number} (${q.module||"bloque"})`).join(", ");
+ sum.innerHTML=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px"><div class="level"><b>${h.length}</b><div class="sub">exámenes hechos</div></div><div class="level"><b>${avg}%</b><div class="sub">media</div></div><div class="level"><b>${best}%</b><div class="sub">mejor resultado</div></div><div class="level"><b>${trend}</b><div class="sub">respecto al anterior</div></div></div>`;
+ rec.innerHTML=`<div class="card" style="background:#f5faf9;margin:0"><b>Recomendación automática</b><div style="margin-top:6px">${weak?`Vuelve a practicar: ${weak}.`:(last<70?"Repite el último examen para consolidar los fallos.":"Mantén la repetición espaciada y prueba una convocatoria nueva.")}</div></div>`;
+ tbl.innerHTML=due.length?due.map(q=>`<tr><td><b>${q.number}</b><br><span class="sub">${q.module||""}</span></td><td>${q.tries}</td><td>${q.ok}/${q.tries}</td><td class="${q.last?"ok":"wait"}">${q.last?"✓ último acierto":"✗ necesita repaso"}</td><td>${q.last?"pronto":"ahora"}</td></tr>`).join(""):'<tr><td colspan="5" class="sub">Todavía no hay detalle por pregunta.</td></tr>';
+}
+renderProgress();
+$("exportProgress").onclick=()=>{
+ const h=loadHistory();
+ const report={generated_at:new Date().toISOString(),description:"Informe automático de progreso de Capitán de Yate",attempts:h};
+ const blob=new Blob([JSON.stringify(report,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+ a.href=url;a.download="informe-progreso-capitan-yate.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),500);
+};
 
 function validated(e){const qs=DB.questions.filter(q=>q.exam_id===e.id);return qs.length===40&&qs.every(q=>q.answer_status==="verificada"||q.answer_status==="anulada")}
 function renderExamList(){
@@ -163,6 +185,7 @@ $("finishExam").onclick=()=>{
    correct:c,total:v,wrong:w,blank:b,
    percent:Math.round(c/v*1000)/10,
    global_pass:globalOK,
+   answers:runQs.filter(q=>q.answer_status!=="anulada").map(q=>({question_id:q.id,number:q.number,module:q.module,selected:runAns[q.id]||null,correct:!!runAns[q.id]&&runAns[q.id]===q.answer})),
    blocks:{
      teoria:blocks.teoria.ok+"/"+blocks.teoria.total,
      calculo:blocks.calculo.ok+"/"+blocks.calculo.total,
