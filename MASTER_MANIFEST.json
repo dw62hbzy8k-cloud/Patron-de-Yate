@@ -68,7 +68,7 @@
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
+      "status": "FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2023",
@@ -227,6 +227,7 @@
       "40": "b"
     },
     "Marzo 2015 Modelo 1": "39 verificadas + 1 anulada en versiones previas del proyecto; conservar al reimportar"
+    ,"Noviembre 2023 Modelo 1": "40 verificadas según el PDF oficial CARM; pregunta 14 admite a/b/c/d y pregunta 15 admite b/c/d, tal como aparecen subrayadas en la fuente"
   },
   "features_to_preserve": [
     "Corrector con respuesta bloqueada",
@@ -259,5 +260,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Se añade seguimiento acumulativo por pregunta sin cambiar las claves históricas de localStorage: contador visible de intentos completos por convocatoria, barra del porcentaje de intentos aprobados, lista automática de fallos pendientes, número de veces realizada cada pregunta y examen personal de repaso. La corrección queda bloqueada si falta alguna respuesta. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas, incluidas las respuestas verificadas, anulaciones, fuentes y resoluciones didácticas anteriores."
+  "last_update_note": "Se verifica y activa el corrector completo de Noviembre 2023 Modelo 1 con las 40 respuestas del PDF oficial CARM. Las preguntas 14 y 15 conservan exactamente las varias opciones subrayadas por la fuente. Se mantiene el seguimiento acumulativo por pregunta, el contador y porcentaje de intentos, la lista automática de fallos y el examen personal de repaso. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas, incluidas las respuestas verificadas, anulaciones, fuentes y resoluciones didácticas anteriores."
 }
