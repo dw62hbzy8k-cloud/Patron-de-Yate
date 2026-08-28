@@ -2,8 +2,12 @@ CAPITÁN DE YATE · MASTER ACUMULATIVO
 
 REGLA: ninguna versión futura puede perder contenido ya incorporado.
 
-Base local conservada: 25 exámenes / 1000 preguntas.
-Objetivo consolidado: 25 exámenes seleccionados / 1.000 preguntas.
+Base actual conservada: 34 exámenes / 1.360 preguntas.
+Objetivo consolidado actual: 34 exámenes / 1.360 preguntas.
+
+NOTA DE TRAZABILIDAD: el inventario de 25 exámenes que aparece a continuación
+pertenece al checkpoint histórico inicial y se conserva para no perder su rastro.
+El estado acumulativo vigente está en murcia_master.json y MASTER_MANIFEST.json.
 
 ESTADO DE LOS 25 EXÁMENES OBJETIVO:
 - Junio 2026 · Modelo 1: FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON
@@ -41,3 +45,7 @@ ALMANAQUE:
 
 FUNCIONES:
 - historial automático; intentos numerados; corrector por materias; botón Corregir en P40; gráfico y estadísticas.
+- contador visible de intentos completos en cada convocatoria.
+- lista automática de preguntas falladas pendientes, con número de repeticiones, aciertos y fallos.
+- examen personal formado por todas las preguntas cuyo último resultado fue incorrecto o quedó en blanco.
+- bloqueo de la corrección hasta que estén respondidas todas las preguntas obligatorias.

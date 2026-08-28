@@ -235,6 +235,10 @@
     "Resultado global y por materias/módulos",
     "Historial automático localStorage",
     "Número de intento por examen",
+    "Lista automática de preguntas cuyo último resultado es un fallo",
+    "Número de repeticiones, aciertos y fallos por pregunta",
+    "Examen personal creado con todas las preguntas falladas pendientes",
+    "Bloqueo de la corrección mientras existan preguntas sin responder",
     "Gráfico frecuencia vs dificultad",
     "Práctica / Exámenes / Estadísticas",
     "Documentación de Almanaque por pregunta"
@@ -254,5 +258,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Verificadas individualmente con cuestionarios oficiales CARM las 320 preguntas de las ocho convocatorias de 2024–2026. Se conserva como resolución completa la pregunta 11 de junio de 2026, con Almanaque, cálculo y teclas Casio. Se conservan como anuladas las preguntas 17 y 20 de marzo de 2026. No se eliminó ningún examen previo."
+  "last_update_note": "Se añade seguimiento acumulativo por pregunta sin cambiar las claves históricas de localStorage: contador visible de intentos completos por convocatoria, lista automática de fallos pendientes, número de veces realizada cada pregunta y examen personal de repaso. La corrección queda bloqueada si falta alguna respuesta. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas, incluidas las respuestas verificadas, anulaciones, fuentes y resoluciones didácticas anteriores."
 }

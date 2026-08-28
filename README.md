@@ -16,6 +16,8 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Los PDFs oficiales utilizados se conservan en `master/fuentes_oficiales/` y cada pregunta enlaza su fuente dentro del JSON.
 - Web estática preparada para publicación desde la raíz del repositorio.
 - La web calcula automáticamente el progreso del alumno en el navegador: evolución, media, fallos repetidos, preguntas pendientes de repaso y recomendaciones. También permite descargar un informe de estadísticas.
+- Cada convocatoria muestra su número de intentos completos. “Mi progreso” reúne únicamente las preguntas cuyo último resultado fue incorrecto o quedó en blanco, indica cuántas veces se hizo cada una y crea un examen personal con todos esos fallos. Al acertarlas en el repaso desaparecen automáticamente de la lista.
+- Ningún examen completo ni examen personal de fallos puede corregirse mientras quede alguna pregunta sin responder; la web lleva al alumno a la primera pendiente.
 - Próxima capa didáctica: cada pregunta de cálculo tendrá referencia a las páginas necesarias del Almanaque Náutico, datos a extraer, croquis/esquema y resolución guiada paso a paso en lenguaje sencillo. Las explicaciones se añadirán sin borrar ni sustituir el contenido del MASTER.
 - MASTER, manifiesto y archivos de seguridad conservados en `master/`.
 - Material del Almanaque conservado en `assets/almanaque/`.
