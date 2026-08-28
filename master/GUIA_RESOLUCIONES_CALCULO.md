@@ -38,4 +38,8 @@ Las pulsaciones se escribirán para la Casio **fx-85SP X II Iberia**. Cada ejerc
 
 No se supondrá que el alumno conoce los menús. La secuencia se comprobará con el manual de Casio y se acompañará de una imagen o esquema de las teclas cuando sea necesario.
 
+## Regla del examen en Murcia
+
+La documentación oficial de Capitán de Yate de la CARM exige **calculadora no programable**. Por tanto, quedan fuera las calculadoras programables, gráficas o con CAS/programas y memoria de texto o fórmulas. No se debe llevar móvil, tableta, reloj inteligente ni otra aplicación como calculadora. La convocatoria concreta y el tribunal son la referencia final si hubiera una duda sobre un modelo.
+
 No se inventarán respuestas para preguntas sin fuente validada. Las preguntas anuladas seguirán marcadas como anuladas. La web mostrará estas explicaciones junto a la pregunta y conservará el histórico de progreso del alumno.
