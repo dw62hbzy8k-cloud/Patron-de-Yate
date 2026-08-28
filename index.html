@@ -20,6 +20,7 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 .progress{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin:15px 0}.pnum{text-align:center;padding:7px;border:1px solid var(--line);border-radius:6px;cursor:pointer}.pnum.correct{background:#dff3e7;border-color:#58b87d}.pnum.wrong{background:#f9dfe2;border-color:#df6a76}.pnum.current{outline:2px solid #183f5d}
 .strategytable{width:100%;border-collapse:collapse;font-size:13px}.strategytable td,.strategytable th{padding:9px;border-bottom:1px solid var(--line);text-align:left}
 .student-chart{display:flex;align-items:flex-end;gap:12px;min-height:190px;margin-top:18px;padding:20px 12px 4px;border-bottom:1px solid var(--line);background:linear-gradient(to top,rgba(22,138,122,.06),transparent 75%);border-radius:10px}.student-col{height:160px;flex:1;min-width:34px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}.student-bar{width:min(48px,80%);min-height:4px;background:linear-gradient(#168a7a,#54b6a7);border-radius:7px 7px 2px 2px;position:relative}.student-bar b{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:12px;color:#126b60}.student-label{font-size:10px;color:#657684;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:92px}.home-stat{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fbfdfd}.home-stat b{font-size:22px;color:var(--accent)}
+.area-chart{display:grid;gap:12px;margin-top:18px}.area-row{display:grid;grid-template-columns:125px 1fr 48px;align-items:center;gap:10px;font-size:13px}.area-track{height:15px;background:#edf2f4;border-radius:99px;overflow:hidden}.area-fill{height:100%;background:linear-gradient(90deg,#168a7a,#69c1b3);border-radius:99px}.area-value{text-align:right;font-weight:bold;color:#126b60}
 @media(max-width:760px){main{padding:12px}.levels{grid-template-columns:1fr}.examrow{grid-template-columns:1fr}.qhead{display:block}.freq{text-align:left;margin-top:8px}.progress{grid-template-columns:repeat(5,1fr)}}
 .almanac-btn{margin-top:14px;background:#eef5f8;color:#173247;border:1px solid #bfd0db;padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:bold}.almanac-wrap{display:none;margin-top:12px;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fafcfd}.almanac-wrap.open{display:block}.almanac-wrap img{display:block;max-width:100%;height:auto;margin:auto;cursor:zoom-in}.almanac-wrap img.zoom{max-width:none;width:1500px;cursor:zoom-out}.almanac-scroll{overflow:auto;max-height:75vh}</style></head><body>
 <header><h1>Aprobar Náutica AI</h1><div style="opacity:.75;font-size:13px;margin-top:4px">Capitán de Yate · Murcia · análisis de exámenes reales</div>
@@ -99,7 +100,7 @@ refill();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam
 
 const HISTKEY="aprobarNautica_examHistory_v1";
 function loadHistory(){try{return JSON.parse(localStorage.getItem(HISTKEY)||"[]")}catch(e){return []}}
-function saveAttempt(a){const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory();renderProgress();renderHomeProgress()}
+function saveAttempt(a){const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory();renderProgress();renderHomeProgress();renderHomeAreas()}
 
 function renderHistory(){
  const h=loadHistory();
@@ -141,6 +142,15 @@ function renderHomeProgress(){
  chart.innerHTML=h.slice(0,8).reverse().map(a=>{const p=Math.max(0,Math.min(100,+a.percent||0));const label=(a.exam||"Examen").replace(" · Modelo "," M");return `<div class="student-col"><div class="student-bar" style="height:${Math.max(4,p*1.6)}px"><b>${p}%</b></div><div class="student-label" title="${esc(a.exam||"")}">${esc(label)}</div></div>`}).join("");
 }
 renderHomeProgress();
+function renderHomeAreas(){
+ const h=loadHistory(),cards=$("homeProgressCards"),chart=$("performanceChart");if(!cards||!chart)return;
+ const areas=[['teoria','Teoría'],['calculo','Cálculo'],['meteo','Meteorología'],['ingles','Inglés']];
+ const totals={};areas.forEach(([k])=>totals[k]={ok:0,total:0});
+ h.forEach(a=>areas.forEach(([k])=>{const m=String(a.blocks&&a.blocks[k]||'').match(/(\d+)\/(\d+)/);if(m){totals[k].ok+=+m[1];totals[k].total+=+m[2]}}));
+ cards.innerHTML=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px">${areas.map(([k,n])=>{const x=totals[k],p=x.total?Math.round(x.ok/x.total*1000)/10:null;return `<div class="home-stat"><b>${p===null?'—':p+'%'}</b><div class="sub">${n}</div></div>`}).join('')}</div>`;
+ chart.className='area-chart';chart.innerHTML=`<div class="sub">Rendimiento acumulado por tipo de pregunta</div>${areas.map(([k,n])=>{const x=totals[k],p=x.total?Math.round(x.ok/x.total*1000)/10:0;return `<div class="area-row"><b>${n}</b><div class="area-track"><div class="area-fill" style="width:${p}%"></div></div><div class="area-value">${x.total?p+'%':'—'}</div></div>`}).join('')}`;
+}
+renderHomeAreas();
 $("exportProgress").onclick=()=>{
  const h=loadHistory();
  const report={generated_at:new Date().toISOString(),description:"Informe automático de progreso de Capitán de Yate",attempts:h};
