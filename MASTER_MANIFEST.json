@@ -1,0 +1,245 @@
+{
+  "project": "Capitán de Yate · Murcia",
+  "master_policy": "ACUMULATIVO. No borrar ni sustituir material incorporado; solo añadir/corregir con trazabilidad.",
+  "created": "2026-08-28",
+  "target_exam_count": 25,
+  "target_question_count": 1000,
+  "current_local_json_exam_count": 25,
+  "current_local_json_question_count": 1000,
+  "target_exams": [
+    {
+      "convocatoria": "Junio 2026",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Marzo 2026",
+      "modelo": 2,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Noviembre 2025",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Junio 2025",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Marzo 2025",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Noviembre 2024",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Junio 2024",
+      "modelo": 2,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Marzo 2024",
+      "modelo": 2,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Noviembre 2023",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Junio 2023",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Marzo 2023",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Noviembre 2022",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Junio 2022",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Abril 2022",
+      "modelo": 2,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Noviembre 2021",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Julio 2021",
+      "modelo": 2,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Abril 2021",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Julio 2020",
+      "modelo": 2,
+      "required_questions": 40,
+      "present_in_current_local_web": false,
+      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+    },
+    {
+      "convocatoria": "Marzo 2020",
+      "modelo": 2,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Noviembre 2019",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Junio 2019",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Marzo 2019",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Noviembre 2018",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Junio 2018",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    },
+    {
+      "convocatoria": "Marzo 2015",
+      "modelo": 1,
+      "required_questions": 40,
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL"
+    }
+  ],
+  "verified_answer_keys": {
+    "Junio 2023 Modelo 1": {
+      "1": "b",
+      "2": "b",
+      "3": "a",
+      "4": "c",
+      "5": "d",
+      "6": "d",
+      "7": "d",
+      "8": "b",
+      "9": "a",
+      "10": "c",
+      "11": "d",
+      "12": "a",
+      "13": "b",
+      "14": "c",
+      "15": "d",
+      "16": "a",
+      "17": "b",
+      "18": "c",
+      "19": "a",
+      "20": "b",
+      "21": "c",
+      "22": "b",
+      "23": "d",
+      "24": "a",
+      "25": "c",
+      "26": "b",
+      "27": "d",
+      "28": "a",
+      "29": "b",
+      "30": "b",
+      "31": "b",
+      "32": "a",
+      "33": "d",
+      "34": "b",
+      "35": "a",
+      "36": "c",
+      "37": "b",
+      "38": "c",
+      "39": "a",
+      "40": "b"
+    },
+    "Marzo 2015 Modelo 1": "39 verificadas + 1 anulada en versiones previas del proyecto; conservar al reimportar"
+  },
+  "features_to_preserve": [
+    "Corrector con respuesta bloqueada",
+    "Verde/rojo en respuesta y número",
+    "Corregir examen solo en P40",
+    "Resultado global y por materias/módulos",
+    "Historial automático localStorage",
+    "Número de intento por examen",
+    "Gráfico frecuencia vs dificultad",
+    "Práctica / Exámenes / Estadísticas",
+    "Documentación de Almanaque por pregunta"
+  ],
+  "almanac_assets": [
+    "web/assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png"
+  ]
+}
