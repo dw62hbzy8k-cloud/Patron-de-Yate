@@ -2,80 +2,80 @@
   "project": "Capitán de Yate · Murcia",
   "master_policy": "ACUMULATIVO. No borrar ni sustituir material incorporado; solo añadir/corregir con trazabilidad.",
   "created": "2026-08-28",
-  "target_exam_count": 25,
-  "target_question_count": 1000,
-  "current_local_json_exam_count": 25,
-  "current_local_json_question_count": 1000,
+  "target_exam_count": 34,
+  "target_question_count": 1360,
+  "current_local_json_exam_count": 34,
+  "current_local_json_question_count": 1360,
   "target_exams": [
     {
       "convocatoria": "Junio 2026",
       "modelo": 1,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Marzo 2026",
       "modelo": 2,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Noviembre 2025",
       "modelo": 1,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2025",
       "modelo": 1,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Marzo 2025",
       "modelo": 1,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Noviembre 2024",
       "modelo": 1,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2024",
       "modelo": 2,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Marzo 2024",
       "modelo": 2,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Noviembre 2023",
       "modelo": 1,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2023",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Marzo 2023",
@@ -103,21 +103,21 @@
       "modelo": 2,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Noviembre 2021",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Julio 2021",
       "modelo": 2,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Abril 2021",
@@ -138,49 +138,49 @@
       "modelo": 2,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Noviembre 2019",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2019",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Marzo 2019",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Noviembre 2018",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2018",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Marzo 2015",
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL"
+      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
     }
   ],
   "verified_answer_keys": {
@@ -241,5 +241,7 @@
   ],
   "almanac_assets": [
     "web/assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png"
-  ]
+  ],
+  "last_update": "2026-08-28",
+  "last_update_note": "Importados de forma acumulativa los 9 exámenes del Excel MASTER: noviembre 2023 y convocatorias 2024–2026. No se eliminó ningún examen previo."
 }
