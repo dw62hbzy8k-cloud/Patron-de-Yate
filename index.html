@@ -94,12 +94,14 @@ function calcGuideHTML(q){
 function optHTML(q,i,sel){const l="abcd"[i];let cl="opt";if(sel&&q.answer_status==="verificada"){if(l===q.answer)cl+=" correct";else if(l===sel)cl+=" wrong"}return `<div class="${cl}" data-l="${l}"><b>${"ABCD"[i]})</b> ${esc(q.options[i])}</div>`}
 function renderBank(){if(!pool.length){$("qbox").innerHTML="Sin preguntas.";return}pos=(pos+pool.length)%pool.length;const q=pool[pos],sel=ans[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=sel===q.answer?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta: ${q.answer.toUpperCase()}</div>`;
 $("qbox").innerHTML=`<div class="qhead"><div><span class="badge">${q.module}</span><span class="badge">${q.topic}</span><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${calcGuideHTML(q)}${fb}`;
-document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{ans[q.id]=x.dataset.l;renderBank()})}
+document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{ans[q.id]=x.dataset.l;savePractice(q,x.dataset.l);renderBank()})}
 refill();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam").onchange=filterBank;$("bTopic").onchange=filterBank;$("prev").onclick=()=>{pos--;renderBank()};$("next").onclick=()=>{pos++;renderBank()};$("random").onclick=()=>{pos=Math.floor(Math.random()*pool.length);renderBank()};
 
 
-const HISTKEY="aprobarNautica_examHistory_v1";
+const HISTKEY="aprobarNautica_examHistory_v1",PRACTKEY="aprobarNautica_practiceHistory_v1";
 function loadHistory(){try{return JSON.parse(localStorage.getItem(HISTKEY)||"[]")}catch(e){return []}}
+function loadPractice(){try{return JSON.parse(localStorage.getItem(PRACTKEY)||"[]")}catch(e){return []}}
+function savePractice(q,selected){const h=loadPractice();h.unshift({date:new Date().toLocaleString("es-ES"),question_id:q.id,number:q.number,module:q.module,topic:q.topic,selected,correct:q.answer_status==="verificada"&&selected===q.answer});localStorage.setItem(PRACTKEY,JSON.stringify(h));renderProgress();renderHomeAreas()}
 function saveAttempt(a){const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory();renderProgress();renderHomeProgress();renderHomeAreas()}
 
 function renderHistory(){
@@ -118,13 +120,14 @@ function renderHistory(){
 renderHistory();
 
 function renderProgress(){
- const h=loadHistory(),sum=$("progressSummary"),rec=$("progressRecommendations"),tbl=$("progressQuestions");
+ const h=loadHistory(),pHist=loadPractice(),sum=$("progressSummary"),rec=$("progressRecommendations"),tbl=$("progressQuestions");
  if(!sum||!rec||!tbl)return;
- if(!h.length){sum.innerHTML='<div class="sub">Aún no hay intentos corregidos. Cuando termines uno, estas estadísticas se actualizarán solas.</div>';rec.innerHTML="";tbl.innerHTML="";return}
- const avg=Math.round(h.reduce((s,a)=>s+(+a.percent||0),0)/h.length*10)/10;
- const best=Math.max(...h.map(a=>+a.percent||0)),last=+h[0].percent||0;
+ if(!h.length&&!pHist.length){sum.innerHTML='<div class="sub">Aún no hay respuestas registradas. Cuando practiques o termines un examen, estas estadísticas se actualizarán solas.</div>';rec.innerHTML="";tbl.innerHTML="";return}
+ const avg=h.length?Math.round(h.reduce((s,a)=>s+(+a.percent||0),0)/h.length*10)/10:0;
+ const best=h.length?Math.max(...h.map(a=>+a.percent||0)):0,last=h.length?(+h[0].percent||0):0;
  const prev=h.length>1?(+h[1].percent||0):null,trend=prev===null?"Primer resultado":(last-prev>=0?`+${Math.round((last-prev)*10)/10} puntos`:`${Math.round((last-prev)*10)/10} puntos`);
  const qmap={};h.forEach(a=>(a.answers||[]).forEach(x=>{const k=x.question_id||`${a.exam_id}-${x.number}`;const q=qmap[k]||(qmap[k]={...x,tries:0,ok:0,last:null,lastDate:null});q.tries++;if(x.correct)q.ok++;q.last=x.correct;q.lastDate=a.date;q.exam=a.exam||""}));
+ pHist.forEach(x=>{const k=x.question_id,q=qmap[k]||(qmap[k]={...x,tries:0,ok:0,last:null,lastDate:null});q.tries++;if(x.correct)q.ok++;q.last=x.correct;q.lastDate=x.date;q.exam="Práctica"});
  const due=Object.values(qmap).filter(q=>!q.last||q.tries<3).sort((a,b)=>(a.last?1:0)-(b.last?1:0)||b.tries-a.tries).slice(0,12);
  const weak=Object.values(qmap).filter(q=>!q.last).slice(0,3).map(q=>`Pregunta ${q.number} (${q.module||"bloque"})`).join(", ");
  sum.innerHTML=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px"><div class="level"><b>${h.length}</b><div class="sub">exámenes hechos</div></div><div class="level"><b>${avg}%</b><div class="sub">media</div></div><div class="level"><b>${best}%</b><div class="sub">mejor resultado</div></div><div class="level"><b>${trend}</b><div class="sub">respecto al anterior</div></div></div>`;
@@ -143,10 +146,11 @@ function renderHomeProgress(){
 }
 renderHomeProgress();
 function renderHomeAreas(){
- const h=loadHistory(),cards=$("homeProgressCards"),chart=$("performanceChart");if(!cards||!chart)return;
+ const h=loadHistory(),pHist=loadPractice(),cards=$("homeProgressCards"),chart=$("performanceChart");if(!cards||!chart)return;
  const areas=[['teoria','Teoría'],['calculo','Cálculo'],['meteo','Meteorología'],['ingles','Inglés']];
  const totals={};areas.forEach(([k])=>totals[k]={ok:0,total:0});
  h.forEach(a=>areas.forEach(([k])=>{const m=String(a.blocks&&a.blocks[k]||'').match(/(\d+)\/(\d+)/);if(m){totals[k].ok+=+m[1];totals[k].total+=+m[2]}}));
+ pHist.forEach(x=>{const k=/ingl/i.test(x.module||'')?'ingles':/meteo/i.test(x.module||'')?'meteo':/cálculo|ortodrómica|recta/i.test(x.module||'')?'calculo':'teoria';totals[k].total++;if(x.correct)totals[k].ok++});
  cards.innerHTML=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px">${areas.map(([k,n])=>{const x=totals[k],p=x.total?Math.round(x.ok/x.total*1000)/10:null;return `<div class="home-stat"><b>${p===null?'—':p+'%'}</b><div class="sub">${n}</div></div>`}).join('')}</div>`;
  chart.className='area-chart';chart.innerHTML=`<div class="sub">Rendimiento acumulado por tipo de pregunta</div>${areas.map(([k,n])=>{const x=totals[k],p=x.total?Math.round(x.ok/x.total*1000)/10:0;return `<div class="area-row"><b>${n}</b><div class="area-track"><div class="area-fill" style="width:${p}%"></div></div><div class="area-value">${x.total?p+'%':'—'}</div></div>`}).join('')}`;
 }
