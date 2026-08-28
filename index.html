@@ -19,13 +19,15 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}button,select,input{font:inherit}button.action{background:var(--nav);color:white;border:0;padding:9px 12px;border-radius:8px;cursor:pointer}select,input{padding:8px;border:1px solid var(--line);border-radius:8px;background:white}
 .progress{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin:15px 0}.pnum{text-align:center;padding:7px;border:1px solid var(--line);border-radius:6px;cursor:pointer}.pnum.correct{background:#dff3e7;border-color:#58b87d}.pnum.wrong{background:#f9dfe2;border-color:#df6a76}.pnum.current{outline:2px solid #183f5d}
 .strategytable{width:100%;border-collapse:collapse;font-size:13px}.strategytable td,.strategytable th{padding:9px;border-bottom:1px solid var(--line);text-align:left}
+.student-chart{display:flex;align-items:flex-end;gap:12px;min-height:190px;margin-top:18px;padding:20px 12px 4px;border-bottom:1px solid var(--line);background:linear-gradient(to top,rgba(22,138,122,.06),transparent 75%);border-radius:10px}.student-col{height:160px;flex:1;min-width:34px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}.student-bar{width:min(48px,80%);min-height:4px;background:linear-gradient(#168a7a,#54b6a7);border-radius:7px 7px 2px 2px;position:relative}.student-bar b{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:12px;color:#126b60}.student-label{font-size:10px;color:#657684;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:92px}.home-stat{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fbfdfd}.home-stat b{font-size:22px;color:var(--accent)}
 @media(max-width:760px){main{padding:12px}.levels{grid-template-columns:1fr}.examrow{grid-template-columns:1fr}.qhead{display:block}.freq{text-align:left;margin-top:8px}.progress{grid-template-columns:repeat(5,1fr)}}
 .almanac-btn{margin-top:14px;background:#eef5f8;color:#173247;border:1px solid #bfd0db;padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:bold}.almanac-wrap{display:none;margin-top:12px;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fafcfd}.almanac-wrap.open{display:block}.almanac-wrap img{display:block;max-width:100%;height:auto;margin:auto;cursor:zoom-in}.almanac-wrap img.zoom{max-width:none;width:1500px;cursor:zoom-out}.almanac-scroll{overflow:auto;max-height:75vh}</style></head><body>
 <header><h1>Aprobar Náutica AI</h1><div style="opacity:.75;font-size:13px;margin-top:4px">Capitán de Yate · Murcia · análisis de exámenes reales</div>
 <nav><button class="active" data-v="home">Inicio</button><button data-v="practice">Practicar</button><button data-v="exams">Exámenes</button><button data-v="stats">Estadísticas</button></nav></header>
 <main>
 <section id="home">
-<div class="card hero"><h2>¿Por dónde empezar Cálculo de Navegación?</h2><p>Frecuencia de aparición en los exámenes analizados y dificultad estimada de cada tipo de ejercicio.</p>
+<div class="card hero"><h2>Tu rendimiento</h2><p id="homeProgressCaption">Aquí aparecerá tu evolución automáticamente al terminar un examen corregido.</p><div id="homeProgressCards"></div><div id="performanceChart" class="student-chart"></div></div>
+<div class="card"><h2>Análisis del banco de preguntas</h2><p class="sub">Frecuencia de aparición y dificultad estimada. Sirve para planificar el estudio; tu progreso personal está arriba y en “Estadísticas”.</p>
 <div class="legend"><div class="key"><span class="swatch"></span> Aparición en exámenes</div><div class="key"><span class="dot"></span> Dificultad (1–10)</div></div>
 <div class="chart"><div class="chart-inner" id="chart"></div></div>
 </div>
@@ -97,7 +99,7 @@ refill();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam
 
 const HISTKEY="aprobarNautica_examHistory_v1";
 function loadHistory(){try{return JSON.parse(localStorage.getItem(HISTKEY)||"[]")}catch(e){return []}}
-function saveAttempt(a){const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory();renderProgress()}
+function saveAttempt(a){const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory();renderProgress();renderHomeProgress()}
 
 function renderHistory(){
  const h=loadHistory();
@@ -129,6 +131,16 @@ function renderProgress(){
  tbl.innerHTML=due.length?due.map(q=>`<tr><td><b>${q.number}</b><br><span class="sub">${q.module||""}</span></td><td>${q.tries}</td><td>${q.ok}/${q.tries}</td><td class="${q.last?"ok":"wait"}">${q.last?"✓ último acierto":"✗ necesita repaso"}</td><td>${q.last?"pronto":"ahora"}</td></tr>`).join(""):'<tr><td colspan="5" class="sub">Todavía no hay detalle por pregunta.</td></tr>';
 }
 renderProgress();
+function renderHomeProgress(){
+ const h=loadHistory(),cap=$("homeProgressCaption"),cards=$("homeProgressCards"),chart=$("performanceChart");
+ if(!cap||!cards||!chart)return;
+ if(!h.length){cap.textContent="Todavía no hay exámenes corregidos guardados en este navegador.";cards.innerHTML='<div class="home-stat"><b>0%</b><div class="sub">Cuando hagas tu primer examen aparecerá aquí tu gráfica personal.</div></div>';chart.innerHTML="";return}
+ const avg=Math.round(h.reduce((s,a)=>s+(+a.percent||0),0)/h.length*10)/10,best=Math.max(...h.map(a=>+a.percent||0));
+ cap.textContent=`${h.length} ${h.length===1?"examen corregido":"exámenes corregidos"} · evolución de tus resultados`;
+ cards.innerHTML=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px"><div class="home-stat"><b>${Math.round((+h[0].percent||0)*10)/10}%</b><div class="sub">último resultado</div></div><div class="home-stat"><b>${avg}%</b><div class="sub">media</div></div><div class="home-stat"><b>${best}%</b><div class="sub">mejor resultado</div></div></div>`;
+ chart.innerHTML=h.slice(0,8).reverse().map(a=>{const p=Math.max(0,Math.min(100,+a.percent||0));const label=(a.exam||"Examen").replace(" · Modelo "," M");return `<div class="student-col"><div class="student-bar" style="height:${Math.max(4,p*1.6)}px"><b>${p}%</b></div><div class="student-label" title="${esc(a.exam||"")}">${esc(label)}</div></div>`}).join("");
+}
+renderHomeProgress();
 $("exportProgress").onclick=()=>{
  const h=loadHistory();
  const report={generated_at:new Date().toISOString(),description:"Informe automático de progreso de Capitán de Yate",attempts:h};
