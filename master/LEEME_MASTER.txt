@@ -46,6 +46,7 @@ ALMANAQUE:
 FUNCIONES:
 - historial automático; intentos numerados; corrector por materias; botón Corregir en P40; gráfico y estadísticas.
 - contador visible de intentos completos en cada convocatoria.
+- barra de porcentaje aprobado por convocatoria (aprobados / intentos completos).
 - lista automática de preguntas falladas pendientes, con número de repeticiones, aciertos y fallos.
 - examen personal formado por todas las preguntas cuyo último resultado fue incorrecto o quedó en blanco.
 - bloqueo de la corrección hasta que estén respondidas todas las preguntas obligatorias.

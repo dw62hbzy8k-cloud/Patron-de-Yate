@@ -235,6 +235,7 @@
     "Resultado global y por materias/módulos",
     "Historial automático localStorage",
     "Número de intento por examen",
+    "Barra de porcentaje aprobado por convocatoria, calculada sobre sus intentos completos",
     "Lista automática de preguntas cuyo último resultado es un fallo",
     "Número de repeticiones, aciertos y fallos por pregunta",
     "Examen personal creado con todas las preguntas falladas pendientes",
@@ -258,5 +259,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Se añade seguimiento acumulativo por pregunta sin cambiar las claves históricas de localStorage: contador visible de intentos completos por convocatoria, lista automática de fallos pendientes, número de veces realizada cada pregunta y examen personal de repaso. La corrección queda bloqueada si falta alguna respuesta. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas, incluidas las respuestas verificadas, anulaciones, fuentes y resoluciones didácticas anteriores."
+  "last_update_note": "Se añade seguimiento acumulativo por pregunta sin cambiar las claves históricas de localStorage: contador visible de intentos completos por convocatoria, barra del porcentaje de intentos aprobados, lista automática de fallos pendientes, número de veces realizada cada pregunta y examen personal de repaso. La corrección queda bloqueada si falta alguna respuesta. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas, incluidas las respuestas verificadas, anulaciones, fuentes y resoluciones didácticas anteriores."
 }
