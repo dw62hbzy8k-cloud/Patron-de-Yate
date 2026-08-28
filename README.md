@@ -19,6 +19,7 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Próxima capa didáctica: cada pregunta de cálculo tendrá referencia a las páginas necesarias del Almanaque Náutico, datos a extraer, croquis/esquema y resolución guiada paso a paso en lenguaje sencillo. Las explicaciones se añadirán sin borrar ni sustituir el contenido del MASTER.
 - MASTER, manifiesto y archivos de seguridad conservados en `master/`.
 - Material del Almanaque conservado en `assets/almanaque/`.
+- Primera resolución completa incorporada: junio de 2026, pregunta 11 (altura estimada del Sol), con página 173 del Almanaque, signos, cálculo y teclas exactas de la Casio fx-85SP X II.
 
 El manifiesto documenta qué convocatorias del objetivo acumulativo todavía deben reimportarse desde sus fuentes originales. La base existente se conserva íntegra mientras se completa esa consolidación.
 

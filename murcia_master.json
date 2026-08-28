@@ -1098,7 +1098,12 @@
       "answer": "b",
       "answer_status": "verificada",
       "answer_note": "Respuesta oficial subrayada en el cuestionario CARM. Pregunta 11.",
-      "answer_source": "https://www.carm.es/web/descarga?ARCHIVO=WEB%20Tipo%201.CAP%20%20junio-26%20con%20respuestas.docx.pdf&ALIAS=ARCH&IDCONTENIDO=170471&IDTIPO=60&RASTRO=c$m74797"
+      "answer_source": "https://www.carm.es/web/descarga?ARCHIVO=WEB%20Tipo%201.CAP%20%20junio-26%20con%20respuestas.docx.pdf&ALIAS=ARCH&IDCONTENIDO=170471&IDTIPO=60&RASTRO=c$m74797",
+      "almanac_assets": [
+        "assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png"
+      ],
+      "resolution_status": "completa_verificada",
+      "resolution_file": "master/resoluciones/2026-06-murcia-p11-altura-estimada-sol.md"
     },
     {
       "id": 1011,

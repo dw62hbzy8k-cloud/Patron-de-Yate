@@ -91,7 +91,7 @@ let pool=[],pos=0,ans={};
 function filterBank(){const ex=$("bExam").value,m=$("bModule").value,t=$("bTopic").value;pool=DB.questions.filter(q=>{const ev=`${q.convocatoria} · M${q.model}`;return(ex==="Todos los exámenes"||ev===ex)&&(m==="Todos los módulos"||q.module===m)&&(t==="Todos los temas"||q.topic===t)});pos=0;renderBank()}
 
 function almanacHTML(q){
- const a=q.almanac_assets||[];
+ const a=q.almanac_assets||(q.id===1010?["assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png"]:[]);
  if(!a.length)return "";
  return `<button class="almanac-btn" onclick="this.nextElementSibling.classList.toggle('open')">📖 Ver hoja del Almanaque necesaria</button>
  <div class="almanac-wrap"><div class="sub" style="margin-bottom:8px">Almanaque Náutico · documentación para esta pregunta · pulsa la imagen para ampliar</div>
@@ -107,14 +107,29 @@ function calcGuideHTML(q){
  else if(t.includes("hora")||t.includes("almanaque")||t.includes("declinación")){title="Guía sencilla · hora y Almanaque";steps=["Abre la página del Almanaque del día y astro indicados.","Lee hora entera y columna de minutos/segundos; interpola si hace falta.","Suma o resta el incremento sin mezclar UT con hora civil.","Convierte horas a grados solo al final.","Comprueba: 1 minuto de tiempo equivale a 15′ de arco."];}
  return `<div class="card" style="margin-top:14px;background:#fffaf0;border-color:#ead7a1"><h3 style="margin-top:0">🧭 ${title}</h3><div class="sub">La hoja del Almanaque de arriba es la referencia de esta pregunta.</div><ol style="line-height:1.55;margin-bottom:0">${steps.map(s=>`<li>${s}</li>`).join("")}</ol><div class="sub" style="margin-top:10px">La página exacta, el croquis y la cuenta numérica completa se añadirán al verificar esta pregunta.</div></div>`;
 }
+function completeSolutionHTML(q){
+ if(q.id!==1010)return "";
+ return `<details class="card" style="margin-top:10px;background:#f3fbf5;border-color:#b9dbc2"><summary><b>✅ Resolución completa · paso a paso</b></summary>
+ <div style="line-height:1.6">
+ <p><b>1. Almanaque, página 173:</b> en la fila UT 14 h se leen <b>hG☉ = 29°58,6′</b> y <b>d☉ = +23°13,8′</b>.</p>
+ <p><b>2. Incremento hasta 14:10:44:</b> 10 min 44 s × 15 = 2°41,0′. Entonces hG☉ = 29°58,6′ + 2°41,0′ = <b>32°39,6′</b>.</p>
+ <p><b>3. Horario local:</b> la longitud W se toma negativa. hL☉ = 32°39,6′ − 9°30,0′ = <b>23°09,6′ W</b>.</p>
+ <p><b>4. Fórmula:</b><br>sen ae = sen 40°34′ × sen 23°13,8′ + cos 40°34′ × cos 23°13,8′ × cos 23°09,6′</p>
+ <p><b>5. Resultado:</b> ae = 63,9372496° = 63°56′14,1″ = <b>63°56,2′</b>.</p>
+ <p style="padding:10px;border-radius:10px;background:#e5f7e9"><b>Respuesta: B · ae = 63°56,2′.</b></p>
+ <p><b>Error que hay que evitar:</b> no sumes los 9°30′ por ver una W. Con longitud algebraica, Oeste lleva signo negativo.</p>
+ </div></details>`;
+}
+
 function calculatorHTML(q){
  if(!/Cálculo|Ortodrómica|Rectas/i.test(q.module||""))return "";
- return `<details class="card" style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ Cómo hacerlo en tu Casio fx-85SP X II</b></summary><ol style="line-height:1.55;margin-bottom:0"><li>Pulsa <b>MENU</b> y entra en <b>Calcular</b>.</li><li>Antes de empezar, deja los ángulos en <b>DEG</b> (grados).</li><li>Usa <b>AC</b> para limpiar la línea; <b>DEL</b> borra solo la cifra equivocada.</li><li>Escribe exactamente la operación que aparece en el paso anterior, usando paréntesis.</li><li>Pulsa <b>EXE</b> y compara el resultado con el indicado. Usa <b>S⇔D</b> si necesitas decimal.</li></ol><div class="sub" style="margin-top:9px">En la resolución completa se añadirá la secuencia tecla por tecla de este ejercicio concreto.</div></details>`;
+ if(q.id===1010)return `<details class="card" style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ Teclas exactas · Casio fx-85SP X II</b></summary><ol style="line-height:1.55"><li><b>MENU</b> → selecciona <b>Calcular</b> → <b>=</b>.</li><li><b>SHIFT</b> → <b>MENU (CONFIG)</b> → <b>2</b> → <b>1</b>. Comprueba que arriba aparece <b>D</b>.</li><li>Pulsa <b>AC</b>.</li></ol><div class="sub">Pulsa la tecla <b>°′″</b> después de grados, minutos y segundos.</div><div style="margin-top:9px;padding:10px;background:white;border-radius:9px;line-height:1.75"><b>SHIFT SIN</b><br><b>SIN 40 °′″ 34 °′″ 0 °′″ ) ×</b><br><b>SIN 23 °′″ 13 °′″ 48 °′″ ) +</b><br><b>COS 40 °′″ 34 °′″ 0 °′″ ) ×</b><br><b>COS 23 °′″ 13 °′″ 48 °′″ ) ×</b><br><b>COS 23 °′″ 9 °′″ 36 °′″ ) ) =</b></div><p>Debe salir <b>63,93724958</b>. Pulsa una vez <b>°′″</b>: aparecerá <b>63°56′14,1″</b>, que redondeado es <b>63°56,2′</b>.</p></details>`;
+ return `<details class="card" style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ Cómo hacerlo en tu Casio fx-85SP X II</b></summary><ol style="line-height:1.55;margin-bottom:0"><li>Pulsa <b>MENU</b> y entra en <b>Calcular</b>.</li><li>Antes de empezar, deja los ángulos en <b>DEG</b> (grados).</li><li>Usa <b>AC</b> para limpiar la línea; <b>DEL</b> borra solo la cifra equivocada.</li><li>Escribe exactamente la operación que aparece en el paso anterior, usando paréntesis.</li><li>Pulsa <b>=</b> y compara el resultado con el indicado. Usa <b>S⇔D</b> si necesitas decimal.</li></ol><div class="sub" style="margin-top:9px">En la resolución completa se añadirá la secuencia tecla por tecla de este ejercicio concreto.</div></details>`;
 }
 
 function optHTML(q,i,sel){const l="abcd"[i];let cl="opt";if(sel&&q.answer_status==="verificada"){if(l===q.answer)cl+=" correct";else if(l===sel)cl+=" wrong"}return `<div class="${cl}" data-l="${l}"><b>${"ABCD"[i]})</b> ${esc(q.options[i])}</div>`}
 function renderBank(){if(!pool.length){$("qbox").innerHTML="Sin preguntas.";return}pos=(pos+pool.length)%pool.length;const q=pool[pos],sel=ans[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=sel===q.answer?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta: ${q.answer.toUpperCase()}</div>`;
-$("qbox").innerHTML=`<div class="qhead"><div><span class="badge">${q.module}</span><span class="badge">${q.topic}</span><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}`;
+$("qbox").innerHTML=`<div class="qhead"><div><span class="badge">${q.module}</span><span class="badge">${q.topic}</span><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}`;
 document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{ans[q.id]=x.dataset.l;savePractice(q,x.dataset.l);renderBank()})}
 refill();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam").onchange=filterBank;$("bTopic").onchange=filterBank;$("prev").onclick=()=>{pos--;renderBank()};$("next").onclick=()=>{pos++;renderBank()};$("random").onclick=()=>{pos=Math.floor(Math.random()*pool.length);renderBank()};
 
@@ -197,7 +212,7 @@ let runQs=[],runPos=0,runAns={},runIsValidated=false;
 function startExam(id){runQs=DB.questions.filter(q=>q.exam_id===id).sort((a,b)=>a.number-b.number);runPos=0;runAns={};runIsValidated=runQs.length===40&&runQs.every(q=>q.answer_status==="verificada"||q.answer_status==="anulada");$("finishExam").disabled=false;$("finishExam").textContent=runIsValidated?"Corregir examen":"Finalizar examen sin corregir";$("examTitle").textContent=runQs[0].convocatoria+" · Modelo "+runQs[0].model+(runIsValidated?"":" · Sin corrector");show("examRun");renderRun()}
 function renderProg(){$("examProgress").innerHTML=runQs.map((q,i)=>{const a=runAns[q.id];let st="";if(a&&q.answer_status==="verificada")st=a===q.answer?"correct":"wrong";return `<div class="pnum ${st} ${i===runPos?"current":""}" data-i="${i}">${q.number}</div>`}).join("");document.querySelectorAll(".pnum").forEach(x=>x.onclick=()=>{runPos=+x.dataset.i;renderRun()})}
 function renderRun(){renderProg();$("finishExam").style.display=runPos===runQs.length-1?"inline-block":"none";const q=runQs[runPos],sel=runAns[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=sel===q.answer?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta: ${q.answer.toUpperCase()}</div>`;
-$("examQuestion").innerHTML=`<div class="sub">Pregunta ${q.number} de 40 · ${q.module}</div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}`;
+$("examQuestion").innerHTML=`<div class="sub">Pregunta ${q.number} de 40 · ${q.module}</div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}`;
 document.querySelectorAll("#examQuestion .opt").forEach(x=>x.onclick=()=>{if(q.answer_status==="anulada"||runAns[q.id])return;runAns[q.id]=x.dataset.l;renderRun()})}
 $("examPrev").onclick=()=>{runPos=Math.max(0,runPos-1);renderRun()};$("examNext").onclick=()=>{runPos=Math.min(39,runPos+1);renderRun()};$("backExams").onclick=()=>show("exams");
 $("finishExam").onclick=()=>{
