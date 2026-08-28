@@ -100,6 +100,7 @@ function almanacHTML(q){
 
 function calcGuideHTML(q){
  if(!/Cálculo|Ortodrómica|Rectas/i.test(q.module||""))return "";
+ if(q.id===1010)return "";
  const t=(q.topic||"").toLowerCase();
  let title="Guía de cálculo",steps=["Copia los datos del enunciado con unidades y signos (+/−).","Localiza en la hoja del Almanaque mostrada arriba la fecha y la hora UT; interpola solo si hace falta.","Escribe la fórmula antes de sustituir números y conserva grados y minutos separados.","Comprueba el signo, el cuadrante y el rango del resultado.","Compara con las opciones únicamente al final."];
  if(t.includes("azimut")||t.includes("rumbo")){title="Guía sencilla · azimut / rumbo";steps=["Anota azimut y rumbo, indicando si son de aguja o verdaderos.","Si aparece la Polar, usa la corrección correspondiente del Almanaque.","Aplica la relación entre rumbo, azimut y corrección total respetando el cuadrante.","Normaliza el resultado entre 000° y 360°.","Revisa el sentido (E/W) antes de elegir."];}
