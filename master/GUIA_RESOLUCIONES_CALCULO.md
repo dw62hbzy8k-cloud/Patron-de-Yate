@@ -24,4 +24,18 @@ La resolución no se considerará terminada si solo enumera fórmulas. Debe pode
 
 La web mostrará la solución en modo guiado, con pasos numerados y lenguaje llano. Si todavía no se ha comprobado un dato o una página, se dejará pendiente y no se inventará.
 
+## Calculadora del alumno
+
+Las pulsaciones se escribirán para la Casio **fx-85SP X II Iberia**. Cada ejercicio deberá indicar, desde una pantalla limpia:
+
+- `MENU` → `Calcular`;
+- comprobar antes que el ángulo está en `DEG` (grados), no en RAD o GRA;
+- tecla exacta para cada seno, coseno, tangente, raíz, potencia, paréntesis y signo negativo;
+- `EXE` después de cada operación completa;
+- `S⇔D` cuando haya que pasar de fracción a decimal;
+- cómo borrar una cifra (`DEL`) o toda la línea (`AC`) sin perder el procedimiento;
+- qué resultado debe aparecer y cómo redondearlo.
+
+No se supondrá que el alumno conoce los menús. La secuencia se comprobará con el manual de Casio y se acompañará de una imagen o esquema de las teclas cuando sea necesario.
+
 No se inventarán respuestas para preguntas sin fuente validada. Las preguntas anuladas seguirán marcadas como anuladas. La web mostrará estas explicaciones junto a la pregunta y conservará el histórico de progreso del alumno.
