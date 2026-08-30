@@ -242,7 +242,8 @@
     "Noviembre 2018 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2018 Tipo 1",
     "Junio 2018 Modelo 1": "40 verificadas según el PDF oficial CARM Junio 2018 Tipo 1; los cálculos sin subrayado visible se comprobaron numéricamente",
     "Marzo 2018 Modelo 2": "40 verificadas según el PDF oficial CARM Marzo 2018 Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente del banco",
-    "Noviembre 2017 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2017 Tipo 1"
+    "Noviembre 2017 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2017 Tipo 1",
+    "Junio 2017 Modelo 1": "40 verificadas según el PDF oficial CARM Junio 2017 Tipo 1; las respuestas de cálculo sin subrayado nítido se comprobaron numéricamente"
   },
   "features_to_preserve": [
     "Corrector con respuesta bloqueada",
@@ -275,5 +276,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Marzo 2020 queda pendiente porque no existe un cuestionario oficial en el material conservado. Se verifica y activa Noviembre de 2017, Modelo 1, con sus 40 respuestas según el PDF oficial CARM Tipo 1. Se mantienen las verificaciones previas y el banco íntegro de 34 exámenes y 1.360 preguntas."
+  "last_update_note": "Marzo 2020 queda pendiente porque no existe un cuestionario oficial en el material conservado. Se verifica y activa Junio de 2017, Modelo 1, con sus 40 respuestas según el PDF oficial CARM Tipo 1; las respuestas de cálculo sin subrayado nítido se comprobaron numéricamente. Se mantienen las verificaciones previas y el banco íntegro de 34 exámenes y 1.360 preguntas."
 }
