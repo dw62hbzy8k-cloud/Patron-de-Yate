@@ -166,7 +166,7 @@
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
+      "status": "FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2018",
@@ -238,7 +238,8 @@
     "Julio 2020 Modelo 1": "40 verificadas según el PDF oficial CARM Julio 2020 Tipo 1; la pregunta 33 conserva literalmente la opción subrayada por la fuente",
     "Noviembre 2019 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2019 Tipo 1; corregidas las transcripciones de las opciones 20a y 36d",
     "Junio 2019 Modelo 1": "40 verificadas según el PDF oficial CARM Junio 2019 Tipo 1",
-    "Marzo 2019 Modelo 1": "40 verificadas según el PDF oficial CARM Marzo 2019 Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente del banco"
+    "Marzo 2019 Modelo 1": "40 verificadas según el PDF oficial CARM Marzo 2019 Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente del banco",
+    "Noviembre 2018 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2018 Tipo 1"
   },
   "features_to_preserve": [
     "Corrector con respuesta bloqueada",
@@ -271,5 +272,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Marzo 2020 queda pendiente porque no existe un cuestionario oficial en el material conservado. Se verifican y activan Junio y Marzo de 2019, Modelo 1, con 40 respuestas cada uno según sus PDF oficiales CARM. Se mantienen las verificaciones previas y el banco íntegro de 34 exámenes y 1.360 preguntas."
+  "last_update_note": "Marzo 2020 queda pendiente porque no existe un cuestionario oficial en el material conservado. Se verifica y activa Noviembre de 2018, Modelo 1, con sus 40 respuestas según el PDF oficial CARM. Se mantienen las verificaciones previas y el banco íntegro de 34 exámenes y 1.360 preguntas."
 }
