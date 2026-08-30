@@ -79,10 +79,10 @@
     },
     {
       "convocatoria": "Marzo 2023",
-      "modelo": 1,
+      "modelo": 2,
       "required_questions": 40,
-      "present_in_current_local_web": false,
-      "status": "FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON"
+      "present_in_current_local_web": true,
+      "status": "FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Noviembre 2022",
@@ -228,7 +228,8 @@
     },
     "Marzo 2015 Modelo 1": "39 verificadas + 1 anulada en versiones previas del proyecto; conservar al reimportar",
     "Noviembre 2023 Modelo 1": "40 verificadas según el PDF oficial CARM; pregunta 14 admite a/b/c/d y pregunta 15 admite b/c/d, tal como aparecen subrayadas en la fuente",
-    "Noviembre 2022 Modelo 2": "40 verificadas según el PDF oficial CARM; respuestas subrayadas en el modelo local"
+    "Noviembre 2022 Modelo 2": "40 verificadas según el PDF oficial CARM; respuestas subrayadas en el modelo local",
+    "Marzo 2023 Modelo 2": "40 verificadas según el PDF oficial CARM Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente de preguntas y respuestas"
   },
   "features_to_preserve": [
     "Corrector con respuesta bloqueada",
@@ -261,5 +262,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Se verifica y activa el corrector completo de Noviembre 2022 Modelo 2 con las 40 respuestas del PDF oficial CARM, manteniendo también la verificación previa de Noviembre 2023 Modelo 1. Se mantiene el seguimiento acumulativo por pregunta, el contador y porcentaje de intentos, la lista automática de fallos y el examen personal de repaso. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas, incluidas las respuestas verificadas, anulaciones, fuentes y resoluciones didácticas anteriores."
+  "last_update_note": "Se verifica y activa el corrector completo de Marzo 2023 Modelo 2 con las 40 respuestas del PDF oficial CARM Tipo 1, comprobando la correspondencia por enunciado y texto de opción porque el orden de la base es distinto. Se mantienen las verificaciones previas, el seguimiento acumulativo por pregunta, el contador y porcentaje de intentos, la lista automática de fallos y el examen personal de repaso. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas, incluidas las respuestas verificadas, anulaciones, fuentes y resoluciones didácticas anteriores."
 }
