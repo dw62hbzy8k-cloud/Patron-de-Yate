@@ -37,6 +37,7 @@ ESTADO DE LOS 25 EXÁMENES OBJETIVO:
 - Marzo 2015 · Modelo 1: FUENTE PERSISTENTE LOCAL
 
 SOLUCIONES A CONSERVAR:
+- Marzo 2016: 40/40 respuestas verificadas según el PDF oficial CARM Tipo 1; las preguntas 16 y 18, cuyas marcas no son nítidas, se comprobaron con los datos del propio cálculo.
 - Noviembre 2016: 40/40 respuestas verificadas según el PDF oficial CARM Tipo 1; la pregunta 12, cuyo subrayado no es nítido, se comprobó con los datos del propio cálculo.
 - Marzo 2017: 40/40 respuestas verificadas según el PDF oficial CARM Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente del banco.
 - Junio 2017: 40/40 respuestas verificadas según el PDF oficial CARM Tipo 1; las respuestas de cálculo sin subrayado nítido se comprobaron numéricamente.
