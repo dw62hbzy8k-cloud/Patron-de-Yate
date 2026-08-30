@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Aprobar Náutica AI",
-    "version": "0.40",
+    "version": "0.41",
     "region": "Murcia",
     "exams": 34,
     "questions": 1360,
     "date_range": "2015–2026",
     "note": "MASTER acumulativo. Las respuestas solo se activan tras verificarse con fuentes oficiales; las preguntas anuladas se conservan como tales.",
-    "validated_exams": 23,
-    "validated_questions": 917
+    "validated_exams": 24,
+    "validated_questions": 957
   },
   "exams": [
     {
@@ -28073,9 +28073,10 @@
           "similarity": 0.67
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 1 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 561,
@@ -28104,9 +28105,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 2 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 562,
@@ -28129,9 +28131,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 3 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 563,
@@ -28154,9 +28157,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 4 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 564,
@@ -28190,9 +28194,10 @@
           "similarity": 0.75
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 5 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 565,
@@ -28215,9 +28220,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 6 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 566,
@@ -28240,9 +28246,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 7 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 567,
@@ -28265,9 +28272,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 8 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 568,
@@ -28301,9 +28309,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 9 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 569,
@@ -28332,9 +28341,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 10 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 570,
@@ -28357,9 +28367,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 11 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 571,
@@ -28382,9 +28393,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 12 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 572,
@@ -28407,9 +28419,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 13 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 573,
@@ -28432,9 +28445,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 14 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 574,
@@ -28457,9 +28471,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 15 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 575,
@@ -28482,9 +28497,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 16 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 576,
@@ -28507,9 +28523,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 17 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 577,
@@ -28532,9 +28549,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 18 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 578,
@@ -28557,9 +28575,10 @@
       "similar_exam_count": 1,
       "difficulty": 6,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 19 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 579,
@@ -28582,9 +28601,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 20 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 580,
@@ -28607,9 +28627,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 21 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 581,
@@ -28632,9 +28653,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 22 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 582,
@@ -28657,9 +28679,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 23 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 583,
@@ -28682,9 +28705,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 24 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 584,
@@ -28707,9 +28731,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 25 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 585,
@@ -28738,9 +28763,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 26 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 586,
@@ -28763,9 +28789,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 27 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 587,
@@ -28788,9 +28815,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 28 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 588,
@@ -28813,9 +28841,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 29 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 589,
@@ -28838,9 +28867,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 30 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 590,
@@ -28863,9 +28893,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 31 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 591,
@@ -28909,9 +28940,10 @@
           "similarity": 0.62
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 32 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 592,
@@ -28934,9 +28966,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 33 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 593,
@@ -28959,9 +28992,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 34 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 594,
@@ -28984,9 +29018,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 35 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 595,
@@ -29015,9 +29050,10 @@
           "similarity": 0.73
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 36 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 596,
@@ -29040,9 +29076,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 37 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 597,
@@ -29086,9 +29123,10 @@
           "similarity": 0.91
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 38 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 598,
@@ -29132,9 +29170,10 @@
           "similarity": 0.67
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 39 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 599,
@@ -29168,9 +29207,10 @@
           "similarity": 0.69
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial de la pregunta 40 en el PDF CARM; correspondencia verificada por enunciado y texto de opción. Las preguntas de cálculo sin subrayado visible se comprobaron numéricamente.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2018_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 600,
