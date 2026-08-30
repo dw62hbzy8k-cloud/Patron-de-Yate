@@ -145,7 +145,7 @@
       "modelo": 1,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
+      "status": "FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB"
     },
     {
       "convocatoria": "Junio 2019",
@@ -235,7 +235,8 @@
     "Noviembre 2021 Modelo 1": "40 verificadas según el PDF oficial CARM Tipo 1; la pregunta 15 conserva a/b/c/d como aceptadas porque las cuatro están subrayadas",
     "Julio 2021 Modelo 2": "40 verificadas según el PDF oficial CARM Junio 2021 Tipo 1; correspondencia comprobada por enunciado y texto de opción debido a la denominación y al orden diferentes",
     "Abril 2021 Modelo 2": "40 verificadas según el PDF oficial CARM Abril 2021 Tipo 1; correspondencia comprobada por enunciado y texto de opción",
-    "Julio 2020 Modelo 1": "40 verificadas según el PDF oficial CARM Julio 2020 Tipo 1; la pregunta 33 conserva literalmente la opción subrayada por la fuente"
+    "Julio 2020 Modelo 1": "40 verificadas según el PDF oficial CARM Julio 2020 Tipo 1; la pregunta 33 conserva literalmente la opción subrayada por la fuente",
+    "Noviembre 2019 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2019 Tipo 1; corregidas las transcripciones de las opciones 20a y 36d"
   },
   "features_to_preserve": [
     "Corrector con respuesta bloqueada",
@@ -268,5 +269,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Se verifica y activa el corrector completo de Julio 2020 Modelo 1 con las 40 respuestas del PDF oficial CARM Tipo 1. La pregunta 33 de inglés conserva literalmente la opción subrayada en la fuente. Se corrige la antigua rotulación del inventario sin borrar contenido. Se mantienen las verificaciones previas y se conserva íntegro el banco de 34 exámenes y 1.360 preguntas."
+  "last_update_note": "Marzo 2020 queda pendiente porque no existe un cuestionario oficial en el material conservado. Se verifica y activa Noviembre 2019 Modelo 1 con las 40 respuestas del PDF oficial CARM Tipo 1 y se corrigen dos errores de transcripción en las opciones 20a y 36d. Se mantienen las verificaciones previas y el banco íntegro de 34 exámenes y 1.360 preguntas."
 }
