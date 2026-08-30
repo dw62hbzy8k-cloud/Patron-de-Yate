@@ -17,6 +17,7 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Marzo de 2023 queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM; se comprobó cada correspondencia por enunciado y texto de opción porque el orden de la base difiere del documento.
 - Junio de 2022 queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM; se recuperó la pregunta real sobre Orión que sustituye el antiguo marcador sin enunciado.
 - Abril de 2022 queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM, cruzadas por enunciado y texto de opción.
+- Noviembre de 2021 queda incorporado con sus 40 respuestas verificadas; la pregunta 15 acepta las cuatro opciones porque el PDF oficial subraya las cuatro.
 - Marzo de 2026 conserva como anuladas las preguntas 17 y 20; no se les asigna una respuesta ficticia.
 - Los PDFs oficiales utilizados se conservan en `master/fuentes_oficiales/` y cada pregunta enlaza su fuente dentro del JSON.
 - Web estática preparada para publicación desde la raíz del repositorio.
