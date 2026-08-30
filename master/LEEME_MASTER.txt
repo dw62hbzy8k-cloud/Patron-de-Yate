@@ -22,7 +22,7 @@ ESTADO DE LOS 25 EXÁMENES OBJETIVO:
 - Junio 2023 · Modelo 1: FUENTE PERSISTENTE LOCAL
 - Marzo 2023 · Modelo 2: FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB (correspondencia comprobada con el PDF CARM Tipo 1)
 - Noviembre 2022 · Modelo 2: FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB
-- Junio 2022 · Modelo 1: FUENTE PERSISTENTE EN FILE LIBRARY · PENDIENTE DE REIMPORTAR AL JSON
+- Junio 2022 · Modelo 2: FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB (pregunta oficial de Orión recuperada)
 - Abril 2022 · Modelo 2: FUENTE PERSISTENTE LOCAL
 - Noviembre 2021 · Modelo 1: FUENTE PERSISTENTE LOCAL
 - Julio 2021 · Modelo 2: FUENTE PERSISTENTE LOCAL
@@ -37,6 +37,7 @@ ESTADO DE LOS 25 EXÁMENES OBJETIVO:
 - Marzo 2015 · Modelo 1: FUENTE PERSISTENTE LOCAL
 
 SOLUCIONES A CONSERVAR:
+- Junio 2022: 40/40 respuestas verificadas en la base local según el PDF oficial CARM; la pregunta sin enunciado fue reemplazada por la pregunta oficial de Orión.
 - Marzo 2023: 40/40 respuestas verificadas en la base local según el PDF oficial CARM; se conserva la correspondencia por texto aunque el orden difiera.
 - Junio 2023: 40/40 respuestas verificadas en la base local.
 - Noviembre 2022: 40/40 respuestas verificadas en la base local según el PDF oficial CARM.
