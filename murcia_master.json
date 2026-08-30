@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Aprobar Náutica AI",
-    "version": "0.31",
+    "version": "0.32",
     "region": "Murcia",
     "exams": 34,
     "questions": 1360,
     "date_range": "2015–2026",
     "note": "MASTER acumulativo. Las respuestas solo se activan tras verificarse con fuentes oficiales; las preguntas anuladas se conservan como tales.",
-    "validated_exams": 14,
-    "validated_questions": 557
+    "validated_exams": 15,
+    "validated_questions": 597
   },
   "exams": [
     {
@@ -15241,9 +15241,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 2 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 161,
@@ -15266,9 +15267,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 1 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 162,
@@ -15297,9 +15299,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 4 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 163,
@@ -15322,9 +15325,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 3 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 164,
@@ -15358,9 +15362,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 6 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 165,
@@ -15383,9 +15388,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 5 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 166,
@@ -15414,9 +15420,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 8 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 167,
@@ -15439,9 +15446,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 7 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 168,
@@ -15464,9 +15472,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 10 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 169,
@@ -15500,9 +15509,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 9 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 170,
@@ -15525,9 +15535,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 11 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 171,
@@ -15550,9 +15561,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 12 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 172,
@@ -15575,9 +15587,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 13 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 173,
@@ -15600,9 +15613,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 14 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 174,
@@ -15625,9 +15639,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 15 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 175,
@@ -15650,9 +15665,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 16 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 176,
@@ -15675,9 +15691,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 17 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 177,
@@ -15700,9 +15717,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 18 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 178,
@@ -15725,9 +15743,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 19 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 179,
@@ -15750,9 +15769,10 @@
       "similar_exam_count": 1,
       "difficulty": 6,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 20 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 180,
@@ -15781,9 +15801,10 @@
           "similarity": 0.54
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 30 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 181,
@@ -15806,9 +15827,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 29 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 182,
@@ -15837,9 +15859,10 @@
           "similarity": 0.71
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 28 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 183,
@@ -15862,9 +15885,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 27 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 184,
@@ -15887,9 +15911,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 26 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 185,
@@ -15912,9 +15937,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 25 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 186,
@@ -15937,9 +15963,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 24 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 187,
@@ -15973,9 +16000,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 23 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 188,
@@ -15998,9 +16026,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 22 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 189,
@@ -16023,9 +16052,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 21 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 190,
@@ -16069,9 +16099,10 @@
           "similarity": 0.94
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 40 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 191,
@@ -16100,9 +16131,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 39 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 192,
@@ -16141,9 +16173,10 @@
           "similarity": 0.69
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 38 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 193,
@@ -16187,9 +16220,10 @@
           "similarity": 0.92
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 37 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 194,
@@ -16233,9 +16267,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 36 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 195,
@@ -16279,9 +16314,10 @@
           "similarity": 0.58
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 35 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 196,
@@ -16320,9 +16356,10 @@
           "similarity": 0.67
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 34 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 197,
@@ -16345,9 +16382,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 33 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 198,
@@ -16376,9 +16414,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 32 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 199,
@@ -16412,9 +16451,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 31 del PDF CARM; correspondencia verificada por enunciado y texto de la opción pese al distinto orden de la base.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2022_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 200,
