@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Aprobar Náutica AI",
-    "version": "0.33",
+    "version": "0.34",
     "region": "Murcia",
     "exams": 34,
     "questions": 1360,
     "date_range": "2015–2026",
     "note": "MASTER acumulativo. Las respuestas solo se activan tras verificarse con fuentes oficiales; las preguntas anuladas se conservan como tales.",
-    "validated_exams": 16,
-    "validated_questions": 637
+    "validated_exams": 17,
+    "validated_questions": 677
   },
   "exams": [
     {
@@ -17638,9 +17638,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 7 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 241,
@@ -17669,9 +17670,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 6 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 242,
@@ -17705,9 +17707,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 1 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 243,
@@ -17736,9 +17739,10 @@
           "similarity": 0.83
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 2 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 244,
@@ -17777,9 +17781,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 4 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 245,
@@ -17813,9 +17818,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 5 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 246,
@@ -17844,9 +17850,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 3 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 247,
@@ -17875,9 +17882,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 9 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 248,
@@ -17911,9 +17919,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 10 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 249,
@@ -17957,9 +17966,10 @@
           "similarity": 0.62
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 8 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 250,
@@ -17982,9 +17992,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 11 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 251,
@@ -18028,9 +18039,10 @@
           "similarity": 0.56
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 12 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 252,
@@ -18053,9 +18065,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 13 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 253,
@@ -18078,9 +18091,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 14 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 254,
@@ -18103,9 +18117,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 15 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 255,
@@ -18128,9 +18143,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 16 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 256,
@@ -18153,9 +18169,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 17 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 257,
@@ -18178,9 +18195,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 18 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 258,
@@ -18203,9 +18221,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 19 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 259,
@@ -18228,9 +18247,10 @@
       "similar_exam_count": 1,
       "difficulty": 6,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 20 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 260,
@@ -18264,9 +18284,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 30 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 261,
@@ -18295,9 +18316,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 25 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 262,
@@ -18326,9 +18348,10 @@
           "similarity": 0.88
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 29 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 263,
@@ -18351,9 +18374,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 28 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 264,
@@ -18382,9 +18406,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 23 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 265,
@@ -18407,9 +18432,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 27 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 266,
@@ -18432,9 +18458,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 22 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 267,
@@ -18457,9 +18484,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 24 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 268,
@@ -18482,9 +18510,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 21 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 269,
@@ -18518,9 +18547,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 26 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 270,
@@ -18559,9 +18589,10 @@
           "similarity": 0.93
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 36 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 271,
@@ -18600,9 +18631,10 @@
           "similarity": 0.88
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 37 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 272,
@@ -18646,9 +18678,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 38 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 273,
@@ -18692,9 +18725,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 39 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 274,
@@ -18738,9 +18772,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 40 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 275,
@@ -18784,9 +18819,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 32 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 276,
@@ -18830,9 +18866,10 @@
           "similarity": 0.93
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 31 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 277,
@@ -18871,9 +18908,10 @@
           "similarity": 0.85
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 33 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 278,
@@ -18917,9 +18955,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 34 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 279,
@@ -18963,9 +19002,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial subrayada en la pregunta 35 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 280,

@@ -117,7 +117,7 @@
       "modelo": 2,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
+      "status": "FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB (correspondencia completa con el PDF CARM Junio 2021 Tipo 1)"
     },
     {
       "convocatoria": "Abril 2021",
@@ -232,7 +232,8 @@
     "Marzo 2023 Modelo 2": "40 verificadas según el PDF oficial CARM Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente de preguntas y respuestas",
     "Junio 2022 Modelo 2": "40 verificadas según el PDF oficial CARM Tipo 1; recuperada la pregunta oficial de Orión que sustituye el marcador sin enunciado",
     "Abril 2022 Modelo 2": "40 verificadas según el PDF oficial CARM Tipo 1; correspondencia comprobada por enunciado y texto de opción",
-    "Noviembre 2021 Modelo 1": "40 verificadas según el PDF oficial CARM Tipo 1; la pregunta 15 conserva a/b/c/d como aceptadas porque las cuatro están subrayadas"
+    "Noviembre 2021 Modelo 1": "40 verificadas según el PDF oficial CARM Tipo 1; la pregunta 15 conserva a/b/c/d como aceptadas porque las cuatro están subrayadas",
+    "Julio 2021 Modelo 2": "40 verificadas según el PDF oficial CARM Junio 2021 Tipo 1; correspondencia comprobada por enunciado y texto de opción debido a la denominación y al orden diferentes"
   },
   "features_to_preserve": [
     "Corrector con respuesta bloqueada",
@@ -265,5 +266,5 @@
     }
   ],
   "last_update": "2026-08-28",
-  "last_update_note": "Se verifica y activa el corrector completo de Noviembre 2021 Modelo 1 con las 40 respuestas del PDF oficial CARM Tipo 1. La pregunta 15 conserva a/b/c/d como respuestas aceptadas porque la fuente subraya las cuatro. Se mantienen las verificaciones previas, el seguimiento acumulativo por pregunta, el contador y porcentaje de intentos, la lista automática de fallos y el examen personal de repaso. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas."
+  "last_update_note": "Se verifica y activa el corrector completo de Julio 2021 Modelo 2 con las 40 respuestas del PDF oficial CARM Junio 2021 Tipo 1. La correspondencia completa se comprobó por enunciado y texto de opción porque la denominación y el orden difieren. Se mantienen las verificaciones previas, el seguimiento acumulativo por pregunta, el contador y porcentaje de intentos, la lista automática de fallos y el examen personal de repaso. Se conserva íntegro el banco de 34 exámenes y 1.360 preguntas."
 }
