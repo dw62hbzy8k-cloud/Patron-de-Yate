@@ -30,13 +30,15 @@ ESTADO DE LOS 25 EXÁMENES OBJETIVO:
 - Julio 2020 · Modelo 1: FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB
 - Marzo 2020 · Modelo 2: FUENTE PERSISTENTE LOCAL
 - Noviembre 2019 · Modelo 1: FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB
-- Junio 2019 · Modelo 1: FUENTE PERSISTENTE LOCAL
-- Marzo 2019 · Modelo 1: FUENTE PERSISTENTE LOCAL
+- Junio 2019 · Modelo 1: FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB
+- Marzo 2019 · Modelo 1: FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS VERIFICADAS EN EL JSON Y LA WEB
 - Noviembre 2018 · Modelo 1: FUENTE PERSISTENTE LOCAL
 - Junio 2018 · Modelo 1: FUENTE PERSISTENTE LOCAL
 - Marzo 2015 · Modelo 1: FUENTE PERSISTENTE LOCAL
 
 SOLUCIONES A CONSERVAR:
+- Marzo 2019: 40/40 respuestas verificadas según el PDF oficial CARM Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente del banco.
+- Junio 2019: 40/40 respuestas verificadas según el PDF oficial CARM Tipo 1.
 - Noviembre 2019: 40/40 respuestas verificadas según el PDF oficial CARM Tipo 1; corregidas las transcripciones de las opciones 20a y 36d.
 - Julio 2020: 40/40 respuestas verificadas en la base local según el PDF oficial CARM Tipo 1; la pregunta 33 conserva literalmente la opción subrayada por la fuente.
 - Abril 2021: 40/40 respuestas verificadas en la base local según el PDF oficial CARM Tipo 1; correspondencia comprobada por enunciado y texto de opción.
