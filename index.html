@@ -75,10 +75,10 @@ function fillFormulaTopics(){const s=$("formulaTopic");if(!s)return;[...new Set(
 function drawChart(){
  const c=$("chart");[0,20,40,60,80,100].forEach(v=>{const y=100-v;c.insertAdjacentHTML("beforeend",`<div class="gridline" style="top:${y}%"></div><div class="ylabel" style="top:${y}%">${v}%</div>`)});
  const bars=document.createElement("div");bars.className="bars";
- P.calc_stats.filter(x=>x.topic!=="Cálculo astronómico general").forEach(s=>{
+ DB.topic_stats.filter(x=>x.topic!=="Cálculo astronómico general").forEach(s=>{
    const col=document.createElement("div");col.className="col";
-   const diffBottom=(s.difficulty10/10)*100;
-   col.innerHTML=`<div class="bar" style="height:${s.exam_percent}%"><b>${s.exam_percent}%</b></div><div class="diffdot" style="bottom:${diffBottom}%"></div><div class="diffnum" style="bottom:calc(${diffBottom}% + 10px)">D ${s.difficulty10}</div><div class="xlabel">${s.topic}</div>`;
+   const diffBottom=(s.difficulty/10)*100;
+   col.innerHTML=`<div class="bar" style="height:${s.exam_percent}%"><b>${s.exam_percent}%</b></div><div class="diffdot" style="bottom:${diffBottom}%"></div><div class="diffnum" style="bottom:calc(${diffBottom}% + 10px)">D ${s.difficulty}</div><div class="xlabel">${s.topic}</div>`;
    bars.appendChild(col);
  });c.appendChild(bars)
 }drawChart();
@@ -247,7 +247,8 @@ function renderExamList(){
  document.querySelectorAll(".examrow.go").forEach(r=>r.onclick=()=>startExam(r.dataset.id));
 }
 renderExamList();
-$("strategyRows").innerHTML=P.exam_strategy.map(x=>`<tr><td>${x.convocatoria}</td><td>${x.model}</td><td><b>${x.without_advanced}/10</b></td><td>${x.advanced}/10</td></tr>`).join("");
+const examStrategy=DB.exams.map(e=>{const calc=DB.questions.filter(q=>q.exam_id===e.id&&q.module==="Cálculo de Navegación"),advanced=calc.filter(q=>q.difficulty>=6).length;return{convocatoria:e.convocatoria,model:e.model,without_advanced:calc.length-advanced,advanced}});
+$("strategyRows").innerHTML=examStrategy.map(x=>`<tr><td>${x.convocatoria}</td><td>${x.model}</td><td><b>${x.without_advanced}/10</b></td><td>${x.advanced}/10</td></tr>`).join("");
 
 let runQs=[],runPos=0,runAns={},runIsValidated=false,runKind="official";
 function startExam(id){runKind="official";runQs=DB.questions.filter(q=>q.exam_id===id).sort((a,b)=>a.number-b.number);runPos=0;runAns={};runIsValidated=runQs.length===40&&runQs.every(q=>q.answer_status==="verificada"||q.answer_status==="anulada");$("examResult").innerHTML="";$("backExams").textContent="← Exámenes";$("finishExam").disabled=false;$("finishExam").textContent=runIsValidated?"Corregir examen":"Finalizar examen sin corregir";$("examTitle").textContent=runQs[0].convocatoria+" · Modelo "+runQs[0].model+(runIsValidated?"":" · Sin corrector");show("examRun");renderRun()}
