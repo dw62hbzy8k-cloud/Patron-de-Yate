@@ -46,6 +46,7 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Cada respuesta puede marcarse como «La sabía», «Dudé» o «La adiviné». Una respuesta acertada por suerte sigue pendiente de refuerzo.
 - La repetición inteligente programa repasos a 1, 3, 7 y 14 días. Una pregunta solo se considera consolidada después de acertarla con seguridad en dos días distintos.
 - “Mi progreso” incluye un semáforo de preparación por Teoría, Cálculo, Meteorología e Inglés y conserva cinco copias automáticas locales del historial y la práctica.
+- Al fallar aparece un panel de corrección con la respuesta elegida, la correcta completa, explicación, truco de memoria y fuente. Las cinco preguntas actualmente falladas por el alumno —Junio 2026 P1, P2 y P8; Noviembre 2025 P11 y P16— tienen explicación pedagógica específica; las dos de cálculo incluyen el desarrollo numérico comprobado.
 - Próxima capa didáctica: cada pregunta de cálculo tendrá referencia a las páginas necesarias del Almanaque Náutico, datos a extraer, croquis/esquema y resolución guiada paso a paso en lenguaje sencillo. Las explicaciones se añadirán sin borrar ni sustituir el contenido del MASTER.
 - MASTER, manifiesto y archivos de seguridad conservados en `master/`.
 - Material del Almanaque conservado en `assets/almanaque/`.

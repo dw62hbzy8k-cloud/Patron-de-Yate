@@ -75,3 +75,4 @@ FUNCIONES:
 - entrenamiento diario automático de 15 preguntas, personalizado con fallos, dudas, respuestas adivinadas, temas flojos y repasos programados.
 - repetición inteligente a 1, 3, 7 y 14 días; una pregunta requiere dos aciertos seguros en días distintos para quedar consolidada.
 - marcador de confianza «La sabía / Dudé / La adiviné», semáforo de preparación por materias y cinco copias automáticas locales del progreso.
+- panel de explicación del error con comparación de respuestas, motivo, regla de memoria y fuente; explicaciones específicas conservadas para Junio 2026 P1/P2/P8 y Noviembre 2025 P11/P16.
