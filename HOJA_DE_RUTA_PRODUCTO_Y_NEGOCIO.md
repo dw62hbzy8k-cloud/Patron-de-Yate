@@ -72,6 +72,21 @@ Para cada comunidad y convocatoria:
 - Estimación del coste total: tasa, viaje, alojamiento y material.
 - Enlaces de afiliación a hoteles cuando exista un acuerdo legítimo y se identifique claramente.
 
+## Pack PER enviado a casa
+
+Crear un paquete físico opcional para que el alumno reciba todo lo necesario para estudiar y practicar como si asistiera a una academia:
+
+- Carta de navegación de la edición adecuada para la convocatoria.
+- Compás de dibujo, transportador, regla o escuadra.
+- Lápiz, goma, sacapuntas y bolígrafos.
+- Guía rápida impresa para preparar la mesa de examen.
+- Ejercicios iniciales de carta y hoja de comprobación del material.
+- Código QR que abra directamente las explicaciones y prácticas de la plataforma.
+- Posible calculadora básica o científica según la titulación y las reglas de la convocatoria.
+- Opciones de pack: esencial, completo y regalo.
+
+El paquete se ofrecerá como material didáctico. La marca no se presentará como escuela náutica oficial ni ofrecerá prácticas reglamentarias sin disponer de las autorizaciones y acuerdos necesarios. En una fase posterior se podrán crear acuerdos con escuelas autorizadas para teoría, prácticas y radio.
+
 ## Modelo comercial provisional
 
 - Acceso gratuito limitado para probar el método.
@@ -81,6 +96,7 @@ Para cada comunidad y convocatoria:
 - Suscripción sin publicidad y versión gratuita con publicidad discreta.
 - Licencias para academias y escuelas náuticas.
 - Comisiones de afiliación por hoteles, libros, calculadoras y material útil.
+- Venta opcional del Pack PER enviado a casa, individualmente o combinado con la suscripción.
 - Colaboraciones con canales de YouTube náuticos mediante código medible, tarifa pequeña y comisión por venta.
 - Contenido propio en YouTube que resuelva problemas y conduzca a la plataforma.
 - Decisión del usuario: reinvertir el beneficio de los dos primeros años en mejorar y hacer crecer el producto.
