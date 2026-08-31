@@ -39,9 +39,13 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Los PDFs oficiales utilizados se conservan en `master/fuentes_oficiales/` y cada pregunta enlaza su fuente dentro del JSON.
 - Web estática preparada para publicación desde la raíz del repositorio.
 - La web calcula automáticamente el progreso del alumno en el navegador: evolución, media, fallos repetidos, preguntas pendientes de repaso y recomendaciones. También permite descargar un informe de estadísticas.
-- Cada convocatoria muestra su número de intentos completos. “Mi progreso” reúne únicamente las preguntas cuyo último resultado fue incorrecto o quedó en blanco, indica cuántas veces se hizo cada una y crea un examen personal con todos esos fallos. Al acertarlas en el repaso desaparecen automáticamente de la lista.
+- Cada convocatoria muestra su número de intentos completos. “Mi progreso” reúne las preguntas que necesitan refuerzo —falladas, dudadas, adivinadas, aún no consolidadas o con repaso vencido—, indica cuántas veces se hizo cada una y crea una práctica personal con ellas. Desaparecen de pendientes cuando se aciertan con seguridad en dos días distintos, hasta su siguiente repaso programado.
 - Junto a los intentos de cada convocatoria aparece una barra con el porcentaje aprobado y la relación de aprobados sobre intentos totales.
 - Ningún examen completo ni examen personal de fallos puede corregirse mientras quede alguna pregunta sin responder; la web lleva al alumno a la primera pendiente.
+- La portada prepara automáticamente un «Entrenamiento de hoy» de 15 preguntas: prioriza fallos, respuestas dudadas o adivinadas, repasos vencidos y temas flojos; completa la sesión con preguntas nuevas o antiguas sin introducir cálculos avanzados nuevos.
+- Cada respuesta puede marcarse como «La sabía», «Dudé» o «La adiviné». Una respuesta acertada por suerte sigue pendiente de refuerzo.
+- La repetición inteligente programa repasos a 1, 3, 7 y 14 días. Una pregunta solo se considera consolidada después de acertarla con seguridad en dos días distintos.
+- “Mi progreso” incluye un semáforo de preparación por Teoría, Cálculo, Meteorología e Inglés y conserva cinco copias automáticas locales del historial y la práctica.
 - Próxima capa didáctica: cada pregunta de cálculo tendrá referencia a las páginas necesarias del Almanaque Náutico, datos a extraer, croquis/esquema y resolución guiada paso a paso en lenguaje sencillo. Las explicaciones se añadirán sin borrar ni sustituir el contenido del MASTER.
 - MASTER, manifiesto y archivos de seguridad conservados en `master/`.
 - Material del Almanaque conservado en `assets/almanaque/`.

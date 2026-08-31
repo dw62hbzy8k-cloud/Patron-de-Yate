@@ -259,13 +259,17 @@
     "Historial automático localStorage",
     "Número de intento por examen",
     "Barra de porcentaje aprobado por convocatoria, calculada sobre sus intentos completos",
-    "Lista automática de preguntas cuyo último resultado es un fallo",
+    "Lista automática de preguntas que necesitan refuerzo: fallo, duda, adivinada, no consolidada o repaso vencido",
     "Número de repeticiones, aciertos y fallos por pregunta",
-    "Examen personal creado con todas las preguntas falladas pendientes",
+    "Práctica personal creada con todas las preguntas pendientes de refuerzo",
     "Bloqueo de la corrección mientras existan preguntas sin responder",
     "Gráfico frecuencia vs dificultad",
     "Práctica / Exámenes / Estadísticas",
-    "Documentación de Almanaque por pregunta"
+    "Documentación de Almanaque por pregunta",
+    "Entrenamiento diario automático de 15 preguntas personalizado por fallos, dudas, respuestas adivinadas, repasos vencidos y temas flojos",
+    "Repetición inteligente a 1, 3, 7 y 14 días con dos aciertos seguros en días distintos para consolidar",
+    "Marcador de confianza La sabía / Dudé / La adiviné",
+    "Semáforo de preparación por materias y cinco copias automáticas locales del progreso"
   ],
   "almanac_assets": [
     "assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png"
@@ -282,5 +286,5 @@
     }
   ],
   "last_update": "2026-08-31",
-  "last_update_note": "Junio y Noviembre de 2015 quedan verificados y activados con 40 respuestas cada uno según los PDF oficiales CARM Tipo 1. Junio de 2016 queda activado tras contraste conceptual y recálculo independiente de sus diez ejercicios. Marzo de 2020 sigue pendiente porque su cuestionario oficial no está en el material conservado. Se mantiene íntegro el banco de 34 exámenes y 1.360 preguntas."
+  "last_update_note": "Se incorpora entrenamiento diario automático, repetición inteligente a 1, 3, 7 y 14 días, confianza La sabía/Dudé/La adiviné, semáforo por materias y copias automáticas locales. Se mantienen íntegros los 34 exámenes, las 1.360 preguntas y todas las verificaciones anteriores. Marzo de 2020 sigue pendiente porque su cuestionario oficial no está en el material conservado."
 }

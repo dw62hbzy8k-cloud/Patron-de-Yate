@@ -22,12 +22,14 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 .student-chart{display:flex;align-items:flex-end;gap:12px;min-height:190px;margin-top:18px;padding:20px 12px 4px;border-bottom:1px solid var(--line);background:linear-gradient(to top,rgba(22,138,122,.06),transparent 75%);border-radius:10px}.student-col{height:160px;flex:1;min-width:34px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}.student-bar{width:min(48px,80%);min-height:4px;background:linear-gradient(#168a7a,#54b6a7);border-radius:7px 7px 2px 2px;position:relative}.student-bar b{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:12px;color:#126b60}.student-label{font-size:10px;color:#657684;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:92px}.home-stat{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fbfdfd}.home-stat b{font-size:22px;color:var(--accent)}
 .area-chart{display:grid;gap:12px;margin-top:18px}.area-row{display:grid;grid-template-columns:125px 1fr 48px;align-items:center;gap:10px;font-size:13px}.area-track{height:15px;background:#edf2f4;border-radius:99px;overflow:hidden}.area-fill{height:100%;background:linear-gradient(90deg,#168a7a,#69c1b3);border-radius:99px}.area-value{text-align:right;font-weight:bold;color:#126b60}
 .formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:16px}.formula-card{border:1px solid var(--line);border-radius:11px;padding:14px;background:#fbfdfd}.formula-card.advanced{background:#fffaf0;border-color:#ead7a1}.formula-card h3{font-size:15px;margin:0 0 8px}.formula{font-size:18px;font-weight:bold;color:#173f5b;padding:10px 0}.formula-card summary{cursor:pointer;color:var(--accent);font-weight:bold}.formula-card p{font-size:13px;line-height:1.45;color:var(--muted)}
-@media(max-width:760px){main{padding:12px}.levels{grid-template-columns:1fr}.examrow{grid-template-columns:1fr}.qhead{display:block}.freq{text-align:left;margin-top:8px}.progress{grid-template-columns:repeat(5,1fr)}}
+.daily-card{background:linear-gradient(135deg,#eaf8f4,#fff);border-color:#abd9ce}.daily-card h2{margin:0 0 6px}.daily-grid{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}.daily-count{font-size:36px;font-weight:bold;color:var(--accent);line-height:1}.daily-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.daily-pill{background:#fff;border:1px solid #cde4de;border-radius:99px;padding:6px 10px;font-size:12px}.confidence-box{margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#f8fafb}.confidence-title{font-size:13px;font-weight:bold;margin-bottom:8px}.confidence-buttons{display:flex;gap:7px;flex-wrap:wrap}.confidence{border:1px solid #b9c8d2;background:#fff;color:#314c60;padding:7px 10px;border-radius:99px;cursor:pointer}.confidence.selected{background:#173f5b;color:#fff;border-color:#173f5b}.review-status{font-size:12px;line-height:1.4}.readiness-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.readiness{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fff}.readiness i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:7px}.readiness.good i{background:var(--good)}.readiness.mid i{background:var(--mid)}.readiness.bad i{background:var(--bad)}.readiness.empty i{background:#aab4bc}
+@media(max-width:760px){main{padding:12px}.levels{grid-template-columns:1fr}.examrow{grid-template-columns:1fr}.qhead{display:block}.freq{text-align:left;margin-top:8px}.progress{grid-template-columns:repeat(5,1fr)}.daily-grid{grid-template-columns:1fr}.daily-count{font-size:28px}}
 .almanac-btn{margin-top:14px;background:#eef5f8;color:#173247;border:1px solid #bfd0db;padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:bold}.almanac-wrap{display:none;margin-top:12px;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fafcfd}.almanac-wrap.open{display:block}.almanac-wrap img{display:block;max-width:100%;height:auto;margin:auto;cursor:zoom-in}.almanac-wrap img.zoom{max-width:none;width:1500px;cursor:zoom-out}.almanac-scroll{overflow:auto;max-height:75vh}</style></head><body>
 <header><h1>Aprobar Náutica AI</h1><div style="opacity:.75;font-size:13px;margin-top:4px">Capitán de Yate · Murcia · análisis de exámenes reales</div>
 <nav><button class="active" data-v="home">Inicio</button><button data-v="practice">Practicar</button><button data-v="exams">Exámenes</button><button data-v="stats">Mi progreso</button><button data-v="formulas">Fórmulas</button></nav></header>
 <main>
 <section id="home">
+<div class="card daily-card"><div class="daily-grid"><div><h2>Entrenamiento de hoy</h2><p class="sub" id="dailyCaption">15 preguntas elegidas automáticamente para ti.</p><div class="daily-meta" id="dailyMeta"></div></div><div><div class="daily-count" id="dailyCount">15</div><div class="sub">preguntas</div></div></div><button class="action" id="startDaily" style="margin-top:16px">Empezar entrenamiento</button></div>
 <div class="card hero"><h2>Tu rendimiento</h2><p id="homeProgressCaption">Aquí aparecerá tu evolución automáticamente al terminar un examen corregido.</p><div id="homeProgressCards"></div><div id="performanceChart" class="student-chart"></div></div>
 <div class="card"><h2>Análisis del banco de preguntas</h2><p class="sub">Frecuencia de aparición y dificultad estimada. Sirve para planificar el estudio; tu progreso personal está arriba y en “Estadísticas”.</p>
 <div class="legend"><div class="key"><span class="swatch"></span> Aparición en exámenes</div><div class="key"><span class="dot"></span> Dificultad (1–10)</div></div>
@@ -44,7 +46,7 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 
 <section id="exams" class="hidden"><div class="card"><h2>Exámenes</h2><p class="sub">Selecciona una convocatoria para realizarla. Los exámenes sin solucionario oficial pueden completarse, pero no se califican ni muestran respuestas inventadas.</p><div id="examList"></div></div><div class="card"><h2>Mi historial</h2><p class="sub">Tus intentos corregidos se registran automáticamente para comparar tu evolución.</p><div id="historyBox"></div></div></section>
 
-<section id="stats" class="hidden"><div class="card mistake-hero"><h2>Preguntas que sueles fallar</h2><p class="sub">Aquí se juntan automáticamente las preguntas cuya última respuesta fue incorrecta o quedó en blanco. Cuando vuelvas a acertar una, desaparecerá de la lista.</p><div id="mistakeExamSummary" style="margin:18px 0"></div><button class="action" id="startMistakeExam">Hacer examen solo con mis fallos</button></div><div class="card"><h2>Mi progreso automático</h2><p class="sub">Solo aparecen las preguntas que ahora necesitas repetir. La web cuenta por ti cuántas veces hiciste cada una, tus aciertos y tus fallos.</p><div id="progressSummary"></div><div id="progressRecommendations" style="margin-top:12px"></div><div style="overflow:auto;margin-top:12px"><table class="strategytable"><thead><tr><th>Pregunta</th><th>Veces hecha</th><th>Aciertos</th><th>Fallos</th><th>Último estado</th></tr></thead><tbody id="progressQuestions"></tbody></table></div><button class="action" id="exportProgress" style="margin-top:14px">Descargar mi informe</button><span class="sub" style="margin-left:10px">Solo incluye tus estadísticas, no tus datos personales.</span></div><div class="card"><h2>Cobertura de Cálculo por convocatoria</h2><p class="sub">Número de las 10 preguntas de cálculo que pertenecen a otros bloques distintos de Ortodrómica y Rectas de altura. Es un análisis histórico, no una garantía de resultado futuro.</p><div style="overflow:auto"><table class="strategytable"><thead><tr><th>Convocatoria</th><th>Modelo</th><th>Otros bloques</th><th>Ortodrómica/Rectas</th></tr></thead><tbody id="strategyRows"></tbody></table></div></div></section>
+<section id="stats" class="hidden"><div class="card mistake-hero"><h2>Preguntas que necesitas reforzar</h2><p class="sub">Aquí aparecen tus fallos, las respuestas dudadas o adivinadas y las que todavía no has acertado dos días distintos. La web decide cuándo toca repetirlas.</p><div id="mistakeExamSummary" style="margin:18px 0"></div><button class="action" id="startMistakeExam">Practicar solo estas preguntas</button></div><div class="card"><h2>Mi progreso automático</h2><p class="sub">La web cuenta por ti cuántas veces hiciste cada pregunta y aplica repasos a 1, 3, 7 y 14 días.</p><div id="progressSummary"></div><div id="progressRecommendations" style="margin-top:12px"></div><div id="readinessLights" style="margin-top:14px"></div><div style="overflow:auto;margin-top:12px"><table class="strategytable"><thead><tr><th>Pregunta</th><th>Veces hecha</th><th>Aciertos</th><th>Fallos</th><th>Próximo paso</th></tr></thead><tbody id="progressQuestions"></tbody></table></div><button class="action" id="exportProgress" style="margin-top:14px">Descargar mi informe</button><span class="sub" style="margin-left:10px">Además se conserva una copia automática local de tu progreso.</span></div><div class="card"><h2>Cobertura de Cálculo por convocatoria</h2><p class="sub">Número de las 10 preguntas de cálculo que pertenecen a otros bloques distintos de Ortodrómica y Rectas de altura. Es un análisis histórico, no una garantía de resultado futuro.</p><div style="overflow:auto"><table class="strategytable"><thead><tr><th>Convocatoria</th><th>Modelo</th><th>Otros bloques</th><th>Ortodrómica/Rectas</th></tr></thead><tbody id="strategyRows"></tbody></table></div></div></section>
 
 <section id="formulas" class="hidden"><div class="card"><h2>Fórmulas para memorizar</h2><p class="sub">Vamos poco a poco: primero aparecen solo las básicas. Las difíciles se conservan aparte para cuando estés preparado.</p><div class="toolbar"><select id="formulaLevel"><option value="base" selected>Básicas</option><option value="all">Todas</option><option value="advanced">Difíciles / avanzadas</option></select><select id="formulaTopic"><option value="all">Todos los temas</option></select></div><div id="formulaList" class="formula-grid"></div></div></section>
 
@@ -87,7 +89,7 @@ const modules=[...new Set(DB.questions.map(q=>q.module))];function fill(el,a){el
 fill($("bExam"),["Todos los exámenes",...DB.exams.map(e=>`${e.convocatoria} · M${e.model}`)]);fill($("bModule"),["Todos los módulos",...modules]);
 function refill(){const m=$("bModule").value;fill($("bTopic"),["Todos los temas",...[...new Set(DB.questions.filter(q=>m==="Todos los módulos"||q.module===m).map(q=>q.topic))].sort()])}
 function esc(s){return String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
-let pool=[],pos=0,ans={};
+let pool=[],pos=0,ans={},ansConfidence={};
 function filterBank(){const ex=$("bExam").value,m=$("bModule").value,t=$("bTopic").value;pool=DB.questions.filter(q=>{const ev=`${q.convocatoria} · M${q.model}`;return(ex==="Todos los exámenes"||ev===ex)&&(m==="Todos los módulos"||q.module===m)&&(t==="Todos los temas"||q.topic===t)});pos=0;renderBank()}
 
 function almanacHTML(q){
@@ -131,21 +133,33 @@ function calculatorHTML(q){
 function validAnswers(q){return Array.isArray(q.accepted_answers)&&q.accepted_answers.length?q.accepted_answers:(q.answer?[q.answer]:[])}
 function isCorrect(q,selected){return q.answer_status==="verificada"&&validAnswers(q).includes(selected)}
 function correctAnswerText(q){return validAnswers(q).map(x=>x.toUpperCase()).join(", ")}
+const CONFIDENCE_LABELS={knew:"La sabía",doubted:"Dudé",guessed:"La adiviné"};
+function confidenceHTML(q,selected,value){
+ if(!selected||q.answer_status!=="verificada")return "";
+ value=value||"knew";
+ return `<div class="confidence-box"><div class="confidence-title">¿Cómo respondiste? <span class="sub">Esto hace más inteligente tu repaso.</span></div><div class="confidence-buttons">${Object.entries(CONFIDENCE_LABELS).map(([k,label])=>`<button class="confidence ${value===k?"selected":""}" data-confidence="${k}">${label}</button>`).join("")}</div></div>`;
+}
 function optHTML(q,i,sel){const l="abcd"[i],valid=validAnswers(q);let cl="opt";if(sel&&q.answer_status==="verificada"){if(valid.includes(l))cl+=" correct";else if(l===sel)cl+=" wrong"}return `<div class="${cl}" data-l="${l}"><b>${"ABCD"[i]})</b> ${esc(q.options[i])}</div>`}
 function renderBank(){if(!pool.length){$("qbox").innerHTML="Sin preguntas.";return}pos=(pos+pool.length)%pool.length;const q=pool[pos],sel=ans[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;
-$("qbox").innerHTML=`<div class="qhead"><div><span class="badge">${q.module}</span><span class="badge">${q.topic}</span><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}`;
-document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{ans[q.id]=x.dataset.l;savePractice(q,x.dataset.l);renderBank()})}
+$("qbox").innerHTML=`<div class="qhead"><div><span class="badge">${q.module}</span><span class="badge">${q.topic}</span><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}${confidenceHTML(q,sel,ansConfidence[q.id])}`;
+document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{if(ans[q.id])return;ans[q.id]=x.dataset.l;ansConfidence[q.id]="knew";savePractice(q,x.dataset.l,"knew");renderBank()});
+document.querySelectorAll("#qbox .confidence").forEach(x=>x.onclick=()=>{ansConfidence[q.id]=x.dataset.confidence;updateLatestPracticeConfidence(q,x.dataset.confidence);renderBank()})}
 refill();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam").onchange=filterBank;$("bTopic").onchange=filterBank;$("prev").onclick=()=>{pos--;renderBank()};$("next").onclick=()=>{pos++;renderBank()};$("random").onclick=()=>{pos=Math.floor(Math.random()*pool.length);renderBank()};
 
 
-const HISTKEY="aprobarNautica_examHistory_v1",PRACTKEY="aprobarNautica_practiceHistory_v1";
+const HISTKEY="aprobarNautica_examHistory_v1",PRACTKEY="aprobarNautica_practiceHistory_v1",BACKUPKEY="aprobarNautica_autoBackups_v1";
 function loadHistory(){try{return JSON.parse(localStorage.getItem(HISTKEY)||"[]")}catch(e){return []}}
 function loadPractice(){try{return JSON.parse(localStorage.getItem(PRACTKEY)||"[]")}catch(e){return []}}
 const QUESTION_BY_ID=new Map(DB.questions.map(q=>[String(q.id),q]));
-function practiceRecord(q,selected,ts=Date.now()){return {ts,date:new Date(ts).toLocaleString("es-ES"),question_id:q.id,number:q.number,module:q.module,topic:q.topic,exam_id:q.exam_id,exam:q.convocatoria+" · Modelo "+q.model,selected,verified:q.answer_status==="verificada",correct:isCorrect(q,selected)}}
-function savePractice(q,selected){const h=loadPractice();h.unshift(practiceRecord(q,selected));localStorage.setItem(PRACTKEY,JSON.stringify(h));renderProgress();renderHomeAreas()}
-function savePracticeBatch(records){const h=loadPractice();localStorage.setItem(PRACTKEY,JSON.stringify([...records].sort((a,b)=>(b.ts||0)-(a.ts||0)).concat(h)));renderProgress();renderHomeAreas()}
-function saveAttempt(a){a.ts=a.ts||Date.now();a.kind=a.kind||"official";const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));renderHistory();renderProgress();renderHomeProgress();renderHomeAreas()}
+function makeAutoBackup(){
+ try{const snapshots=JSON.parse(localStorage.getItem(BACKUPKEY)||"[]"),snapshot={ts:Date.now(),history:loadHistory(),practice:loadPractice()};snapshots.unshift(snapshot);localStorage.setItem(BACKUPKEY,JSON.stringify(snapshots.slice(0,5)))}catch(e){}
+}
+function practiceRecord(q,selected,ts=Date.now(),confidence="knew",kind="practice"){return {ts,date:new Date(ts).toLocaleString("es-ES"),question_id:q.id,number:q.number,module:q.module,topic:q.topic,exam_id:q.exam_id,exam:q.convocatoria+" · Modelo "+q.model,selected,confidence,kind,verified:q.answer_status==="verificada",correct:isCorrect(q,selected)}}
+function refreshPersonal(){renderProgress();renderHomeAreas();renderDailyCard()}
+function savePractice(q,selected,confidence="knew"){const h=loadPractice();h.unshift(practiceRecord(q,selected,Date.now(),confidence));localStorage.setItem(PRACTKEY,JSON.stringify(h));makeAutoBackup();refreshPersonal()}
+function updateLatestPracticeConfidence(q,confidence){const h=loadPractice(),row=h.find(x=>String(x.question_id)===String(q.id));if(!row)return;row.confidence=confidence;localStorage.setItem(PRACTKEY,JSON.stringify(h));makeAutoBackup();refreshPersonal()}
+function savePracticeBatch(records){const h=loadPractice();localStorage.setItem(PRACTKEY,JSON.stringify([...records].sort((a,b)=>(b.ts||0)-(a.ts||0)).concat(h)));makeAutoBackup();refreshPersonal()}
+function saveAttempt(a){a.ts=a.ts||Date.now();a.kind=a.kind||"official";const h=loadHistory();h.unshift(a);localStorage.setItem(HISTKEY,JSON.stringify(h));makeAutoBackup();renderHistory();renderProgress();renderHomeProgress();renderHomeAreas();renderDailyCard()}
 
 function progressTime(row,index){
  if(Number.isFinite(+row.ts)&&+row.ts>0)return +row.ts;
@@ -167,15 +181,74 @@ function buildQuestionProgress(){
    events.push({...x,question:source,key:String(x.question_id),exam:x.exam||(source?source.convocatoria+" · Modelo "+source.model:"Práctica"),time:progressTime(x,pi),order:serial++});
  });
  events.sort((a,b)=>a.time-b.time||a.order-b.order);
- const qmap={};
+ const qmap={},intervals=[1,3,7,14];
  events.forEach(x=>{
-   const q=qmap[x.key]||(qmap[x.key]={key:x.key,question:x.question,question_id:x.question_id,number:x.number,module:x.module,topic:x.topic,exam:x.exam,tries:0,ok:0,fails:0,last:null,lastDate:null});
+   const q=qmap[x.key]||(qmap[x.key]={key:x.key,question:x.question,question_id:x.question_id,number:x.number,module:x.module||(x.question&&x.question.module),topic:x.topic||(x.question&&x.question.topic),exam:x.exam,tries:0,ok:0,fails:0,last:null,lastDate:null,lastTime:0,lastConfidence:"knew",knownStreakDays:0,lastKnownDay:null});
    q.tries++;if(x.correct)q.ok++;else q.fails++;
-   q.last=!!x.correct;q.lastDate=x.date;q.exam=x.exam||q.exam;if(x.question)q.question=x.question;
+   const confidence=x.confidence||"knew",day=new Date(x.time).toISOString().slice(0,10);
+   if(x.correct&&confidence==="knew"){
+     if(q.lastKnownDay!==day)q.knownStreakDays=q.last&&q.lastConfidence==="knew"?q.knownStreakDays+1:1;
+     q.lastKnownDay=day;
+   }else{q.knownStreakDays=0;q.lastKnownDay=null}
+   q.last=!!x.correct;q.lastDate=x.date;q.lastTime=x.time;q.lastConfidence=confidence;q.exam=x.exam||q.exam;if(x.question)q.question=x.question;
+ });
+ Object.values(qmap).forEach(q=>{
+   const delay=intervals[Math.min(Math.max(q.knownStreakDays-1,0),intervals.length-1)];
+   q.dueTime=q.lastTime+delay*86400000;
+   q.mastered=q.knownStreakDays>=2;
+   q.needsReview=!q.last||q.lastConfidence!=="knew"||!q.mastered||q.dueTime<=Date.now();
  });
  return Object.values(qmap);
 }
-function currentMistakes(){return buildQuestionProgress().filter(q=>q.last===false&&q.question&&q.question.answer_status==="verificada").sort((a,b)=>b.fails-a.fails||b.tries-a.tries||a.number-b.number)}
+function currentMistakes(){return buildQuestionProgress().filter(q=>q.needsReview&&q.question&&q.question.answer_status==="verificada").sort((a,b)=>(a.last===false?-1:0)-(b.last===false?-1:0)||b.fails-a.fails||b.tries-a.tries||a.number-b.number)}
+function reviewStatus(q){
+ if(!q.last)return "✗ Fallada · repetir ahora";
+ if(q.lastConfidence==="guessed")return "🎲 Adivinada · repetir";
+ if(q.lastConfidence==="doubted")return "? Dudada · repetir";
+ if(q.knownStreakDays<2)return "✓ Falta acertarla otro día";
+ return q.dueTime<=Date.now()?"⏰ Repaso programado":`✓ Dominada por ahora`;
+}
+function stableDailyNumber(value){let h=2166136261;for(const c of String(value)){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+function dailyPlan(){
+ const today=new Date().toISOString().slice(0,10),progress=buildQuestionProgress(),byId=new Map(progress.map(x=>[String(x.question_id),x])),topicTotals={};
+ progress.forEach(x=>{const k=x.topic||x.module||"General",t=topicTotals[k]||(topicTotals[k]={ok:0,total:0});t.ok+=x.ok;t.total+=x.tries});
+ const candidates=DB.questions.filter(q=>q.answer_status==="verificada").map(q=>{
+   const p=byId.get(String(q.id)),weak=topicTotals[q.topic]&&topicTotals[q.topic].total>=2&&topicTotals[q.topic].ok/topicTotals[q.topic].total<.7;
+   let score=0,reason="Pregunta antigua para no olvidar";
+   if(p&&!p.last){score=1000+p.fails*12;reason="La fallaste"}
+   else if(p&&p.lastConfidence==="guessed"){score=930;reason="La acertaste adivinando"}
+   else if(p&&p.lastConfidence==="doubted"){score=880;reason="La respondiste con duda"}
+   else if(p&&p.dueTime<=Date.now()){score=820;reason="Toca repasarla hoy"}
+   else if(p&&!p.mastered){score=740;reason="Falta consolidarla otro día"}
+   else if(weak){score=430;reason="Tema que necesitas reforzar"}
+   else if(!p){score=180;reason="Pregunta nueva"}
+   else score=90;
+   const hardNewCalc=!p&&/Cálculo/i.test(q.module||"")&&(+q.difficulty||0)>=6;
+   if(hardNewCalc)score=-1;
+   return {q,score,reason,tie:stableDailyNumber(today+":"+q.id)};
+ }).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score||a.tie-b.tie);
+ const picked=[],moduleCounts={};
+ for(const x of candidates){
+   const cap=/Cálculo/i.test(x.q.module||"")?5:6,n=moduleCounts[x.q.module]||0;
+   if(n>=cap&&picked.length<12)continue;
+   picked.push(x);moduleCounts[x.q.module]=n+1;if(picked.length===15)break;
+ }
+ return picked;
+}
+let dailyReasons={};
+function renderDailyCard(){
+ const plan=dailyPlan(),due=plan.filter(x=>/fallaste|adivinando|duda|repasarla|consolidarla/i.test(x.reason)).length,weak=plan.filter(x=>/tema/i.test(x.reason)).length;
+ if(!$("dailyCount"))return;
+ $("dailyCount").textContent=plan.length;$("startDaily").disabled=!plan.length;
+ $("dailyCaption").textContent=plan.length?"Una sesión corta preparada con tus resultados. Cambia sola según avances.":"No hay preguntas verificadas disponibles.";
+ $("dailyMeta").innerHTML=`<span class="daily-pill">${due} de repaso</span><span class="daily-pill">${weak} de temas flojos</span><span class="daily-pill">sin cálculos difíciles nuevos</span>`;
+}
+function startDailyTraining(){
+ const plan=dailyPlan();if(!plan.length)return;
+ runKind="daily";runQs=plan.map(x=>x.q);dailyReasons=Object.fromEntries(plan.map(x=>[String(x.q.id),x.reason]));runPos=0;runAns={};runConfidence={};runIsValidated=true;
+ $("examResult").innerHTML="";$("backExams").textContent="← Inicio";$("finishExam").disabled=false;$("finishExam").textContent="Terminar entrenamiento";$("examTitle").textContent=`Entrenamiento de hoy · ${runQs.length} preguntas`;show("examRun");renderRun();
+}
+renderDailyCard();$("startDaily").onclick=startDailyTraining;
 
 function renderHistory(){
  const h=loadHistory();
@@ -192,19 +265,26 @@ function renderHistory(){
 }
 renderHistory();
 
+function renderReadiness(){
+ const box=$("readinessLights");if(!box)return;
+ const areas=[["Teoría de Navegación","Teoría"],["Cálculo de Navegación","Cálculo"],["Meteorología","Meteorología"],["Inglés","Inglés"]],events=[];
+ buildQuestionProgress().forEach(q=>events.push(q));
+ box.innerHTML=`<h3 style="margin:0 0 9px">Semáforo de preparación</h3><div class="readiness-grid">${areas.map(([module,label])=>{const xs=events.filter(x=>x.module===module),tries=xs.reduce((s,x)=>s+x.tries,0),ok=xs.reduce((s,x)=>s+x.ok,0),rate=tries?Math.round(ok/tries*100):null,cl=rate===null?"empty":rate>=70?"good":rate>=55?"mid":"bad",word=rate===null?"Sin datos":rate>=70?"Buen nivel":rate>=55?"En progreso":"Necesita repaso";return `<div class="readiness ${cl}"><b><i></i>${label}</b><div style="margin-top:7px">${rate===null?"—":rate+"%"} · ${word}</div><div class="sub">${tries} respuestas registradas</div></div>`}).join("")}</div><div class="sub" style="margin-top:8px">Es una orientación personal; el aprobado real también depende de los mínimos de cada materia.</div>`;
+}
 function renderProgress(){
  const h=loadHistory(),pHist=loadPractice(),sum=$("progressSummary"),rec=$("progressRecommendations"),tbl=$("progressQuestions"),hero=$("mistakeExamSummary"),start=$("startMistakeExam");
  if(!sum||!rec||!tbl||!hero||!start)return;
  const mistakes=currentMistakes();
  start.disabled=!mistakes.length;
- hero.innerHTML=mistakes.length?`<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><div class="mistake-count">${mistakes.length}</div><div><b>${mistakes.length===1?"pregunta necesita":"preguntas necesitan"} repetición</b><div class="sub">Están listas para practicar juntas ahora.</div></div></div>`:'<div class="mistake-empty"><b>Ahora mismo no tienes preguntas pendientes.</b><div style="margin-top:4px">Cuando falles una pregunta o la dejes en blanco, aparecerá aquí automáticamente.</div></div>';
- if(!h.length&&!pHist.length){sum.innerHTML='<div class="sub">Aún no hay respuestas registradas. Cuando practiques o termines un examen, estas estadísticas se actualizarán solas.</div>';rec.innerHTML="";tbl.innerHTML='<tr><td colspan="5" class="sub">Todavía no hay preguntas falladas.</td></tr>';return}
+ hero.innerHTML=mistakes.length?`<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><div class="mistake-count">${mistakes.length}</div><div><b>${mistakes.length===1?"pregunta necesita":"preguntas necesitan"} refuerzo</b><div class="sub">No desaparecerán por suerte: deben quedar claras en días distintos.</div></div></div>`:'<div class="mistake-empty"><b>Ahora mismo no tienes preguntas pendientes.</b><div style="margin-top:4px">El entrenamiento diario seguirá trayendo preguntas antiguas para mantenerlas frescas.</div></div>';
+ renderReadiness();
+ if(!h.length&&!pHist.length){sum.innerHTML='<div class="sub">Aún no hay respuestas registradas. Cuando practiques o termines un examen, estas estadísticas se actualizarán solas.</div>';rec.innerHTML="";tbl.innerHTML='<tr><td colspan="5" class="sub">Todavía no hay preguntas pendientes.</td></tr>';return}
  const avg=h.length?Math.round(h.reduce((s,a)=>s+(+a.percent||0),0)/h.length*10)/10:0;
  const best=h.length?Math.max(...h.map(a=>+a.percent||0)):0,last=h.length?(+h[0].percent||0):0;
  const prev=h.length>1?(+h[1].percent||0):null,trend=prev===null?"Primer resultado":(last-prev>=0?`+${Math.round((last-prev)*10)/10} puntos`:`${Math.round((last-prev)*10)/10} puntos`);
  sum.innerHTML=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px"><div class="level"><b>${h.length}</b><div class="sub">exámenes hechos</div></div><div class="level"><b>${avg}%</b><div class="sub">media</div></div><div class="level"><b>${best}%</b><div class="sub">mejor resultado</div></div><div class="level"><b>${trend}</b><div class="sub">respecto al anterior</div></div></div>`;
- rec.innerHTML=`<div class="card" style="background:#f5faf9;margin:0"><b>Recomendación automática</b><div style="margin-top:6px">${mistakes.length?`Haz ahora el examen de tus ${mistakes.length} ${mistakes.length===1?"fallo":"fallos"}. Empieza por las que más veces has fallado.`:(last<70?"No quedan fallos pendientes. Haz otro examen completo para seguir entrenando.":"No quedan fallos pendientes. Puedes probar una convocatoria nueva.")}</div></div>`;
- tbl.innerHTML=mistakes.length?mistakes.map(q=>`<tr><td><b>${esc(q.exam||"")} · P${q.number}</b><br><span class="sub">${esc(q.module||"")}${q.topic?" · "+esc(q.topic):""}</span></td><td><b>${q.tries}</b></td><td>${q.ok}</td><td><b>${q.fails}</b></td><td class="wait">✗ necesita repetición</td></tr>`).join(""):'<tr><td colspan="5" class="sub">No tienes preguntas falladas pendientes.</td></tr>';
+ rec.innerHTML=`<div class="card" style="background:#f5faf9;margin:0"><b>Recomendación automática</b><div style="margin-top:6px">${mistakes.length?`Haz el entrenamiento de hoy: ya mezcla tus ${mistakes.length} preguntas pendientes con tus temas más flojos.`:(last<70?"No quedan repasos pendientes. Haz el entrenamiento corto de hoy antes de otro examen completo.":"Vas bien: mantén el entrenamiento diario y prueba una convocatoria nueva cuando te apetezca.")}</div></div>`;
+ tbl.innerHTML=mistakes.length?mistakes.map(q=>`<tr><td><b>${esc(q.exam||"")} · P${q.number}</b><br><span class="sub">${esc(q.module||"")}${q.topic?" · "+esc(q.topic):""}</span></td><td><b>${q.tries}</b></td><td>${q.ok}</td><td><b>${q.fails}</b></td><td class="review-status ${q.last&&q.lastConfidence==="knew"?"ok":"wait"}">${reviewStatus(q)}</td></tr>`).join(""):'<tr><td colspan="5" class="sub">No tienes preguntas pendientes de refuerzo.</td></tr>';
 }
 renderProgress();
 function renderHomeProgress(){
@@ -250,19 +330,20 @@ renderExamList();
 const examStrategy=DB.exams.map(e=>{const calc=DB.questions.filter(q=>q.exam_id===e.id&&q.module==="Cálculo de Navegación"),advanced=calc.filter(q=>q.difficulty>=6).length;return{convocatoria:e.convocatoria,model:e.model,without_advanced:calc.length-advanced,advanced}});
 $("strategyRows").innerHTML=examStrategy.map(x=>`<tr><td>${x.convocatoria}</td><td>${x.model}</td><td><b>${x.without_advanced}/10</b></td><td>${x.advanced}/10</td></tr>`).join("");
 
-let runQs=[],runPos=0,runAns={},runIsValidated=false,runKind="official";
-function startExam(id){runKind="official";runQs=DB.questions.filter(q=>q.exam_id===id).sort((a,b)=>a.number-b.number);runPos=0;runAns={};runIsValidated=runQs.length===40&&runQs.every(q=>q.answer_status==="verificada"||q.answer_status==="anulada");$("examResult").innerHTML="";$("backExams").textContent="← Exámenes";$("finishExam").disabled=false;$("finishExam").textContent=runIsValidated?"Corregir examen":"Finalizar examen sin corregir";$("examTitle").textContent=runQs[0].convocatoria+" · Modelo "+runQs[0].model+(runIsValidated?"":" · Sin corrector");show("examRun");renderRun()}
+let runQs=[],runPos=0,runAns={},runConfidence={},runIsValidated=false,runKind="official";
+function startExam(id){runKind="official";runQs=DB.questions.filter(q=>q.exam_id===id).sort((a,b)=>a.number-b.number);runPos=0;runAns={};runConfidence={};runIsValidated=runQs.length===40&&runQs.every(q=>q.answer_status==="verificada"||q.answer_status==="anulada");$("examResult").innerHTML="";$("backExams").textContent="← Exámenes";$("finishExam").disabled=false;$("finishExam").textContent=runIsValidated?"Corregir examen":"Finalizar examen sin corregir";$("examTitle").textContent=runQs[0].convocatoria+" · Modelo "+runQs[0].model+(runIsValidated?"":" · Sin corrector");show("examRun");renderRun()}
 function startMistakeExam(){
  const mistakes=currentMistakes();
  if(!mistakes.length)return;
- runKind="mistakes";runQs=mistakes.map(x=>x.question);runPos=0;runAns={};runIsValidated=true;
- $("examResult").innerHTML="";$("backExams").textContent="← Mi progreso";$("finishExam").disabled=false;$("finishExam").textContent="Corregir mis fallos";$("examTitle").textContent=`Mi examen de fallos · ${runQs.length} ${runQs.length===1?"pregunta":"preguntas"}`;show("examRun");renderRun();
+ runKind="mistakes";runQs=mistakes.map(x=>x.question);runPos=0;runAns={};runConfidence={};runIsValidated=true;
+ $("examResult").innerHTML="";$("backExams").textContent="← Mi progreso";$("finishExam").disabled=false;$("finishExam").textContent="Terminar repaso";$("examTitle").textContent=`Mi repaso personal · ${runQs.length} ${runQs.length===1?"pregunta":"preguntas"}`;show("examRun");renderRun();
 }
-function renderProg(){$("examProgress").innerHTML=runQs.map((q,i)=>{const a=runAns[q.id];let st="";if(a&&q.answer_status==="verificada")st=isCorrect(q,a)?"correct":"wrong";return `<div class="pnum ${st} ${i===runPos?"current":""}" data-i="${i}">${runKind==="mistakes"?i+1:q.number}</div>`}).join("");document.querySelectorAll(".pnum").forEach(x=>x.onclick=()=>{runPos=+x.dataset.i;renderRun()})}
-function renderRun(){renderProg();$("finishExam").style.display=runPos===runQs.length-1?"inline-block":"none";const q=runQs[runPos],sel=runAns[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;const origin=runKind==="mistakes"?` · ${q.convocatoria} · pregunta original ${q.number}`:"";
-$("examQuestion").innerHTML=`<div class="sub">Pregunta ${runPos+1} de ${runQs.length} · ${q.module}${origin}</div><div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}`;
-document.querySelectorAll("#examQuestion .opt").forEach(x=>x.onclick=()=>{if(q.answer_status==="anulada"||runAns[q.id])return;runAns[q.id]=x.dataset.l;$("examResult").innerHTML="";renderRun()})}
-$("examPrev").onclick=()=>{runPos=Math.max(0,runPos-1);renderRun()};$("examNext").onclick=()=>{runPos=Math.min(runQs.length-1,runPos+1);renderRun()};$("backExams").onclick=()=>show(runKind==="mistakes"?"stats":"exams");$("startMistakeExam").onclick=startMistakeExam;
+function renderProg(){$("examProgress").innerHTML=runQs.map((q,i)=>{const a=runAns[q.id];let st="";if(a&&q.answer_status==="verificada")st=isCorrect(q,a)?"correct":"wrong";return `<div class="pnum ${st} ${i===runPos?"current":""}" data-i="${i}">${runKind==="official"?q.number:i+1}</div>`}).join("");document.querySelectorAll(".pnum").forEach(x=>x.onclick=()=>{runPos=+x.dataset.i;renderRun()})}
+function renderRun(){renderProg();$("finishExam").style.display=runPos===runQs.length-1?"inline-block":"none";const q=runQs[runPos],sel=runAns[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;const origin=runKind!=="official"?` · ${q.convocatoria} · pregunta original ${q.number}`:"",reason=runKind==="daily"?`<div class="daily-pill" style="display:inline-block;margin-top:8px">Por qué aparece: ${esc(dailyReasons[String(q.id)]||"Repaso personalizado")}</div>`:"";
+$("examQuestion").innerHTML=`<div class="sub">Pregunta ${runPos+1} de ${runQs.length} · ${q.module}${origin}</div>${reason}<div class="question">${esc(q.text)}</div>${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${almanacHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${fb}${confidenceHTML(q,sel,runConfidence[q.id])}`;
+document.querySelectorAll("#examQuestion .opt").forEach(x=>x.onclick=()=>{if(q.answer_status==="anulada"||runAns[q.id])return;runAns[q.id]=x.dataset.l;runConfidence[q.id]="knew";$("examResult").innerHTML="";renderRun()});
+document.querySelectorAll("#examQuestion .confidence").forEach(x=>x.onclick=()=>{runConfidence[q.id]=x.dataset.confidence;renderRun()})}
+$("examPrev").onclick=()=>{runPos=Math.max(0,runPos-1);renderRun()};$("examNext").onclick=()=>{runPos=Math.min(runQs.length-1,runPos+1);renderRun()};$("backExams").onclick=()=>show(runKind==="mistakes"?"stats":runKind==="daily"?"home":"exams");$("startMistakeExam").onclick=startMistakeExam;
 $("finishExam").onclick=()=>{
  const pending=runQs.filter(q=>q.answer_status!=="anulada"&&!runAns[q.id]);
  if(pending.length){
@@ -270,13 +351,14 @@ $("finishExam").onclick=()=>{
    $("examResult").innerHTML=`<div class="feedback no">Todavía no se puede corregir: faltan ${pending.length} ${pending.length===1?"pregunta":"preguntas"} por responder. Te he llevado a la primera pendiente.</div>`;
    return;
  }
- if(runKind==="mistakes"){
-   const now=Date.now(),records=runQs.map((q,i)=>practiceRecord(q,runAns[q.id],now+i));
+ if(runKind==="mistakes"||runKind==="daily"){
+   const now=Date.now(),records=runQs.map((q,i)=>practiceRecord(q,runAns[q.id],now+i,runConfidence[q.id]||"knew",runKind));
    const correct=records.filter(x=>x.correct).length,wrong=records.length-correct;
    savePracticeBatch(records);const remaining=currentMistakes().length;
    $("finishExam").disabled=true;
-   $("examResult").innerHTML=`<div class="card"><h3 style="margin-top:0">Resultado de tus fallos</h3><div style="font-size:25px"><b>${correct}/${records.length} correctas</b></div><div class="sub" style="margin-top:6px">${wrong} ${wrong===1?"pregunta sigue necesitando":"preguntas siguen necesitando"} repetición.</div><div style="margin-top:12px;padding:11px;border-radius:9px;background:${remaining?"#fff6e8":"#e5f6ec"}"><b>${remaining?`Te quedan ${remaining} ${remaining===1?"pregunta pendiente":"preguntas pendientes"}.`:"¡Has limpiado toda tu lista de fallos!"}</b></div><button class="action" id="mistakeResultBack" style="margin-top:14px">Volver a mis preguntas falladas</button></div>`;
-   $("mistakeResultBack").onclick=()=>show("stats");
+   const unsure=records.filter(x=>x.confidence!=="knew").length;
+   $("examResult").innerHTML=`<div class="card"><h3 style="margin-top:0">${runKind==="daily"?"Entrenamiento terminado":"Repaso terminado"}</h3><div style="font-size:25px"><b>${correct}/${records.length} correctas</b></div><div class="sub" style="margin-top:6px">${wrong} errores · ${unsure} respuestas dudadas o adivinadas.</div><div style="margin-top:12px;padding:11px;border-radius:9px;background:${remaining?"#fff6e8":"#e5f6ec"}"><b>${remaining?`Quedan ${remaining} ${remaining===1?"pregunta que necesita":"preguntas que necesitan"} refuerzo.`:"¡Todo lo pendiente está consolidado por ahora!"}</b></div><div class="sub" style="margin-top:9px">Las acertadas no se dan por aprendidas por casualidad: la web volverá a comprobarlas en otro día.</div><button class="action" id="mistakeResultBack" style="margin-top:14px">${runKind==="daily"?"Volver al inicio":"Volver a mi progreso"}</button></div>`;
+   $("mistakeResultBack").onclick=()=>show(runKind==="daily"?"home":"stats");
    return;
  }
  if(!runIsValidated){
@@ -320,7 +402,7 @@ $("finishExam").onclick=()=>{
    correct:c,total:v,wrong:w,blank:b,
    percent:Math.round(c/v*1000)/10,
    global_pass:globalOK,
-   answers:runQs.filter(q=>q.answer_status!=="anulada").map(q=>({question_id:q.id,number:q.number,module:q.module,selected:runAns[q.id]||null,correct:isCorrect(q,runAns[q.id])})),
+   answers:runQs.filter(q=>q.answer_status!=="anulada").map(q=>({question_id:q.id,number:q.number,module:q.module,topic:q.topic,selected:runAns[q.id]||null,confidence:runConfidence[q.id]||"knew",correct:isCorrect(q,runAns[q.id])})),
    blocks:{
      teoria:blocks.teoria.ok+"/"+blocks.teoria.total,
      calculo:blocks.calculo.ok+"/"+blocks.calculo.total,
