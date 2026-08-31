@@ -82,6 +82,10 @@ const formulaBank=[
 function renderFormulas(){const list=$("formulaList"),lev=$("formulaLevel"),top=$("formulaTopic");if(!list)return;const level=lev.value,topic=top.value;list.innerHTML=formulaBank.filter(x=>(level==="all"||x.level===level)&&(topic==="all"||x.topic===topic)).map(x=>`<div class="formula-card ${x.level}"><h3>${x.t} ${x.level==="advanced"?"· difícil":""}</h3><div class="formula">${x.f}</div><details><summary>Ver explicación</summary><p>${x.p}</p></details></div>`).join("")||'<div class="sub">No hay fórmulas con este filtro.</div>'}
 function show(v){views.forEach(x=>$(x).classList.toggle("hidden",x!==v));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.v===v));if(v==="stats")renderProgress()}
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>show(b.dataset.v));
+if(new URLSearchParams(location.search).get("start")==="home"){
+ show("home");
+ window.addEventListener("pageshow",()=>show("home"));
+}
 fillFormulaTopics();
 function fillFormulaTopics(){const s=$("formulaTopic");if(!s)return;[...new Set(formulaBank.map(x=>x.topic))].forEach(x=>s.insertAdjacentHTML("beforeend",`<option>${x}</option>`));$("formulaLevel").onchange=renderFormulas;s.onchange=renderFormulas;renderFormulas()}
 
