@@ -45,3 +45,12 @@ Resultado: **opción C, 39°29,9′ N**.
 
 - CARM, Capitán de Yate, Tipo 1, Junio 2026, preguntas 1, 2 y 8.
 - CARM, Capitán de Yate, Tipo 1, Noviembre 2025, preguntas 11 y 16.
+
+## Recursos visuales incorporados
+
+La web dibuja esquemas propios para las cinco preguntas de este documento. La captura aportada por el alumno se utiliza únicamente como referencia de estilo; no se copia porque contiene simplificaciones que pueden confundir la distancia cenital con un arco desde el horizonte y una trayectoria diurna con un meridiano.
+
+- Coordenadas horarias: https://www.youtube.com/watch?v=opky4uAF4xk
+- Círculos horarios y vertical de un astro: https://www.youtube.com/watch?v=R8MH3_Oh-0E
+
+Los enlaces se comprobaron antes de incorporarlos.
