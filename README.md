@@ -59,6 +59,7 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Resolución completa incorporada: junio de 2023, pregunta 15 (declinación del Sol), con el enunciado autosuficiente, página 184 del Almanaque 2023, lectura guiada de fila y columna e interpolación de 20 minutos.
 - Resolución completa incorporada: junio de 2023, pregunta 17 (altura verdadera del Sol), con clasificación frente a ortodrómica, Tabla A/B de la página 387 y operaciones de corrección paso a paso.
 - “Mi progreso” permite guardar una copia completa y recuperarla en otro navegador sin borrar los resultados que ya existan allí.
+- La portada permite guardar el nombre del alumno y lo saluda personalmente sin modificar ni reiniciar su historial. En esta primera versión el nombre se conserva en el mismo navegador; las cuentas individuales con progreso sincronizado en la nube forman parte de la evolución comercial de la plataforma.
 - Todas las preguntas de Cálculo muestran un cuadro previo con el tipo de problema, las pistas para reconocerlo y si necesita Almanaque. Cuando falta la hoja exacta, la web lo advierte claramente y deja de afirmar que existe una referencia todavía no incorporada.
 - Altura estimada muestra destacada la fórmula completa del triángulo de posición y define cada letra. Junio y marzo de 2026 P11 incluyen las dos hojas necesarias: página diaria y tabla de incrementos, rotuladas con la fila y columna que debe leer el alumno.
 

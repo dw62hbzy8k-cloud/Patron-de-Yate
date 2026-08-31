@@ -17,6 +17,7 @@ Principio comercial decidido por el usuario: **dar más por menos**. El producto
 3. Incorporar Patrón de Yate, con especial atención a los cálculos y al uso de calculadoras científicas.
 4. Cubrir PER, Patrón de Yate y Capitán de Yate en todas las comunidades autónomas y convocatorias disponibles.
 5. Convertir la web estática en una plataforma con usuarios, base de datos, pagos y progreso sincronizado.
+   - Cada alumno tendrá perfil propio, saludo por nombre y progreso aislado del resto de usuarios.
 
 ## Funciones educativas esenciales
 
