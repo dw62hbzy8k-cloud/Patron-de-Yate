@@ -32,7 +32,9 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Marzo de 2017, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1, cruzadas por enunciado y texto de opción debido al orden diferente del banco.
 - Noviembre de 2016, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1; la pregunta 12, cuyo subrayado no es nítido, se comprobó con los datos del propio cálculo.
 - Marzo de 2016, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1; las preguntas 16 y 18, cuyas marcas no son nítidas, se comprobaron con los datos del propio cálculo.
-- Junio de 2016 permanece sin corrector porque su cuestionario oficial no está entre las fuentes conservadas; no se asignan respuestas inventadas.
+- Noviembre de 2015, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1; en la pregunta 4 la propia fuente subraya las cuatro afirmaciones y «Todas las respuestas son correctas».
+- Junio de 2015, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1.
+- Junio de 2016, Modelo 1, queda incorporado con sus 40 respuestas verificadas mediante contraste conceptual con cuestionarios oficiales ya validados y recálculo independiente de los ejercicios 11–20; la hoja de trazabilidad se conserva en `master/verificaciones/`.
 - Marzo de 2026 conserva como anuladas las preguntas 17 y 20; no se les asigna una respuesta ficticia.
 - Los PDFs oficiales utilizados se conservan en `master/fuentes_oficiales/` y cada pregunta enlaza su fuente dentro del JSON.
 - Web estática preparada para publicación desde la raíz del repositorio.

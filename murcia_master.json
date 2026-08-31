@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Aprobar Náutica AI",
-    "version": "0.47",
+    "version": "0.48",
     "region": "Murcia",
     "exams": 34,
     "questions": 1360,
     "date_range": "2015–2026",
     "note": "MASTER acumulativo. Las respuestas solo se activan tras verificarse con fuentes oficiales; las preguntas anuladas se conservan como tales.",
-    "validated_exams": 30,
-    "validated_questions": 1197
+    "validated_exams": 33,
+    "validated_questions": 1317
   },
   "exams": [
     {
@@ -35619,9 +35619,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 801,
@@ -35650,9 +35651,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 802,
@@ -35675,9 +35677,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 803,
@@ -35700,9 +35703,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 804,
@@ -35725,9 +35729,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 805,
@@ -35756,9 +35761,10 @@
           "similarity": 0.55
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 806,
@@ -35797,9 +35803,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 807,
@@ -35822,9 +35829,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 808,
@@ -35847,9 +35855,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 809,
@@ -35872,9 +35881,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 810,
@@ -35897,9 +35907,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 811,
@@ -35922,9 +35933,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 812,
@@ -35947,9 +35959,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 813,
@@ -35993,9 +36006,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 814,
@@ -36018,9 +36032,10 @@
       "similar_exam_count": 1,
       "difficulty": 6,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 815,
@@ -36049,9 +36064,10 @@
           "similarity": 0.71
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 816,
@@ -36074,9 +36090,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 817,
@@ -36099,9 +36116,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 818,
@@ -36124,9 +36142,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 819,
@@ -36149,9 +36168,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Resultado recalculado de forma independiente con los datos del enunciado; desarrollo y controles conservados en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 820,
@@ -36190,9 +36210,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 821,
@@ -36215,9 +36236,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 822,
@@ -36240,9 +36262,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 823,
@@ -36265,9 +36288,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 824,
@@ -36301,9 +36325,10 @@
           "similarity": 0.58
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 825,
@@ -36337,9 +36362,10 @@
           "similarity": 0.84
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 826,
@@ -36362,9 +36388,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 827,
@@ -36393,9 +36420,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 828,
@@ -36418,9 +36446,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 829,
@@ -36443,9 +36472,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 830,
@@ -36489,9 +36519,10 @@
           "similarity": 0.93
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 831,
@@ -36535,9 +36566,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 832,
@@ -36576,9 +36608,10 @@
           "similarity": 0.85
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 833,
@@ -36622,9 +36655,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 834,
@@ -36668,9 +36702,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 835,
@@ -36709,9 +36744,10 @@
           "similarity": 0.93
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 836,
@@ -36750,9 +36786,10 @@
           "similarity": 0.88
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 837,
@@ -36796,9 +36833,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 838,
@@ -36842,9 +36880,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 839,
@@ -36888,9 +36927,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta contrastada por concepto y con preguntas equivalentes de cuestionarios oficiales ya verificados; trazabilidad conservada en la hoja de verificación.",
+      "answer_source": "master/verificaciones/2016-06-murcia-verificacion.md"
     },
     {
       "id": 840,
@@ -38280,9 +38320,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 881,
@@ -38305,9 +38346,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 882,
@@ -38330,9 +38372,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 883,
@@ -38355,9 +38398,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1. El documento subraya las cuatro afirmaciones y la opción d («Todas las respuestas son correctas»).",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 884,
@@ -38396,9 +38440,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 885,
@@ -38437,9 +38482,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 886,
@@ -38462,9 +38508,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 887,
@@ -38487,9 +38534,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 888,
@@ -38518,9 +38566,10 @@
           "similarity": 0.75
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 889,
@@ -38543,9 +38592,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 890,
@@ -38568,9 +38618,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 891,
@@ -38593,9 +38644,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 892,
@@ -38618,9 +38670,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 893,
@@ -38643,9 +38696,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 894,
@@ -38668,9 +38722,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 895,
@@ -38699,9 +38754,10 @@
           "similarity": 0.53
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 896,
@@ -38724,9 +38780,10 @@
       "similar_exam_count": 1,
       "difficulty": 6,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 897,
@@ -38749,9 +38806,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 898,
@@ -38774,9 +38832,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 899,
@@ -38799,9 +38858,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 900,
@@ -38824,9 +38884,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 901,
@@ -38849,9 +38910,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 902,
@@ -38885,9 +38947,10 @@
           "similarity": 0.8
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 903,
@@ -38916,9 +38979,10 @@
           "similarity": 0.53
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 904,
@@ -38947,9 +39011,10 @@
           "similarity": 0.62
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 905,
@@ -38983,9 +39048,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 906,
@@ -39008,9 +39074,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 907,
@@ -39033,9 +39100,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 908,
@@ -39058,9 +39126,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 909,
@@ -39083,9 +39152,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 910,
@@ -39119,9 +39189,10 @@
           "similarity": 0.81
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 911,
@@ -39144,9 +39215,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 912,
@@ -39175,9 +39247,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 913,
@@ -39206,9 +39279,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 914,
@@ -39252,9 +39326,10 @@
           "similarity": 0.65
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 915,
@@ -39277,9 +39352,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 916,
@@ -39308,9 +39384,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 917,
@@ -39333,9 +39410,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 918,
@@ -39358,9 +39436,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 919,
@@ -39404,9 +39483,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Noviembre_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 920,
@@ -39429,9 +39509,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 921,
@@ -39460,9 +39541,10 @@
           "similarity": 0.53
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 922,
@@ -39491,9 +39573,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 923,
@@ -39516,9 +39599,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 924,
@@ -39541,9 +39625,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 925,
@@ -39587,9 +39672,10 @@
           "similarity": 0.74
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 926,
@@ -39612,9 +39698,10 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 927,
@@ -39637,9 +39724,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 928,
@@ -39668,9 +39756,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 929,
@@ -39693,9 +39782,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 930,
@@ -39718,9 +39808,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 931,
@@ -39743,9 +39834,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 932,
@@ -39768,9 +39860,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 933,
@@ -39799,9 +39892,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 934,
@@ -39824,9 +39918,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 935,
@@ -39855,9 +39950,10 @@
           "similarity": 0.57
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 936,
@@ -39880,9 +39976,10 @@
       "similar_exam_count": 1,
       "difficulty": 6,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 937,
@@ -39905,9 +40002,10 @@
       "similar_exam_count": 1,
       "difficulty": 5,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 938,
@@ -39930,9 +40028,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 939,
@@ -39955,9 +40054,10 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 940,
@@ -39980,9 +40080,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 941,
@@ -40005,9 +40106,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 942,
@@ -40036,9 +40138,10 @@
           "similarity": 0.79
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 943,
@@ -40061,9 +40164,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 944,
@@ -40092,9 +40196,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 945,
@@ -40117,9 +40222,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 946,
@@ -40148,9 +40254,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 947,
@@ -40179,9 +40286,10 @@
           "similarity": 0.67
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 948,
@@ -40225,9 +40333,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 949,
@@ -40250,9 +40359,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 950,
@@ -40296,9 +40406,10 @@
           "similarity": 0.6
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 951,
@@ -40327,9 +40438,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 952,
@@ -40373,9 +40485,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 953,
@@ -40419,9 +40532,10 @@
           "similarity": 0.94
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 954,
@@ -40465,9 +40579,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 955,
@@ -40490,9 +40605,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 956,
@@ -40536,9 +40652,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 957,
@@ -40582,9 +40699,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 958,
@@ -40628,9 +40746,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 959,
@@ -40674,9 +40793,10 @@
           "similarity": 0.69
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Respuesta oficial en el PDF CARM Tipo 1; correspondencia verificada por enunciado y texto de opción.",
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2015_Tipo1_con_respuestas.pdf"
     },
     {
       "id": 960,

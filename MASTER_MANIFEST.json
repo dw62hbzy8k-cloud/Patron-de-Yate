@@ -246,7 +246,10 @@
     "Junio 2017 Modelo 1": "40 verificadas según el PDF oficial CARM Junio 2017 Tipo 1; las respuestas de cálculo sin subrayado nítido se comprobaron numéricamente",
     "Marzo 2017 Modelo 1": "40 verificadas según el PDF oficial CARM Marzo 2017 Tipo 1; correspondencia comprobada por enunciado y texto de opción debido al orden diferente del banco",
     "Noviembre 2016 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2016 Tipo 1; la pregunta 12 se comprobó con los datos del propio cálculo",
-    "Marzo 2016 Modelo 1": "40 verificadas según el PDF oficial CARM Marzo 2016 Tipo 1; las preguntas 16 y 18 se comprobaron con los datos del propio cálculo"
+    "Marzo 2016 Modelo 1": "40 verificadas según el PDF oficial CARM Marzo 2016 Tipo 1; las preguntas 16 y 18 se comprobaron con los datos del propio cálculo",
+    "Junio 2015 Modelo 1": "40 verificadas según el PDF oficial CARM Junio 2015 Tipo 1",
+    "Noviembre 2015 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2015 Tipo 1; la pregunta 4 conserva d porque la fuente subraya las cuatro afirmaciones y «Todas las respuestas son correctas»",
+    "Junio 2016 Modelo 1": "40 verificadas por contraste conceptual con cuestionarios oficiales ya validados y recálculo independiente de los ejercicios 11-20; hoja de trazabilidad en master/verificaciones/2016-06-murcia-verificacion.md"
   },
   "features_to_preserve": [
     "Corrector con respuesta bloqueada",
@@ -278,6 +281,6 @@
       "status": "COMPLETA Y VERIFICADA"
     }
   ],
-  "last_update": "2026-08-28",
-  "last_update_note": "Marzo 2020 y Junio 2016 quedan pendientes porque no existe un cuestionario oficial en el material conservado. Se verifica y activa Marzo de 2016, Modelo 1, con sus 40 respuestas según el PDF oficial CARM Tipo 1; las preguntas 16 y 18, cuyas marcas no son nítidas, se comprobaron con los datos del propio cálculo. Se mantienen las verificaciones previas y el banco íntegro de 34 exámenes y 1.360 preguntas."
+  "last_update": "2026-08-31",
+  "last_update_note": "Junio y Noviembre de 2015 quedan verificados y activados con 40 respuestas cada uno según los PDF oficiales CARM Tipo 1. Junio de 2016 queda activado tras contraste conceptual y recálculo independiente de sus diez ejercicios. Marzo de 2020 sigue pendiente porque su cuestionario oficial no está en el material conservado. Se mantiene íntegro el banco de 34 exámenes y 1.360 preguntas."
 }
