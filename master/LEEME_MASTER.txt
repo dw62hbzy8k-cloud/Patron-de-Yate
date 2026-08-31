@@ -63,6 +63,7 @@ SOLUCIONES A CONSERVAR:
 - Marzo 2015: conservar solucionario validado previo (39 + 1 anulada).
 
 ALMANAQUE:
+- 24 junio 2023, pág. 184, guardada físicamente en web/assets/almanaque/2023/ y vinculada a Junio 2023 P15.
 - 13 junio 2026, pág. 173, guardada físicamente en web/assets/almanaque/2026/.
 
 FUNCIONES:
@@ -75,6 +76,7 @@ FUNCIONES:
 - entrenamiento diario automático de 15 preguntas, personalizado con fallos, dudas, respuestas adivinadas, temas flojos y repasos programados.
 - repetición inteligente a 1, 3, 7 y 14 días; una pregunta requiere dos aciertos seguros en días distintos para quedar consolidada.
 - marcador de confianza «La sabía / Dudé / La adiviné», semáforo de preparación por materias y cinco copias automáticas locales del progreso.
+- copia completa descargable y recuperación combinada del progreso para trasladarlo entre navegadores sin sobrescribir intentos existentes.
 - panel de explicación del error con comparación de respuestas, motivo, regla de memoria y fuente; explicaciones específicas conservadas para Junio 2026 P1/P2/P8 y Noviembre 2025 P11/P16.
 - esquemas visuales propios para esas cinco explicaciones y vídeos externos comprobados para coordenadas horarias y círculo vertical; la captura externa del alumno solo se usa como referencia de estilo y no se copia.
 - receta de cálculo para principiantes con datos, croquis, signos, fórmula, sustitución, unidades, comprobación y teclas Casio; P11/P16 de noviembre de 2025 tienen la secuencia exacta.

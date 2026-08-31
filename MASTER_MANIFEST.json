@@ -258,6 +258,7 @@
     "Corregir examen solo en P40",
     "Resultado global y por materias/módulos",
     "Historial automático localStorage",
+    "Copia completa y recuperación combinada del progreso entre navegadores",
     "Número de intento por examen",
     "Barra de porcentaje aprobado por convocatoria, calculada sobre sus intentos completos",
     "Lista automática de preguntas que necesitan refuerzo: fallo, duda, adivinada, no consolidada o repaso vencido",

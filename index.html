@@ -65,6 +65,8 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 <script>
 (function(){
 const P=JSON.parse(document.getElementById("data").textContent),DB=P.db,$=id=>document.getElementById(id);
+const JUNE_2023_P15=DB.questions.find(q=>q.id===14);
+if(JUNE_2023_P15)Object.assign(JUNE_2023_P15,{topic:"Almanaque: declinación",text:"Sábado 24 de junio de 2023. A HcG (UT) = 10:20, en situación estimada 37°59,9′ N - 001°19,6′ E, calculan con el Almanaque Náutico el valor de la declinación del Sol en ese instante:",answer_note:"En la página 184 del Almanaque Náutico 2023, fila UT 10 y columna Dec del Sol, se lee +23°24,7′. Entre las 10 y las 11 la declinación disminuye 0,1′; al interpolar 20 minutos y redondear a décimas se conserva +23°24,7′.",answer_source:"solucionario facilitado por el usuario; Almanaque Náutico Perseis 2023, página 184",almanac_assets:["assets/almanaque/2023/2023-06-24_p184_diaria_sol_luna_planetas-188.png"]});
 const views=["home","practice","exams","stats","examRun","formulas","concepts"];
 const formulaBank=[
  {t:"Tiempo y longitud",topic:"Tiempo",level:"base",f:"1 h de tiempo = 15° de arco",p:"Para pasar de horas a grados, multiplica por 15. Para pasar de grados a horas, divide entre 15."},
@@ -121,7 +123,7 @@ function almanacHTML(q){
 
 function calcGuideHTML(q){
  if(!/Cálculo|Ortodrómica|Rectas/i.test(q.module||""))return "";
- if(q.id===1010)return "";
+ if(q.id===1010||q.id===14)return "";
  const t=(q.topic||"").toLowerCase();
  let title="Guía de cálculo · sin saltarse ningún paso",steps=["Lee el enunciado dos veces y rodea qué te piden exactamente: altura, azimut, latitud, rumbo, hora o distancia.","Haz una lista aparte con todos los datos y copia las unidades; no mezcles grados decimales con grados y minutos.","Dibuja una mini-esfera: Norte/Sur, horizonte, cenit, astro y sentido E/W. El dibujo decide los signos.","Busca en el Almanaque solo la fecha, UT y astro indicados; apunta la fila y la columna antes de cerrar la hoja.","Escribe la fórmula completa sin números. Después sustituye un dato cada vez, usando paréntesis.","Haz primero la cuenta en decimal y después convierte el resultado a grados-minutos-segundos.","Comprueba que los minutos están entre 0 y 59, que el cuadrante tiene sentido y que el resultado es razonable.","Solo al final compara con las opciones; descarta cualquier opción con unidades o signos imposibles."];
  if(q.id===1090){title="Guía cerrada · altura estimada del Sol";steps=["Copia: 22-11-2025 · UT 11:10:00 · l = 35°42′ N · L = 24°40′ E.","En el Almanaque, localiza el Sol para esa fecha y UT y apunta hG☉ y d☉ sin redondear antes de tiempo.","Convierte la longitud: E es positiva, por eso se suma a hG☉. Si el total supera 360°, resta 360° una sola vez.","Escribe el horario local hL☉ resultante y decide si queda E o W en el dibujo.","Usa sen ae = sen l·sen d + cos l·cos d·cos hL; la declinación Sur entra con signo negativo.","Calcula la expresión completa con paréntesis, comprueba que la calculadora está en DEG y convierte la salida a grados y minutos.","Resultado comprobado: ae = 32°08,4′. La opción 32°72,1′ es imposible porque 72,1′ debe normalizarse y no es una respuesta válida tal como está escrita."]}
@@ -132,6 +134,23 @@ function calcGuideHTML(q){
  return `<div class="card" style="margin-top:14px;background:#fffaf0;border-color:#ead7a1"><h3 style="margin-top:0">🧭 ${title}</h3><div class="sub">La hoja del Almanaque de arriba es la referencia de esta pregunta.</div><ol style="line-height:1.55;margin-bottom:0">${steps.map(s=>`<li>${s}</li>`).join("")}</ol><div class="sub" style="margin-top:10px">La página exacta, el croquis y la cuenta numérica completa se añadirán al verificar esta pregunta.</div></div>`;
 }
 function completeSolutionHTML(q){
+ if(q.id===14)return `<details class="card" open style="margin-top:10px;background:#f3fbf5;border-color:#87bd98"><summary><b>✅ Resolución completa · sin suponer que sabes nada</b></summary>
+ <div style="line-height:1.65">
+ <p><b>Qué significa lo que piden:</b> la <b>declinación</b> dice a cuántos grados está el Sol al norte (+) o al sur (−) del Ecuador celeste. En esta pregunta <b>no tienes que usar ninguna fórmula</b>: solo leer correctamente una tabla.</p>
+ <div style="padding:11px;border-radius:9px;background:#fff;border:1px solid #cfe3d4"><b>Datos que vas a usar:</b> 24 de junio de 2023 · UT 10:20 · Sol.<br><b>Datos que NO vas a usar:</b> latitud 37°59,9′ N y longitud 001°19,6′ E.</div>
+ <ol>
+ <li>Pulsa <b>“Ver hoja del Almanaque necesaria”</b>, justo encima de esta explicación.</li>
+ <li>Mira el título grande de la hoja: debe decir <b>“Sábado 24 de junio de 2023”</b>. Si pone otro día, esa hoja no sirve.</li>
+ <li>Ve al cuadro de arriba a la izquierda que pone <b>SOL</b>.</li>
+ <li>En ese cuadro hay tres columnas: <b>UT</b>, <b>hG ☉</b> y <b>Dec</b>. Pon el dedo en <b>Dec</b>. “Dec” es la abreviatura de declinación.</li>
+ <li>Baja hasta la fila que empieza por <b>10</b>, porque la hora es 10:20 y primero se toma la hora entera anterior: 10.</li>
+ <li>Sin salirte de esa fila, mira la columna <b>Dec</b>. Allí aparece <b>+23°24,7′</b>.</li>
+ <li>Comprobación de los 20 minutos: a las 11 la tabla muestra +23°24,6′. Solo cambia 0,1′ en una hora; en 20 minutos cambia 0,033′. Al redondear a una décima sigue quedando <b>+23°24,7′</b>.</li>
+ <li>Busca esa cifra entre las respuestas: es la <b>D</b>.</li>
+ </ol>
+ <div style="padding:12px;border-radius:9px;background:#e3f4e8;font-size:18px"><b>Respuesta: D · +23°24,7′</b></div>
+ <p><b>No te confundas:</b> el número 329°23,9′ de la misma fila pertenece a <b>hG del Sol</b>; no es la declinación.</p>
+ </div></details>`;
  if(q.id!==1010)return "";
  return `<details class="card" style="margin-top:10px;background:#f3fbf5;border-color:#b9dbc2"><summary><b>✅ Resolución completa · paso a paso</b></summary>
  <div style="line-height:1.6">
@@ -147,6 +166,7 @@ function completeSolutionHTML(q){
 
 function calculatorHTML(q){
  if(!/Cálculo|Ortodrómica|Rectas/i.test(q.module||""))return "";
+ if(q.id===14)return `<details class="card" open style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ ¿Hay que usar la Casio?</b></summary><p><b>No.</b> Esta pregunta se resuelve leyendo el Almanaque. La pequeña interpolación solo sirve para comprobar el redondeo: 0,1′ × 20 ÷ 60 = 0,033′. No necesitas teclearla para elegir la respuesta.</p></details>`;
  if(q.id===1010)return `<details class="card" style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ Teclas exactas · Casio fx-85SP X II</b></summary><ol style="line-height:1.55"><li><b>MENU</b> → selecciona <b>Calcular</b> → <b>=</b>.</li><li><b>SHIFT</b> → <b>MENU (CONFIG)</b> → <b>2</b> → <b>1</b>. Comprueba que arriba aparece <b>D</b>.</li><li>Pulsa <b>AC</b>.</li></ol><div class="sub">Pulsa la tecla <b>°′″</b> después de grados, minutos y segundos.</div><div style="margin-top:9px;padding:10px;background:white;border-radius:9px;line-height:1.75"><b>SHIFT SIN</b><br><b>SIN 40 °′″ 34 °′″ 0 °′″ ) ×</b><br><b>SIN 23 °′″ 13 °′″ 48 °′″ ) +</b><br><b>COS 40 °′″ 34 °′″ 0 °′″ ) ×</b><br><b>COS 23 °′″ 13 °′″ 48 °′″ ) ×</b><br><b>COS 23 °′″ 9 °′″ 36 °′″ ) ) =</b></div><p>Debe salir <b>63,93724958</b>. Pulsa una vez <b>°′″</b>: aparecerá <b>63°56′14,1″</b>, que redondeado es <b>63°56,2′</b>.</p></details>`;
  if(q.id===1090)return `<details class="card" style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ Teclas exactas · altura estimada (Casio fx-85SP X II)</b></summary><ol style="line-height:1.55"><li><b>MENU</b> → <b>Calcular</b> → <b>=</b>.</li><li><b>SHIFT</b> → <b>MENU (CONFIG)</b> → <b>2</b> → <b>1</b>. Arriba debe aparecer <b>D</b> de DEG.</li><li>Pulsa <b>AC</b>.</li><li>Escribe: <b>SIN 35 °′″ 42 °′″ 0 °′″ ) × SIN (−) 20 °′″ 14 °′″ 6 °′″ ) + COS 35 °′″ 42 °′″ 0 °′″ ) × COS (−) 20 °′″ 14 °′″ 6 °′″ ) × COS 15 °′″ 37 °′″ 36 °′″ ) =</b>.</li><li>Debe salir aproximadamente <b>0,531...</b>. Pulsa <b>SHIFT</b> → <b>SIN</b> para obtener el arco seno y después la tecla <b>°′″</b>.</li></ol><div class="sub">Resultado: <b>32°08,4′</b>. El signo (−) delante de la declinación Sur es obligatorio.</div></details>`;
  if(q.id===1095)return `<details class="card" style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ Teclas exactas · latitud meridiana (Casio fx-85SP X II)</b></summary><ol style="line-height:1.55"><li><b>MENU</b> → <b>Calcular</b> y comprueba <b>DEG</b> con <b>SHIFT</b> → <b>MENU</b> → <b>2</b> → <b>1</b>.</li><li>Pulsa <b>AC</b>.</li><li>Distancia cenital: <b>90 °′″ 0 °′″ 0 °′″ − 32 °′″ 15 °′″ 12 °′″ =</b>. Sale <b>57°44,8′</b>.</li><li>Resta la declinación Sur: <b>57 °′″ 44 °′″ 48 °′″ − 18 °′″ 14 °′″ 54 °′″ =</b>.</li><li>Pulsa <b>°′″</b> para leer <b>39°29,9′</b> y añade <b>N</b> por el croquis del Sol al Sur.</li></ol></details>`;
@@ -337,7 +357,7 @@ function renderProgress(){
  start.disabled=!mistakes.length;
  hero.innerHTML=mistakes.length?`<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><div class="mistake-count">${mistakes.length}</div><div><b>${mistakes.length===1?"pregunta necesita":"preguntas necesitan"} refuerzo</b><div class="sub">No desaparecerán por suerte: deben quedar claras en días distintos.</div></div></div>`:'<div class="mistake-empty"><b>Ahora mismo no tienes preguntas pendientes.</b><div style="margin-top:4px">El entrenamiento diario seguirá trayendo preguntas antiguas para mantenerlas frescas.</div></div>';
  renderReadiness();
- if(!h.length&&!pHist.length){sum.innerHTML='<div class="sub">Aún no hay respuestas registradas. Cuando practiques o termines un examen, estas estadísticas se actualizarán solas.</div>';rec.innerHTML="";tbl.innerHTML='<tr><td colspan="5" class="sub">Todavía no hay preguntas pendientes.</td></tr>';return}
+ if(!h.length&&!pHist.length){sum.innerHTML='<div class="mistake-empty"><b>No hay progreso guardado en este navegador.</b><div style="margin-top:5px">Si ya hiciste exámenes en otra ventana o navegador, no significa que se hayan borrado: pulsa <b>Recuperar una copia de mi progreso</b> debajo.</div></div>';rec.innerHTML="";tbl.innerHTML='<tr><td colspan="5" class="sub">Todavía no hay preguntas pendientes en este navegador.</td></tr>';return}
  const avg=h.length?Math.round(h.reduce((s,a)=>s+(+a.percent||0),0)/h.length*10)/10:0;
  const best=h.length?Math.max(...h.map(a=>+a.percent||0)):0,last=h.length?(+h[0].percent||0):0;
  const prev=h.length>1?(+h[1].percent||0):null,trend=prev===null?"Primer resultado":(last-prev>=0?`+${Math.round((last-prev)*10)/10} puntos`:`${Math.round((last-prev)*10)/10} puntos`);
@@ -349,7 +369,7 @@ renderProgress();
 function renderHomeProgress(){
  const h=loadHistory(),cap=$("homeProgressCaption"),cards=$("homeProgressCards"),chart=$("performanceChart");
  if(!cap||!cards||!chart)return;
- if(!h.length){cap.textContent="Todavía no hay exámenes corregidos guardados en este navegador.";cards.innerHTML='<div class="home-stat"><b>0%</b><div class="sub">Cuando hagas tu primer examen aparecerá aquí tu gráfica personal.</div></div>';chart.innerHTML="";return}
+ if(!h.length){cap.textContent="Este navegador todavía no tiene tu historial. Si lo hiciste en otra ventana, puedes recuperarlo desde Mi progreso.";cards.innerHTML='<div class="home-stat"><b>0%</b><div class="sub">Tu historial puede seguir guardado en el navegador donde hiciste los exámenes.</div></div>';chart.innerHTML="";return}
  const avg=Math.round(h.reduce((s,a)=>s+(+a.percent||0),0)/h.length*10)/10,best=Math.max(...h.map(a=>+a.percent||0));
  cap.textContent=`${h.length} ${h.length===1?"examen corregido":"exámenes corregidos"} · evolución de tus resultados`;
  cards.innerHTML=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px"><div class="home-stat"><b>${Math.round((+h[0].percent||0)*10)/10}%</b><div class="sub">último resultado</div></div><div class="home-stat"><b>${avg}%</b><div class="sub">media</div></div><div class="home-stat"><b>${best}%</b><div class="sub">mejor resultado</div></div></div>`;
@@ -366,11 +386,28 @@ function renderHomeAreas(){
  chart.className='area-chart';chart.innerHTML=`<div class="sub">Rendimiento acumulado por tipo de pregunta</div>${areas.map(([k,n])=>{const x=totals[k],p=x.total?Math.round(x.ok/x.total*1000)/10:0;return `<div class="area-row"><b>${n}</b><div class="area-track"><div class="area-fill" style="width:${p}%"></div></div><div class="area-value">${x.total?p+'%':'—'}</div></div>`}).join('')}`;
 }
 renderHomeAreas();
-$("exportProgress").onclick=()=>{
- const h=loadHistory(),questionProgress=buildQuestionProgress().map(({question,...x})=>x),mistakes=currentMistakes().map(({question,...x})=>x);
- const report={generated_at:new Date().toISOString(),description:"Informe automático de progreso de Capitán de Yate",attempts:h,question_progress:questionProgress,current_mistakes:mistakes};
+const progressExportButton=$("exportProgress");
+progressExportButton.textContent="Guardar una copia completa de mi progreso";
+progressExportButton.insertAdjacentHTML("afterend",'<button class="action" id="importProgress" style="margin:14px 0 0 8px">Recuperar una copia de mi progreso</button><input id="importProgressFile" type="file" accept="application/json,.json" hidden><div id="progressTransferStatus" class="sub" style="margin-top:9px"></div>');
+progressExportButton.onclick=()=>{
+ const h=loadHistory(),practice=loadPractice(),questionProgress=buildQuestionProgress().map(({question,...x})=>x),mistakes=currentMistakes().map(({question,...x})=>x);
+ const report={format:"aprobar-nautica-progress-v2",generated_at:new Date().toISOString(),description:"Copia completa del progreso de Capitán de Yate",history:h,attempts:h,practice,question_progress:questionProgress,current_mistakes:mistakes};
  const blob=new Blob([JSON.stringify(report,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");
- a.href=url;a.download="informe-progreso-capitan-yate.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),500);
+ a.href=url;a.download="copia-progreso-aprobar-nautica.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),500);
+};
+function mergeProgressRows(current,incoming){const seen=new Set(),out=[];[...incoming,...current].forEach(x=>{const key=JSON.stringify([x.ts||x.date||"",x.exam_id||x.exam||"",x.question_id||"",x.kind||"",x.percent??"",x.selected||""]);if(!seen.has(key)){seen.add(key);out.push(x)}});return out.sort((a,b)=>(+b.ts||0)-(+a.ts||0))}
+$("importProgress").onclick=()=>$("importProgressFile").click();
+$("importProgressFile").onchange=async e=>{
+ const file=e.target.files&&e.target.files[0];if(!file)return;
+ try{
+   const data=JSON.parse(await file.text()),history=Array.isArray(data.history)?data.history:(Array.isArray(data.attempts)?data.attempts:[]),practice=Array.isArray(data.practice)?data.practice:[];
+   if(!history.length&&!practice.length)throw new Error("La copia no contiene exámenes ni prácticas.");
+   localStorage.setItem(HISTKEY,JSON.stringify(mergeProgressRows(loadHistory(),history)));
+   localStorage.setItem(PRACTKEY,JSON.stringify(mergeProgressRows(loadPractice(),practice)));
+   makeAutoBackup();renderHistory();renderExamList();refreshPersonal();renderHomeProgress();renderHomeAreas();
+   $("progressTransferStatus").innerHTML=`<b class="ok">✓ Progreso recuperado:</b> ${history.length} exámenes y ${practice.length} respuestas de práctica encontrados en la copia.`;
+ }catch(err){$("progressTransferStatus").innerHTML=`<b class="wait">No se pudo recuperar:</b> ${esc(err.message)}`}
+ e.target.value="";
 };
 
 function validated(e){const qs=DB.questions.filter(q=>q.exam_id===e.id);return qs.length===40&&qs.every(q=>q.answer_status==="verificada"||q.answer_status==="anulada")}

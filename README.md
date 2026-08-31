@@ -56,6 +56,8 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - MASTER, manifiesto y archivos de seguridad conservados en `master/`.
 - Material del Almanaque conservado en `assets/almanaque/`.
 - Primera resolución completa incorporada: junio de 2026, pregunta 11 (altura estimada del Sol), con página 173 del Almanaque, signos, cálculo y teclas exactas de la Casio fx-85SP X II.
+- Resolución completa incorporada: junio de 2023, pregunta 15 (declinación del Sol), con el enunciado autosuficiente, página 184 del Almanaque 2023, lectura guiada de fila y columna e interpolación de 20 minutos.
+- “Mi progreso” permite guardar una copia completa y recuperarla en otro navegador sin borrar los resultados que ya existan allí.
 
 El manifiesto documenta qué convocatorias del objetivo acumulativo todavía deben reimportarse desde sus fuentes originales. La base existente se conserva íntegra mientras se completa esa consolidación.
 

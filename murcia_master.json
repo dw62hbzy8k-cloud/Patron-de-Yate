@@ -10600,8 +10600,8 @@
       "model": 1,
       "number": 15,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
-      "text": "A continuación, con esos mismos datos de HcG y situación de estima, calculan el valor de la declinación del Sol en ese instante:",
+      "topic": "Almanaque: declinación",
+      "text": "Sábado 24 de junio de 2023. A HcG (UT) = 10:20, en situación estimada 37°59,9′ N - 001°19,6′ E, calculan con el Almanaque Náutico el valor de la declinación del Sol en ese instante:",
       "options": [
         "+23° 33,0'.",
         "+23° 30,1'.",
@@ -10616,8 +10616,11 @@
       "similar_examples": [],
       "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "",
-      "answer_source": "solucionario facilitado por el usuario"
+      "answer_note": "En la página 184 del Almanaque Náutico 2023, fila UT 10 y columna Dec del Sol, se lee +23°24,7′. Entre las 10 y las 11 la declinación disminuye 0,1′; al interpolar 20 minutos y redondear a décimas se conserva +23°24,7′.",
+      "answer_source": "solucionario facilitado por el usuario; Almanaque Náutico Perseis 2023, página 184",
+      "almanac_assets": [
+        "assets/almanaque/2023/2023-06-24_p184_diaria_sol_luna_planetas-188.png"
+      ]
     },
     {
       "id": 15,
