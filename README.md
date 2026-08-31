@@ -39,6 +39,8 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Marzo de 2026 conserva como anuladas las preguntas 17 y 20; no se les asigna una respuesta ficticia.
 - Los PDFs oficiales utilizados se conservan en `master/fuentes_oficiales/` y cada pregunta enlaza su fuente dentro del JSON.
 - Web estática preparada para publicación desde la raíz del repositorio.
+- Plan personal de Cálculo empezando por los bloques más fáciles, con acceso directo a prácticas por tema y progreso automático gris/rojo/amarillo/verde basado en aciertos, variedad de preguntas y repetición en días distintos.
+- Corregida la clasificación de abril de 2022: sus preguntas 14, 15 y 17 son respectivamente latitud por meridiana, horario de astros y latitud por la Polar; la mera mención de la derrota ortodrómica no las convierte en ejercicios de Ortodrómica.
 - La web calcula automáticamente el progreso del alumno en el navegador: evolución, media, fallos repetidos, preguntas pendientes de repaso y recomendaciones. También permite descargar un informe de estadísticas.
 - Cada convocatoria muestra su número de intentos completos. “Mi progreso” reúne las preguntas que necesitan refuerzo —falladas, dudadas, adivinadas, aún no consolidadas o con repaso vencido—, indica cuántas veces se hizo cada una y crea una práctica personal con ellas. Desaparecen de pendientes cuando se aciertan con seguridad en dos días distintos, hasta su siguiente repaso programado.
 - Junto a los intentos de cada convocatoria aparece una barra con el porcentaje aprobado y la relación de aprobados sobre intentos totales.

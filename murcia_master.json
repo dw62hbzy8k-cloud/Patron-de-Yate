@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Aprobar Náutica AI",
-    "version": "0.49",
+    "version": "0.50",
     "region": "Murcia",
     "exams": 34,
     "questions": 1360,
@@ -358,7 +358,7 @@
       "topic": "Ortodrómica",
       "exam_count": 34,
       "exam_percent": 100,
-      "question_count": 72,
+      "question_count": 69,
       "difficulty": 7,
       "study_value": 14
     },
@@ -385,7 +385,7 @@
       "topic": "Teoría general",
       "exam_count": 29,
       "exam_percent": 85.3,
-      "question_count": 116,
+      "question_count": 115,
       "difficulty": 3,
       "study_value": 28
     },
@@ -412,7 +412,7 @@
       "topic": "Estrellas y constelaciones",
       "exam_count": 25,
       "exam_percent": 73.5,
-      "question_count": 63,
+      "question_count": 64,
       "difficulty": 1,
       "study_value": 74
     },
@@ -439,7 +439,7 @@
       "topic": "Almanaque: horarios de astros",
       "exam_count": 23,
       "exam_percent": 67.6,
-      "question_count": 39,
+      "question_count": 40,
       "difficulty": 3,
       "study_value": 23
     },
@@ -517,21 +517,21 @@
     },
     {
       "module": "Inglés",
-      "topic": "SMCP: VHF",
-      "exam_count": 15,
-      "exam_percent": 44.1,
-      "question_count": 17,
-      "difficulty": 1,
-      "study_value": 44
-    },
-    {
-      "module": "Inglés",
       "topic": "SMCP: navegación y tráfico",
       "exam_count": 15,
       "exam_percent": 44.1,
       "question_count": 17,
       "difficulty": 2,
       "study_value": 22
+    },
+    {
+      "module": "Inglés",
+      "topic": "SMCP: VHF",
+      "exam_count": 15,
+      "exam_percent": 44.1,
+      "question_count": 17,
+      "difficulty": 1,
+      "study_value": 44
     },
     {
       "module": "Teoría de Navegación",
@@ -652,6 +652,15 @@
     },
     {
       "module": "Cálculo de Navegación",
+      "topic": "Latitud por meridiana",
+      "exam_count": 7,
+      "exam_percent": 20.6,
+      "question_count": 8,
+      "difficulty": 2,
+      "study_value": 10
+    },
+    {
+      "module": "Cálculo de Navegación",
       "topic": "Meridiana / horas",
       "exam_count": 7,
       "exam_percent": 20.6,
@@ -687,15 +696,6 @@
       "study_value": 6
     },
     {
-      "module": "Cálculo de Navegación",
-      "topic": "Latitud por meridiana",
-      "exam_count": 6,
-      "exam_percent": 17.6,
-      "question_count": 7,
-      "difficulty": 2,
-      "study_value": 9
-    },
-    {
       "module": "Inglés",
       "topic": "SMCP: vocabulario náutico",
       "exam_count": 5,
@@ -703,6 +703,15 @@
       "question_count": 5,
       "difficulty": 1,
       "study_value": 15
+    },
+    {
+      "module": "Cálculo de Navegación",
+      "topic": "Latitud por la Polar",
+      "exam_count": 4,
+      "exam_percent": 11.8,
+      "question_count": 5,
+      "difficulty": 3,
+      "study_value": 4
     },
     {
       "module": "Cálculo de Navegación",
@@ -715,21 +724,12 @@
     },
     {
       "module": "Cálculo de Navegación",
-      "topic": "Latitud por la Polar",
-      "exam_count": 3,
-      "exam_percent": 8.8,
-      "question_count": 4,
-      "difficulty": 3,
-      "study_value": 3
-    },
-    {
-      "module": "Cálculo de Navegación",
-      "topic": "LATITUD POR LA POLAR",
+      "topic": "Altura meridiana",
       "exam_count": 3,
       "exam_percent": 8.8,
       "question_count": 3,
-      "difficulty": 5,
-      "study_value": 2
+      "difficulty": 2,
+      "study_value": 4
     },
     {
       "module": "Cálculo de Navegación",
@@ -742,12 +742,12 @@
     },
     {
       "module": "Cálculo de Navegación",
-      "topic": "Altura meridiana",
+      "topic": "LATITUD POR LA POLAR",
       "exam_count": 3,
       "exam_percent": 8.8,
       "question_count": 3,
-      "difficulty": 2,
-      "study_value": 4
+      "difficulty": 5,
+      "study_value": 2
     },
     {
       "module": "Teoría de Navegación",
@@ -778,15 +778,6 @@
     },
     {
       "module": "Teoría de Navegación",
-      "topic": "Azimut",
-      "exam_count": 1,
-      "exam_percent": 2.9,
-      "question_count": 1,
-      "difficulty": 3,
-      "study_value": 1
-    },
-    {
-      "module": "Teoría de Navegación",
       "topic": "Altura verdadera",
       "exam_count": 1,
       "exam_percent": 2.9,
@@ -795,12 +786,12 @@
       "study_value": 1
     },
     {
-      "module": "Cálculo de Navegación",
-      "topic": "Rumbo verdadero",
+      "module": "Teoría de Navegación",
+      "topic": "Azimut",
       "exam_count": 1,
       "exam_percent": 2.9,
       "question_count": 1,
-      "difficulty": 2,
+      "difficulty": 3,
       "study_value": 1
     },
     {
@@ -810,6 +801,15 @@
       "exam_percent": 2.9,
       "question_count": 1,
       "difficulty": 5,
+      "study_value": 1
+    },
+    {
+      "module": "Cálculo de Navegación",
+      "topic": "Rumbo verdadero",
+      "exam_count": 1,
+      "exam_percent": 2.9,
+      "question_count": 1,
+      "difficulty": 2,
       "study_value": 1
     }
   ],
@@ -13996,8 +13996,8 @@
         "La mitad de ella se ubica en el hemisferio Norte y la otra mitad en el hemisferio Sur.",
         "Solo la estrella Rigel se encuentra en el hemisferio Sur."
       ],
-      "topic_percent": 85.3,
-      "topic_exam_count": 29,
+      "topic_percent": 73.5,
+      "topic_exam_count": 25,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 3,
@@ -14388,8 +14388,8 @@
         "37° 25,2'N",
         "37° 18,3'N"
       ],
-      "topic_percent": 17.6,
-      "topic_exam_count": 6,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 2,
@@ -15599,7 +15599,7 @@
       "model": 2,
       "number": 14,
       "module": "Cálculo de Navegación",
-      "topic": "Ortodrómica",
+      "topic": "Latitud por meridiana",
       "text": "Navegan al rumbo inicial ortodrómico y a hora civil de Greenwich (HCG) 16:22:28, se encuentran en situación estimada= 33°10,2'N - 063°28,2'W y en ese instante se produce el paso del Sol por el meridiano móvil del yate y toman altura meridiana instrumental al Sol (limbo inferior) = 62°10,1' (elevación del observador= 3 metros y corrección de índice= -3 ) y calculan la declinación del Sol en ese instante= +5°05,7'y rectifican la latitud por meridiana al Sol:",
       "options": [
         "32°48,7'N.",
@@ -15607,11 +15607,11 @@
         "32°42,2'N.",
         "32°46,2'N."
       ],
-      "topic_percent": 100,
-      "topic_exam_count": 34,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
-      "difficulty": 7,
+      "difficulty": 2,
       "similar_examples": [],
       "answer": "d",
       "answer_status": "verificada",
@@ -15625,7 +15625,7 @@
       "model": 2,
       "number": 15,
       "module": "Cálculo de Navegación",
-      "topic": "Ortodrómica",
+      "topic": "Almanaque: horarios de astros",
       "text": "SABADO 2 DE ABRIL DE 2022. Continúan navegando al rumbo inicial ortodrómico con viento moderado del Oeste y mar tendida del WNW. A HCG 23:10:00 en situación estimada= 33°06,3'N - 062°36,4'W y en ese instante calculan el horario del lugar de Aries (HIY):",
       "options": [
         "116°09,9'.",
@@ -15633,11 +15633,11 @@
         "178°46,3'.",
         "170°40,2'."
       ],
-      "topic_percent": 100,
-      "topic_exam_count": 34,
+      "topic_percent": 67.6,
+      "topic_exam_count": 23,
       "similar_percent": 4,
       "similar_exam_count": 1,
-      "difficulty": 7,
+      "difficulty": 3,
       "similar_examples": [],
       "answer": "a",
       "answer_status": "verificada",
@@ -15677,7 +15677,7 @@
       "model": 2,
       "number": 17,
       "module": "Cálculo de Navegación",
-      "topic": "Ortodrómica",
+      "topic": "Latitud por la Polar",
       "text": "DIA 3 DE ABRIL DE 2022. Siguen navegando al rumbo inicial ortodrómico, aumenta la intensidad del viento Oeste con marejada de popa. A HCG 10:00:00 en el crepúsculo matutino, están en situación estimada = 33°26,1´N - 061°41,2´W y en ese instante toman altura instrumental a la estrella -Polar- = 33°01,9' (elevación del observador= 3 metros y corrección de índice = -3) y calculado previamente el horario del lugar de Aries (HIY)= 280°00'00´ , proceden a rectificar la latitud por altura a la estrella -Polar- utilizando las tablas del Almanaque Náutico correspondientes:",
       "options": [
         "33°00'15´N.",
@@ -15685,11 +15685,11 @@
         "33°24'10´N.",
         "33°32'00´N."
       ],
-      "topic_percent": 100,
-      "topic_exam_count": 34,
+      "topic_percent": 11.8,
+      "topic_exam_count": 4,
       "similar_percent": 4,
       "similar_exam_count": 1,
-      "difficulty": 7,
+      "difficulty": 3,
       "similar_examples": [],
       "answer": "b",
       "answer_status": "verificada",
@@ -18189,8 +18189,8 @@
         "40° 14.4'N",
         "40° 16.6'N"
       ],
-      "topic_percent": 17.6,
-      "topic_exam_count": 6,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 2,
@@ -24780,8 +24780,8 @@
         "36° 20,4´ N.",
         "35° 58,9´ N."
       ],
-      "topic_percent": 8.8,
-      "topic_exam_count": 3,
+      "topic_percent": 11.8,
+      "topic_exam_count": 4,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 3,
@@ -24916,8 +24916,8 @@
         "35° 12,2´.",
         "35° 05,1´."
       ],
-      "topic_percent": 17.6,
-      "topic_exam_count": 6,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 2,
@@ -28557,8 +28557,8 @@
         "Zv0= 107,5°",
         "Zv0= 112,8°"
       ],
-      "topic_percent": 17.6,
-      "topic_exam_count": 6,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 2,
@@ -28583,8 +28583,8 @@
         "lo= 38° 33,0’N.",
         "lo= 38° 40,0’N."
       ],
-      "topic_percent": 17.6,
-      "topic_exam_count": 6,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 2,
@@ -30976,8 +30976,8 @@
         "32° 30,5´N",
         "32° 20,5´N"
       ],
-      "topic_percent": 8.8,
-      "topic_exam_count": 3,
+      "topic_percent": 11.8,
+      "topic_exam_count": 4,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 3,
@@ -31002,8 +31002,8 @@
         "6° NW",
         "8° NW"
       ],
-      "topic_percent": 8.8,
-      "topic_exam_count": 3,
+      "topic_percent": 11.8,
+      "topic_exam_count": 4,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 3,
@@ -31080,8 +31080,8 @@
         "latitud meridiana = 32° 16.3´N.",
         "latitud meridiana = 32° 54.2´N."
       ],
-      "topic_percent": 17.6,
-      "topic_exam_count": 6,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 2,
@@ -37371,8 +37371,8 @@
         "29° 47,4’N.",
         "30° 10,2’N."
       ],
-      "topic_percent": 17.6,
-      "topic_exam_count": 6,
+      "topic_percent": 20.6,
+      "topic_exam_count": 7,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 2,
@@ -37522,8 +37522,8 @@
         "38° 48,3’N.",
         "38° 52,6’N."
       ],
-      "topic_percent": 8.8,
-      "topic_exam_count": 3,
+      "topic_percent": 11.8,
+      "topic_exam_count": 4,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 3,
