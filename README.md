@@ -67,6 +67,7 @@ El manifiesto documenta qué convocatorias del objetivo acumulativo todavía deb
 - `index.html`: aplicación web.
 - `murcia_master.json`: banco de exámenes y preguntas usado por la web.
 - `MASTER_MANIFEST.json`: inventario, reglas y estado de consolidación.
+- `HOJA_DE_RUTA_PRODUCTO_Y_NEGOCIO.md`: memoria acumulativa de las ideas, prioridades y decisiones de expansión nacional.
 - `master/ARCHIVO_MAESTRO_CAPITAN_YATE_MURCIA.xlsx`: hoja maestra recuperada.
 - `master/checkpoints/CAPITAN_YATE_MASTER_CHECKPOINT.zip`: checkpoint original, sin modificar.
 - `master/fuentes_oficiales/`: cuestionarios oficiales CARM usados para verificar las respuestas.

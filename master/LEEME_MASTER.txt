@@ -2,6 +2,10 @@ CAPITÁN DE YATE · MASTER ACUMULATIVO
 
 REGLA: ninguna versión futura puede perder contenido ya incorporado.
 
+HOJA DE RUTA: las decisiones de producto, expansión nacional, modelo comercial,
+calculadoras, visita 360 y acompañamiento al examen se conservan en
+HOJA_DE_RUTA_PRODUCTO_Y_NEGOCIO.md. Ese documento también es acumulativo.
+
 Base actual conservada: 34 exámenes / 1.360 preguntas.
 Objetivo consolidado actual: 34 exámenes / 1.360 preguntas.
 
