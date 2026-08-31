@@ -10,5 +10,16 @@
     "date": "2026-06-13",
     "page": 173,
     "description": "Sábado 13 de junio de 2026. Sol, Luna, Aries, Venus, Marte, Júpiter y Saturno."
+  },
+  "2026-03-14_p82": {
+    "file": "assets/almanaque/2026/2026-03-14_p82_diaria_sol_luna_planetas.png",
+    "date": "2026-03-14",
+    "page": 82,
+    "description": "Sábado 14 de marzo de 2026. Sol, Luna, Aries, Venus, Marte, Júpiter y Saturno. Usada en Marzo 2026 P11."
+  },
+  "2026_p430_incrementos_10m": {
+    "file": "assets/almanaque/2026/2026_p430_incrementos_10m.png",
+    "page": 430,
+    "description": "Tabla de incrementos para 10 y 11 minutos. En Junio 2026 P11 se usa la columna 10 minutos y la fila 44 segundos: incremento del Sol 2°41,0′."
   }
 }

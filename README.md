@@ -60,6 +60,7 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Resolución completa incorporada: junio de 2023, pregunta 17 (altura verdadera del Sol), con clasificación frente a ortodrómica, Tabla A/B de la página 387 y operaciones de corrección paso a paso.
 - “Mi progreso” permite guardar una copia completa y recuperarla en otro navegador sin borrar los resultados que ya existan allí.
 - Todas las preguntas de Cálculo muestran un cuadro previo con el tipo de problema, las pistas para reconocerlo y si necesita Almanaque. Cuando falta la hoja exacta, la web lo advierte claramente y deja de afirmar que existe una referencia todavía no incorporada.
+- Altura estimada muestra destacada la fórmula completa del triángulo de posición y define cada letra. Junio y marzo de 2026 P11 incluyen las dos hojas necesarias: página diaria y tabla de incrementos, rotuladas con la fila y columna que debe leer el alumno.
 
 El manifiesto documenta qué convocatorias del objetivo acumulativo todavía deben reimportarse desde sus fuentes originales. La base existente se conserva íntegra mientras se completa esa consolidación.
 
