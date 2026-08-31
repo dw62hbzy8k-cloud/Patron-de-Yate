@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Aprobar Náutica AI",
-    "version": "0.48",
+    "version": "0.49",
     "region": "Murcia",
     "exams": 34,
     "questions": 1360,
     "date_range": "2015–2026",
     "note": "MASTER acumulativo. Las respuestas solo se activan tras verificarse con fuentes oficiales; las preguntas anuladas se conservan como tales.",
-    "validated_exams": 33,
-    "validated_questions": 1317
+    "validated_exams": 34,
+    "validated_questions": 1357
   },
   "exams": [
     {
@@ -21740,9 +21740,10 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 361,
@@ -21786,9 +21787,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 362,
@@ -21832,9 +21834,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 363,
@@ -21863,9 +21866,10 @@
           "similarity": 0.8
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 364,
@@ -21909,9 +21913,10 @@
           "similarity": 0.63
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 365,
@@ -21940,9 +21945,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 366,
@@ -21971,9 +21977,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 367,
@@ -22012,9 +22019,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 368,
@@ -22043,9 +22051,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 369,
@@ -22074,9 +22083,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 370,
@@ -22105,9 +22115,10 @@
           "similarity": 0.93
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 371,
@@ -22136,9 +22147,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 372,
@@ -22167,9 +22179,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 373,
@@ -22198,9 +22211,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 374,
@@ -22229,9 +22243,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 375,
@@ -22260,9 +22275,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 376,
@@ -22291,9 +22307,10 @@
           "similarity": 0.95
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 377,
@@ -22327,9 +22344,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 378,
@@ -22358,9 +22376,10 @@
           "similarity": 0.84
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 379,
@@ -22389,9 +22408,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 380,
@@ -22425,9 +22445,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 381,
@@ -22456,9 +22477,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 382,
@@ -22502,9 +22524,10 @@
           "similarity": 0.5
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 383,
@@ -22548,9 +22571,10 @@
           "similarity": 0.57
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 384,
@@ -22579,9 +22603,10 @@
           "similarity": 0.72
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 385,
@@ -22610,9 +22635,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 386,
@@ -22641,9 +22667,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 387,
@@ -22677,9 +22704,10 @@
           "similarity": 0.54
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 388,
@@ -22708,9 +22736,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 389,
@@ -22739,9 +22768,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 390,
@@ -22785,9 +22815,10 @@
           "similarity": 0.67
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 391,
@@ -22831,9 +22862,10 @@
           "similarity": 0.69
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 392,
@@ -22877,9 +22909,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "c",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 393,
@@ -22923,9 +22956,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "d",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 394,
@@ -22948,9 +22982,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 395,
@@ -22994,9 +23029,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 396,
@@ -23040,9 +23076,10 @@
           "similarity": 0.71
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "b",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 397,
@@ -23065,9 +23102,10 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 398,
@@ -23111,9 +23149,10 @@
           "similarity": 0.58
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 399,
@@ -23157,9 +23196,10 @@
           "similarity": 1
         }
       ],
-      "answer": null,
-      "answer_status": "pendiente",
-      "answer_note": ""
+      "answer": "a",
+      "answer_status": "verificada",
+      "answer_note": "Clave aportada por el usuario para el examen de marzo de 2020, modelo 2. Pendiente de contraste con solucionario oficial.",
+      "answer_source": "user-provided: 2026-08-31"
     },
     {
       "id": 400,

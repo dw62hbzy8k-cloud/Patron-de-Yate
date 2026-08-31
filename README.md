@@ -21,6 +21,7 @@ El MASTER es acumulativo: ninguna actualización puede borrar, sustituir por una
 - Julio de 2021 queda incorporado con sus 40 respuestas verificadas desde el cuestionario oficial CARM de junio de 2021, Tipo 1; la correspondencia completa se comprobó por enunciado y texto de opción porque la base usa otra denominación y otro orden.
 - Abril de 2021, Modelo 2, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1, cruzadas por enunciado y texto de opción.
 - Julio de 2020, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1; se conserva literalmente la respuesta oficial de la pregunta 33 de inglés.
+- Marzo de 2020, Modelo 2, queda corregido con las 40 respuestas aportadas por el usuario el 31 de agosto de 2026; la clave queda identificada como aportación del usuario y pendiente de contraste con un solucionario oficial.
 - Noviembre de 2019, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1; se corrigen dos errores de transcripción en las opciones 20 y 36.
 - Junio de 2019, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1.
 - Marzo de 2019, Modelo 1, queda incorporado con sus 40 respuestas verificadas desde el PDF oficial CARM Tipo 1, cruzadas por enunciado y texto de opción debido al orden diferente del banco.

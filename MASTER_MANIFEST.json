@@ -138,7 +138,7 @@
       "modelo": 2,
       "required_questions": 40,
       "present_in_current_local_web": true,
-      "status": "FUENTE PERSISTENTE LOCAL · IMPORTADA EN EL JSON Y LA WEB"
+      "status": "FUENTE PERSISTENTE LOCAL · 40 RESPUESTAS APORTADAS POR EL USUARIO EN EL JSON Y LA WEB; PENDIENTE DE CONTRASTE OFICIAL"
     },
     {
       "convocatoria": "Noviembre 2019",
@@ -235,6 +235,7 @@
     "Noviembre 2021 Modelo 1": "40 verificadas según el PDF oficial CARM Tipo 1; la pregunta 15 conserva a/b/c/d como aceptadas porque las cuatro están subrayadas",
     "Julio 2021 Modelo 2": "40 verificadas según el PDF oficial CARM Junio 2021 Tipo 1; correspondencia comprobada por enunciado y texto de opción debido a la denominación y al orden diferentes",
     "Abril 2021 Modelo 2": "40 verificadas según el PDF oficial CARM Abril 2021 Tipo 1; correspondencia comprobada por enunciado y texto de opción",
+    "Marzo 2020 Modelo 2": "40 respuestas aportadas por el usuario el 31/08/2026; pendientes de contraste con solucionario oficial",
     "Julio 2020 Modelo 1": "40 verificadas según el PDF oficial CARM Julio 2020 Tipo 1; la pregunta 33 conserva literalmente la opción subrayada por la fuente",
     "Noviembre 2019 Modelo 1": "40 verificadas según el PDF oficial CARM Noviembre 2019 Tipo 1; corregidas las transcripciones de las opciones 20a y 36d",
     "Junio 2019 Modelo 1": "40 verificadas según el PDF oficial CARM Junio 2019 Tipo 1",
