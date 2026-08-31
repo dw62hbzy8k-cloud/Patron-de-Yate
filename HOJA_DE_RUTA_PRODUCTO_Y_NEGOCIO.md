@@ -87,6 +87,19 @@ Crear un paquete físico opcional para que el alumno reciba todo lo necesario pa
 
 El paquete se ofrecerá como material didáctico. La marca no se presentará como escuela náutica oficial ni ofrecerá prácticas reglamentarias sin disponer de las autorizaciones y acuerdos necesarios. En una fase posterior se podrán crear acuerdos con escuelas autorizadas para teoría, prácticas y radio.
 
+## Radio y prácticas reglamentarias
+
+Estrategia acordada: empezar mediante colaboración con escuelas náuticas autorizadas.
+
+- Aprobar Náutica AI capta al alumno, imparte la preparación teórica, organiza la reserva y hace el seguimiento.
+- La escuela colaboradora aporta instructores habilitados, embarcación, seguros, simuladores homologados y certificación oficial.
+- El alumno puede contratar teoría, pack físico, radio y prácticas desde un itinerario único, dejando siempre claro quién imparte y certifica cada parte.
+- Negociar una comisión o precio mayorista por cada alumno remitido.
+- Incorporar escuelas de varias comunidades para ofrecer disponibilidad cercana al alumno.
+- Solo estudiar la apertura de una escuela propia cuando el volumen permita cubrir embarcación, mantenimiento, seguros, instalaciones, simuladores, instructores y obligaciones administrativas.
+
+Para una escuela propia deberán verificarse la normativa estatal y la regulación específica de la comunidad: declaración o autorización previa, director e instructores titulados, equipos homologados, embarcaciones reglamentarias, seguros, registros y comunicaciones a la Administración antes y después de cada curso o práctica.
+
 ## Modelo comercial provisional
 
 - Acceso gratuito limitado para probar el método.
