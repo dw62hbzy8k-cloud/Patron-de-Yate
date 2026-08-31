@@ -64,6 +64,7 @@ SOLUCIONES A CONSERVAR:
 
 ALMANAQUE:
 - 24 junio 2023, pág. 184, guardada físicamente en web/assets/almanaque/2023/ y vinculada a Junio 2023 P15.
+- Tabla de correcciones de alturas verdaderas, pág. 387 del Almanaque 2023, vinculada a Junio 2023 P17.
 - 13 junio 2026, pág. 173, guardada físicamente en web/assets/almanaque/2026/.
 
 FUNCIONES:

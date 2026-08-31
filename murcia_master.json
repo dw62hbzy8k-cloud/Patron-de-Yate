@@ -10655,8 +10655,8 @@
       "model": 1,
       "number": 17,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
-      "text": "A HcG (Hora civil de Greenwich) = 1010, en situación estimada= 38° 20,0'N - 002° 39,4'E, le toman altura instrumental al Sol (limbo inferior) = 63° 23,3' con elevación del observador 3 metros y corrección de índice= +3'y calculan la altura verdadera del Sol en ese instante:",
+      "topic": "Altura verdadera",
+      "text": "Domingo 25 de junio de 2023. A HcG (Hora civil de Greenwich) = 10:10, en situación estimada 38°20,0′ N - 002°39,4′ E, toman al Sol (limbo inferior) una altura instrumental de 63°23,3′. La elevación del observador es 3 m y la corrección de índice es +3,0′. Calculan la altura verdadera del Sol:",
       "options": [
         "68° 07,6'.",
         "63° 38,5'.",
@@ -10671,8 +10671,9 @@
       "similar_examples": [],
       "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "",
-      "answer_source": "solucionario facilitado por el usuario"
+      "answer_note": "Tipo de problema: corrección de una altura de sextante, no ortodrómica. En la página 387 del Almanaque Náutico: índice +3,0′; depresión para 3 m ≈ −3,1′; Tabla B del Sol (limbo inferior), corrección ≈ +15,3′. Resultado 63°23,3′ + 3,0′ − 3,1′ + 15,3′ = 63°38,5′.",
+      "answer_source": "solucionario facilitado por el usuario; Almanaque Náutico Perseis 2023, página 387",
+      "almanac_pdf": "https://enc.es/encvirtual/cursos/CYATE/Documentos/ANP_2023.pdf#page=390"
     },
     {
       "id": 17,
