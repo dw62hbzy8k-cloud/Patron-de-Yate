@@ -41,6 +41,18 @@ Datos: altura verdadera meridiana 32°15,2′; declinación 18°14,9′ S; Sol o
 
 Resultado: **opción C, 39°29,9′ N**.
 
+## Teclas Casio fx-85SP X II
+
+Antes de cada ejercicio: `MENU → Calcular`; después `SHIFT → MENU (CONFIG) → 2 → 1` para dejar `DEG`; finalmente `AC`.
+
+### P11
+
+Teclea `SIN 35°42′0″ × SIN (−)20°14′6″ + COS 35°42′0″ × COS (−)20°14′6″ × COS 15°37′36″ =`. Pulsa `SHIFT → SIN` para el arco seno y luego `°′″`. El resultado debe redondear a `32°08,4′`.
+
+### P16
+
+Teclea `90°0′0″ − 32°15′12″ =` para obtener `57°44,8′`. Después `57°44′48″ − 18°14′54″ =`; pulsa `°′″` y lee `39°29,9′`. El croquis añade la orientación `N`.
+
 ## Fuente oficial
 
 - CARM, Capitán de Yate, Tipo 1, Junio 2026, preguntas 1, 2 y 8.

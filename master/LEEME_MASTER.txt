@@ -77,3 +77,4 @@ FUNCIONES:
 - marcador de confianza «La sabía / Dudé / La adiviné», semáforo de preparación por materias y cinco copias automáticas locales del progreso.
 - panel de explicación del error con comparación de respuestas, motivo, regla de memoria y fuente; explicaciones específicas conservadas para Junio 2026 P1/P2/P8 y Noviembre 2025 P11/P16.
 - esquemas visuales propios para esas cinco explicaciones y vídeos externos comprobados para coordenadas horarias y círculo vertical; la captura externa del alumno solo se usa como referencia de estilo y no se copia.
+- receta de cálculo para principiantes con datos, croquis, signos, fórmula, sustitución, unidades, comprobación y teclas Casio; P11/P16 de noviembre de 2025 tienen la secuencia exacta.

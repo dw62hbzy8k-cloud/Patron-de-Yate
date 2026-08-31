@@ -272,7 +272,8 @@
     "Semáforo de preparación por materias y cinco copias automáticas locales del progreso",
     "Panel de explicación de errores con respuesta elegida, respuesta correcta, motivo, regla de memoria y fuente",
     "Explicaciones pedagógicas específicas para Junio 2026 P1, P2 y P8 y Noviembre 2025 P11 y P16",
-    "Esquemas visuales propios para las cinco explicaciones específicas y vídeos externos comprobados para coordenadas horarias y círculo vertical"
+    "Esquemas visuales propios para las cinco explicaciones específicas y vídeos externos comprobados para coordenadas horarias y círculo vertical",
+    "Guías de cálculo para principiantes con croquis, signos, fórmulas, unidades, comprobaciones y teclas Casio; secuencias exactas en Noviembre 2025 P11 y P16"
   ],
   "almanac_assets": [
     "assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png"
@@ -303,5 +304,5 @@
     ]
   },
   "last_update": "2026-08-31",
-  "last_update_note": "Se incorpora entrenamiento diario automático, repetición inteligente y panel de explicación al fallar. Las cinco preguntas actualmente falladas por el alumno tienen explicación específica y esquema visual propio; las dos de teoría celeste enlazan vídeos comprobados. Se mantienen íntegros los 34 exámenes, las 1.360 preguntas y todas las verificaciones anteriores."
+  "last_update_note": "Se incorpora entrenamiento diario automático, repetición inteligente, panel de explicación al fallar y guías de cálculo paso a paso. Las cinco preguntas actualmente falladas por el alumno tienen explicación y esquema visual propio; Noviembre 2025 P11 y P16 incluyen teclas Casio exactas. Se mantienen íntegros los 34 exámenes, las 1.360 preguntas y todas las verificaciones anteriores."
 }
