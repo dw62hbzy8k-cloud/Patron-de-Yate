@@ -30,7 +30,7 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 
 - 12 preguntas pertenecen realmente a este procedimiento.
 - 7 están terminadas dentro del bloque: ID 1050, 1010, 98, 334, 374, 735 y 970.
-- La ID 296 ya tiene la resolución preparada: recupera únicamente la latitud de la pregunta 16; la pregunta 17 ya aporta declinación y P, por lo que no necesita Almanaque. Incluye una vista polar a escala angular del triángulo de posición, con anillos cada 30° y las posiciones de PN, cenit y Sol calculadas con los datos reales; además explica sin saltos la conversión de 51,235123° a 51°14,1′. Continúa amarilla hasta la revisión del usuario.
+- La ID 296 ya tiene la resolución preparada: recupera únicamente la latitud de la pregunta 16; la pregunta 17 ya aporta declinación y P, por lo que no necesita Almanaque. Incluye una vista polar a escala angular del triángulo de posición, con anillos cada 30° y las posiciones de PN, cenit y Sol calculadas con los datos reales; aclara que el observador se encuentra sobre la Tierra justo debajo del cenit Z; y explica sin saltos la conversión de 51,235123° a 51°14,1′. Continúa amarilla hasta la revisión del usuario.
 - 4 siguen pendientes de recuperar datos de la pregunta anterior o comprobar un cartoncillo de estrellas: ID 1298, 58, 1258 y 1335.
 - La ID 1336 estaba etiquetada dentro del bloque, pero trata de altura verdadera y correcciones de sextante; queda separada para corregir su clasificación sin mezclar métodos.
 - En la ID 98 se corrigió el orden de las opciones con la página 5 del PDF oficial CARM. La respuesta A es 25°27′18″ y coincide con la fórmula.
