@@ -146,11 +146,11 @@ const HEIGHT_DIRECT_SOLUTIONS={
  735:{lat:"34°10,8′ N",dec:"2°24,3′ N",pole:"25°09,3′ E",latCalc:"+34°10,8′",decCalc:"+2°24,3′",poleCalc:"25°09,3′",sinAe:"0,771734",decimal:"50,509830°",screenDms:"50°30′35,4″",result:"50°30,6′",answer:"B",keysLat:"34 °′″ 10 °′″ 48 °′″",keysDec:"2 °′″ 24 °′″ 18 °′″",keysPole:"25 °′″ 9 °′″ 18 °′″",precision:"La opción oficial B escribe 50°30,5′; la diferencia de 0,1′ procede del redondeo de los datos intermedios y es, con mucha diferencia, la única opción compatible."},
  970:{lat:"30°10,7′ N",dec:"3°18,2′ N",pole:"27°40,2′ E",latCalc:"+30°10,7′",decCalc:"+3°18,2′",poleCalc:"27°40,2′",sinAe:"0,793296",decimal:"52,494625°",screenDms:"52°29′40,6″",result:"52°29,7′",answer:"A",keysLat:"30 °′″ 10 °′″ 42 °′″",keysDec:"3 °′″ 18 °′″ 12 °′″",keysPole:"27 °′″ 40 °′″ 12 °′″",precision:"Coincide con la opción A."}
 };
-const DIDACTIC_WORKFLOW={currentId:1010,completedInExecutionOrder:[1050,14,296]};
+const DIDACTIC_WORKFLOW={currentId:null,completedInExecutionOrder:[1050,14,296,1010]};
 const EDITORIAL_COMPLETED_OUTSIDE_CALCULATION=new Set([89]);
 const HEIGHT_TRIANGLE_REVIEW_ORDER=[1050,296,1010,98,334,374,735,970,1298,58,1258,1335];
 const HEIGHT_TRIANGLE_WORK_IDS=new Set(HEIGHT_TRIANGLE_REVIEW_ORDER);
-const DIDACTIC_DRAFT_IDS=new Set([1010,98,334,374,735,970]);
+const DIDACTIC_DRAFT_IDS=new Set([98,334,374,735,970]);
 const ORIGINAL_QUESTION_ORDER=new Map(DB.questions.map((q,index)=>[q.id,index]));
 const DIDACTIC_SCOPE=DB.questions.filter(q=>q.module==="Cálculo de Navegación");
 const DIDACTIC_PLAN=[...DIDACTIC_SCOPE].sort((a,b)=>(a.difficulty||9)-(b.difficulty||9)||(b.topic_percent||0)-(a.topic_percent||0)||(ORIGINAL_QUESTION_ORDER.get(a.id)||0)-(ORIGINAL_QUESTION_ORDER.get(b.id)||0));
@@ -346,6 +346,7 @@ function completeSolutionHTML(q){
  <p><b>No te confundas:</b> el número 329°23,9′ de la misma fila pertenece a <b>hG del Sol</b>; no es la declinación.</p>
  </div></details>`;
  if(q.id!==1010)return "";
+ if(didacticState(q)==="ready")return `<details class="card" open style="margin-top:10px;background:#f3fbf5;border:2px solid #87bd98"><summary><b>✅ Resolución completa · aprobada</b></summary><div style="line-height:1.65"><p><b>Cadena completa:</b><br>página diaria 173 → hG☉ 29°58,6′ y d☉ +23°13,8′;<br>página 430 → incremento 2°41,0′;<br>hG☉ 32°39,6′;<br>L 9°30′ W resta → hL☉ 23°09,6′ W;<br>hL ≤ 180° → P = 23°09,6′ W;<br>fórmula del triángulo → sen(ae) 0,8983134026;<br>SHIFT → SIN → ae 63,9372496°;<br>tecla °′″ → 63°56′14,1″ → <b>63°56,2′</b>.</p><div style="padding:12px;border-radius:9px;background:#e3f4e8;font-size:19px;text-align:center"><b>Respuesta verificada y aprobada: B · ae = 63°56,2′</b></div><div style="margin-top:10px;padding:10px;border:1px solid #86acd2;border-radius:9px;background:#eef8ff"><b>Comprobación práctica pendiente:</b> cuando el alumno tenga delante su Casio fx-85SP X II física, repetiremos la entrada directa de <b>23°13,8′</b> y <b>23°09,6′</b>. Si el comportamiento real difiere, se ajustará el simulador; esta comprobación no cambia la resolución matemática aprobada.</div></div></details>`;
  return `<details class="card" open style="margin-top:10px;background:#fffaf0;border:2px solid #d6a31c"><summary><b>🟡 Resolución preparada · pendiente de tu revisión</b></summary><div style="line-height:1.65"><div style="padding:11px;border-radius:9px;background:#fff3cd"><b>Todavía no está aprobada en verde.</b> El desarrollo numérico está contrastado, pero la dejamos amarilla hasta que tú compruebes que se entiende y des el visto bueno.</div><p><b>Cadena completa, sin saltos:</b><br>página diaria 173 → hG☉ 29°58,6′ y d☉ +23°13,8′;<br>página 430 → incremento 2°41,0′;<br>hG☉ 32°39,6′;<br>L 9°30′ W resta → hL☉ 23°09,6′ W;<br>hL ≤ 180° → P = 23°09,6′ W;<br>fórmula del triángulo → sen(ae) 0,8983134026;<br>SHIFT → SIN → ae 63,9372496°;<br>tecla °′″ → 63°56′14,1″ → <b>63°56,2′</b>.</p><div style="padding:12px;border-radius:9px;background:#e3f4e8;font-size:19px;text-align:center"><b>Resultado verificado: respuesta B · ae = 63°56,2′</b></div><p><b>Control oficial:</b> la opción B aparece marcada como correcta en el examen oficial de la Región de Murcia, Junio 2026, Modelo 1, pregunta 11.</p></div></details>`;
 }
 

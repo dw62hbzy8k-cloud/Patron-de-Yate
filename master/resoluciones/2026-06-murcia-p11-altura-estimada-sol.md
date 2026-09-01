@@ -3,7 +3,8 @@
 ## Estado
 
 - Resolución numérica y respuesta oficial comprobadas.
-- Desarrollo didáctico preparado en la web y pendiente del visto bueno del usuario antes de pasar a verde.
+- Desarrollo didáctico aprobado expresamente por el usuario y pasado a verde.
+- Comprobación práctica pendiente: repetir la entrada de minutos decimales cuando el usuario tenga delante su Casio fx-85SP X II física. Si la máquina real se comporta de otra manera, ajustar el simulador sin cambiar la resolución matemática.
 - Respuesta oficial: **b) ae = 63°56,2′**.
 - Pregunta del MASTER: `id 1010`.
 - Hojas necesarias del Almanaque: página diaria 173 y página 430 de incrementos.
