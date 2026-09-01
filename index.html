@@ -161,7 +161,7 @@ function renderWorkTracker(){
  const readyButton=$("practiceReadyQuestions");if(readyButton&&!readyButton.disabled)readyButton.onclick=practiceReadyQuestions;
  box.querySelectorAll("[data-work-id]").forEach(button=>button.onclick=()=>openDidacticQuestion(+button.dataset.workId));
 }
-let pool=[],pos=0,ans={},ansConfidence={};
+let pool=[],pos=0,ans={},ansConfidence={},compactStudy=false;
 function filterBank(){const ex=$("bExam").value,m=$("bModule").value,t=$("bTopic").value,rows=DB.questions.filter(q=>{const ev=`${q.convocatoria} · M${q.model}`;return(ex==="Todos los exámenes"||ev===ex)&&(m==="Todos los módulos"||q.module===m)&&(t==="Todos los temas"||q.topic===t)});pool=m==="Cálculo de Navegación"?studentCalculationOrder(rows):rows;pos=0;renderBank()}
 
 function almanacHTML(q){
@@ -351,8 +351,8 @@ function calculatorHTML(q,inline=false){
  return `<details class="card" style="margin-top:10px;background:#f4f8ff;border-color:#cbd9ee"><summary><b>⌨️ Cómo hacerlo en tu Casio fx-85SP X II</b></summary><ol style="line-height:1.55;margin-bottom:0"><li>Pulsa <b>MENU</b> y entra en <b>Calcular</b>.</li><li>Antes de empezar, deja los ángulos en <b>DEG</b> (grados).</li><li>Usa <b>AC</b> para limpiar la línea; <b>DEL</b> borra solo la cifra equivocada.</li><li>Escribe exactamente la operación que aparece en el paso anterior, usando paréntesis.</li><li>Pulsa <b>=</b> y compara el resultado con el indicado. Usa <b>S⇔D</b> si necesitas decimal.</li></ol><div class="sub" style="margin-top:9px">En la resolución completa se añadirá la secuencia tecla por tecla de este ejercicio concreto.</div></details>`;
 }
 
-function quickReminderHTML(q){
- if(didacticState(q)!=="ready")return "";
+function quickReminderHTML(q,force=false){
+ if(!force&&didacticState(q)!=="ready")return "";
  const directHeight=HEIGHT_DIRECT_SOLUTIONS[q.id];
  let body="";
 	 if(q.id===14)body=`<b>Reconoce:</b> piden únicamente la declinación del Sol para UT 10:20.<ol><li>Página diaria 184: d☉ a 10:00 = +23°24,7′; a 11:00 = +23°24,6′.</li><li>Cambio para 20 min: −0,1′ × 20/60 = −0,033′.</li><li>Resultado redondeado: <b>+23°24,7′ · D</b>. Atajo: el cambio no alcanza una décima.</li></ol>`;
@@ -362,6 +362,18 @@ function quickReminderHTML(q){
 	 else if(directHeight)body=`<b>Reconoce:</b> ya te dan l, d y P; no abras el Almanaque.<ol><li>Escribe sen(ae) = sen(l)·sen(d) + cos(l)·cos(d)·cos(P).</li><li>Sustituye <b>${directHeight.latCalc}</b>, <b>${directHeight.decCalc}</b> y <b>${directHeight.poleCalc}</b>.</li><li>SHIFT → SIN: <b>ae = ${directHeight.result} · ${directHeight.answer}</b>.</li></ol>`;
  if(!body)return "";
  return `<details class="quick-reminder"><summary>⚡ Recordatorio rápido</summary><div class="quick-reminder-body">${body}</div></details>`;
+}
+function studyModeToggleHTML(q){
+ if(!quickReminderHTML(q,true))return "";
+ return `<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0;padding:10px;border:1px solid #c8d8df;border-radius:10px;background:#f7fafb"><b style="margin-right:4px">Cómo quieres practicar:</b><button class="action" type="button" data-study-mode="full" aria-pressed="${String(!compactStudy)}" style="${compactStudy?"background:#e7eef2;color:#173247":""}">Explicación completa</button><button class="action" type="button" data-study-mode="compact" aria-pressed="${String(compactStudy)}" style="${compactStudy?"":"background:#e7eef2;color:#173247"}">Versión rápida</button><span class="sub">La versión rápida conserva los datos heredados y el Almanaque cuando sean necesarios.</span></div>`;
+}
+function learningMaterialsHTML(q){
+ const reminder=quickReminderHTML(q,true);
+ if(compactStudy&&reminder)return `${almanacHTML(q)}${reminder}${calculatorHTML(q,true)}`;
+ return `${problemTypeHTML(q)}${almanacHTML(q)}${heightFormulaHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${quickReminderHTML(q)}`;
+}
+function bindStudyMode(scope,rerender){
+ scope.querySelectorAll("[data-study-mode]").forEach(button=>button.onclick=()=>{compactStudy=button.dataset.studyMode==="compact";rerender()});
 }
 
 function validAnswers(q){return Array.isArray(q.accepted_answers)&&q.accepted_answers.length?q.accepted_answers:(q.answer?[q.answer]:[])}
@@ -417,7 +429,8 @@ function addComparisonSignsReminder(scope){
  casesGrid.insertAdjacentHTML("afterend",`<div class="comparison-signs-reminder" style="margin-top:10px;padding:12px;border:2px solid #d49a19;border-radius:10px;background:#fff8df;text-align:left;line-height:1.65"><b style="color:#79570a">TRUCO PARA NO CONFUNDIR &lt;, &gt;, ≤ Y ≥</b><br><span style="font-size:18px"><b>≤</b> = menor o igual que · <b>&gt;</b> = mayor que</span><div style="margin-top:7px;padding:9px;border-radius:8px;background:white"><b>1. La boca abierta mira siempre al número mayor; la punta señala al menor.</b><br><b>2. La rayita de debajo significa «o también puede ser igual».</b> La rayita no decide si es mayor o menor: eso lo decide la dirección de la boca.<br><br><b>≤</b> = menor o igual · <b>≥</b> = mayor o igual<br><b>&lt;</b> = menor, sin admitir igualdad · <b>&gt;</b> = mayor, sin admitir igualdad<br><br><b>hL ≤ 180°:</b> la boca mira a 180° y la rayita permite que hL sea exactamente 180°.<br><b>hL &gt; 180°:</b> la boca mira a hL y, como no hay rayita, hL tiene que superar realmente 180°.</div></div>`);
 }
 function renderBank(){if(!pool.length){$("qbox").innerHTML="Sin preguntas.";return}pos=(pos+pool.length)%pool.length;const q=pool[pos],sel=ans[q.id];applyDidacticFrame($("qbox"),q);let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;
-$("qbox").innerHTML=`<div class="qhead"><div>${didacticBadgeHTML(q)}<div style="margin-top:7px"><span class="badge">${q.module}</span><span class="badge">${q.topic}</span></div><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${dependencyContextHTML(q)}${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${problemTypeHTML(q)}${almanacHTML(q)}${heightFormulaHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${quickReminderHTML(q)}${fb}${correctionDetailHTML(q,sel)}${confidenceHTML(q,sel,ansConfidence[q.id])}`;
+$("qbox").innerHTML=`<div class="qhead"><div>${didacticBadgeHTML(q)}<div style="margin-top:7px"><span class="badge">${q.module}</span><span class="badge">${q.topic}</span></div><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${dependencyContextHTML(q)}${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${studyModeToggleHTML(q)}${learningMaterialsHTML(q)}${fb}${correctionDetailHTML(q,sel)}${confidenceHTML(q,sel,ansConfidence[q.id])}`;
+bindStudyMode($("qbox"),renderBank);
 addComparisonSignsReminder($("qbox"));
 if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("qbox"));
 document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{if(ans[q.id])return;ans[q.id]=x.dataset.l;ansConfidence[q.id]="knew";savePractice(q,x.dataset.l,"knew");renderBank()});
@@ -689,7 +702,8 @@ function startMistakeExam(){
 }
 function renderProg(){$("examProgress").innerHTML=runQs.map((q,i)=>{const a=runAns[q.id];let st="";if(a&&q.answer_status==="verificada")st=isCorrect(q,a)?"correct":"wrong";return `<div class="pnum ${st} ${i===runPos?"current":""}" data-i="${i}">${runKind==="official"?q.number:i+1}</div>`}).join("");document.querySelectorAll(".pnum").forEach(x=>x.onclick=()=>{runPos=+x.dataset.i;renderRun()})}
 function renderRun(){renderProg();$("finishExam").style.display=runPos===runQs.length-1?"inline-block":"none";const q=runQs[runPos],sel=runAns[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;const origin=runKind!=="official"?` · ${q.convocatoria} · pregunta original ${q.number}`:"",reason=(runKind==="daily"||runKind==="calculation")?`<div class="daily-pill" style="display:inline-block;margin-top:8px">Por qué aparece: ${esc(dailyReasons[String(q.id)]||"Repaso personalizado")}</div>`:"";
-$("examQuestion").innerHTML=`<div class="sub">Pregunta ${runPos+1} de ${runQs.length} · ${q.module}${origin}</div>${reason}<div class="question">${esc(q.text)}</div>${dependencyContextHTML(q)}${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${problemTypeHTML(q)}${almanacHTML(q)}${heightFormulaHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${quickReminderHTML(q)}${fb}${correctionDetailHTML(q,sel)}${confidenceHTML(q,sel,runConfidence[q.id])}`;
+$("examQuestion").innerHTML=`<div class="sub">Pregunta ${runPos+1} de ${runQs.length} · ${q.module}${origin}</div>${reason}<div class="question">${esc(q.text)}</div>${dependencyContextHTML(q)}${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${studyModeToggleHTML(q)}${learningMaterialsHTML(q)}${fb}${correctionDetailHTML(q,sel)}${confidenceHTML(q,sel,runConfidence[q.id])}`;
+bindStudyMode($("examQuestion"),renderRun);
 addComparisonSignsReminder($("examQuestion"));
 if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("examQuestion"));
 document.querySelectorAll("#examQuestion .opt").forEach(x=>x.onclick=()=>{if(q.answer_status==="anulada"||runAns[q.id])return;runAns[q.id]=x.dataset.l;runConfidence[q.id]="knew";$("examResult").innerHTML="";renderRun()});
