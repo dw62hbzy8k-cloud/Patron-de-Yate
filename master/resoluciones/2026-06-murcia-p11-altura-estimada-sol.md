@@ -119,25 +119,27 @@ Triángulo de posición:
 3. Comprobar que aparece `D` en la parte superior de la pantalla.
 4. Pulsar `AC`.
 
-La tecla `°′″` es la tecla sexagesimal. Para evitar minutos decimales se usan estas equivalencias:
+La tecla `°′″` es la tecla sexagesimal. En esta pregunta se conservan los minutos decimales exactamente como los entrega el enunciado:
 
-- `23°13,8′ = 23°13′48″`.
-- `23°09,6′ = 23°09′36″`.
+- `23°13,8′`: pulsar `23`, `°′″`, `13`, `.`, `8`, `°′″`.
+- `23°09,6′`: pulsar `23`, `°′″`, `9`, `.`, `6`, `°′″`.
+
+La primera pulsación de `°′″` cierra los grados y la segunda cierra los minutos. No es necesario convertir `0,8′` en `48″` ni `0,6′` en `36″`.
 
 ### Introducir toda la fórmula
 
 Pulsar, en este orden:
 
 ```text
-SIN  40  °′″  34  °′″  0  °′″  )
+SIN  40  °′″  34  °′″  )
 ×
-SIN  23  °′″  13  °′″  48  °′″  )
+SIN  23  °′″  13  .  8  °′″  )
 +
-COS  40  °′″  34  °′″  0  °′″  )
+COS  40  °′″  34  °′″  )
 ×
-COS  23  °′″  13  °′″  48  °′″  )
+COS  23  °′″  13  .  8  °′″  )
 ×
-COS  23  °′″  9  °′″  36  °′″  )
+COS  23  °′″  9  .  6  °′″  )
 =
 ```
 

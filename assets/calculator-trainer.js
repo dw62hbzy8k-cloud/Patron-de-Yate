@@ -47,17 +47,17 @@ const height296Directions=height296Expected.map(function(key,index){
  return `Pulsa ${key}.`;
 });
 const height1010Expected=[
- "sin","4","0","°′″","3","4","°′″","0","°′″",")","×",
- "sin","2","3","°′″","1","3","°′″","4","8","°′″",")","+",
- "cos","4","0","°′″","3","4","°′″","0","°′″",")","×",
- "cos","2","3","°′″","1","3","°′″","4","8","°′″",")","×",
- "cos","2","3","°′″","9","°′″","3","6","°′″",")","=",
+ "sin","4","0","°′″","3","4","°′″",")","×",
+ "sin","2","3","°′″","1","3",".","8","°′″",")","+",
+ "cos","4","0","°′″","3","4","°′″",")","×",
+ "cos","2","3","°′″","1","3",".","8","°′″",")","×",
+ "cos","2","3","°′″","9",".","6","°′″",")","=",
  "SHIFT","sin","Ans",")","=","°′″"
 ];
 const height1010Directions=height1010Expected.map(function(key,index){
  if(index===0)return "Pulsa SIN para comenzar la fórmula con la latitud 40°34′ N.";
- if(index===57)return "La fórmula ya dio sen(ae). Pulsa SHIFT para recuperar la altura estimada.";
- if(index===62)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
+ if(index===50)return "La fórmula ya dio sen(ae). Pulsa SHIFT para recuperar la altura estimada.";
+ if(index===55)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
  return `Pulsa ${key}.`;
 });
 const modeText={
@@ -92,7 +92,7 @@ function trainerMarkup(guideId){
  const subtitle=is1010?"Cálculo interactivo de Junio 2026 · Modelo 1 · P11.":is296?"Cálculo interactivo de esta pregunta: altura estimada del Sol.":guideId?"Cálculo interactivo completo de la altura estimada del Sol.":"Convertir grados decimales en grados y minutos.";
  const objective=is1010?"Objetivo de esta pregunta: ae = 63°56,2′":is296?"Objetivo de esta pregunta: ae = 51°14,1′":guideId?"Objetivo: ae = 44°53,7′":"Objetivo: 44,895188° = 44°53,7′";
  const steps=isHeight?"<li>Introducir l, d y P en la fórmula.</li><li>Calcular sen(ae) y recuperar ae con SHIFT → SIN.</li><li>Pasar ae a grados, minutos y segundos con °′″.</li>":"<li>Quitar los 44 grados enteros.</li><li>Multiplicar la parte decimal por 60 para convertirla en minutos.</li><li>Redondear 53,71128′ a 53,7′ y detenerse.</li>";
- const initial=is1010?"Empieza por SIN: vas a introducir l = 40°34′, d = 23°13′48″ y P = 23°09′36″.":is296?"Empieza por SIN: vas a introducir la fórmula real con los datos de esta pregunta.":guideId?"Empieza por SIN: vas a introducir la fórmula real con l, d y P.":"La pantalla ya contiene 44,895188. Empieza por la operación indicada.";
+ const initial=is1010?"Empieza por SIN: vas a introducir l = 40°34′, d = 23°13,8′ y P = 23°09,6′, exactamente como están escritos.":is296?"Empieza por SIN: vas a introducir la fórmula real con los datos de esta pregunta.":guideId?"Empieza por SIN: vas a introducir la fórmula real con l, d y P.":"La pantalla ya contiene 44,895188. Empieza por la operación indicada.";
  return `<div class="calc-trainer-head"><div><h3>Calculadora guiada · Casio fx-85SP X II</h3><p class="sub">${subtitle}</p></div><div class="calc-trainer-progress" data-ct-progress></div></div>
 <div class="calc-trainer-controls" role="group" aria-label="Nivel de ayuda de la calculadora">
  <button class="calc-mode" type="button" data-ct-mode="1" aria-pressed="true">1 · Aprender</button>
@@ -146,14 +146,15 @@ function setupDocking(root,calculationZone){
 }
 function pretty(value){return String(value).replace(".",",")}
 function calculate(a,operator,b){if(operator==="+")return a+b;if(operator==="−")return a-b;if(operator==="×")return a*b;if(operator==="÷")return b===0?NaN:a/b;return b}
-function formatHeightExpression(keys){return keys.map(function(key,index){
+function formatHeightExpression(keys){let sexagesimalPart=0;return keys.map(function(key,index){
  const previous=keys[index-1];
  if(key==="SHIFT")return "";
- if(key==="sin")return previous==="SHIFT"?"sen⁻¹(":"sen(";
- if(key==="cos")return "cos(";
+ if(key==="sin"){sexagesimalPart=0;return previous==="SHIFT"?"sen⁻¹(":"sen("}
+ if(key==="cos"){sexagesimalPart=0;return "cos("}
  if(key==="(-)")return "−";
- if(key==="°′″")return "°′″";
- if(["+","−","×","÷","="].includes(key))return ` ${key} `;
+ if(key==="°′″"){const symbol=["°","′","″"][Math.min(sexagesimalPart,2)];sexagesimalPart++;return symbol}
+ if(key===".")return ",";
+ if(["+","−","×","÷","="].includes(key)){sexagesimalPart=0;return ` ${key} `}
  return key;
 }).join("").trim()}
 function mount(root){
@@ -164,8 +165,8 @@ function mount(root){
  const height296=guideId==="296",height1010=guideId==="1010",heightGuide=guideId==="1"||height296||height1010;
  const expected=height1010?height1010Expected:height296?height296Expected:heightGuide?heightExpected:conversionExpected,directions=height1010?height1010Directions:height296?height296Directions:heightGuide?heightDirections:conversionDirections,storageKey=height1010?HEIGHT_1010_STORAGE_KEY:height296?HEIGHT_296_STORAGE_KEY:heightGuide?HEIGHT_STORAGE_KEY:STORAGE_KEY;
  const finalHeightText=height1010?"ae = 63°56′14,1″, que en las respuestas es 63°56,2′.":height296?"ae = 51°14′06,4″, que en las respuestas es 51°14,1′.":"ae = 44°53,7′.";
- const milestones=height1010?[{at:57,value:"0.8983134026"},{at:62,value:"63.9372496"},{at:63,value:"63°56′14,1″"}]:height296?[{at:61,value:"0.779722"},{at:66,value:"51.235123"},{at:67,value:"51°14′06,4″"}]:[{at:61,value:"0.7058120802"},{at:66,value:"44.8951881663"},{at:70,value:"0.8951881663"},{at:74,value:"53.7112899782"}];
- const formulaEnd=height1010?57:61,inverseEnd=height1010?62:66;
+ const milestones=height1010?[{at:50,value:"0.8983134026"},{at:55,value:"63.9372496"},{at:56,value:"63°56′14,1″"}]:height296?[{at:61,value:"0.779722"},{at:66,value:"51.235123"},{at:67,value:"51°14′06,4″"}]:[{at:61,value:"0.7058120802"},{at:66,value:"44.8951881663"},{at:70,value:"0.8951881663"},{at:74,value:"53.7112899782"}];
+ const formulaEnd=height1010?50:61,inverseEnd=height1010?55:66;
  if(inlineTrainer){root.classList.add("calc-inline-trainer");const calculationZone=root.closest('div[style*="border:3px solid #1c6ea4"]')||root;setupDocking(root,calculationZone)}
  const expressionEl=root.querySelector("[data-ct-expression]"),resultEl=root.querySelector("[data-ct-result]"),instructionEl=root.querySelector("[data-ct-instruction]"),feedbackEl=root.querySelector("[data-ct-feedback]"),levelEl=root.querySelector("[data-ct-level]"),modeDescriptionEl=root.querySelector("[data-ct-mode-description]"),progressEl=root.querySelector("[data-ct-progress]"),soundEl=root.querySelector("[data-ct-sound]"),keys=Array.from(root.querySelectorAll(".calc-key")),modeButtons=Array.from(root.querySelectorAll("[data-ct-mode]")),stepItems=Array.from(root.querySelectorAll("[data-ct-steps] li"));
  const startValue=heightGuide?"0":"44.895188",startExpression=heightGuide?"":"44.895188";
@@ -178,7 +179,7 @@ function mount(root){
  function updateKeyState(){keys.forEach(function(key){key.classList.remove("next-key","locked")});if(mode===1&&cursor<expected.length){keys.forEach(function(key){if(key.dataset.key===expected[cursor])key.classList.add("next-key");else key.classList.add("locked")})}}
  function render(){expressionEl.textContent=expression;resultEl.textContent=pretty(display);expressionEl.scrollLeft=expressionEl.scrollWidth;resultEl.scrollLeft=resultEl.scrollWidth;instructionEl.textContent=cursor<expected.length?directions[cursor]:heightGuide?`Cálculo completo: ${finalHeightText}`:"Ejercicio terminado: 44,895188° = 44°53,7′.";updateSteps();updateKeyState();updateProgress()}
  function complete(){if(completed)return;completed=true;if(mode===1)progress.guided++;else if(mode===2)progress.practice++;else progress.solo++;saveProgress(progress,storageKey);updateProgress()}
- function reset(){cursor=0;history=[];expression=startExpression;display=startValue;stored=Number(startValue);pending=null;typing=false;completed=false;feedbackEl.className="calc-feedback";feedbackEl.textContent=height1010?"Empieza por SIN: vas a introducir l = 40°34′, d = 23°13′48″ y P = 23°09′36″.":height296?"Empieza por SIN: vas a introducir la fórmula real con los datos de esta pregunta.":heightGuide?"Empieza por SIN: vas a introducir la fórmula real con l, d y P.":mode===3?"Calculadora libre. Haz la conversión y después pulsa «Revisar resultado».":"La pantalla ya contiene 44,895188. Empieza por la operación indicada.";render()}
+ function reset(){cursor=0;history=[];expression=startExpression;display=startValue;stored=Number(startValue);pending=null;typing=false;completed=false;feedbackEl.className="calc-feedback";feedbackEl.textContent=height1010?"Empieza por SIN: vas a introducir l = 40°34′, d = 23°13,8′ y P = 23°09,6′, exactamente como están escritos.":height296?"Empieza por SIN: vas a introducir la fórmula real con los datos de esta pregunta.":heightGuide?"Empieza por SIN: vas a introducir la fórmula real con l, d y P.":mode===3?"Calculadora libre. Haz la conversión y después pulsa «Revisar resultado».":"La pantalla ya contiene 44,895188. Empieza por la operación indicada.";render()}
  function useBasicKey(value){
   if(/^[0-9]$/.test(value)||value==="."){if(!typing){display=value==="."?"0.":value;typing=true}else if(!(value==="."&&String(display).includes(".")))display=String(display)+value;expression+=value;return true}
   if(["+","−","×","÷"].includes(value)){const number=Number(display);if(!Number.isFinite(number))return false;if(pending&&typing)stored=calculate(stored,pending,number);else stored=number;pending=value;typing=false;expression+=" "+value+" ";display=String(stored);return true}
@@ -195,10 +196,10 @@ function mount(root){
   return false
  }
  function updateHeightState(){
-  cursor=history.length;expression=formatHeightExpression(history);
-  const reached=milestones.filter(function(item){return cursor>=item.at}).pop();
-  display=reached?reached.value:expression?expression.slice(-18):"0";
- }
+ cursor=history.length;expression=formatHeightExpression(history);
+ const reached=milestones.filter(function(item){return cursor>=item.at}).pop();
+ display=reached?reached.value:"";
+}
  function firstMismatch(){const limit=Math.max(history.length,expected.length);let mismatch=0;while(mismatch<limit&&history[mismatch]===expected[mismatch])mismatch++;return mismatch}
  function guidedHeightPress(key,value){
   if(value==="AC"){setMode(recommendedMode(progress));return}
