@@ -21,14 +21,14 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 
 ## Estado actual
 
-- Pregunta activa: ninguna; la ID 1010 acaba de pasar a verde por visto bueno expreso del usuario.
+- Pregunta activa: ID 1258, junio de 2024, modelo 2, pregunta 19, altura estimada de Vega.
 - Tema: Altura estimada / triángulo de posición.
 - Última pregunta aprobada: ID 1010, junio de 2026, modelo 1, pregunta 11, dificultad 5 de 7.
-- Estado: verde por visto bueno expreso del usuario.
+- Estado: amarillo; resolución preparada y pendiente de revisión del usuario.
 - Preguntas completamente terminadas y revisadas por el usuario: ID 1050, ID 14, ID 296 e ID 1010.
-- Totales de Cálculo: 4 verdes, 0 amarillas y 336 rojas.
+- Totales de Cálculo: 4 verdes, 1 amarilla y 335 rojas.
 - El panel de trabajo muestra las 3 preguntas verdes en una lista propia y visible, en orden de aprobación. Dentro de Altura estimada / triángulo solo están verdes marzo de 2026, modelo 2, pregunta 11, y abril de 2021, modelo 2, pregunta 17. Junio de 2023, modelo 1, pregunta 15, también está verde, pero pertenece a Almanaque: declinación.
-- Las 12 preguntas de Altura estimada / triángulo aparecen juntas en un bloque propio, con las 3 verdes revisadas y las 9 pendientes. El bloque muestra el contador `3 de 12 terminadas · faltan 9` y una barra de avance editorial.
+- Las 12 preguntas de Altura estimada / triángulo aparecen juntas en un bloque propio, con 3 verdes revisadas, 1 amarilla activa y 8 rojas. El bloque muestra el contador `3 de 12 terminadas · faltan 9` y una barra de avance editorial.
 
 ## Preguntas verdes fuera de Cálculo
 
@@ -42,7 +42,8 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 - La ID 1010, junio de 2026, modelo 1, pregunta 11, está aprobada en verde: respuesta B verificada en el PDF oficial; páginas 173 y 430 del Almanaque incorporadas y explicadas; cálculo de hG, d, hL y P desarrollado; gráfico con datos reales; fórmula por colores; Casio interactiva propia; versión rápida y comprobaciones finales. La Casio conserva directamente los minutos decimales del enunciado (`23°13,8′` y `23°09,6′`) y su pantalla representa cada separador como grados o minutos según corresponda, sin convertirlos innecesariamente en segundos.
 - Recordatorio pendiente de la ID 1010: cuando el usuario tenga físicamente su Casio fx-85SP X II, repetir la secuencia de entrada directa de minutos decimales. Si la calculadora real difiere, corregir el simulador. Esta comprobación práctica no bloquea el estado verde ni altera la respuesta matemática.
 - 5 tienen una resolución base preparada por el asistente, pero no han sido revisadas una por una con el usuario y por eso permanecen rojas: ID 98, 334, 374, 735 y 970.
-- 4 siguen pendientes de recuperar datos de la pregunta anterior o comprobar un cartoncillo de estrellas: ID 1298, 58, 1258 y 1335.
+- La ID 1258 está preparada en amarillo: Junio 2024, pregunta 19, altura estimada de Vega. Presenta directamente HcG 10:00, l = 31°32,2′ N, L = 121°38,2′ W y P = 13°05′46″ W; incorpora el cartoncillo de Vega con d* = +38°48,2′; explica qué datos entran en la fórmula; incluye triángulo con PN, Z y Vega y los arcos reales; cálculo independiente ae* = 77°04′57,2″; respuesta D; Casio interactiva específica y versión rápida. No pasará a verde hasta el visto bueno del usuario.
+- 3 siguen pendientes de recuperar datos o comprobar otros cartoncillos: ID 1298, 58 y 1335.
 - La ID 1336 estaba etiquetada dentro del bloque, pero trata de altura verdadera y correcciones de sextante; queda separada para corregir su clasificación sin mezclar métodos.
 - En la ID 98 se corrigió el orden de las opciones con la página 5 del PDF oficial CARM. La respuesta A es 25°27′18″ y coincide con la fórmula.
 - Cada pregunta verde incluye al final un recordatorio rápido, discreto y cerrado por defecto.

@@ -1,0 +1,46 @@
+# Junio 2024 · pregunta 19 · altura estimada de Vega
+
+Estado editorial: **preparada y pendiente de revisión del usuario**. No marcar en verde hasta recibir su aprobación.
+
+## Datos utilizados
+
+- HcG: 10:00.
+- Situación estimada: `l = 31°32,2′ N`, `L = 121°38,2′ W`.
+- Ángulo en el Polo facilitado: `P = 13°05′46″ W`.
+- Declinación de Vega indicada por el cartoncillo del ejercicio: `d* = +38°48,2′`.
+- Resultado pedido: altura estimada de Vega, `ae*`.
+
+Como `P` ya está facilitado, HcG y L no intervienen en la fórmula de la altura.
+
+## Cálculo independiente
+
+Fórmula:
+
+`sen(ae*) = sen(l)·sen(d*) + cos(l)·cos(d*)·cos(P)`
+
+Sustitución:
+
+`sen(ae*) = sen(31°32,2′)·sen(38°48,2′) + cos(31°32,2′)·cos(38°48,2′)·cos(13°05′46″)`
+
+Resultados sin redondear antes de tiempo:
+
+- `sen(ae*) = 0,974693172380`
+- `ae* = 77,082554213904°`
+- `ae* = 77°04′57,195″`
+- Redondeado al segundo: `ae* = 77°04′57″`
+
+Respuesta en la web: **D · 77°04′57″**.
+
+## Control geométrico
+
+- Colatitud `PN–Z = 90° − l = 58°27,8′`.
+- Distancia polar de Vega `PN–Vega = 90° − d* = 51°11,8′`.
+- Distancia cenital `z = 90° − ae* = 12°55′02,8″`.
+
+## Fuentes y trazabilidad
+
+- Examen oficial CARM, Junio 2024, Tipo 1 con respuestas: `master/fuentes_oficiales/CARM_CY_Junio_2024_Tipo1_con_respuestas.pdf`.
+- URL oficial registrada en la pregunta: https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAP+junio-2024+Tipo+1+con+respuestas.pdf&IDCONTENIDO=199033&IDTIPO=60
+- Cartoncillo didáctico incorporado a la web: `assets/almanaque/2024/2024_cartoncillo_vega_junio.svg`.
+
+Nota de control: el valor `+38°48,2′` es el que reproduce exactamente la opción oficial. No sustituirlo por otra edición o redondeo del Almanaque sin volver a comprobar toda la pregunta.

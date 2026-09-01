@@ -7551,8 +7551,13 @@
       "similar_examples": [],
       "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 19 del tipo 1 CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
-      "answer_source": "https://www.carm.es/web/descarga?ARCHIVO=CAP%20junio-2024%20Tipo%201%20con%20respuestas.pdf&ALIAS=ARCH&IDCONTENIDO=199033&IDTIPO=60&RASTRO=c$m74741"
+      "answer_note": "Respuesta D verificada en la pregunta 19 del tipo 1 CARM y mediante cálculo independiente: con l = 31°32,2′ N, d* = +38°48,2′ y P = 13°05′46″ W se obtiene ae* = 77°04′57,2″, que redondeado al segundo coincide con 77°04′57″.",
+      "answer_source": "https://www.carm.es/web/descarga?ARCHIVO=CAP%20junio-2024%20Tipo%201%20con%20respuestas.pdf&ALIAS=ARCH&IDCONTENIDO=199033&IDTIPO=60&RASTRO=c$m74741",
+      "almanac_assets": [
+        "assets/almanaque/2024/2024_cartoncillo_vega_junio.svg"
+      ],
+      "resolution_status": "preparada_pendiente_revision_usuario",
+      "resolution_file": "master/resoluciones/2024-06-murcia-p19-altura-estimada-vega.md"
     },
     {
       "id": 1259,

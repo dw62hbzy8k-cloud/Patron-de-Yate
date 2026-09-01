@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" role="img" aria-labelledby="title desc">
+  <title id="title">Cartoncillo de estrellas 2024: declinación de Vega</title>
+  <desc id="desc">Ficha didáctica que destaca la declinación norte de Vega, más 38 grados 48,2 minutos, utilizada en la pregunta 19 de junio de 2024.</desc>
+  <rect width="1100" height="700" fill="#f2ecdc"/>
+  <rect x="38" y="38" width="1024" height="624" rx="16" fill="#fffdf5" stroke="#173f5b" stroke-width="5"/>
+  <text x="550" y="105" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#173f5b">ESTRELLAS · CARTONCILLO 2024</text>
+  <text x="550" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#4d6475">Dato necesario para Junio 2024 · pregunta 19</text>
+  <line x1="90" y1="185" x2="1010" y2="185" stroke="#173f5b" stroke-width="3"/>
+  <rect x="90" y="220" width="920" height="82" fill="#173f5b"/>
+  <text x="155" y="272" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="white">N.º / astro</text>
+  <text x="520" y="272" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="white">Mes</text>
+  <text x="705" y="272" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="white">Declinación d*</text>
+  <rect x="90" y="302" width="920" height="130" fill="#fff4c5" stroke="#d6a31c" stroke-width="5"/>
+  <text x="135" y="382" font-family="Arial, sans-serif" font-size="36" font-weight="800" fill="#173f5b">86 · α Lyrae · VEGA</text>
+  <text x="525" y="382" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#173f5b">Junio</text>
+  <rect x="705" y="326" width="265" height="82" rx="12" fill="#e9f8ef" stroke="#24834f" stroke-width="5"/>
+  <text x="838" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="900" fill="#176b43">+38°48,2′</text>
+  <path d="M835 450 L835 420" stroke="#24834f" stroke-width="5"/>
+  <path d="M835 420 L823 436 M835 420 L847 436" fill="none" stroke="#24834f" stroke-width="5"/>
+  <text x="550" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#176b43">Este es el número que copias en la fórmula</text>
+  <rect x="105" y="535" width="890" height="88" rx="12" fill="#eef8ff" stroke="#86acd2" stroke-width="3"/>
+  <text x="135" y="570" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173f5b">Cómo leerlo:</text>
+  <text x="135" y="603" font-family="Arial, sans-serif" font-size="21" fill="#173f5b">Vega → columna de declinación → +38°48,2′. El signo + significa Norte.</text>
+</svg>
