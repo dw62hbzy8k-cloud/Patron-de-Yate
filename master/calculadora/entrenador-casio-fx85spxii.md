@@ -36,6 +36,8 @@ El alumno puede seleccionar manualmente cualquiera de los tres niveles y puede s
 
 ## Integración
 
+En la resolución de marzo de 2026, la Casio aparece como calculadora libre, comenzando en `0`. No se muestra allí la práctica de conversión de `44,895188°`, ni sus niveles, contadores, objetivo o instrucciones. El entrenador permanece separado de la explicación del examen.
+
 - Sección propia `Calculadora` en la navegación principal.
 - Entrenador incorporado dentro de la explicación de la pregunta 11 de marzo de 2026, modelo 2.
 - En ordenador, guía y calculadora aparecen lado a lado.
