@@ -17,7 +17,16 @@ En el documento oficial de la CARM este enunciado aparece como pregunta 7 y est�
 - Cuando ese último borde toca el horizonte por el oeste, el Sol termina de desaparecer: es el **ocaso**.
 - La **culminación** ocurre antes, cuando el Sol cruza el meridiano del observador y alcanza su mayor altura del día. En la culminación no está tocando el horizonte.
 
+## Las cuatro palabras del dibujo
+
+1. **Aurora:** comienza a clarear, pero todavía no vemos el disco solar.
+2. **Orto:** el Sol empieza a aparecer por el este.
+3. **Culminación:** el Sol alcanza su mayor altura al cruzar el meridiano del observador.
+4. **Ocaso:** el último borde del Sol desaparece por el oeste.
+
 ### Recordatorio
+
+**Aurora → claridad · orto → sale · culminación → mayor altura · ocaso → se pone.**
 
 **Poniente → el Sol se pone → ocaso.**
 

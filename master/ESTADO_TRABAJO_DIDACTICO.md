@@ -2,6 +2,8 @@
 
 Este registro controla nuestro trabajo de preparación de las preguntas de Cálculo de Navegación. No representa el progreso del alumno ni la verificación oficial de las respuestas.
 
+Las preguntas terminadas de otros módulos se registran aparte para no alterar los contadores ni el orden del bloque de Cálculo.
+
 ## Estados
 
 - Amarillo: pregunta en la que estamos trabajando o que ya está preparada pero espera la revisión del usuario. Aparece temporalmente la primera para continuarla sin buscarla.
@@ -27,6 +29,10 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 - Totales de Cálculo: 3 verdes, 0 amarillas y 337 rojas.
 - El panel de trabajo muestra las 3 preguntas verdes en una lista propia y visible, en orden de aprobación. Dentro de Altura estimada / triángulo solo están verdes marzo de 2026, modelo 2, pregunta 11, y abril de 2021, modelo 2, pregunta 17. Junio de 2023, modelo 1, pregunta 15, también está verde, pero pertenece a Almanaque: declinación.
 - Las 12 preguntas de Altura estimada / triángulo aparecen juntas en un bloque propio, ordenadas primero por las 2 verdes revisadas y después por las 10 que faltan. El bloque muestra el contador `2 de 12 terminadas · faltan 10` y una barra de avance editorial. Las 6 que ya tienen borrador se distinguen como pendientes de revisión; no se confunden con preguntas verdes.
+
+## Preguntas verdes fuera de Cálculo
+
+- ID 89, noviembre de 2022, modelo 2, pregunta 10, Teoría de Navegación: **verde por visto bueno expreso del usuario**. La respuesta C, «El Ocaso», se cotejó con la pregunta 7 del PDF oficial CARM. Incluye una explicación que diferencia aurora, orto, culminación y ocaso, junto con un gráfico de las cuatro etapas revisado visualmente y aprobado por el usuario.
 
 ## Bloque actual: Altura estimada / triángulo de posición
 
