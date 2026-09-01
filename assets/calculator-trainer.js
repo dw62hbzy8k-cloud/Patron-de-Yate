@@ -104,6 +104,7 @@ function trainerMarkup(guideId){
 function setupDocking(root,calculationZone){
  const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]");
  if(!dock||!handle)return;
+ const forceDocked=root.dataset.forceDocked==="1";
  let saved=loadDockPosition(),dragging=null;
  function place(x,y,remember){
   const rect=dock.getBoundingClientRect(),maxX=Math.max(8,window.innerWidth-rect.width-8),maxY=Math.max(8,window.innerHeight-rect.height-8),left=Math.max(8,Math.min(maxX,x)),top=Math.max(8,Math.min(maxY,y));
@@ -113,7 +114,7 @@ function setupDocking(root,calculationZone){
  function restore(){if(root.classList.contains("calc-docked")&&saved)requestAnimationFrame(function(){place(saved.x,saved.y,false)})}
  function updateDock(){
   if(!root.isConnected){window.removeEventListener("scroll",updateDock);window.removeEventListener("resize",updateDock);return}
-  const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),insideCalculationZone=trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>60;
+  const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),insideCalculationZone=forceDocked||(trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>60);
   root.classList.toggle("calc-docked",insideCalculationZone);
   if(insideCalculationZone)restore()
  }
