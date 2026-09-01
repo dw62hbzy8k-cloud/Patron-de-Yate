@@ -79,12 +79,25 @@ Antes de operar se separan dos reglas diferentes:
 1. `hG = 342°42,5′ + 2°30,0′ = 345°12,5′`.
 2. La longitud es Oeste, por lo que se resta: `hL = 345°12,5′ − 10°40,0′ = 334°32,5′`.
 3. `hL` se expresa sobre el círculo completo, de 0° a 360°. `P` utiliza el arco menor, de 0° a 180°, e indica Este u Oeste. Si `hL` está entre 0° y 180°, `P = hL W`; si `hL > 180°`, `P = 360° − hL E`. En esta pregunta: `P = 360° − 334°32,5′ = 25°27,5′ E`.
+
+   Símbolos y límites que deben repetirse en la web justo debajo de esta regla:
+
+   - `hL`: horario local del astro, expresado de 0° a 360°.
+   - `P`: ángulo en el Polo reducido al arco más corto, de 0° a 180°.
+   - `W`: Oeste; `E`: Este.
+   - `180°`: media circunferencia; `360°`: circunferencia completa.
+
+   La explicación conceptual es que `hL` se cuenta hacia el Oeste. Hasta 180°, ese mismo recorrido es el arco más corto y por eso `P = hL W`. Cuando `hL` supera 180°, el recorrido hacia el Oeste ya es el largo; el arco corto queda al Este y mide lo que falta para cerrar la circunferencia: `P = 360° − hL E`.
 4. Fórmula: `sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)`.
 5. La declinación Sur entra con signo negativo.
 6. Se calcula completa la parte situada a la derecha del signo igual: `sen(+35°54′) × sen(−2°26,1′) + cos(+35°54′) × cos(−2°26,1′) × cos(25°27,5′)`.
 7. Al pulsar `=`, la parte derecha da aproximadamente `0,705812`. Por tanto, `sen(ae) = 0,705812`. Este decimal todavía no es `ae`.
 8. El resultado queda guardado en la memoria `Ans`. Pulsar `SHIFT → SIN → Ans → ) → =` para calcular `sen⁻¹(Ans)`.
-9. La pantalla muestra `ae = 44,895188°`.
+   - `sen⁻¹` se lee «arco seno» u «operación inversa del seno».
+   - No significa elevar el seno a `−1` ni dividir entre el seno.
+   - Responde a esta pregunta: «¿qué ángulo tiene como seno `0,705812`?».
+9. La pantalla muestra `ae = 44,895188°`. Este es todavía un resultado intermedio porque las opciones están expresadas en grados y minutos decimales.
+10. La resolución continúa obligatoriamente con la conversión: `− 44 =`, después `× 60 =`, redondeo a una décima de minuto y resultado final `ae = 44°53,7′`, respuesta C.
 
 ## Conversión en la Casio fx-85SP X II
 
