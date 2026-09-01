@@ -1,0 +1,8 @@
+interface:
+  display_name: "Modo Máster Náutica"
+  short_description: "Explicaciones náuticas sin saltarse pasos"
+  default_prompt: "Usa $modo-master-nautica para revisar y explicar este ejercicio náutico con todos sus datos, símbolos, fuentes y pasos."
+
+policy:
+  allow_implicit_invocation: true
+

@@ -17,6 +17,36 @@ Se reconoce porque el enunciado pide literalmente calcular la **altura estimada 
 - `hL☉`: horario local del Sol.
 - `P`: ángulo en el Polo.
 
+## Formas en las que pueden facilitar los datos
+
+Para aplicar la fórmula de la altura estimada siempre se necesitan `l`, `d` y `P`, pero el examen no siempre los entrega del mismo modo. En el banco real aparecen estas variantes:
+
+1. Latitud, declinación y ángulo en el Polo dados directamente.
+2. Fecha, hora, astro, latitud y longitud; `hG` y `d` se obtienen del Almanaque y después se calculan `hL` y `P`.
+3. Referencia a «la misma hora y situación anteriores»; los datos se recuperan de la pregunta precedente.
+4. Ángulo en el Polo ya calculado y declinación que debe leerse en una hoja anexa, especialmente para estrellas.
+
+En estos exámenes la hora aparece como `UT` o `HcG` —hora civil de Greenwich—, o se reutiliza la misma HcG de la pregunta anterior. Ambas expresiones están referidas a Greenwich para la consulta del Almanaque. Si otro enunciado utilizara una clase de hora diferente, su conversión debería explicarse antes de consultar las tablas.
+
+## Qué entrega esta pregunta y qué falta
+
+El enunciado proporciona:
+
+- fecha: 14 de marzo de 2026;
+- hora: `UT 11:10:00`;
+- astro: Sol;
+- latitud estimada: `l = 35°54′ N`;
+- longitud estimada: `L = 10°40′ W`;
+- incógnita solicitada: altura estimada del Sol, `ae☉`.
+
+No proporciona y se debe obtener:
+
+- `hG☉`, mediante las páginas 82 y 430;
+- `d☉`, mediante la página diaria 82;
+- `hL☉`, combinando `hG☉` con `L`;
+- `P`, a partir de `hL☉`;
+- `ae☉`, aplicando la fórmula del triángulo de posición.
+
 ## Datos
 
 - Fecha: 14 de marzo de 2026.
