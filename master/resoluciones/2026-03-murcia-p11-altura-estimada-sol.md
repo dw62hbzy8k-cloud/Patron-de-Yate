@@ -88,14 +88,19 @@ Antes de operar se separan dos reglas diferentes:
    - `180°`: media circunferencia; `360°`: circunferencia completa.
 
    La explicación conceptual es que `hL` se cuenta hacia el Oeste. Hasta 180°, ese mismo recorrido es el arco más corto y por eso `P = hL W`. Cuando `hL` supera 180°, el recorrido hacia el Oeste ya es el largo; el arco corto queda al Este y mide lo que falta para cerrar la circunferencia: `P = 360° − hL E`.
+
+   La web incorpora inmediatamente debajo un gráfico del Ecuador celeste visto desde el polo elevado. Debe mostrar simultáneamente el arco largo azul `hL = 334°32,5′ W`, el arco corto morado `P = 25°27,5′ E`, el meridiano superior en `0°/360°`, la media circunferencia en `180°` y el semicírculo horario del Sol. La explicación acompaña el gráfico en cuatro pasos y compara los dos casos generales: `hL ≤ 180°` y `hL > 180°`.
+
+   Después del gráfico aparece la separación pedagógica «Hasta aquí, papel. Ahora coge la calculadora», con `l`, `d` y `P` repetidos antes de la primera operación numérica. La calculadora no debe volver a colocarse al final como si fuera un añadido independiente.
 4. Fórmula: `sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)`.
 5. La declinación Sur entra con signo negativo.
 6. Se calcula completa la parte situada a la derecha del signo igual: `sen(+35°54′) × sen(−2°26,1′) + cos(+35°54′) × cos(−2°26,1′) × cos(25°27,5′)`.
 7. Al pulsar `=`, la parte derecha da aproximadamente `0,705812`. Por tanto, `sen(ae) = 0,705812`. Este decimal todavía no es `ae`.
 8. El resultado queda guardado en la memoria `Ans`. Pulsar `SHIFT → SIN → Ans → ) → =` para calcular `sen⁻¹(Ans)`.
    - `sen⁻¹` se lee «arco seno» u «operación inversa del seno».
-   - No significa elevar el seno a `−1` ni dividir entre el seno.
-   - Responde a esta pregunta: «¿qué ángulo tiene como seno `0,705812`?».
+   - En la Casio está escrito en pequeño y en amarillo encima de la tecla `SIN`; no es una tecla distinta.
+   - Se activa pulsando primero `SHIFT` y después `SIN`. La pantalla muestra `sin⁻¹(`.
+   - En esta pregunta sirve para recuperar `ae` a partir de `sen(ae) = 0,705812`. También se usa cuando otro ejercicio da el seno de un ángulo y pide averiguar el ángulo.
 9. La pantalla muestra `ae = 44,895188°`. Este es todavía un resultado intermedio porque las opciones están expresadas en grados y minutos decimales.
 10. La resolución continúa obligatoriamente con la conversión: `− 44 =`, después `× 60 =`, redondeo a una décima de minuto y resultado final `ae = 44°53,7′`, respuesta C.
 
