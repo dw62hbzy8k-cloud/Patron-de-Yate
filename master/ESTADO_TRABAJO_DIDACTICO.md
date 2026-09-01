@@ -35,7 +35,7 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 - La ID 1336 estaba etiquetada dentro del bloque, pero trata de altura verdadera y correcciones de sextante; queda separada para corregir su clasificación sin mezclar métodos.
 - En la ID 98 se corrigió el orden de las opciones con la página 5 del PDF oficial CARM. La respuesta A es 25°27′18″ y coincide con la fórmula.
 - Cada pregunta verde incluye al final un recordatorio rápido, discreto y cerrado por defecto.
-- Las preguntas con recordatorio preparado permiten alternar entre explicación completa y versión rápida. La versión rápida conserva el enunciado, las opciones, cualquier dato heredado del ejercicio anterior, el recordatorio discreto, la calculadora y las hojas del Almanaque únicamente cuando el problema las necesita.
+- Las preguntas con recordatorio preparado permiten alternar entre explicación completa y versión rápida. La versión rápida conserva el enunciado, las opciones, cualquier dato heredado del ejercicio anterior, el recordatorio discreto, la calculadora y las hojas del Almanaque únicamente cuando el problema las necesita. La calculadora se abre y se cierra con un botón explícito para que el bloque se despliegue hacia abajo y no parezca que falta.
 
 ## Condiciones para pasar una pregunta a verde
 

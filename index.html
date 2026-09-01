@@ -369,11 +369,17 @@ function studyModeToggleHTML(q){
 }
 function learningMaterialsHTML(q){
  const reminder=quickReminderHTML(q,true);
- if(compactStudy&&reminder)return `${almanacHTML(q)}${reminder}${calculatorHTML(q,true)}`;
+ if(compactStudy&&reminder)return `${almanacHTML(q)}${reminder}${compactCalculatorHTML(q)}`;
  return `${problemTypeHTML(q)}${almanacHTML(q)}${heightFormulaHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${quickReminderHTML(q)}`;
+}
+function compactCalculatorHTML(q){
+ const calculator=calculatorHTML(q,true);
+ if(!calculator)return "";
+ return `<div style="margin-top:10px;padding:10px;border:2px solid #7657a5;border-radius:11px;background:#f4effb"><button class="action" type="button" data-compact-calculator-toggle aria-expanded="false" style="width:100%;font-size:18px;background:#7657a5">🧮 Abrir calculadora ↓</button><div data-compact-calculator-panel hidden>${calculator}</div></div>`;
 }
 function bindStudyMode(scope,rerender){
  scope.querySelectorAll("[data-study-mode]").forEach(button=>button.onclick=()=>{compactStudy=button.dataset.studyMode==="compact";rerender()});
+ scope.querySelectorAll("[data-compact-calculator-toggle]").forEach(button=>button.onclick=()=>{const panel=button.parentElement.querySelector("[data-compact-calculator-panel]"),opening=panel.hidden;panel.hidden=!opening;button.setAttribute("aria-expanded",String(opening));button.textContent=opening?"🧮 Cerrar calculadora ↑":"🧮 Abrir calculadora ↓";if(opening){window.dispatchEvent(new Event("resize"));requestAnimationFrame(()=>panel.scrollIntoView({behavior:"smooth",block:"start"}))}});
 }
 
 function validAnswers(q){return Array.isArray(q.accepted_answers)&&q.accepted_answers.length?q.accepted_answers:(q.answer?[q.answer]:[])}
