@@ -56,3 +56,5 @@ Fuente: `master/fuentes_oficiales/CARM_CY_Noviembre_2022_Tipo1_con_respuestas.pd
 ## Resultado
 
 La auditoría detectó **33 respuestas mal asociadas** y **7 que ya coincidían**. Las 40 quedan ahora cotejadas con el texto subrayado del documento oficial.
+
+La web conserva la letra elegida por el alumno en cada intento. Al cargar esta revisión, vuelve a calificar automáticamente los intentos y prácticas anteriores de noviembre de 2022 con la plantilla corregida, recalcula los cuatro bloques y conserva antes una copia automática de seguridad.

@@ -496,6 +496,28 @@ renderCalcStudyPlan();renderBankAnalysis();
 function makeAutoBackup(){
  try{const snapshots=JSON.parse(localStorage.getItem(BACKUPKEY)||"[]"),snapshot={ts:Date.now(),history:loadHistory(),practice:loadPractice()};snapshots.unshift(snapshot);localStorage.setItem(BACKUPKEY,JSON.stringify(snapshots.slice(0,5)))}catch(e){}
 }
+function reconcileNovember2022Progress(){
+ const revisionKey="aprobarNautica_answerKeyRevision_nov2022_v1",revision="c34eeb2";
+ if(localStorage.getItem(revisionKey)===revision)return;
+ const examId="murcia_2022_11_m2_murcia",history=loadHistory(),practice=loadPractice();
+ makeAutoBackup();
+ practice.forEach(row=>{const q=QUESTION_BY_ID.get(String(row.question_id));if(!q||q.exam_id!==examId)return;row.verified=q.answer_status==="verificada";row.correct=row.verified&&isCorrect(q,row.selected)});
+ history.forEach(attempt=>{
+   if(attempt.exam_id!==examId||!Array.isArray(attempt.answers))return;
+   const blocks={teoria:{ok:0,total:0},calculo:{ok:0,total:0},meteo:{ok:0,total:0},ingles:{ok:0,total:0}};
+   let correct=0,wrong=0,blank=0,total=0;
+   attempt.answers.forEach(row=>{
+     const q=QUESTION_BY_ID.get(String(row.question_id));if(!q||q.answer_status==="anulada")return;
+     row.correct=q.answer_status==="verificada"&&isCorrect(q,row.selected);row.module=q.module;row.topic=q.topic;row.number=q.number;
+     total++;if(!row.selected)blank++;else if(row.correct)correct++;else wrong++;
+     const key=q.number<=10?"teoria":q.number<=20?"calculo":q.number<=30?"meteo":"ingles";blocks[key].total++;if(row.correct)blocks[key].ok++;
+   });
+   attempt.correct=correct;attempt.total=total;attempt.wrong=wrong;attempt.blank=blank;attempt.percent=total?Math.round(correct/total*1000)/10:0;attempt.global_pass=correct>=28&&blocks.teoria.ok>=5&&blocks.calculo.ok>=6;
+   attempt.blocks={teoria:`${blocks.teoria.ok}/${blocks.teoria.total}`,calculo:`${blocks.calculo.ok}/${blocks.calculo.total}`,meteo:`${blocks.meteo.ok}/${blocks.meteo.total}`,ingles:`${blocks.ingles.ok}/${blocks.ingles.total}`};
+ });
+ localStorage.setItem(PRACTKEY,JSON.stringify(practice));localStorage.setItem(HISTKEY,JSON.stringify(history));localStorage.setItem(revisionKey,revision);
+}
+reconcileNovember2022Progress();
 function practiceRecord(q,selected,ts=Date.now(),confidence="knew",kind="practice"){return {ts,date:new Date(ts).toLocaleString("es-ES"),question_id:q.id,number:q.number,module:q.module,topic:q.topic,exam_id:q.exam_id,exam:q.convocatoria+" · Modelo "+q.model,selected,confidence,kind,verified:q.answer_status==="verificada",correct:isCorrect(q,selected)}}
 function refreshPersonal(){renderProgress();renderHomeAreas();renderDailyCard();renderCalculationTrainingControls();renderCalcStudyPlan();renderBankAnalysis()}
 function savePractice(q,selected,confidence="knew"){const h=loadPractice();h.unshift(practiceRecord(q,selected,Date.now(),confidence));localStorage.setItem(PRACTKEY,JSON.stringify(h));makeAutoBackup();refreshPersonal()}
