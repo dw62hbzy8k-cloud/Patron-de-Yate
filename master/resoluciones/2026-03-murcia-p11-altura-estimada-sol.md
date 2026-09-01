@@ -124,6 +124,6 @@ La web incluye esta conversión en una simulación educativa de la Casio fx-85SP
 2. **Practicar:** ninguna tecla se adelanta; una pulsación equivocada queda bloqueada, se marca en rojo y puede emitir un aviso. La correcta se confirma brevemente en verde, sin texto innecesario.
 3. **Solo:** permite realizar la operación libremente y revisar el resultado. Si no coincide, señala la primera pulsación que se separó de la ruta enseñada.
 
-La secuencia validada de esta lección es `− → 4 → 4 → = → × → 6 → 0 → =`. El resultado intermedio obligatorio es `0,895188` y el resultado de los minutos es `53,71128′`. La web guarda por separado los ejercicios completados en cada nivel y recomienda el siguiente nivel sin modificar ni borrar el historial de exámenes del alumno.
+La secuencia validada de esta lección es `− 44 =`, seguida de `× 60 =`. En las instrucciones visibles, `44` y `60` deben escribirse siempre como números completos, sin separar sus cifras. El resultado intermedio obligatorio es `0,895188` y el resultado de los minutos es `53,71128′`. La web guarda por separado los ejercicios completados en cada nivel y recomienda el siguiente nivel sin modificar ni borrar el historial de exámenes del alumno.
 
 La conservación del último resultado en la memoria `Ans` se ha contrastado con el manual oficial de la Casio fx-82/85/350SP X II: `https://support.casio.com/storage/es/manual/pdf/ES/004/fx-82_85_350SP_X_II_ES.pdf`.

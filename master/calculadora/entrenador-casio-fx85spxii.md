@@ -10,9 +10,11 @@ La primera lección enseña la conversión final de la pregunta 11 del examen de
 - minutos sin redondear: `53,71128′`;
 - respuesta final: `44°53,7′`.
 
-Secuencia principal validada:
+Operaciones principales validadas:
 
-`− → 4 → 4 → = → × → 6 → 0 → =`
+`− 44 =` y después `× 60 =`.
+
+En las explicaciones se muestran `44` y `60` como números completos. El entrenador ilumina cada tecla individual únicamente mientras el alumno practica la pulsación real.
 
 ## Tres niveles
 
