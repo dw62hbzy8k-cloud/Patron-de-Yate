@@ -32,6 +32,8 @@ La guía conserva directamente los minutos decimales de los datos. La primera pu
 
 En la web no se repite esta lista como una explicación separada. La calculadora aparece dentro del paso 3 y guía directamente la introducción de la fórmula, tecla por tecla, con el mismo modelo empleado en los ejercicios anteriores.
 
+La estructura visible debe conservar la plantilla ya aprobada en las preguntas verdes de altura estimada: datos preparados en el papel → reglas de signos → dibujo → fórmula general → sustitución → calculadora → paso 1, calcular la parte derecha → paso 2, recuperar `ae*` con `SHIFT → SIN` → paso 3, convertir al formato de las respuestas. No crear una numeración o una tipología distinta para esta pregunta.
+
 La versión rápida conserva visible la fórmula general y su sustitución numérica antes del resultado.
 
 Resultados sin redondear antes de tiempo:
