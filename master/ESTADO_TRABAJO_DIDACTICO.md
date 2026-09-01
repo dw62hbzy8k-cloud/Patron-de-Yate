@@ -26,6 +26,7 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 - Preguntas completamente terminadas y revisadas por el usuario: ID 1050, ID 14 e ID 296.
 - Totales de Cálculo: 3 verdes, 0 amarillas y 337 rojas.
 - El panel de trabajo muestra las 3 preguntas verdes en una lista propia y visible, en orden de aprobación. Dentro de Altura estimada / triángulo solo están verdes marzo de 2026, modelo 2, pregunta 11, y abril de 2021, modelo 2, pregunta 17. Junio de 2023, modelo 1, pregunta 15, también está verde, pero pertenece a Almanaque: declinación.
+- Las 12 preguntas de Altura estimada / triángulo aparecen juntas en un bloque propio, ordenadas primero por las 2 verdes revisadas y después por las 10 que faltan. El bloque muestra el contador `2 de 12 terminadas · faltan 10` y una barra de avance editorial. Las 6 que ya tienen borrador se distinguen como pendientes de revisión; no se confunden con preguntas verdes.
 
 ## Bloque actual: Altura estimada / triángulo de posición
 
