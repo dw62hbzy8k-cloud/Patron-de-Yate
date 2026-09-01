@@ -78,7 +78,7 @@ Antes de operar se separan dos reglas diferentes:
 
 1. `hG = 342°42,5′ + 2°30,0′ = 345°12,5′`.
 2. La longitud es Oeste, por lo que se resta: `hL = 345°12,5′ − 10°40,0′ = 334°32,5′`.
-3. Como `hL > 180°`, `P = 360° − 334°32,5′ = 25°27,5′ E`.
+3. `hL` se expresa sobre el círculo completo, de 0° a 360°. `P` utiliza el arco menor, de 0° a 180°, e indica Este u Oeste. Si `hL` está entre 0° y 180°, `P = hL W`; si `hL > 180°`, `P = 360° − hL E`. En esta pregunta: `P = 360° − 334°32,5′ = 25°27,5′ E`.
 4. Fórmula: `sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)`.
 5. La declinación Sur entra con signo negativo.
 6. La expresión da aproximadamente `sen(ae) = 0,705812`.
