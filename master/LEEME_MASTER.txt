@@ -2,6 +2,15 @@ CAPITÁN DE YATE · MASTER ACUMULATIVO
 
 REGLA: ninguna versión futura puede perder contenido ya incorporado.
 
+MODO DE REVISIÓN VISUAL ESTRICTA:
+- Los gráficos didácticos no se consideran terminados solo porque funcionen técnicamente.
+- Antes de dar una modificación visual por finalizada, abrir la versión publicada y revisar una captura ampliada.
+- Comprobar que ningún texto pisa líneas, flechas, imágenes ni otros rótulos.
+- Cada flecha debe terminar junto al elemento que identifica, sin confundirse con otra línea del dibujo.
+- Rótulo, flecha y elemento relacionado deben compartir un color claramente distinto de los demás.
+- Verificar también la parte inferior del gráfico y no únicamente la primera zona visible.
+- Si la captura descubre un defecto, corregirlo y repetir la revisión antes de comunicárselo al usuario como terminado.
+
 HOJA DE RUTA: las decisiones de producto, expansión nacional, modelo comercial,
 calculadoras, visita 360 y acompañamiento al examen se conservan en
 HOJA_DE_RUTA_PRODUCTO_Y_NEGOCIO.md. Ese documento también es acumulativo.
