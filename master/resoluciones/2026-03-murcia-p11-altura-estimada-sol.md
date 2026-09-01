@@ -16,6 +16,16 @@ Altura estimada mediante el triángulo de posición. No es una ortodrómica.
 - Página diaria 82: para UT 11, `hG del Sol = 342°42,5′` y `declinación = 2°26,1′ S`.
 - Página 430 de incrementos: para 10 minutos y 0 segundos, incremento del Sol `2°30,0′`.
 
+### Cómo leer la página 430
+
+1. `UT 11:10:00` se separa en la hora entera `11 h` y el tiempo transcurrido después de ella: `10 min 00 s`.
+2. En la página 430 se entra por el bloque `10ᵐ`.
+3. En la primera columna, encabezada con `s`, se busca la fila `0` porque la UT tiene cero segundos.
+4. En esa misma fila se avanza hasta la columna `Sol y planetas` y se lee `2°30,0′`.
+5. Las columnas `Dif.` y `Correc.` de la derecha no se utilizan en esta pregunta.
+
+Aunque la página se titula «Correcciones», el valor `2°30,0′` de la columna `Sol y planetas` es el incremento de horario acumulado durante los diez minutos posteriores a las 11:00. Aparece sin signo porque la tabla da su magnitud y su operación ya está definida: se añade al horario de Greenwich de la hora entera.
+
 ## Cálculo
 
 1. `hG = 342°42,5′ + 2°30,0′ = 345°12,5′`.
