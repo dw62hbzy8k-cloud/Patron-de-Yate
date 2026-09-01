@@ -51,12 +51,12 @@ Principio comercial decidido por el usuario: **dar más por menos**. El producto
 - Crear una calculadora guiada interactiva junto a cada resolución: dibujo fiel del modelo seleccionado, pantalla simulada y tecla siguiente iluminada suavemente.
 - Sincronizar la calculadora con un único paso visible cada vez, mediante botones «Anterior», «Siguiente» y «Repetir», y permitir reproducción automática lenta sin impedir que el alumno avance manualmente.
 - Ofrecer dos modos sobre la misma calculadora: «Con guía», que enseña y comprueba la secuencia tecla por tecla, y «Libre», que deja todo el teclado operativo para calcular a voluntad.
-- En modo guiado, permitir elegir entre bloquear una tecla equivocada o aceptarla y explicar cómo corregirla con `DEL` o `AC`.
+- En los dos primeros niveles guiados, bloquear siempre la tecla equivocada para que no modifique la operación.
 - En modo libre, incluir las operaciones necesarias para PER, Patrón y Capitán de Yate: paréntesis, memoria `Ans`, grados, minutos y segundos, DEG, trigonometría y funciones trigonométricas inversas.
 - La calculadora será una implementación educativa propia; no copiará el programa interno ni se presentará como emulador oficial del fabricante.
 - Convertir esos modos en tres niveles de aprendizaje automáticos:
   1. **Aprendizaje verde:** iluminar la tecla siguiente con un verde muy suave y bloquear todas las teclas incorrectas.
-  2. **Práctica con aviso:** no iluminar ninguna tecla; permitir el intento, pero emitir un sonido discreto y marcar en rojo una pulsación equivocada para que el alumno la corrija.
+  2. **Práctica con aviso:** no indicar de antemano la tecla correcta. Si el alumno pulsa una tecla equivocada, esa tecla no funciona ni modifica la operación: solo toma momentáneamente un tono rojo y emite un sonido discreto. Cuando pulsa la tecla correcta, la pulsación sí se acepta, la tecla se pone verde y aparece una confirmación de que va por buen camino.
   3. **Uso autónomo:** dejar toda la calculadora operativa y permitir errores sin interrumpir. Al finalizar, analizar la operación y mostrar el primer paso en el que el resultado se desvió, la tecla que originó el error y cómo corregirla.
 - Guardar para cada intento la secuencia de teclas, las expresiones y los resultados intermedios. Comparar estados matemáticos y no solo una cadena rígida de teclas, para aceptar procedimientos equivalentes que también sean correctos.
 - Hacer que el programa cambie de nivel según el dominio demostrado por el alumno en ese tipo de cálculo y en ese modelo de calculadora. Permitir bajar temporalmente de nivel cuando reaparezcan errores y ofrecer siempre un botón para solicitar ayuda.
