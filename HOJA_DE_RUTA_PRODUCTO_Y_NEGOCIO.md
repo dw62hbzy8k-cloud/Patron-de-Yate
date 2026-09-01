@@ -50,6 +50,10 @@ Principio comercial decidido por el usuario: **dar más por menos**. El producto
 - Conservar junto a cada secuencia el modelo exacto, la versión del manual oficial y el enlace de procedencia.
 - Crear una calculadora guiada interactiva junto a cada resolución: dibujo fiel del modelo seleccionado, pantalla simulada, tecla siguiente iluminada y un dedo animado que indique dónde pulsar.
 - Sincronizar la calculadora con un único paso visible cada vez, mediante botones «Anterior», «Siguiente» y «Repetir», y permitir reproducción automática lenta sin impedir que el alumno avance manualmente.
+- Ofrecer dos modos sobre la misma calculadora: «Con guía», que enseña y comprueba la secuencia tecla por tecla, y «Libre», que deja todo el teclado operativo para calcular a voluntad.
+- En modo guiado, permitir elegir entre bloquear una tecla equivocada o aceptarla y explicar cómo corregirla con `DEL` o `AC`.
+- En modo libre, incluir las operaciones necesarias para PER, Patrón y Capitán de Yate: paréntesis, memoria `Ans`, grados, minutos y segundos, DEG, trigonometría y funciones trigonométricas inversas.
+- La calculadora será una implementación educativa propia; no copiará el programa interno ni se presentará como emulador oficial del fabricante.
 - Adaptar la posición al dispositivo: calculadora al lado del ejercicio en ordenador y debajo del paso actual en móvil.
 - Utilizar ilustraciones propias o imágenes autorizadas para la interfaz comercial, conservando la distribución exacta de teclas necesaria para enseñar el modelo.
 - Verificar siempre las reglas de calculadoras permitidas de cada convocatoria; no ayudar a ocultar calculadoras programables prohibidas.
