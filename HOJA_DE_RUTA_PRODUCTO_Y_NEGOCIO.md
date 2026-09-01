@@ -45,6 +45,9 @@ Principio comercial decidido por el usuario: **dar más por menos**. El producto
 - Empezar por la Casio fx-85SP X II del usuario.
 - En PER, centrarse en operaciones y cálculos sencillos; en Patrón de Yate, ampliar a calculadoras científicas; en Capitán de Yate, integrar Almanaque y navegación astronómica.
 - Crear un selector de calculadora y una tabla de equivalencias entre modelos habituales.
+- Reservar para la fase final una biblioteca de calculadoras habituales entre los alumnos: identificar primero los modelos realmente usados y descargar únicamente sus manuales oficiales.
+- Traducir cada procedimiento matemático ya validado a secuencias de teclas independientes para cada modelo; no asumir que dos calculadoras utilizan el mismo menú o las mismas teclas.
+- Conservar junto a cada secuencia el modelo exacto, la versión del manual oficial y el enlace de procedencia.
 - Verificar siempre las reglas de calculadoras permitidas de cada convocatoria; no ayudar a ocultar calculadoras programables prohibidas.
 
 ## Aprendizaje visual a bordo

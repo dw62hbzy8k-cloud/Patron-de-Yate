@@ -81,8 +81,10 @@ Antes de operar se separan dos reglas diferentes:
 3. `hL` se expresa sobre el círculo completo, de 0° a 360°. `P` utiliza el arco menor, de 0° a 180°, e indica Este u Oeste. Si `hL` está entre 0° y 180°, `P = hL W`; si `hL > 180°`, `P = 360° − hL E`. En esta pregunta: `P = 360° − 334°32,5′ = 25°27,5′ E`.
 4. Fórmula: `sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)`.
 5. La declinación Sur entra con signo negativo.
-6. La expresión da aproximadamente `sen(ae) = 0,705812`.
-7. Con `SHIFT → SIN`, `ae = 44,895188°`.
+6. Se calcula completa la parte situada a la derecha del signo igual: `sen(+35°54′) × sen(−2°26,1′) + cos(+35°54′) × cos(−2°26,1′) × cos(25°27,5′)`.
+7. Al pulsar `=`, la parte derecha da aproximadamente `0,705812`. Por tanto, `sen(ae) = 0,705812`. Este decimal todavía no es `ae`.
+8. El resultado queda guardado en la memoria `Ans`. Pulsar `SHIFT → SIN → Ans → ) → =` para calcular `sen⁻¹(Ans)`.
+9. La pantalla muestra `ae = 44,895188°`.
 
 ## Conversión en la Casio fx-85SP X II
 
@@ -95,3 +97,5 @@ Antes de operar se separan dos reglas diferentes:
 7. Reunir grados y minutos: `44°53,7′`.
 
 Resultado: `44°53,7′`. Respuesta C.
+
+La conservación del último resultado en la memoria `Ans` se ha contrastado con el manual oficial de la Casio fx-82/85/350SP X II: `https://support.casio.com/storage/es/manual/pdf/ES/004/fx-82_85_350SP_X_II_ES.pdf`.
