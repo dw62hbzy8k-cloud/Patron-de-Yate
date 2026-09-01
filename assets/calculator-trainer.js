@@ -136,18 +136,31 @@ function setupDocking(root,calculationZone){
  const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]");
  if(!dock||!handle)return;
  const forceDocked=root.dataset.forceDocked==="1";
- let saved=loadDockPosition(),dragging=null;
+ let saved=loadDockPosition(),dragging=null,docked=false,ticking=false,placeholderHeight=0;
  function place(x,y,remember){
   const rect=dock.getBoundingClientRect(),maxX=Math.max(8,window.innerWidth-rect.width-8),maxY=Math.max(8,window.innerHeight-rect.height-8),left=Math.max(8,Math.min(maxX,x)),top=Math.max(8,Math.min(maxY,y));
   dock.style.left=left+"px";dock.style.top=top+"px";dock.style.right="auto";dock.style.bottom="auto";
   if(remember){saved={x:left,y:top};saveDockPosition(saved)}
  }
- function restore(){if(root.classList.contains("calc-docked")&&saved)requestAnimationFrame(function(){place(saved.x,saved.y,false)})}
+ function restore(){if(docked&&saved)requestAnimationFrame(function(){place(saved.x,saved.y,false)})}
+ function setDocked(next){
+  if(next===docked)return;
+  if(next){
+   placeholderHeight=Math.max(1,dock.getBoundingClientRect().height);
+   root.style.minHeight=placeholderHeight+"px";
+   docked=true;root.classList.add("calc-docked");restore();
+  }else{
+   docked=false;root.classList.remove("calc-docked");root.style.minHeight="";
+  }
+ }
  function updateDock(){
   if(!root.isConnected){window.removeEventListener("scroll",updateDock);window.removeEventListener("resize",updateDock);return}
-  const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),insideCalculationZone=forceDocked||(trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>60);
-  root.classList.toggle("calc-docked",insideCalculationZone);
-  if(insideCalculationZone)restore()
+  if(ticking)return;ticking=true;
+  requestAnimationFrame(function(){
+   ticking=false;
+   const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),insideCalculationZone=forceDocked||(trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>80);
+   setDocked(insideCalculationZone)
+  })
  }
  function startDrag(event){if(!root.classList.contains("calc-docked")||![0,2].includes(event.button))return;event.preventDefault();event.stopPropagation();const rect=dock.getBoundingClientRect();dragging={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,left:rect.left,top:rect.top};place(rect.left,rect.top,false);handle.classList.add("dragging");dock.setPointerCapture(event.pointerId)}
  handle.addEventListener("pointerdown",startDrag);
@@ -182,7 +195,7 @@ function mount(root){
  const finalHeightText=height1258?"ae* = 77°04′57,2″, que en las respuestas es 77°04′57″.":height1010?"ae = 63°56′14,1″, que en las respuestas es 63°56,2′.":height296?"ae = 51°14′06,4″, que en las respuestas es 51°14,1′.":"ae = 44°53,7′.";
  const milestones=height1258?[{at:58,value:"0.974693172380"},{at:63,value:"77.082554214"},{at:64,value:"77°04′57,2″"}]:height1010?[{at:50,value:"0.8983134026"},{at:55,value:"63.9372496"},{at:56,value:"63°56′14,1″"}]:height296?[{at:61,value:"0.779722"},{at:66,value:"51.235123"},{at:67,value:"51°14′06,4″"}]:[{at:61,value:"0.7058120802"},{at:66,value:"44.8951881663"},{at:70,value:"0.8951881663"},{at:74,value:"53.7112899782"}];
  const formulaEnd=height1258?58:height1010?50:61,inverseEnd=height1258?63:height1010?55:66;
- if(inlineTrainer){root.classList.add("calc-inline-trainer");const calculationZone=root.closest('div[style*="border:3px solid #1c6ea4"]')||root;setupDocking(root,calculationZone)}
+ if(inlineTrainer){root.classList.add("calc-inline-trainer");const calculationZone=root.closest("[data-calculation-zone]")||root.closest('div[style*="border:3px solid #1c6ea4"]')||root.closest('div[style*="border:3px solid #d6a31c"]')||root;setupDocking(root,calculationZone)}
  const expressionEl=root.querySelector("[data-ct-expression]"),resultEl=root.querySelector("[data-ct-result]"),instructionEl=root.querySelector("[data-ct-instruction]"),feedbackEl=root.querySelector("[data-ct-feedback]"),levelEl=root.querySelector("[data-ct-level]"),modeDescriptionEl=root.querySelector("[data-ct-mode-description]"),progressEl=root.querySelector("[data-ct-progress]"),soundEl=root.querySelector("[data-ct-sound]"),keys=Array.from(root.querySelectorAll(".calc-key")),modeButtons=Array.from(root.querySelectorAll("[data-ct-mode]")),stepItems=Array.from(root.querySelectorAll("[data-ct-steps] li"));
  const startValue=heightGuide?"0":"44.895188",startExpression=heightGuide?"":"44.895188";
  let progress=loadProgress(storageKey),mode=recommendedMode(progress),cursor=0,history=[],expression=startExpression,display=startValue,stored=Number(startValue),pending=null,typing=false,completed=false;

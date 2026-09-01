@@ -22,6 +22,16 @@ Sustitución:
 
 `sen(ae*) = sen(31°32,2′)·sen(38°48,2′) + cos(31°32,2′)·cos(38°48,2′)·cos(13°05′46″)`
 
+### Entrada clara en la Casio
+
+La guía conserva directamente los minutos decimales de los datos. La primera pulsación de `°′″` cierra los grados y la segunda cierra los minutos:
+
+- `31°32,2′`: `31 → °′″ → 32 → . → 2 → °′″`.
+- `38°48,2′`: `38 → °′″ → 48 → . → 2 → °′″`.
+- `13°05′46″`: `13 → °′″ → 5 → °′″ → 46 → °′″`; este dato ya incluye segundos, por eso tiene tres grupos.
+
+La explicación visible debe indicar qué representa cada pulsación, no limitarse a enumerar las teclas.
+
 Resultados sin redondear antes de tiempo:
 
 - `sen(ae*) = 0,974693172380`
@@ -42,5 +52,7 @@ Respuesta en la web: **D · 77°04′57″**.
 - Examen oficial CARM, Junio 2024, Tipo 1 con respuestas: `master/fuentes_oficiales/CARM_CY_Junio_2024_Tipo1_con_respuestas.pdf`.
 - URL oficial registrada en la pregunta: https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAP+junio-2024+Tipo+1+con+respuestas.pdf&IDCONTENIDO=199033&IDTIPO=60
 - Cartoncillo didáctico incorporado a la web: `assets/almanaque/2024/2024_cartoncillo_vega_junio.svg`.
+- Tabla real de estrellas del Nautical Almanac 2024 incorporada a la web: `assets/almanaque/2024/2024_tabla_real_estrellas_vega.png`. En la fila Vega figuran `SHA 80°33,1′` y `Dec +38°48,2′`, exactamente el dato empleado por la respuesta oficial.
+- Documento público de origen: https://www.estudiasonavegas.com/images/Archivos/CY/CY_Almanaques_Nauticos/2024_Nautical_Almanac.pdf
 
 Nota de control: el valor `+38°48,2′` es el que reproduce exactamente la opción oficial. No sustituirlo por otra edición o redondeo del Almanaque sin volver a comprobar toda la pregunta.

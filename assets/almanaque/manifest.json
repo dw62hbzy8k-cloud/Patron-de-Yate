@@ -1,4 +1,9 @@
 {
+  "2024_tabla_real_estrellas_vega": {
+    "file": "assets/almanaque/2024/2024_tabla_real_estrellas_vega.png",
+    "date": "2024-06",
+    "description": "Tabla real de estrellas del Nautical Almanac 2024, difundido públicamente por Estudias o Navegas. En la fila Vega figuran SHA 80°33,1′ y declinación +38°48,2′."
+  },
   "2024_cartoncillo_vega_junio": {
     "file": "assets/almanaque/2024/2024_cartoncillo_vega_junio.svg",
     "date": "2024-06",
