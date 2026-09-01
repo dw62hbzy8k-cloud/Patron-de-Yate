@@ -22,7 +22,7 @@ Sustitución:
 
 `sen(ae*) = sen(31°32,2′)·sen(38°48,2′) + cos(31°32,2′)·cos(38°48,2′)·cos(13°05′46″)`
 
-### Entrada clara en la Casio
+### Entrada en la calculadora interactiva
 
 La guía conserva directamente los minutos decimales de los datos. La primera pulsación de `°′″` cierra los grados y la segunda cierra los minutos:
 
@@ -30,7 +30,9 @@ La guía conserva directamente los minutos decimales de los datos. La primera pu
 - `38°48,2′`: `38 → °′″ → 48 → . → 2 → °′″`.
 - `13°05′46″`: `13 → °′″ → 5 → °′″ → 46 → °′″`; este dato ya incluye segundos, por eso tiene tres grupos.
 
-La explicación visible debe indicar qué representa cada pulsación, no limitarse a enumerar las teclas.
+En la web no se repite esta lista como una explicación separada. La calculadora aparece dentro del paso 3 y guía directamente la introducción de la fórmula, tecla por tecla, con el mismo modelo empleado en los ejercicios anteriores.
+
+La versión rápida conserva visible la fórmula general y su sustitución numérica antes del resultado.
 
 Resultados sin redondear antes de tiempo:
 
