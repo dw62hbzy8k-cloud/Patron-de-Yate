@@ -48,9 +48,9 @@ Principio comercial decidido por el usuario: **dar más por menos**. El producto
 - Reservar para la fase final una biblioteca de calculadoras habituales entre los alumnos: identificar primero los modelos realmente usados y descargar únicamente sus manuales oficiales.
 - Traducir cada procedimiento matemático ya validado a secuencias de teclas independientes para cada modelo; no asumir que dos calculadoras utilizan el mismo menú o las mismas teclas.
 - Conservar junto a cada secuencia el modelo exacto, la versión del manual oficial y el enlace de procedencia.
-- Crear una calculadora guiada interactiva junto a cada resolución: dibujo fiel del modelo seleccionado, pantalla simulada y tecla siguiente iluminada suavemente.
+- Primera versión ya incorporada para la conversión final de la altura estimada de marzo de 2026: dibujo fiel de la Casio fx-85SP X II, pantalla simulada, tecla siguiente iluminada, tres niveles y progreso local. Extender el mismo sistema, ejercicio por ejercicio, después de validar cada secuencia.
 - Sincronizar la calculadora con un único paso visible cada vez, mediante botones «Anterior», «Siguiente» y «Repetir», y permitir reproducción automática lenta sin impedir que el alumno avance manualmente.
-- Ofrecer dos modos sobre la misma calculadora: «Con guía», que enseña y comprueba la secuencia tecla por tecla, y «Libre», que deja todo el teclado operativo para calcular a voluntad.
+- Ofrecer tres niveles sobre la misma calculadora: aprendizaje con tecla iluminada, práctica sin pista previa y uso autónomo con revisión final.
 - En los dos primeros niveles guiados, bloquear siempre la tecla equivocada para que no modifique la operación.
 - En modo libre, incluir las operaciones necesarias para PER, Patrón y Capitán de Yate: paréntesis, memoria `Ans`, grados, minutos y segundos, DEG, trigonometría y funciones trigonométricas inversas.
 - La calculadora será una implementación educativa propia; no copiará el programa interno ni se presentará como emulador oficial del fabricante.
