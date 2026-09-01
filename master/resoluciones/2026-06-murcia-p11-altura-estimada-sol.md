@@ -2,10 +2,11 @@
 
 ## Estado
 
-- Resolución numérica comprobada.
+- Resolución numérica y respuesta oficial comprobadas.
+- Desarrollo didáctico preparado en la web y pendiente del visto bueno del usuario antes de pasar a verde.
 - Respuesta oficial: **b) ae = 63°56,2′**.
 - Pregunta del MASTER: `id 1010`.
-- Hoja necesaria del Almanaque: página 173, sábado 13 de junio de 2026.
+- Hojas necesarias del Almanaque: página diaria 173 y página 430 de incrementos.
 
 ## Datos del enunciado
 
@@ -23,14 +24,17 @@ En la página 173, tabla del Sol, fila `UT 14 h`:
 
 En la fila `UT 15 h`, la declinación es `+23°13,9′`. Durante 10 min 44 s solo cambia aproximadamente `+0,02′`, por lo que a décimas de minuto se conserva `d☉ = +23°13,8′`.
 
-Hoja conservada: `assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png`.
+Hojas conservadas:
+
+- `assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png`.
+- `assets/almanaque/2026/2026_p430_incrementos_10m.png`.
 
 ## Paso 1 · Incremento de hG entre las 14:00:00 y las 14:10:44
 
-El Sol avanza 15° por hora, que equivale a 15′ de arco por cada minuto de tiempo.
+En la página 430 se entra en el bloque de 10 minutos, fila de 44 segundos y columna «Sol y planetas». Allí se lee directamente:
 
 ```text
-10 min 44 s × 15 = 2°41,0′
+incremento = 2°41,0′
 ```
 
 Por tanto:
@@ -57,10 +61,23 @@ hL☉ = 23°09,6′ W
 
 Error típico: sumar 9°30′ por ver la letra W. Con esta convención no se suma: la longitud W lleva signo negativo.
 
-## Paso 3 · Fórmula de la altura estimada
+## Paso 3 · Convertir hL en P
+
+El horario local se expresa de 0° a 360°, pero la fórmula usa el ángulo menor en el Polo, de 0° a 180°:
+
+- Si `hL ≤ 180°`, `P = hL W`.
+- Si `hL > 180°`, `P = 360° − hL E`.
+
+Aquí `hL = 23°09,6′`, que no supera 180°. Por tanto:
 
 ```text
-sen ae = sen l × sen d + cos l × cos d × cos hL
+P = 23°09,6′ W
+```
+
+## Paso 4 · Fórmula de la altura estimada
+
+```text
+sen ae = sen l × sen d + cos l × cos d × cos P
 ```
 
 Sustituyendo:
@@ -90,7 +107,7 @@ Horizonte  ----+---+----------------
 Triángulo de posición:
   l  = 40°34′ N
   d  = 23°13,8′ N
-  hL = 23°09,6′ W
+  P  = 23°09,6′ W
 ```
 
 ## Casio fx-85SP X II Iberia · teclas exactas
@@ -112,7 +129,6 @@ La tecla `°′″` es la tecla sexagesimal. Para evitar minutos decimales se us
 Pulsar, en este orden:
 
 ```text
-SHIFT  SIN
 SIN  40  °′″  34  °′″  0  °′″  )
 ×
 SIN  23  °′″  13  °′″  48  °′″  )
@@ -122,11 +138,18 @@ COS  40  °′″  34  °′″  0  °′″  )
 COS  23  °′″  13  °′″  48  °′″  )
 ×
 COS  23  °′″  9  °′″  36  °′″  )
-)
 =
 ```
 
-Debe aparecer aproximadamente `63,93724958`.
+Debe aparecer aproximadamente `0,8983134026`. Ese número es `sen(ae)`, no la altura.
+
+Ahora se recupera el ángulo:
+
+```text
+SHIFT  SIN  Ans  )  =
+```
+
+Debe aparecer aproximadamente `63,9372496`.
 
 Pulsar una vez `°′″` para convertir el resultado:
 

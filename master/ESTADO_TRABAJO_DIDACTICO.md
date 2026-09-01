@@ -21,14 +21,14 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 
 ## Estado actual
 
-- Pregunta activa: ninguna; la última revisada ha pasado a verde y la siguiente todavía no se ha seleccionado.
+- Pregunta activa: ID 1010, junio de 2026, modelo 1, pregunta 11, dificultad 5 de 7.
 - Tema: Altura estimada / triángulo de posición.
 - Última pregunta aprobada: ID 296, abril de 2021, modelo 2, pregunta 17, dificultad 5 de 7.
 - Estado: verde por visto bueno expreso del usuario.
 - Preguntas completamente terminadas y revisadas por el usuario: ID 1050, ID 14 e ID 296.
-- Totales de Cálculo: 3 verdes, 0 amarillas y 337 rojas.
+- Totales de Cálculo: 3 verdes, 1 amarilla y 336 rojas.
 - El panel de trabajo muestra las 3 preguntas verdes en una lista propia y visible, en orden de aprobación. Dentro de Altura estimada / triángulo solo están verdes marzo de 2026, modelo 2, pregunta 11, y abril de 2021, modelo 2, pregunta 17. Junio de 2023, modelo 1, pregunta 15, también está verde, pero pertenece a Almanaque: declinación.
-- Las 12 preguntas de Altura estimada / triángulo aparecen juntas en un bloque propio, ordenadas primero por las 2 verdes revisadas y después por las 10 que faltan. El bloque muestra el contador `2 de 12 terminadas · faltan 10` y una barra de avance editorial. Las 6 que ya tienen borrador se distinguen como pendientes de revisión; no se confunden con preguntas verdes.
+- Las 12 preguntas de Altura estimada / triángulo aparecen juntas en un bloque propio, con las 2 verdes revisadas, la amarilla activa ID 1010 y las 9 pendientes. El bloque muestra el contador `2 de 12 terminadas · faltan 10` y una barra de avance editorial.
 
 ## Preguntas verdes fuera de Cálculo
 
@@ -39,7 +39,8 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 - 12 preguntas pertenecen realmente a este procedimiento.
 - 2 están terminadas, corregidas junto al usuario y aprobadas en verde dentro del bloque: ID 1050 y 296.
 - La ID 296 quedó aprobada en verde por el usuario. Como se practica aislada, el recuadro superior recuerda la HcG y la situación del ejercicio anterior del examen original; el alumno no debe volver a la pregunta 16. La latitud queda incluida arriba y el enunciado actual ya aporta declinación y P, por lo que no necesita Almanaque. Incluye una vista polar a escala angular del triángulo de posición, con anillos cada 30° y las posiciones de PN, cenit y Sol calculadas con los datos reales; aclara que el observador se encuentra sobre la Tierra justo debajo del cenit Z; explica sin saltos la conversión de 51,235123° a 51°14,1′; elimina el recuadro de resolución que repetía lo ya explicado; e incorpora en el punto exacto de cálculo una Casio interactiva propia para esta pregunta, con los tres niveles de ayuda y resultado 51°14,1′.
-- 6 tienen una resolución base preparada por el asistente, pero no han sido revisadas una por una con el usuario y por eso permanecen rojas: ID 1010, 98, 334, 374, 735 y 970.
+- La ID 1010, junio de 2026, modelo 1, pregunta 11, está completa en amarillo a la espera de revisión: respuesta B verificada en el PDF oficial; páginas 173 y 430 del Almanaque incorporadas y explicadas; cálculo de hG, d, hL y P desarrollado; gráfico con datos reales; fórmula por colores; Casio interactiva propia; versión rápida y comprobaciones finales.
+- 5 tienen una resolución base preparada por el asistente, pero no han sido revisadas una por una con el usuario y por eso permanecen rojas: ID 98, 334, 374, 735 y 970.
 - 4 siguen pendientes de recuperar datos de la pregunta anterior o comprobar un cartoncillo de estrellas: ID 1298, 58, 1258 y 1335.
 - La ID 1336 estaba etiquetada dentro del bloque, pero trata de altura verdadera y correcciones de sextante; queda separada para corregir su clasificación sin mezclar métodos.
 - En la ID 98 se corrigió el orden de las opciones con la página 5 del PDF oficial CARM. La respuesta A es 25°27′18″ y coincide con la fórmula.
