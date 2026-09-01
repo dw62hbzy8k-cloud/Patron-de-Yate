@@ -12653,9 +12653,9 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 1 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 2 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12695,9 +12695,9 @@
           "similarity": 1
         }
       ],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 2 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 1 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12721,9 +12721,9 @@
       "similar_exam_count": 1,
       "difficulty": 1,
       "similar_examples": [],
-      "answer": "c",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 3 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 4 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12749,7 +12749,7 @@
       "similar_examples": [],
       "answer": "a",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 4 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta A verificada al cotejar el enunciado y el texto de la opción con la pregunta 3 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12773,9 +12773,9 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 5 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 6 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12799,9 +12799,9 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 6 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 5 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12846,9 +12846,9 @@
           "similarity": 0.63
         }
       ],
-      "answer": "c",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 7 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 10 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12890,7 +12890,7 @@
       ],
       "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 8 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 9 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12937,7 +12937,7 @@
       ],
       "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 9 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 8 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12961,9 +12961,9 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": "a",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 10 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C («El Ocaso») subrayada en la pregunta 7 de la página 2 del PDF oficial CARM. El oeste o poniente y el limbo superior tangente al horizonte describen el ocaso, no la culminación.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -12987,9 +12987,9 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": "d",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 11 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 11 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13034,9 +13034,9 @@
           "similarity": 0.5
         }
       ],
-      "answer": "a",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 12 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 12 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13060,9 +13060,9 @@
       "similar_exam_count": 1,
       "difficulty": 5,
       "similar_examples": [],
-      "answer": "a",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 13 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 13 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13086,9 +13086,9 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": "c",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 14 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 14 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13112,9 +13112,9 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": "a",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 15 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 15 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13138,9 +13138,9 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 16 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 16 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13164,9 +13164,9 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": "c",
+      "answer": "a",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 17 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta A verificada al cotejar el enunciado y el texto de la opción con la pregunta 17 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13196,9 +13196,9 @@
           "similarity": 0.57
         }
       ],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 18 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 18 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13254,9 +13254,9 @@
       "similar_exam_count": 1,
       "difficulty": 6,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 20 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 20 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13280,9 +13280,9 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": "d",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 21 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 30 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13306,9 +13306,9 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": "a",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 22 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 29 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13332,9 +13332,9 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 23 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 24 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13358,9 +13358,9 @@
       "similar_exam_count": 1,
       "difficulty": 2,
       "similar_examples": [],
-      "answer": "d",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 24 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 23 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13384,9 +13384,9 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": "a",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 25 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 27 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13410,9 +13410,9 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": "d",
+      "answer": "a",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 26 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta A verificada al cotejar el enunciado y el texto de la opción con la pregunta 25 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13438,7 +13438,7 @@
       "similar_examples": [],
       "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 27 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 26 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13464,7 +13464,7 @@
       "similar_examples": [],
       "answer": "a",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 28 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta A verificada al cotejar el enunciado y el texto de la opción con la pregunta 28 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13488,9 +13488,9 @@
       "similar_exam_count": 1,
       "difficulty": 3,
       "similar_examples": [],
-      "answer": "d",
+      "answer": "a",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 29 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta A verificada al cotejar el enunciado y el texto de la opción con la pregunta 22 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13525,9 +13525,9 @@
           "similarity": 0.54
         }
       ],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 30 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 21 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13572,9 +13572,9 @@
           "similarity": 0.88
         }
       ],
-      "answer": "d",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 31 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 31 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13619,9 +13619,9 @@
           "similarity": 1
         }
       ],
-      "answer": "d",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 32 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 32 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13666,9 +13666,9 @@
           "similarity": 1
         }
       ],
-      "answer": "c",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 33 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 33 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13708,9 +13708,9 @@
           "similarity": 0.88
         }
       ],
-      "answer": "d",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 34 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 34 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13750,9 +13750,9 @@
           "similarity": 0.93
         }
       ],
-      "answer": "a",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 35 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 35 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13797,9 +13797,9 @@
           "similarity": 1
         }
       ],
-      "answer": "b",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 36 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 36 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13844,9 +13844,9 @@
           "similarity": 1
         }
       ],
-      "answer": "c",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 37 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 37 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13886,9 +13886,9 @@
           "similarity": 0.85
         }
       ],
-      "answer": "b",
+      "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 38 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta D verificada al cotejar el enunciado y el texto de la opción con la pregunta 38 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13933,9 +13933,9 @@
           "similarity": 1
         }
       ],
-      "answer": "a",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 39 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta C verificada al cotejar el enunciado y el texto de la opción con la pregunta 39 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
@@ -13980,9 +13980,9 @@
           "similarity": 0.93
         }
       ],
-      "answer": "c",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 40 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada al cotejar el enunciado y el texto de la opción con la pregunta 40 del PDF oficial CARM; el orden de las opciones es distinto en este modelo.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
