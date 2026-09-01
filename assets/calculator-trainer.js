@@ -136,7 +136,7 @@ function setupDocking(root,calculationZone){
  const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]");
  if(!dock||!handle)return;
  const forceDocked=root.dataset.forceDocked==="1";
- let saved=loadDockPosition(),dragging=null,docked=false,ticking=false,placeholderHeight=0;
+ let saved=loadDockPosition(),dragging=null,docked=false,ticking=false,enterScroll=0,exitScroll=Infinity,blockRedockAtBottom=false;
  function place(x,y,remember){
   const rect=dock.getBoundingClientRect(),maxX=Math.max(8,window.innerWidth-rect.width-8),maxY=Math.max(8,window.innerHeight-rect.height-8),left=Math.max(8,Math.min(maxX,x)),top=Math.max(8,Math.min(maxY,y));
   dock.style.left=left+"px";dock.style.top=top+"px";dock.style.right="auto";dock.style.bottom="auto";
@@ -146,8 +146,10 @@ function setupDocking(root,calculationZone){
  function setDocked(next){
   if(next===docked)return;
   if(next){
-   placeholderHeight=Math.max(1,dock.getBoundingClientRect().height);
-   root.style.minHeight=placeholderHeight+"px";
+   const dockHeight=Math.max(1,dock.getBoundingClientRect().height),trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),pageY=window.scrollY;
+   enterScroll=Math.max(0,pageY+trainerRect.top-window.innerHeight*.72);
+   exitScroll=Math.max(enterScroll+120,pageY+zoneRect.bottom-(dockHeight-1)-80);
+   root.style.minHeight="1px";
    docked=true;root.classList.add("calc-docked");restore();
   }else{
    docked=false;root.classList.remove("calc-docked");root.style.minHeight="";
@@ -158,8 +160,16 @@ function setupDocking(root,calculationZone){
   if(ticking)return;ticking=true;
   requestAnimationFrame(function(){
    ticking=false;
-   const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),insideCalculationZone=forceDocked||(trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>80);
-   setDocked(insideCalculationZone)
+   if(forceDocked){setDocked(true);return}
+   const pageY=window.scrollY;
+   if(docked){
+    if(pageY<enterScroll-24){setDocked(false);return}
+    if(pageY>exitScroll+24){blockRedockAtBottom=true;setDocked(false);return}
+    return
+   }
+   if(blockRedockAtBottom){if(pageY>=exitScroll-140)return;blockRedockAtBottom=false}
+   const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect();
+   if(trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>80)setDocked(true)
   })
  }
  function startDrag(event){if(!root.classList.contains("calc-docked")||![0,2].includes(event.button))return;event.preventDefault();event.stopPropagation();const rect=dock.getBoundingClientRect();dragging={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,left:rect.left,top:rect.top};place(rect.left,rect.top,false);handle.classList.add("dragging");dock.setPointerCapture(event.pointerId)}
