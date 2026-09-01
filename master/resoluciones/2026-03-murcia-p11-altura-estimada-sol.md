@@ -4,6 +4,19 @@
 
 Altura estimada mediante el triángulo de posición. No es una ortodrómica.
 
+Se reconoce porque el enunciado pide literalmente calcular la **altura estimada del Sol**. En este ejercicio proporciona la fecha, la hora UT y las coordenadas de la situación estimada: latitud y longitud.
+
+### Símbolos
+
+- `ae`: altura estimada.
+- `l`: latitud estimada.
+- `L`: longitud estimada.
+- `UT`: hora universal.
+- `hG☉`: horario de Greenwich del Sol.
+- `d☉`: declinación del Sol.
+- `hL☉`: horario local del Sol.
+- `P`: ángulo en el Polo.
+
 ## Datos
 
 - Fecha: 14 de marzo de 2026.
