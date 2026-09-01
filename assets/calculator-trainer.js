@@ -73,7 +73,7 @@ function trainerMarkup(){return `<div class="calc-trainer-head"><div><h3>Calcula
   <div class="calc-feedback" data-ct-feedback aria-live="polite">La pantalla ya contiene 44,895188. Empieza por la operación indicada.</div>
  </div>
  <div class="calc-body-wrap"><div class="calc-drag-shell">
-  <div class="calc-drag-handle" data-ct-drag-handle role="button" tabindex="0" aria-label="Mover la calculadora"><span aria-hidden="true">⠿</span> Arrastra para mover</div>
+  <div class="calc-drag-handle" data-ct-drag-handle role="button" tabindex="0" aria-label="Mover la calculadora"><span aria-hidden="true">⠿</span> Arrastra para mover · botón izquierdo o derecho</div>
   ${calculatorPhotoMarkup()}
   <div class="calc-review-row"><button class="calc-review" type="button" data-ct-review>Revisar resultado</button></div>
   <div class="calc-key-legend"><span><i class="calc-key-dot good"></i>tecla correcta</span><span><i class="calc-key-dot bad"></i>tecla incorrecta</span></div>
@@ -96,13 +96,13 @@ function setupDocking(root,calculationZone){
   root.classList.toggle("calc-docked",insideCalculationZone);
   if(insideCalculationZone)restore()
  }
- handle.addEventListener("pointerdown",function(event){
-  if(!root.classList.contains("calc-docked")||event.button!==0)return;
-  event.preventDefault();const rect=dock.getBoundingClientRect();dragging={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,left:rect.left,top:rect.top};place(rect.left,rect.top,false);handle.classList.add("dragging");handle.setPointerCapture(event.pointerId)
- });
- handle.addEventListener("pointermove",function(event){if(!dragging||event.pointerId!==dragging.pointerId)return;event.preventDefault();place(dragging.left+event.clientX-dragging.startX,dragging.top+event.clientY-dragging.startY,false)});
+ function startDrag(event){if(!root.classList.contains("calc-docked")||![0,2].includes(event.button))return;event.preventDefault();event.stopPropagation();const rect=dock.getBoundingClientRect();dragging={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,left:rect.left,top:rect.top};place(rect.left,rect.top,false);handle.classList.add("dragging");dock.setPointerCapture(event.pointerId)}
+ handle.addEventListener("pointerdown",startDrag);
+ dock.addEventListener("pointerdown",function(event){if(event.button===2)startDrag(event)});
+ dock.addEventListener("contextmenu",function(event){if(root.classList.contains("calc-docked"))event.preventDefault()});
+ dock.addEventListener("pointermove",function(event){if(!dragging||event.pointerId!==dragging.pointerId)return;event.preventDefault();place(dragging.left+event.clientX-dragging.startX,dragging.top+event.clientY-dragging.startY,false)});
  function finishDrag(event){if(!dragging||event.pointerId!==dragging.pointerId)return;const rect=dock.getBoundingClientRect();dragging=null;handle.classList.remove("dragging");place(rect.left,rect.top,true)}
- handle.addEventListener("pointerup",finishDrag);handle.addEventListener("pointercancel",finishDrag);
+ dock.addEventListener("pointerup",finishDrag);dock.addEventListener("pointercancel",finishDrag);
  handle.addEventListener("keydown",function(event){if(!root.classList.contains("calc-docked")||!["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key))return;event.preventDefault();const rect=dock.getBoundingClientRect(),step=event.shiftKey?30:10,dx=event.key==="ArrowLeft"?-step:event.key==="ArrowRight"?step:0,dy=event.key==="ArrowUp"?-step:event.key==="ArrowDown"?step:0;place(rect.left+dx,rect.top+dy,true)});
  window.addEventListener("scroll",updateDock,{passive:true});window.addEventListener("resize",updateDock);updateDock()
 }
