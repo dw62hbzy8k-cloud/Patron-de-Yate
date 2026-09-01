@@ -54,6 +54,13 @@ Principio comercial decidido por el usuario: **dar más por menos**. El producto
 - En modo guiado, permitir elegir entre bloquear una tecla equivocada o aceptarla y explicar cómo corregirla con `DEL` o `AC`.
 - En modo libre, incluir las operaciones necesarias para PER, Patrón y Capitán de Yate: paréntesis, memoria `Ans`, grados, minutos y segundos, DEG, trigonometría y funciones trigonométricas inversas.
 - La calculadora será una implementación educativa propia; no copiará el programa interno ni se presentará como emulador oficial del fabricante.
+- Convertir esos modos en tres niveles de aprendizaje automáticos:
+  1. **Aprendizaje verde:** iluminar la tecla siguiente con un verde muy suave, señalarla con el dedo y bloquear todas las teclas incorrectas.
+  2. **Práctica con aviso:** no iluminar ninguna tecla; permitir el intento, pero emitir un sonido discreto y marcar en rojo una pulsación equivocada para que el alumno la corrija.
+  3. **Uso autónomo:** dejar toda la calculadora operativa y permitir errores sin interrumpir. Al finalizar, analizar la operación y mostrar el primer paso en el que el resultado se desvió, la tecla que originó el error y cómo corregirla.
+- Guardar para cada intento la secuencia de teclas, las expresiones y los resultados intermedios. Comparar estados matemáticos y no solo una cadena rígida de teclas, para aceptar procedimientos equivalentes que también sean correctos.
+- Hacer que el programa cambie de nivel según el dominio demostrado por el alumno en ese tipo de cálculo y en ese modelo de calculadora. Permitir bajar temporalmente de nivel cuando reaparezcan errores y ofrecer siempre un botón para solicitar ayuda.
+- Diseñar el aviso sonoro con control de volumen y opción de silencio, acompañado siempre por el aviso visual rojo para que no dependa del audio.
 - Adaptar la posición al dispositivo: calculadora al lado del ejercicio en ordenador y debajo del paso actual en móvil.
 - Utilizar ilustraciones propias o imágenes autorizadas para la interfaz comercial, conservando la distribución exacta de teclas necesaria para enseñar el modelo.
 - Verificar siempre las reglas de calculadoras permitidas de cada convocatoria; no ayudar a ocultar calculadoras programables prohibidas.
