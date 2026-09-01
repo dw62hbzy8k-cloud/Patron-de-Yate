@@ -38,6 +38,11 @@ El alumno puede seleccionar manualmente cualquiera de los tres niveles y puede s
 - Entrenador incorporado dentro de la explicación de la pregunta 11 de marzo de 2026, modelo 2.
 - En ordenador, guía y calculadora aparecen lado a lado.
 - En móvil, la calculadora baja debajo de la guía.
+- La calculadora se muestra con la fotografía frontal aportada por el alumno de su modelo exacto `Casio fx-85SP X II Iberia`.
+- La pantalla de la simulación y las zonas táctiles se superponen a la fotografía sin alterar la distribución física del teclado.
+- La distribución conserva el cursor central, las cuatro teclas superiores, las seis columnas científicas y las cinco columnas del bloque numérico tal como aparecen en el aparato real.
+- La escala nominal de escritorio usa las dimensiones oficiales del aparato: `77 × 165,5 mm`; en pantallas que no tengan espacio suficiente se reduce proporcionalmente para no quedar cortada.
+- En la resolución de una pregunta, al alcanzar la zona en la que comienza el uso de la calculadora, esta se fija abajo a la derecha y continúa visible mientras el alumno desplaza la explicación con el ratón. En pantallas estrechas permanece dentro del flujo de la página para no tapar el contenido.
 
 ## Límites declarados
 
