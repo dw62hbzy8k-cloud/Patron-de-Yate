@@ -2,6 +2,7 @@
 "use strict";
 const STORAGE_KEY="aprobarNautica_calculatorTrainer_v1";
 const HEIGHT_STORAGE_KEY="aprobarNautica_heightEstimateTrainer_v1";
+const DOCK_POSITION_KEY="aprobarNautica_calculatorDockPosition_v1";
 const conversionExpected=["−","4","4","=","×","6","0","="];
 const conversionDirections=[
  "Pulsa la tecla de restar: −",
@@ -52,6 +53,8 @@ function calculatorPhotoMarkup(){
 }
 function loadProgress(storageKey){try{return Object.assign({guided:0,practice:0,solo:0,wrong:0},JSON.parse(localStorage.getItem(storageKey||STORAGE_KEY)||"{}"))}catch(e){return {guided:0,practice:0,solo:0,wrong:0}}}
 function saveProgress(progress,storageKey){try{localStorage.setItem(storageKey||STORAGE_KEY,JSON.stringify(progress))}catch(e){}}
+function loadDockPosition(){try{const p=JSON.parse(localStorage.getItem(DOCK_POSITION_KEY)||"null");return p&&Number.isFinite(p.x)&&Number.isFinite(p.y)?p:null}catch(e){return null}}
+function saveDockPosition(position){try{localStorage.setItem(DOCK_POSITION_KEY,JSON.stringify(position))}catch(e){}}
 function recommendedMode(progress){if(progress.guided<2)return 1;if(progress.practice<2)return 2;return 3}
 function trainerMarkup(){return `<div class="calc-trainer-head"><div><h3>Calculadora guiada · Casio fx-85SP X II</h3><p class="sub">Primera lección interactiva: convertir grados decimales en grados y minutos.</p></div><div class="calc-trainer-progress" data-ct-progress></div></div>
 <div class="calc-trainer-controls" role="group" aria-label="Nivel de ayuda de la calculadora">
@@ -69,13 +72,40 @@ function trainerMarkup(){return `<div class="calc-trainer-head"><div><h3>Calcula
   <ol class="calc-lesson-steps" data-ct-steps><li>Quitar los 44 grados enteros.</li><li>Multiplicar la parte decimal por 60 para convertirla en minutos.</li><li>Redondear 53,71128′ a 53,7′ y detenerse.</li></ol>
   <div class="calc-feedback" data-ct-feedback aria-live="polite">La pantalla ya contiene 44,895188. Empieza por la operación indicada.</div>
  </div>
- <div class="calc-body-wrap"><div>
+ <div class="calc-body-wrap"><div class="calc-drag-shell">
+  <div class="calc-drag-handle" data-ct-drag-handle role="button" tabindex="0" aria-label="Mover la calculadora"><span aria-hidden="true">⠿</span> Arrastra para mover</div>
   ${calculatorPhotoMarkup()}
   <div class="calc-review-row"><button class="calc-review" type="button" data-ct-review>Revisar resultado</button></div>
   <div class="calc-key-legend"><span><i class="calc-key-dot good"></i>tecla correcta</span><span><i class="calc-key-dot bad"></i>tecla incorrecta</span></div>
   <div class="calc-legal">Simulación educativa propia; no es un emulador oficial. Fotografía de referencia facilitada por el alumno y funciones contrastadas con la <a href="https://www.edu-casio.es/calculadora/fx-85sp-x-ii-iberia/" target="_blank" rel="noopener">ficha oficial de Casio Educación España</a>.</div>
  </div></div>
 </div>`}
+function setupDocking(root,calculationZone){
+ const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]");
+ if(!dock||!handle)return;
+ let saved=loadDockPosition(),dragging=null;
+ function place(x,y,remember){
+  const rect=dock.getBoundingClientRect(),maxX=Math.max(8,window.innerWidth-rect.width-8),maxY=Math.max(8,window.innerHeight-rect.height-8),left=Math.max(8,Math.min(maxX,x)),top=Math.max(8,Math.min(maxY,y));
+  dock.style.left=left+"px";dock.style.top=top+"px";dock.style.right="auto";dock.style.bottom="auto";
+  if(remember){saved={x:left,y:top};saveDockPosition(saved)}
+ }
+ function restore(){if(root.classList.contains("calc-docked")&&saved)requestAnimationFrame(function(){place(saved.x,saved.y,false)})}
+ function updateDock(){
+  if(!root.isConnected){window.removeEventListener("scroll",updateDock);window.removeEventListener("resize",updateDock);return}
+  const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),insideCalculationZone=trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>60;
+  root.classList.toggle("calc-docked",insideCalculationZone);
+  if(insideCalculationZone)restore()
+ }
+ handle.addEventListener("pointerdown",function(event){
+  if(!root.classList.contains("calc-docked")||event.button!==0)return;
+  event.preventDefault();const rect=dock.getBoundingClientRect();dragging={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,left:rect.left,top:rect.top};place(rect.left,rect.top,false);handle.classList.add("dragging");handle.setPointerCapture(event.pointerId)
+ });
+ handle.addEventListener("pointermove",function(event){if(!dragging||event.pointerId!==dragging.pointerId)return;event.preventDefault();place(dragging.left+event.clientX-dragging.startX,dragging.top+event.clientY-dragging.startY,false)});
+ function finishDrag(event){if(!dragging||event.pointerId!==dragging.pointerId)return;const rect=dock.getBoundingClientRect();dragging=null;handle.classList.remove("dragging");place(rect.left,rect.top,true)}
+ handle.addEventListener("pointerup",finishDrag);handle.addEventListener("pointercancel",finishDrag);
+ handle.addEventListener("keydown",function(event){if(!root.classList.contains("calc-docked")||!["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key))return;event.preventDefault();const rect=dock.getBoundingClientRect(),step=event.shiftKey?30:10,dx=event.key==="ArrowLeft"?-step:event.key==="ArrowRight"?step:0,dy=event.key==="ArrowUp"?-step:event.key==="ArrowDown"?step:0;place(rect.left+dx,rect.top+dy,true)});
+ window.addEventListener("scroll",updateDock,{passive:true});window.addEventListener("resize",updateDock);updateDock()
+}
 function pretty(value){return String(value).replace(".",",")}
 function calculate(a,operator,b){if(operator==="+")return a+b;if(operator==="−")return a-b;if(operator==="×")return a*b;if(operator==="÷")return b===0?NaN:a/b;return b}
 function formatHeightExpression(keys){return keys.map(function(key,index){
@@ -94,7 +124,7 @@ function mount(root){
  const inlineTrainer=root.dataset.trainerInstance!=="principal";
  const heightGuide=root.dataset.heightGuide==="1";
  const expected=heightGuide?heightExpected:conversionExpected,directions=heightGuide?heightDirections:conversionDirections,storageKey=heightGuide?HEIGHT_STORAGE_KEY:STORAGE_KEY;
- if(inlineTrainer){root.classList.add("calc-inline-trainer");const calculationZone=root.closest('div[style*="border:3px solid #1c6ea4"]')||root;const updateDock=function(){if(!root.isConnected){window.removeEventListener("scroll",updateDock);window.removeEventListener("resize",updateDock);return}const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),insideCalculationZone=trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>60;root.classList.toggle("calc-docked",insideCalculationZone)};window.addEventListener("scroll",updateDock,{passive:true});window.addEventListener("resize",updateDock);updateDock()}
+ if(inlineTrainer){root.classList.add("calc-inline-trainer");const calculationZone=root.closest('div[style*="border:3px solid #1c6ea4"]')||root;setupDocking(root,calculationZone)}
  const expressionEl=root.querySelector("[data-ct-expression]"),resultEl=root.querySelector("[data-ct-result]"),instructionEl=root.querySelector("[data-ct-instruction]"),feedbackEl=root.querySelector("[data-ct-feedback]"),levelEl=root.querySelector("[data-ct-level]"),modeDescriptionEl=root.querySelector("[data-ct-mode-description]"),progressEl=root.querySelector("[data-ct-progress]"),soundEl=root.querySelector("[data-ct-sound]"),keys=Array.from(root.querySelectorAll(".calc-key")),modeButtons=Array.from(root.querySelectorAll("[data-ct-mode]")),stepItems=Array.from(root.querySelectorAll("[data-ct-steps] li"));
  const startValue=heightGuide?"0":"44.895188",startExpression=heightGuide?"":"44.895188";
  let progress=loadProgress(storageKey),mode=recommendedMode(progress),cursor=0,history=[],expression=startExpression,display=startValue,stored=Number(startValue),pending=null,typing=false,completed=false;
