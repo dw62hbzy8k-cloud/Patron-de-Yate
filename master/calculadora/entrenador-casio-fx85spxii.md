@@ -2,17 +2,13 @@
 
 ## Alcance de la primera versión
 
-La primera lección enseña la conversión final de la pregunta 11 del examen de marzo de 2026, modelo 2:
+La lección de la pregunta 11 del examen de marzo de 2026, modelo 2, comienza en el verdadero primer uso de la calculadora, no en el resultado decimal final. Enseña en este orden:
 
-- valor inicial: `44,895188°`;
-- grados enteros: `44°`;
-- parte decimal: `0,895188°`;
-- minutos sin redondear: `53,71128′`;
-- respuesta final: `44°53,7′`.
-
-Operaciones principales validadas:
-
-`− 44 =` y después `× 60 =`.
+1. Introducir la fórmula completa de la altura estimada con `l = 35°54′ N`, `d = 2°26,1′ S` y `P = 25°27,5′ E`.
+2. Obtener `sen(ae) = 0,7058120802`.
+3. Pulsar `SHIFT → SIN → Ans → ) → =` para recuperar `ae = 44,895188°`.
+4. Solo entonces convertir el resultado al formato del examen mediante `− 44 =` y después `× 60 =`.
+5. Terminar en `ae = 44°53,7′`, respuesta C.
 
 En las explicaciones se muestran `44` y `60` como números completos. El entrenador ilumina cada tecla individual únicamente mientras el alumno practica la pulsación real.
 
@@ -24,7 +20,7 @@ En las explicaciones se muestran `44` y `60` como números completos. El entrena
 
 ## Progreso y conservación
 
-El progreso específico de la calculadora se guarda en el navegador con la clave `aprobarNautica_calculatorTrainer_v1`. Es independiente de las claves del historial de exámenes y de las prácticas, por lo que incorporar el entrenador no borra ni sustituye los datos anteriores del alumno.
+El progreso de la lección completa de altura estimada se guarda en el navegador con la clave `aprobarNautica_heightEstimateTrainer_v1`. Se mantiene separado del antiguo ejercicio de conversión y de las claves del historial de exámenes, por lo que el cambio no borra ni sustituye los datos anteriores del alumno.
 
 La recomendación automática funciona así:
 
@@ -32,11 +28,11 @@ La recomendación automática funciona así:
 - dos ejercicios completados en Aprender y menos de dos en Practicar: recomienda nivel 2;
 - dos ejercicios completados en ambos niveles: recomienda nivel 3.
 
-El alumno puede seleccionar manualmente cualquiera de los tres niveles y puede silenciar el aviso.
+En la sección propia de Calculadora se puede seleccionar manualmente un nivel y silenciar el aviso. Dentro de la resolución, el nivel cambia automáticamente al pulsar `AC` después de completar las repeticiones exigidas.
 
 ## Integración
 
-En la resolución de marzo de 2026, la Casio aparece como calculadora libre, comenzando en `0`. No se muestra allí la práctica de conversión de `44,895188°`, ni sus niveles, contadores, objetivo o instrucciones. El entrenador permanece separado de la explicación del examen.
+En la resolución de marzo de 2026, la Casio comienza en `0` y guía desde la primera tecla de la fórmula real. Conserva los tres niveles y el comportamiento verde/rojo, pero no muestra el panel voluminoso de contadores, objetivos y listas alrededor de la máquina. El nivel avanza automáticamente según el progreso. El alumno que estrene la web no necesita conocer previamente Capitán de Yate: cada tecla y cada resultado intermedio deben poder comprobarse sin adivinar nada.
 
 - Sección propia `Calculadora` en la navegación principal.
 - Entrenador incorporado dentro de la explicación de la pregunta 11 de marzo de 2026, modelo 2.
