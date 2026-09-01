@@ -112,13 +112,7 @@ Antes de operar se separan dos reglas diferentes:
 
 ## Conversión en la Casio fx-85SP X II
 
-1. Apuntar los 44 grados completos.
-2. Con `44,895188` todavía en pantalla, pulsar `− 44 =`.
-3. Aparece `0,895188`.
-4. Pulsar `× 60 =`.
-5. Aparece `53,71128`, que son minutos.
-6. Redondear a una cifra decimal: `53,7′`.
-7. Reunir grados y minutos: `44°53,7′`.
+La web no repite aquí una segunda lista estática con los mismos pasos. La conversión se practica directamente en la calculadora interactiva que aparece a continuación.
 
 Resultado: `44°53,7′`. Respuesta C.
 
