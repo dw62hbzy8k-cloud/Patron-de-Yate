@@ -141,7 +141,7 @@ const HEIGHT_DIRECT_SOLUTIONS={
  735:{lat:"34°10,8′ N",dec:"2°24,3′ N",pole:"25°09,3′ E",latCalc:"+34°10,8′",decCalc:"+2°24,3′",poleCalc:"25°09,3′",sinAe:"0,771734",decimal:"50,509830°",screenDms:"50°30′35,4″",result:"50°30,6′",answer:"B",keysLat:"34 °′″ 10 °′″ 48 °′″",keysDec:"2 °′″ 24 °′″ 18 °′″",keysPole:"25 °′″ 9 °′″ 18 °′″",precision:"La opción oficial B escribe 50°30,5′; la diferencia de 0,1′ procede del redondeo de los datos intermedios y es, con mucha diferencia, la única opción compatible."},
  970:{lat:"30°10,7′ N",dec:"3°18,2′ N",pole:"27°40,2′ E",latCalc:"+30°10,7′",decCalc:"+3°18,2′",poleCalc:"27°40,2′",sinAe:"0,793296",decimal:"52,494625°",screenDms:"52°29′40,6″",result:"52°29,7′",answer:"A",keysLat:"30 °′″ 10 °′″ 42 °′″",keysDec:"3 °′″ 18 °′″ 12 °′″",keysPole:"27 °′″ 40 °′″ 12 °′″",precision:"Coincide con la opción A."}
 };
-const DIDACTIC_WORKFLOW={currentId:null,completedInExecutionOrder:[1050,14,1010,98,334,374,735,970,296]};
+const DIDACTIC_WORKFLOW={currentId:null,completedInExecutionOrder:[1050,14,296]};
 const ORIGINAL_QUESTION_ORDER=new Map(DB.questions.map((q,index)=>[q.id,index]));
 const DIDACTIC_SCOPE=DB.questions.filter(q=>q.module==="Cálculo de Navegación");
 const DIDACTIC_PLAN=[...DIDACTIC_SCOPE].sort((a,b)=>(a.difficulty||9)-(b.difficulty||9)||(b.topic_percent||0)-(a.topic_percent||0)||(ORIGINAL_QUESTION_ORDER.get(a.id)||0)-(ORIGINAL_QUESTION_ORDER.get(b.id)||0));
