@@ -19,18 +19,19 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 
 ## Estado actual
 
-- Pregunta activa: ID 296, abril de 2021, modelo 2, pregunta 17.
+- Pregunta activa: ninguna; la última revisada ha pasado a verde y la siguiente todavía no se ha seleccionado.
 - Tema: Altura estimada / triángulo de posición.
-- Dificultad: 5 de 7.
-- Estado: amarillo, resolución didáctica preparada y pendiente de revisión del usuario. No pasará a verde sin su visto bueno.
-- Preguntas completamente terminadas: ID 1050, ID 14, ID 1010, ID 98, ID 334, ID 374, ID 735 e ID 970.
-- Totales de Cálculo: 8 verdes, 1 amarilla y 331 rojas.
+- Última pregunta aprobada: ID 296, abril de 2021, modelo 2, pregunta 17, dificultad 5 de 7.
+- Estado: verde por visto bueno expreso del usuario.
+- Preguntas completamente terminadas: ID 1050, ID 14, ID 1010, ID 98, ID 334, ID 374, ID 735, ID 970 e ID 296.
+- Totales de Cálculo: 9 verdes, 0 amarillas y 331 rojas.
+- El panel de trabajo muestra ahora las 9 preguntas verdes en una lista propia y visible, en orden de aprobación. Marzo de 2026, modelo 2, pregunta 11, permanece la primera; abril de 2021, modelo 2, pregunta 17, ocupa el noveno puesto.
 
 ## Bloque actual: Altura estimada / triángulo de posición
 
 - 12 preguntas pertenecen realmente a este procedimiento.
-- 7 están terminadas dentro del bloque: ID 1050, 1010, 98, 334, 374, 735 y 970.
-- La ID 296 ya tiene la resolución preparada. Como se practica aislada, el recuadro superior recuerda la HcG y la situación del ejercicio anterior del examen original; el alumno no debe volver a la pregunta 16. La latitud queda incluida arriba y el enunciado actual ya aporta declinación y P, por lo que no necesita Almanaque. Incluye una vista polar a escala angular del triángulo de posición, con anillos cada 30° y las posiciones de PN, cenit y Sol calculadas con los datos reales; aclara que el observador se encuentra sobre la Tierra justo debajo del cenit Z; explica sin saltos la conversión de 51,235123° a 51°14,1′; elimina el recuadro de resolución que repetía lo ya explicado; e incorpora en el punto exacto de cálculo una Casio interactiva propia para esta pregunta, con los tres niveles de ayuda y resultado 51°14,1′. Continúa amarilla hasta la revisión del usuario.
+- 8 están terminadas dentro del bloque: ID 1050, 1010, 98, 334, 374, 735, 970 y 296.
+- La ID 296 quedó aprobada en verde por el usuario. Como se practica aislada, el recuadro superior recuerda la HcG y la situación del ejercicio anterior del examen original; el alumno no debe volver a la pregunta 16. La latitud queda incluida arriba y el enunciado actual ya aporta declinación y P, por lo que no necesita Almanaque. Incluye una vista polar a escala angular del triángulo de posición, con anillos cada 30° y las posiciones de PN, cenit y Sol calculadas con los datos reales; aclara que el observador se encuentra sobre la Tierra justo debajo del cenit Z; explica sin saltos la conversión de 51,235123° a 51°14,1′; elimina el recuadro de resolución que repetía lo ya explicado; e incorpora en el punto exacto de cálculo una Casio interactiva propia para esta pregunta, con los tres niveles de ayuda y resultado 51°14,1′.
 - 4 siguen pendientes de recuperar datos de la pregunta anterior o comprobar un cartoncillo de estrellas: ID 1298, 58, 1258 y 1335.
 - La ID 1336 estaba etiquetada dentro del bloque, pero trata de altura verdadera y correcciones de sextante; queda separada para corregir su clasificación sin mezclar métodos.
 - En la ID 98 se corrigió el orden de las opciones con la página 5 del PDF oficial CARM. La respuesta A es 25°27′18″ y coincide con la fórmula.
