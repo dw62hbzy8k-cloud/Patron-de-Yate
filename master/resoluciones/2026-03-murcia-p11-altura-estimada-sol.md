@@ -89,7 +89,9 @@ Antes de operar se separan dos reglas diferentes:
 
    La explicación conceptual es que `hL` se cuenta hacia el Oeste. Hasta 180°, ese mismo recorrido es el arco más corto y por eso `P = hL W`. Cuando `hL` supera 180°, el recorrido hacia el Oeste ya es el largo; el arco corto queda al Este y mide lo que falta para cerrar la circunferencia: `P = 360° − hL E`.
 
-   La web incorpora inmediatamente debajo un gráfico del Ecuador celeste visto desde el polo elevado. Debe mostrar simultáneamente el arco largo azul `hL = 334°32,5′ W`, el arco corto morado `P = 25°27,5′ E`, el meridiano superior en `0°/360°`, la media circunferencia en `180°` y el semicírculo horario del Sol. La explicación acompaña el gráfico en cuatro pasos y compara los dos casos generales: `hL ≤ 180°` y `hL > 180°`.
+   La web incorpora inmediatamente debajo un gráfico en planta del Ecuador celeste, mirando a lo largo del eje polar. Antes del dibujo se debe aclarar que no es una vista lateral del horizonte: en la realidad, el polo elevado está por encima del horizonte y su altura coincide con la latitud; en esta proyección aparece en el centro porque se mira desde el eje polar. La parte superior del gráfico representa el origen `0°/360°`, no una mayor altura.
+
+   El gráfico debe mostrar simultáneamente el arco largo azul `hL = 334°32,5′ W`, el arco corto morado `P = 25°27,5′ E`, el meridiano superior en `0°/360°`, la media circunferencia en `180°` y el semicírculo horario del Sol. Las etiquetas `hL` y `P` se sitúan fuera del círculo para no taparlo y cada una lleva una flecha del mismo color que toca su arco correspondiente. La explicación acompaña el gráfico en cuatro pasos y compara los dos casos generales: `hL ≤ 180°` y `hL > 180°`.
 
    Después del gráfico aparece la separación pedagógica «Hasta aquí, papel. Ahora coge la calculadora», con `l`, `d` y `P` repetidos antes de la primera operación numérica. La calculadora no debe volver a colocarse al final como si fuera un añadido independiente.
 4. Fórmula: `sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)`.
