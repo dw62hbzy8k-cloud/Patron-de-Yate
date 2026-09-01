@@ -71,6 +71,11 @@ Aunque la página se titula «Correcciones», el valor `2°30,0′` de la column
 
 ## Cálculo
 
+Antes de operar se separan dos reglas diferentes:
+
+- Para calcular `hL`, la longitud Este se suma a `hG` y la longitud Oeste se resta.
+- Al introducir `l` y `d` en la fórmula, Norte lleva signo positivo y Sur lleva signo negativo.
+
 1. `hG = 342°42,5′ + 2°30,0′ = 345°12,5′`.
 2. La longitud es Oeste, por lo que se resta: `hL = 345°12,5′ − 10°40,0′ = 334°32,5′`.
 3. Como `hL > 180°`, `P = 360° − 334°32,5′ = 25°27,5′ E`.
