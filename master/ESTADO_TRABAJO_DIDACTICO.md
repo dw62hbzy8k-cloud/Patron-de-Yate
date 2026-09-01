@@ -4,7 +4,7 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 
 ## Estados
 
-- Amarillo: pregunta en la que estamos trabajando. Aparece temporalmente la primera para continuarla sin buscarla.
+- Amarillo: pregunta en la que estamos trabajando o que ya está preparada pero espera la revisión del usuario. Aparece temporalmente la primera para continuarla sin buscarla.
 - Verde: pregunta completamente terminada.
 - Rojo: pregunta que aún necesita preparación didáctica.
 
@@ -13,15 +13,16 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 1. Primero se termina un bloque completo del mismo procedimiento para aprovechar y afinar un único método.
 2. El bloque actual es Altura estimada / triángulo de posición.
 3. Dentro del bloque se preparan primero las preguntas que ya dan l, d y P; después las que dependen de una pregunta anterior o de cartoncillos de estrellas.
-4. La pregunta activa se muestra temporalmente la primera. Al terminarla queda verde y vuelve a su puesto de ejecución.
+4. La pregunta activa se muestra temporalmente la primera. Aunque la explicación esté preparada, permanece amarilla hasta que el usuario la revise y dé el visto bueno; solo entonces queda verde y vuelve a su puesto de ejecución.
 5. Al terminar el bloque se continúa de menor a mayor dificultad con el siguiente tipo de Cálculo.
+6. Cuando el enunciado remita a la hora, situación u otros datos de una pregunta anterior, el texto oficial se conserva y esos datos se repiten inmediatamente debajo, entre paréntesis, porque en la práctica las preguntas no siempre aparecen juntas ni en el orden del examen.
 
 ## Estado actual
 
 - Pregunta activa: ID 296, abril de 2021, modelo 2, pregunta 17.
 - Tema: Altura estimada / triángulo de posición.
 - Dificultad: 5 de 7.
-- Estado: amarillo, siguiente pregunta que se preparará.
+- Estado: amarillo, resolución didáctica preparada y pendiente de revisión del usuario. No pasará a verde sin su visto bueno.
 - Preguntas completamente terminadas: ID 1050, ID 14, ID 1010, ID 98, ID 334, ID 374, ID 735 e ID 970.
 - Totales de Cálculo: 8 verdes, 1 amarilla y 331 rojas.
 
@@ -29,7 +30,8 @@ Este registro controla nuestro trabajo de preparación de las preguntas de Cálc
 
 - 12 preguntas pertenecen realmente a este procedimiento.
 - 7 están terminadas dentro del bloque: ID 1050, 1010, 98, 334, 374, 735 y 970.
-- 5 necesitan recuperar datos de la pregunta anterior o comprobar un cartoncillo de estrellas: ID 296, 1298, 58, 1258 y 1335.
+- La ID 296 ya tiene la resolución preparada: recupera únicamente la latitud de la pregunta 16; la pregunta 17 ya aporta declinación y P, por lo que no necesita Almanaque. Continúa amarilla hasta la revisión del usuario.
+- 4 siguen pendientes de recuperar datos de la pregunta anterior o comprobar un cartoncillo de estrellas: ID 1298, 58, 1258 y 1335.
 - La ID 1336 estaba etiquetada dentro del bloque, pero trata de altura verdadera y correcciones de sextante; queda separada para corregir su clasificación sin mezclar métodos.
 - En la ID 98 se corrigió el orden de las opciones con la página 5 del PDF oficial CARM. La respuesta A es 25°27′18″ y coincide con la fórmula.
 - Cada pregunta verde incluye al final un recordatorio rápido, discreto y cerrado por defecto.
@@ -47,3 +49,4 @@ Una pregunta solo puede marcarse como terminada cuando cumple todo lo siguiente:
 - croquis o gráfico correcto cuando ayude a comprenderla;
 - guía de teclas de la calculadora cuando sea necesaria;
 - funcionamiento y aspecto comprobados en la web publicada.
+- visto bueno explícito del usuario después de revisarla.
