@@ -42,7 +42,7 @@ El alumno puede seleccionar manualmente cualquiera de los tres niveles y puede s
 - La pantalla de la simulación y las zonas táctiles se superponen a la fotografía sin alterar la distribución física del teclado.
 - La distribución conserva el cursor central, las cuatro teclas superiores, las seis columnas científicas y las cinco columnas del bloque numérico tal como aparecen en el aparato real.
 - La escala nominal de escritorio usa las dimensiones oficiales del aparato: `77 × 165,5 mm`; en pantallas que no tengan espacio suficiente se reduce proporcionalmente para no quedar cortada.
-- En la resolución de una pregunta, al alcanzar la zona en la que comienza el uso de la calculadora, esta se fija abajo a la derecha y continúa visible mientras el alumno desplaza la explicación con el ratón. En pantallas estrechas permanece dentro del flujo de la página para no tapar el contenido.
+- En la resolución de una pregunta, al alcanzar la zona en la que comienza el uso de la calculadora, esta se fija abajo a la derecha mientras el alumno desplaza esa parte de la explicación con el ratón. Al salir de la zona de cálculo se oculta para no estorbar; si el alumno regresa, reaparece conservando la pantalla, el nivel y la pulsación exacta en la que se quedó. En pantallas estrechas permanece dentro del flujo de la página para no tapar el contenido.
 
 ## Límites declarados
 
