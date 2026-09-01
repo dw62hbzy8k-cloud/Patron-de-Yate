@@ -1,4 +1,4 @@
-# Aprobar Náutica AI · hoja de ruta del producto y del negocio
+# NavegandoAndo · hoja de ruta del producto y del negocio
 
 Última actualización: 31 de agosto de 2026.
 
@@ -110,7 +110,7 @@ El paquete se ofrecerá como material didáctico. La marca no se presentará com
 
 Estrategia acordada: empezar mediante colaboración con escuelas náuticas autorizadas.
 
-- Aprobar Náutica AI capta al alumno, imparte la preparación teórica, organiza la reserva y hace el seguimiento.
+- NavegandoAndo capta al alumno, imparte la preparación teórica, organiza la reserva y hace el seguimiento.
 - La escuela colaboradora aporta instructores habilitados, embarcación, seguros, simuladores homologados y certificación oficial.
 - El alumno puede contratar teoría, pack físico, radio y prácticas desde un itinerario único, dejando siempre claro quién imparte y certifica cada parte.
 - Negociar una comisión o precio mayorista por cada alumno remitido.

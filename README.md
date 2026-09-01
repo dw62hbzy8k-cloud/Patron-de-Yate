@@ -1,6 +1,6 @@
-# Capitán de Yate · Murcia
+# NavegandoAndo · Capitán de Yate
 
-Repositorio persistente del proyecto **Aprobar Náutica AI**.
+Repositorio persistente del proyecto **NavegandoAndo**.
 
 ## Principio del proyecto
 

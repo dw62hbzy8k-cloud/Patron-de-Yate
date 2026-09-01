@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Aprobar Náutica AI",
+    "title": "NavegandoAndo",
     "version": "0.50",
     "region": "Murcia",
     "exams": 34,
@@ -500,11 +500,11 @@
     {
       "module": "Cálculo de Navegación",
       "topic": "Altura verdadera",
-      "exam_count": 18,
-      "exam_percent": 52.9,
-      "question_count": 25,
+      "exam_count": 20,
+      "exam_percent": 58.8,
+      "question_count": 27,
       "difficulty": 2,
-      "study_value": 26
+      "study_value": 29
     },
     {
       "module": "Inglés",
@@ -601,7 +601,7 @@
       "topic": "Altura estimada / triángulo",
       "exam_count": 12,
       "exam_percent": 35.3,
-      "question_count": 13,
+      "question_count": 12,
       "difficulty": 5,
       "study_value": 7
     },
@@ -9573,7 +9573,7 @@
       "model": 1,
       "number": 17,
       "module": "Cálculo de Navegación",
-      "topic": "Altura estimada / triángulo",
+      "topic": "Altura verdadera",
       "text": "Obtenida la altura estimada de la estrella Vega, le toman altura instrumentad 68°34'47´´ con corrección de índice= +3'y elevación del observador= 3 metros, (ver hoja adjunta del Almanaque Náutico de la tabla que resuelven las correcciones para las alturas observadas):",
       "options": [
         "67°30,2'.",
@@ -9581,11 +9581,11 @@
         "68°39,3'.",
         "68°37,2'."
       ],
-      "topic_percent": 35.3,
-      "topic_exam_count": 12,
+      "topic_percent": 58.8,
+      "topic_exam_count": 20,
       "similar_percent": 0,
       "similar_exam_count": 0,
-      "difficulty": 5,
+      "difficulty": 2,
       "similar_examples": [],
       "answer": "b",
       "answer_status": "verificada",
@@ -13211,9 +13211,9 @@
       "topic": "Altura estimada / triángulo",
       "text": "A hora civil de Greenwich = 10:25, en situación estimada = 27° 08,7'N - 021° 31,9'W y habiendo obtenido previamente para esa hora los siguientes valores: Angulo en el polo del Sol = 44° 26'20´´E. Declinación del Sol= -20° 59' 12´´. Calcula el valor de la altura estimada del Sol con la ayuda de las fórmulas que resuelven los lados y sus complementos del triángulo de posición:",
       "options": [
+        "25° 27'18´´",
         "25° 38'40´´",
         "25° 15'10´´",
-        "25° 27'18´´",
         "25° 03'05´´"
       ],
       "topic_percent": 35.3,
@@ -13230,7 +13230,7 @@
       ],
       "answer": "a",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 19 del PDF CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta A verificada en la página 5 del PDF oficial CARM y mediante cálculo trigonométrico: ae = 25°27′18″. Se corrigió el orden de las opciones del banco, que no coincidía con el documento original.",
       "answer_source": "https://www.carm.es/web/descarga?ALIAS=ARCH&ARCHIVO=CAPITAN+Noviembre+2022.pdf&IDCONTENIDO=199104&IDTIPO=60&RASTRO=c667%24m12137%2C9503%2C74737%2C74748%2C74751"
     },
     {
