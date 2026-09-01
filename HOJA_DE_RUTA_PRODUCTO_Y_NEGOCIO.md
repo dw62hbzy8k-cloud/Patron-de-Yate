@@ -48,6 +48,10 @@ Principio comercial decidido por el usuario: **dar más por menos**. El producto
 - Reservar para la fase final una biblioteca de calculadoras habituales entre los alumnos: identificar primero los modelos realmente usados y descargar únicamente sus manuales oficiales.
 - Traducir cada procedimiento matemático ya validado a secuencias de teclas independientes para cada modelo; no asumir que dos calculadoras utilizan el mismo menú o las mismas teclas.
 - Conservar junto a cada secuencia el modelo exacto, la versión del manual oficial y el enlace de procedencia.
+- Crear una calculadora guiada interactiva junto a cada resolución: dibujo fiel del modelo seleccionado, pantalla simulada, tecla siguiente iluminada y un dedo animado que indique dónde pulsar.
+- Sincronizar la calculadora con un único paso visible cada vez, mediante botones «Anterior», «Siguiente» y «Repetir», y permitir reproducción automática lenta sin impedir que el alumno avance manualmente.
+- Adaptar la posición al dispositivo: calculadora al lado del ejercicio en ordenador y debajo del paso actual en móvil.
+- Utilizar ilustraciones propias o imágenes autorizadas para la interfaz comercial, conservando la distribución exacta de teclas necesaria para enseñar el modelo.
 - Verificar siempre las reglas de calculadoras permitidas de cada convocatoria; no ayudar a ocultar calculadoras programables prohibidas.
 
 ## Aprendizaje visual a bordo
