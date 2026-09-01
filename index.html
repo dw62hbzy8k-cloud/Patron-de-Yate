@@ -108,7 +108,7 @@ function show(v){views.forEach(x=>$(x).classList.toggle("hidden",x!==v));documen
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>show(b.dataset.v));
 if(new URLSearchParams(location.search).get("start")==="home"){
  show("home");
- window.addEventListener("pageshow",()=>show("home"));
+ window.addEventListener("pageshow",()=>{const questionId=Number(new URLSearchParams(location.search).get("question"));if(questionId){show("practice");openDidacticQuestion(questionId)}else show("home")});
 }
 fillFormulaTopics();
 function fillFormulaTopics(){const s=$("formulaTopic");if(!s)return;[...new Set(formulaBank.map(x=>x.topic))].forEach(x=>s.insertAdjacentHTML("beforeend",`<option>${x}</option>`));$("formulaLevel").onchange=renderFormulas;s.onchange=renderFormulas;renderFormulas()}
@@ -487,7 +487,7 @@ addComparisonSignsReminder($("qbox"));
 if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("qbox"));
 document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{if(ans[q.id])return;ans[q.id]=x.dataset.l;ansConfidence[q.id]="knew";savePractice(q,x.dataset.l,"knew");renderBank()});
 document.querySelectorAll("#qbox .confidence").forEach(x=>x.onclick=()=>{ansConfidence[q.id]=x.dataset.confidence;updateLatestPracticeConfidence(q,x.dataset.confidence);renderBank()})}
-refill();renderWorkTracker();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam").onchange=filterBank;$("bTopic").onchange=filterBank;$("prev").onclick=()=>{pos--;renderBank()};$("next").onclick=()=>{pos++;renderBank()};$("random").onclick=()=>{pos=Math.floor(Math.random()*pool.length);renderBank()};
+refill();renderWorkTracker();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam").onchange=filterBank;$("bTopic").onchange=filterBank;$("prev").onclick=()=>{pos--;renderBank()};$("next").onclick=()=>{pos++;renderBank()};$("random").onclick=()=>{pos=Math.floor(Math.random()*pool.length);renderBank()};const directQuestionId=Number(new URLSearchParams(location.search).get("question"));if(directQuestionId){show("practice");openDidacticQuestion(directQuestionId)}
 
 
 const HISTKEY="aprobarNautica_examHistory_v1",PRACTKEY="aprobarNautica_practiceHistory_v1",BACKUPKEY="aprobarNautica_autoBackups_v1",NAMEKEY="aprobarNautica_studentName_v1";
