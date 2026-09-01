@@ -26,7 +26,7 @@ Para aplicar la fórmula de la altura estimada siempre se necesitan `l`, `d` y `
 3. Referencia a «la misma hora y situación anteriores»; los datos se recuperan de la pregunta precedente.
 4. Ángulo en el Polo ya calculado y declinación que debe leerse en una hoja anexa, especialmente para estrellas.
 
-En estos exámenes la hora aparece como `UT` o `HcG` —hora civil de Greenwich—, o se reutiliza la misma HcG de la pregunta anterior. Ambas expresiones están referidas a Greenwich para la consulta del Almanaque. Si otro enunciado utilizara una clase de hora diferente, su conversión debería explicarse antes de consultar las tablas.
+En estos exámenes la hora aparece como `UT` o `HcG` —hora civil de Greenwich—. Ambas están referidas a Greenwich y permiten consultar el Almanaque. Cuando el enunciado dice «a la misma HcG anterior», se utiliza la hora indicada en la pregunta anterior.
 
 ## Qué entrega esta pregunta y qué falta
 
