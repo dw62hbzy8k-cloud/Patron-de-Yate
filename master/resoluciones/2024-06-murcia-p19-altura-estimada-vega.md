@@ -1,6 +1,6 @@
 # Junio 2024 · pregunta 19 · altura estimada de Vega
 
-Estado editorial: **preparada y pendiente de revisión del usuario**. No marcar en verde hasta recibir su aprobación.
+Estado editorial: **verde, terminada y aprobada expresamente por el usuario el 2 de septiembre de 2026**.
 
 ## Datos utilizados
 
