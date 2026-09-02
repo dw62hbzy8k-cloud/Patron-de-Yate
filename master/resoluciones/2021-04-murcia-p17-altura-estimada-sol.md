@@ -76,3 +76,5 @@ La fórmula numérica mantiene el mismo formato de la plantilla aprobada: `sen(a
 Dentro del paso 3 la fórmula se muestra una sola vez, en el apartado donde se calcula la parte derecha verde. No se repite antes de desplegar la calculadora.
 
 La calculadora guiada conserva los minutos decimales tal como aparecen en la fórmula. No transforma `29°26,5′` en `29°26′30″`: guía `29 → °′″ → 26.5 → °′″`. Aplica la misma regla a `11°22,8′` y `36°53,9′`.
+
+El paso de calculadora se simplifica en dos apartados del mismo estilo visual: `A · calcula toda la parte derecha verde` y `B · obtén ae y déjala como aparece en las respuestas`. El apartado B reúne `sen(ae)`, `SHIFT → SIN`, la conversión con `°′″` y el resultado final; no se distribuye en tres recuadros distintos.

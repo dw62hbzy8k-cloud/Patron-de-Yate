@@ -385,6 +385,13 @@ function heightFormulaHTML(q){
   Array.from(clean.querySelectorAll("div")).filter(node=>node.textContent.trim()==="sen(+29°26,5′) × sen(+11°22,8′) + cos(+29°26,5′) × cos(+11°22,8′) × cos(36°53,9′)").forEach(node=>node.replaceWith(labelled.cloneNode(true)));
   const repeatedInCalculatorStep=clean.querySelectorAll("[data-calculation-zone] [data-labelled-formula]");
   if(repeatedInCalculatorStep.length>1)repeatedInCalculatorStep[0].remove();
+  const findBlock=label=>Array.from(clean.querySelectorAll("b")).find(node=>node.textContent.trim()===label)?.parentElement;
+  const obtainedBlock=findBlock("LO QUE HAS OBTENIDO"),angleBlock=findBlock("B · Obtén ae con la calculadora"),formatBlock=findBlock("C · Pasa el resultado al formato de las respuestas");
+  if(obtainedBlock&&angleBlock&&formatBlock){
+   obtainedBlock.style.cssText="margin-top:10px;padding:12px;border:2px solid #30945b;border-radius:9px;background:#e9f8ef";
+   obtainedBlock.innerHTML='<b style="color:#176b43">B · OBTÉN ae Y DÉJALA COMO APARECE EN LAS RESPUESTAS</b><p>La parte derecha ha dado <b>sen(ae) = 0,779722</b>. Este decimal todavía no es la altura.</p><p>Con <b>0,779722</b> en pantalla, pulsa <b>SHIFT → SIN → Ans → ) → =</b>. Obtienes <b>ae = 51,235123°</b>.</p><p>Sin borrar el resultado, pulsa una vez <b>°′″</b>. La pantalla muestra <b>51°14′06,4″</b>.</p><p>Las respuestas utilizan minutos con una decimal: <b>14′ + 6,4″ ÷ 60 = 14,1067′ → 14,1′</b>.</p><div style="padding:12px;border-radius:9px;background:white;font-size:20px;text-align:center"><b>Resultado final: ae = 51°14,1′ · respuesta A</b></div>';
+   angleBlock.remove();formatBlock.remove();
+  }
   return clean.innerHTML;
  }
  if(q.id!==1050||!html)return html;
