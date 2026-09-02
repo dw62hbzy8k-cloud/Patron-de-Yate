@@ -75,6 +75,8 @@ La fórmula inicial se presenta como «Punto de partida», sin numerarla como pa
 
 La fórmula aparece al final de cada paso. Cada dato obtenido cambia a un pequeño recuadro verde y cada dato pendiente permanece en rojo. Al finalizar el Paso 2, `P` continúa roja porque `hL` es todavía un resultado intermedio. Al terminar el Paso 3, `P = 25°27,5′` pasa a verde y toda la fórmula queda completa para el Paso 4.
 
+Las instrucciones generales utilizan siempre la palabra «calculadora», sin imponer una marca. Las secuencias de teclas y los valores intermedios se presentan con tamaño normal; solo la fórmula y el resultado importante conservan énfasis visual. El simulador concreto puede identificar su modelo por separado.
+
 Antes de operar se separan dos reglas diferentes:
 
 - Para calcular `hL`, la longitud Este se suma a `hG` y la longitud Oeste se resta.
