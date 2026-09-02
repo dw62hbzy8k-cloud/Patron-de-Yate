@@ -46,3 +46,5 @@ Resultado: **respuesta A · ae = 51°14,1′**.
 9. Versión rápida con datos, fórmula, sustitución y resultado.
 
 Las fórmulas completas permanecen en un solo renglón y utilizan el mayor tamaño que permite el ancho disponible. Se dice siempre «calculadora» en las instrucciones visibles. La pregunta conserva su marco verde hasta que el usuario decida otro estado.
+
+La obtención de `ae` no utiliza expresiones imprecisas como «continúa con la secuencia indicada». Especifica las teclas completas: con `0,779722` en pantalla, `SHIFT → SIN → Ans → ) → =`.
