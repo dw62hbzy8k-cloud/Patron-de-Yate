@@ -79,6 +79,8 @@ En el título «Cómo convertimos hL en P» aparece al lado, en pequeño, la acl
 
 En toda la explicación visible de esta pregunta se utiliza la palabra «calculadora», sin imponer una marca. Las secuencias de teclas y los valores intermedios se presentan con tamaño normal; solo la fórmula y el resultado importante conservan énfasis visual.
 
+La numeración `Paso 1`, `Paso 2`, etc. queda reservada exclusivamente para las etapas principales. Las acciones internas de cada paso se identifican con `A`, `B`, `C`, etc.; nunca puede aparecer un paso numerado dentro de otro paso numerado.
+
 Antes de operar se separan dos reglas diferentes:
 
 - Para calcular `hL`, la longitud Este se suma a `hG` y la longitud Oeste se resta.
