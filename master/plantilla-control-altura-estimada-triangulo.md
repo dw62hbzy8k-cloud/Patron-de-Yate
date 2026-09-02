@@ -27,3 +27,4 @@ Esta lista reúne las correcciones editoriales aprobadas por el alumno. Debe apl
 - La calculadora debe poder moverse, conservar su estado, permanecer dentro de la pantalla y no bloquear el desplazamiento de la página.
 - La vista normal y la rápida deben comprobarse tanto en escritorio como en pantalla estrecha.
 - Una pregunta nueva queda amarilla durante la revisión. Solo pasa a verde después del visto bueno expreso del alumno.
+- Antes de solicitar ese visto bueno hay que abrir la versión pública y recorrer la pregunta completa: Almanaque, vista completa, cálculo tecla por tecla, tres niveles, desplazamiento arriba y abajo, calculadora móvil, versión rápida y pantalla estrecha. Comprobar existencia no equivale a comprobar funcionamiento.

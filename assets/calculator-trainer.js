@@ -180,7 +180,7 @@ function setupDocking(root,calculationZone){
  function finishDrag(event){if(!dragging||event.pointerId!==dragging.pointerId)return;const rect=dock.getBoundingClientRect();dragging=null;handle.classList.remove("dragging");place(rect.left,rect.top,true)}
  dock.addEventListener("pointerup",finishDrag);dock.addEventListener("pointercancel",finishDrag);
  handle.addEventListener("keydown",function(event){if(!root.classList.contains("calc-docked")||!["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key))return;event.preventDefault();const rect=dock.getBoundingClientRect(),step=event.shiftKey?30:10,dx=event.key==="ArrowLeft"?-step:event.key==="ArrowRight"?step:0,dy=event.key==="ArrowUp"?-step:event.key==="ArrowDown"?step:0;place(rect.left+dx,rect.top+dy,true)});
- window.addEventListener("scroll",updateDock,{passive:true});window.addEventListener("resize",updateDock);updateDock()
+ window.addEventListener("scroll",updateDock,{passive:true});window.addEventListener("resize",updateDock);updateDock();requestAnimationFrame(updateDock);setTimeout(updateDock,120)
 }
 function pretty(value){return String(value).replace(".",",")}
 function calculate(a,operator,b){if(operator==="+")return a+b;if(operator==="−")return a-b;if(operator==="×")return a*b;if(operator==="÷")return b===0?NaN:a/b;return b}
