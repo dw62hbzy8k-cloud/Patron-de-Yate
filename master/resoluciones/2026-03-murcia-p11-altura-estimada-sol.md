@@ -96,6 +96,7 @@ Antes de operar se separan dos reglas diferentes:
 2. La longitud es Oeste, por lo que se resta: `hL = 345°12,5′ − 10°40,0′ = 334°32,5′`.
    La ruta principal muestra la operación náutica normal, identificando cada magnitud: `hL (horario local del Sol) = hG☉ − L W = 345°12,5′ − 10°40,0′ = 334°32,5′`. No se muestra una secuencia estática de teclas porque la calculadora interactiva guía la pulsación. La pantalla muestra `334°32′30″`, equivalente a `334°32,5′`. No se enseña el préstamo manual en la explicación principal.
 3. `hL` se expresa sobre el círculo completo, de 0° a 360°. `P` utiliza el arco menor, de 0° a 180°, e indica Este u Oeste. Si `hL` está entre 0° y 180°, `P = hL W`; si `hL > 180°`, `P = 360° − hL E`. En esta pregunta: `P = 360° − 334°32,5′ = 25°27,5′ E`.
+   En el Paso 3 no se repite en un recuadro independiente `P = 360° − 334°32,5′`; se conserva la explicación y la operación guiada sin duplicar información.
    En la Casio: `360 → °′″ → − → 334 → °′″ → 32 → . → 5 → °′″ → =`. La pantalla muestra `25°27′30″`, equivalente a `25°27,5′`. Se añade `E` porque, al superar `hL` los 180°, el arco más corto queda al Este.
 
    Símbolos y límites que deben repetirse en la web justo debajo de esta regla:
