@@ -77,7 +77,7 @@ La fórmula aparece al final de cada paso. Cada dato obtenido cambia a un peque�
 
 En el título «Cómo convertimos hL en P» aparece al lado, en pequeño, la aclaración «hL = horario local del Sol · P = ángulo en el Polo».
 
-En toda la explicación visible de esta pregunta se utiliza la palabra «calculadora», sin imponer una marca. Las secuencias de teclas y los valores intermedios se presentan con tamaño normal; solo la fórmula y el resultado importante conservan énfasis visual.
+En toda la explicación visible de esta pregunta se utiliza la palabra «calculadora», sin imponer una marca. Las operaciones sencillas se escriben de forma matemática normal, sin cadenas estáticas de teclas. El resultado `334°32′30″ = 334°32,5′` aparece ligeramente más grande para distinguirlo con claridad.
 
 La numeración `Paso 1`, `Paso 2`, etc. queda reservada exclusivamente para las etapas principales. Las acciones internas de cada paso se identifican con `A`, `B`, `C`, etc.; nunca puede aparecer un paso numerado dentro de otro paso numerado.
 
