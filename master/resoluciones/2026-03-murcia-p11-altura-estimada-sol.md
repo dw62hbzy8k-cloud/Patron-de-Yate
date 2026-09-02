@@ -75,6 +75,8 @@ La primera aparición muestra únicamente la fórmula general limpia, sin recuad
 
 La fórmula aparece al final de cada paso. Cada dato obtenido cambia a un pequeño recuadro verde y cada dato pendiente permanece en rojo. Al finalizar el Paso 2, `P` continúa roja porque `hL` es todavía un resultado intermedio. Al terminar el Paso 3, `P = 25°27,5′` pasa a verde y toda la fórmula queda completa para el Paso 4.
 
+La fórmula completa se mantiene siempre en un solo renglón. Utiliza el mayor tamaño posible dentro del ancho disponible y se reduce de forma adaptable únicamente cuando la pantalla es más estrecha.
+
 En el título «Cómo convertimos hL en P» aparece al lado, en pequeño, la aclaración «hL = horario local del Sol · P = ángulo en el Polo».
 
 En toda la explicación visible de esta pregunta se utiliza la palabra «calculadora», sin imponer una marca. Las operaciones sencillas se escriben de forma matemática normal, sin cadenas estáticas de teclas. El resultado `334°32′30″ = 334°32,5′` aparece ligeramente más grande para distinguirlo con claridad.
