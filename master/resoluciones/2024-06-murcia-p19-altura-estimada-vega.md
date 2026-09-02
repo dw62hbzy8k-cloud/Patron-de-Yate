@@ -60,3 +60,10 @@ Respuesta en la web: **D · 77°04′57″**.
 - Documento público de origen: https://www.estudiasonavegas.com/images/Archivos/CY/CY_Almanaques_Nauticos/2024_Nautical_Almanac.pdf
 
 Nota de control: el valor `+38°48,2′` es el que reproduce exactamente la opción oficial. No sustituirlo por otra edición o redondeo del Almanaque sin volver a comprobar toda la pregunta.
+
+## Revisión editorial pendiente del alumno
+
+- Se añadió al final «Resolución completa» con la misma cadena y el mismo orden de las preguntas de altura estimada ya aprobadas.
+- El recuadro morado de `P` se sacó del centro del triángulo y ahora lleva una flecha morada hasta el ángulo correspondiente.
+- La pregunta continúa amarilla: no pasarla a verde hasta recibir el visto bueno expreso del alumno.
+- Para las siguientes preguntas de altura estimada y triángulo se aplicará obligatoriamente `master/plantilla-control-altura-estimada-triangulo.md`.

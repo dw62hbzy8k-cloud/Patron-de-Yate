@@ -1,0 +1,26 @@
+# Control obligatorio · altura estimada y triángulo de posición
+
+Esta lista reúne las correcciones editoriales aprobadas por el alumno. Debe aplicarse antes de presentar cualquier pregunta nueva de este mismo tipo.
+
+## Orden obligatorio
+
+1. Identificar con palabras exactas qué tipo de problema es y qué pide.
+2. Mostrar todos los datos necesarios. Si proceden de una pregunta anterior del examen original, repetirlos a la vista y explicarlo sin mandar al alumno a buscar otra pregunta.
+3. Colocar las páginas reales del Almanaque justo en el paso en que se consultan, indicando fecha, hora, fila, columna y dato leído.
+4. Antes de usar la calculadora, ordenar en papel `l`, `d`, `hG`, `hL` y `P`, pero solo los que intervengan realmente.
+5. Explicar por separado las reglas E/W de longitud y las reglas N/S de latitud y declinación.
+6. Incluir un gráfico conceptual propio de la pregunta, con magnitudes y orientación coherentes con sus datos.
+7. Mostrar primero la fórmula general y después la sustitución numérica completa.
+8. Hacer aparecer la calculadora exactamente cuando comienza la cuenta, nunca antes ni después.
+9. Explicar que la parte derecha produce `sen(ae)` y que `SHIFT → SIN` recupera la altura estimada.
+10. Explicar la conversión al formato pedido y el redondeo final sin saltos.
+11. Cerrar con «Resolución completa» y la misma cadena ordenada que las preguntas ya aprobadas.
+12. Incluir una versión rápida con datos heredados, Almanaque si hace falta, fórmula, sustitución, calculadora y recordatorio breve.
+
+## Control visual y funcional
+
+- Ningún texto, recuadro o flecha puede pisar otro elemento del gráfico.
+- Cada flecha y su explicación deben compartir color y apuntar con claridad a la línea correcta.
+- La calculadora debe poder moverse, conservar su estado, permanecer dentro de la pantalla y no bloquear el desplazamiento de la página.
+- La vista normal y la rápida deben comprobarse tanto en escritorio como en pantalla estrecha.
+- Una pregunta nueva queda amarilla durante la revisión. Solo pasa a verde después del visto bueno expreso del alumno.
