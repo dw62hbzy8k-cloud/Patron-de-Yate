@@ -125,7 +125,7 @@ function trainerMarkup(guideId){
   <div class="calc-feedback" data-ct-feedback aria-live="polite">${initial}</div>
  </div>
  <div class="calc-body-wrap"><div class="calc-drag-shell">
-  <div class="calc-drag-handle" data-ct-drag-handle role="button" tabindex="0" aria-label="Mover la calculadora"><span aria-hidden="true">⠿</span> Arrastra para mover · botón izquierdo o derecho</div>
+  <div class="calc-drag-handle" data-ct-drag-handle role="button" tabindex="0" aria-label="Mover la calculadora"><span class="calc-drag-label"><span aria-hidden="true">⠿</span> Arrastra para mover</span><button class="calc-dock-close" type="button" data-ct-dock-close aria-label="Cerrar calculadora">× Cerrar</button></div>
   ${calculatorPhotoMarkup()}
   <div class="calc-review-row"><button class="calc-review" type="button" data-ct-review>Revisar resultado</button></div>
   <div class="calc-key-legend"><span><i class="calc-key-dot good"></i>tecla correcta</span><span><i class="calc-key-dot bad"></i>tecla incorrecta</span></div>
@@ -133,12 +133,12 @@ function trainerMarkup(guideId){
  </div></div>
 </div>`}
 function setupDocking(root,calculationZone){
- const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]");
+ const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]"),closeButton=root.querySelector("[data-ct-dock-close]");
  if(!dock||!handle)return;
  const forceDocked=root.dataset.forceDocked==="1";
  const originalBodyPaddingBottom=document.body.style.paddingBottom;
  const anchor=root.parentElement,originalAnchorPaddingBottom=anchor?anchor.style.paddingBottom:"";
- let saved=loadDockPosition(),dragging=null,docked=false,ticking=false,enterScroll=0,exitScroll=Infinity,blockRedockAtBottom=false;
+ let saved=loadDockPosition(),dragging=null,docked=false,ticking=false,enterScroll=0,exitScroll=Infinity,blockRedockAtBottom=false,manuallyClosed=false;
  function place(x,y,remember){
   const rect=dock.getBoundingClientRect(),maxX=Math.max(8,window.innerWidth-rect.width-8),maxY=Math.max(8,window.innerHeight-rect.height-8),left=Math.max(8,Math.min(maxX,x)),top=Math.max(8,Math.min(maxY,y));
   dock.style.left=left+"px";dock.style.top=top+"px";dock.style.right="auto";dock.style.bottom="auto";
@@ -165,11 +165,10 @@ function setupDocking(root,calculationZone){
   requestAnimationFrame(function(){
    ticking=false;
    if(forceDocked){setDocked(true);return}
+   if(manuallyClosed)return;
    const pageY=window.scrollY;
    if(docked){
     if(pageY<enterScroll-24){setDocked(false);return}
-    if(calculationZone.getBoundingClientRect().bottom<-24){blockRedockAtBottom=true;setDocked(false);return}
-    if(pageY>exitScroll+24){blockRedockAtBottom=true;setDocked(false);return}
     return
    }
    if(blockRedockAtBottom){if(pageY>=exitScroll-140)return;blockRedockAtBottom=false}
@@ -179,6 +178,8 @@ function setupDocking(root,calculationZone){
  }
  function startDrag(event){if(!root.classList.contains("calc-docked")||![0,2].includes(event.button))return;event.preventDefault();event.stopPropagation();const rect=dock.getBoundingClientRect();dragging={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,left:rect.left,top:rect.top};place(rect.left,rect.top,false);handle.classList.add("dragging");dock.setPointerCapture(event.pointerId)}
  handle.addEventListener("pointerdown",startDrag);
+ if(closeButton)closeButton.addEventListener("pointerdown",function(event){event.stopPropagation()});
+ if(closeButton)closeButton.addEventListener("click",function(event){event.preventDefault();event.stopPropagation();manuallyClosed=true;setDocked(false)});
  dock.addEventListener("pointerdown",function(event){if(event.button===2)startDrag(event)});
  dock.addEventListener("contextmenu",function(event){if(root.classList.contains("calc-docked"))event.preventDefault()});
  dock.addEventListener("pointermove",function(event){if(!dragging||event.pointerId!==dragging.pointerId)return;event.preventDefault();place(dragging.left+event.clientX-dragging.startX,dragging.top+event.clientY-dragging.startY,false)});
