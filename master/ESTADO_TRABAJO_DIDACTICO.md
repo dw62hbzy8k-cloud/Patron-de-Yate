@@ -14,7 +14,7 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 ## Orden de ejecución
 
 1. Primero se termina un bloque completo del mismo procedimiento para aprovechar y afinar un único método.
-2. El bloque de Altura estimada / triángulo de posición ya está terminado; el bloque actual es Ángulo en el Polo (P).
+2. Los bloques de Altura estimada / triángulo de posición y Ángulo en el Polo (P) ya están terminados; el bloque actual es Latitud por meridiana.
 3. Dentro de cada bloque se preparan primero las preguntas más sencillas y después las que dependen de una pregunta anterior o del Almanaque.
 4. La pregunta activa se muestra temporalmente la primera. Cuando el asistente termina y comprueba una pregunta pasa de rojo o amarillo a verde; solo el visto bueno del usuario puede pasarla de verde a celeste.
 5. Al terminar el bloque se continúa de menor a mayor dificultad con el siguiente tipo de Cálculo.
@@ -24,7 +24,8 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 
 - Bloque de Altura estimada / triángulo de posición: 12 preguntas terminadas y aprobadas expresamente por el usuario; se muestran en celeste.
 - Bloque de Ángulo en el Polo (P): 15 preguntas comprobadas tres veces por el asistente; se muestran en verde y quedan pendientes de la revisión del usuario.
-- Pregunta amarilla activa: ninguna. La próxima revisión debe comenzar por la primera pregunta verde del bloque de Ángulo en el Polo.
+- Bloque de Latitud por meridiana: 2 de 6 preguntas preparadas y comprobadas; se muestran en verde y quedan pendientes de la revisión del usuario. Son Julio 2021 P18 (ID 257) y Noviembre 2017 P18 (ID 657).
+- Pregunta amarilla activa: ninguna. El trabajo se detiene tras estas dos primeras preguntas de Latitud por meridiana, según lo acordado con el usuario.
 - Las preguntas verdes permanecen verdes hasta que el usuario las revise. Solo entonces pasan a celeste, una por una.
 - La web conserva separados el progreso del alumno y este estado editorial: responder una pregunta no cambia su color editorial.
 
@@ -66,3 +67,12 @@ Una pregunta solo puede marcarse como terminada cuando cumple todo lo siguiente:
 - Casos límite incluidos en la calculadora: resultado negativo más 360° (ID 494 y 811), resultado superior a 360° menos 360° (ID 1296), datos en segundos (ID 1256, 1296 y 811), longitud Este y Oeste, P al Este y al Oeste.
 - Auditoría especial ID 573: con los datos impresos, 317°34,6′ + 1°13,0′ = 318°47,6′ y P = 41°12,4′ E. El solucionario señala C, 41°12,6′ E. La web muestra la discrepancia editorial de 0,2′ de forma transparente; no falsea la cuenta y C continúa siendo la única opción compatible.
 - Estado tras la triple comprobación: las 15 preguntas del bloque Ángulo en el Polo, incluida la plantilla ID 731, quedan verdes. Ninguna pasa a celeste hasta recibir la revisión y aprobación expresa del usuario.
+
+## Bloque Latitud por meridiana · preparación del 3 de septiembre de 2026
+
+- Preguntas terminadas y verdes, pendientes de revisión del usuario: ID 257 (Julio 2021 P18) e ID 657 (Noviembre 2017 P18).
+- Las dos conservan el mismo patrón: reconocer el paso del Sol por el meridiano; reunir altura verdadera meridiana `av` y declinación `d`; obtener la distancia cenital con `z = 90° − av`; aplicar algebraicamente `l = z + d`; comprobar la respuesta oficial.
+- Incluyen explicación desde cero, fórmula por bloques, calculadora guiada y movible, versión rápida y esfera celeste 3D interactiva. En estas dos preguntas no se abre el Almanaque porque el enunciado ya proporciona `av` y `d`.
+- Resultados comprobados: ID 257, `z = 17°00,5′` y `l = 40°12,2′ N` (respuesta B); ID 657, `z = 51°58,3′` y `l = 32°06,7′ N` (respuesta A).
+- La calculadora fue recorrida tecla por tecla en ambas preguntas y terminó en `40°12′12″` y `32°06′42″`, equivalentes respectivamente a `40°12,2′ N` y `32°06,7′ N`.
+- La clave de Junio 2019 P19 (ID 458) se corrigió provisionalmente a C tras verificar `z = 90° − 78°13,8′ = 11°46,2′` y `l = 11°46,2′ + 23°26,0′ = 35°12,2′ N`; esta pregunta sigue roja y deberá auditarse por completo antes de pasar a verde.
