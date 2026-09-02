@@ -521,17 +521,9 @@ function correctConceptHTML(q,selected){
  return `<div class="error-explanation" style="border-color:#4caf78;background:#f1fbf5"><h3 style="color:#176b43">✓ Por qué es correcta</h3><div class="explain-body">${specific.why}</div><div class="explain-memory"><b>Truco para recordarla:</b> ${specific.memory}</div>${visualAidHTML(q)}</div>`;
 }
 function optHTML(q,i,sel){const l="abcd"[i],valid=validAnswers(q);let cl="opt";if(sel&&q.answer_status==="verificada"){if(valid.includes(l))cl+=" correct";else if(l===sel)cl+=" wrong"}return `<div class="${cl}" data-l="${l}"><b>${"ABCD"[i]})</b> ${esc(q.options[i])}</div>`}
-function addComparisonSignsReminder(scope){
- const caseA=Array.from(scope.querySelectorAll("b")).find(function(node){return node.textContent.trim()==="CASO A · hL ≤ 180°"});
- if(!caseA)return;
- const casesGrid=caseA.parentElement&&caseA.parentElement.parentElement;
- if(!casesGrid||casesGrid.nextElementSibling&&casesGrid.nextElementSibling.classList.contains("comparison-signs-reminder"))return;
- casesGrid.insertAdjacentHTML("afterend",`<div class="comparison-signs-reminder" style="margin-top:10px;padding:12px;border:2px solid #d49a19;border-radius:10px;background:#fff8df;text-align:left;line-height:1.65"><b style="color:#79570a">TRUCO PARA NO CONFUNDIR &lt;, &gt;, ≤ Y ≥</b><br><span style="font-size:18px"><b>≤</b> = menor o igual que · <b>&gt;</b> = mayor que</span><div style="margin-top:7px;padding:9px;border-radius:8px;background:white"><b>1. La boca abierta mira siempre al número mayor; la punta señala al menor.</b><br><b>2. La rayita de debajo significa «o también puede ser igual».</b> La rayita no decide si es mayor o menor: eso lo decide la dirección de la boca.<br><br><b>≤</b> = menor o igual · <b>≥</b> = mayor o igual<br><b>&lt;</b> = menor, sin admitir igualdad · <b>&gt;</b> = mayor, sin admitir igualdad<br><br><b>hL ≤ 180°:</b> la boca mira a 180° y la rayita permite que hL sea exactamente 180°.<br><b>hL &gt; 180°:</b> la boca mira a hL y, como no hay rayita, hL tiene que superar realmente 180°.</div></div>`);
-}
 function renderBank(){if(!pool.length){$("qbox").innerHTML="Sin preguntas.";return}pos=(pos+pool.length)%pool.length;const q=pool[pos],sel=ans[q.id];applyDidacticFrame($("qbox"),q);let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;
 $("qbox").innerHTML=`<div class="qhead"><div>${didacticBadgeHTML(q)}<div style="margin-top:7px"><span class="badge">${q.module}</span><span class="badge">${q.topic}</span></div><div class="sub">${q.convocatoria} · P${q.number}</div></div><div class="freq"><strong>${q.topic_percent}%</strong><div class="sub">aparición del tema</div></div></div><div class="question">${esc(q.text)}</div>${dependencyContextHTML(q)}${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${studyModeToggleHTML(q)}${learningMaterialsHTML(q)}${fb}${correctionDetailHTML(q,sel)}${correctConceptHTML(q,sel)}${confidenceHTML(q,sel,ansConfidence[q.id])}`;
 bindStudyMode($("qbox"),renderBank);
-addComparisonSignsReminder($("qbox"));
 if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("qbox"));
 enhanceQ98Diagram($("qbox"));
 document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{if(ans[q.id])return;ans[q.id]=x.dataset.l;ansConfidence[q.id]="knew";savePractice(q,x.dataset.l,"knew");renderBank()});
@@ -827,7 +819,6 @@ function renderProg(){$("examProgress").innerHTML=runQs.map((q,i)=>{const a=runA
 function renderRun(){renderProg();$("finishExam").style.display=runPos===runQs.length-1?"inline-block":"none";const q=runQs[runPos],sel=runAns[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;const origin=runKind!=="official"?` · ${q.convocatoria} · pregunta original ${q.number}`:"",reason=(runKind==="daily"||runKind==="calculation")?`<div class="daily-pill" style="display:inline-block;margin-top:8px">Por qué aparece: ${esc(dailyReasons[String(q.id)]||"Repaso personalizado")}</div>`:"";
 $("examQuestion").innerHTML=`<div class="sub">Pregunta ${runPos+1} de ${runQs.length} · ${q.module}${origin}</div>${reason}<div class="question">${esc(q.text)}</div>${dependencyContextHTML(q)}${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${studyModeToggleHTML(q)}${learningMaterialsHTML(q)}${fb}${correctionDetailHTML(q,sel)}${correctConceptHTML(q,sel)}${confidenceHTML(q,sel,runConfidence[q.id])}`;
 bindStudyMode($("examQuestion"),renderRun);
-addComparisonSignsReminder($("examQuestion"));
 if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("examQuestion"));
 enhanceQ98Diagram($("examQuestion"));
 document.querySelectorAll("#examQuestion .opt").forEach(x=>x.onclick=()=>{if(q.answer_status==="anulada"||runAns[q.id])return;runAns[q.id]=x.dataset.l;runConfidence[q.id]="knew";$("examResult").innerHTML="";renderRun()});
