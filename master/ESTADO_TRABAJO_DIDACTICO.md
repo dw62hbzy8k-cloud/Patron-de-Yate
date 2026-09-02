@@ -7,48 +7,39 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 ## Estados
 
 - Amarillo: pregunta en la que estamos trabajando o que ya está preparada pero espera la revisión del usuario. Aparece temporalmente la primera para continuarla sin buscarla.
-- Verde: pregunta completamente terminada.
+- Verde: pregunta preparada y comprobada varias veces por el asistente; queda lista para la revisión del usuario.
+- Celeste: pregunta que el usuario ha revisado y aprobado expresamente.
 - Rojo: pregunta que aún necesita preparación didáctica.
 
 ## Orden de ejecución
 
 1. Primero se termina un bloque completo del mismo procedimiento para aprovechar y afinar un único método.
-2. El bloque actual es Altura estimada / triángulo de posición.
-3. Dentro del bloque se preparan primero las preguntas que ya dan l, d y P; después las que dependen de una pregunta anterior o de cartoncillos de estrellas.
-4. La pregunta activa se muestra temporalmente la primera. Aunque la explicación esté preparada, permanece amarilla hasta que el usuario la revise y dé el visto bueno; solo entonces queda verde y vuelve a su puesto de ejecución.
+2. El bloque de Altura estimada / triángulo de posición ya está terminado; el bloque actual es Ángulo en el Polo (P).
+3. Dentro de cada bloque se preparan primero las preguntas más sencillas y después las que dependen de una pregunta anterior o del Almanaque.
+4. La pregunta activa se muestra temporalmente la primera. Cuando el asistente termina y comprueba una pregunta pasa de rojo o amarillo a verde; solo el visto bueno del usuario puede pasarla de verde a celeste.
 5. Al terminar el bloque se continúa de menor a mayor dificultad con el siguiente tipo de Cálculo.
 6. Cuando el enunciado remita a la hora, situación u otros datos de una pregunta anterior, el texto oficial se conserva y esos datos se repiten inmediatamente debajo, entre paréntesis, porque en la práctica las preguntas no siempre aparecen juntas ni en el orden del examen.
 
 ## Estado actual
 
-- Pregunta activa: ID 98, noviembre de 2022, modelo 2, pregunta 19, altura estimada / triángulo de posición.
-- Tema: Altura estimada / triángulo de posición.
-- Última pregunta aprobada: ID 1258, junio de 2024, modelo 2, pregunta 19.
-- Estado de la ID 1258: verde; terminada y aprobada expresamente por el alumno el 2 de septiembre de 2026, incluida la calculadora flotante con cierre manual.
-- Preguntas completamente terminadas y revisadas por el usuario: ID 1050, ID 14, ID 296, ID 1010 e ID 1258.
-- Totales de Cálculo: 5 verdes, 1 amarilla y 334 rojas.
-- El panel de trabajo muestra las 5 preguntas verdes en una lista propia y visible, en orden de aprobación. Dentro de Altura estimada / triángulo están verdes las ID 1050, 296, 1010 y 1258. La ID 14 también está verde, pero pertenece a Almanaque: declinación.
-- Las 12 preguntas de Altura estimada / triángulo aparecen juntas en un bloque propio, con 4 verdes revisadas, 1 amarilla activa y 7 rojas. El bloque muestra el contador `4 de 12 terminadas · faltan 8` y una barra de avance editorial.
+- Bloque de Altura estimada / triángulo de posición: 12 preguntas terminadas y aprobadas expresamente por el usuario; se muestran en celeste.
+- Bloque de Ángulo en el Polo (P): 15 preguntas comprobadas tres veces por el asistente; se muestran en verde y quedan pendientes de la revisión del usuario.
+- Pregunta amarilla activa: ninguna. La próxima revisión debe comenzar por la primera pregunta verde del bloque de Ángulo en el Polo.
+- Las preguntas verdes permanecen verdes hasta que el usuario las revise. Solo entonces pasan a celeste, una por una.
+- La web conserva separados el progreso del alumno y este estado editorial: responder una pregunta no cambia su color editorial.
 
 ## Preguntas verdes fuera de Cálculo
 
 - ID 89, noviembre de 2022, modelo 2, pregunta 10, Teoría de Navegación: **verde por visto bueno expreso del usuario**. La respuesta C, «El Ocaso», se cotejó con la pregunta 7 del PDF oficial CARM. Incluye una explicación que diferencia aurora, orto, culminación y ocaso, junto con un gráfico de las cuatro etapas revisado visualmente y aprobado por el usuario.
 
-## Bloque actual: Altura estimada / triángulo de posición
+## Bloque terminado: Altura estimada / triángulo de posición
 
-- 12 preguntas pertenecen realmente a este procedimiento.
-- 4 están terminadas, corregidas junto al usuario y aprobadas en verde dentro del bloque: ID 1050, 296, 1010 y 1258.
-- La ID 296 quedó aprobada en verde por el usuario. Como se practica aislada, el recuadro superior recuerda la HcG y la situación del ejercicio anterior del examen original; el alumno no debe volver a la pregunta 16. La latitud queda incluida arriba y el enunciado actual ya aporta declinación y P, por lo que no necesita Almanaque. Incluye una vista polar a escala angular del triángulo de posición, con anillos cada 30° y las posiciones de PN, cenit y Sol calculadas con los datos reales; aclara que el observador se encuentra sobre la Tierra justo debajo del cenit Z; explica sin saltos la conversión de 51,235123° a 51°14,1′; elimina el recuadro de resolución que repetía lo ya explicado; e incorpora en el punto exacto de cálculo una Casio interactiva propia para esta pregunta, con los tres niveles de ayuda y resultado 51°14,1′.
-- La ID 1010, junio de 2026, modelo 1, pregunta 11, está aprobada en verde: respuesta B verificada en el PDF oficial; páginas 173 y 430 del Almanaque incorporadas y explicadas; cálculo de hG, d, hL y P desarrollado; gráfico con datos reales; fórmula por colores; Casio interactiva propia; versión rápida y comprobaciones finales. La Casio conserva directamente los minutos decimales del enunciado (`23°13,8′` y `23°09,6′`) y su pantalla representa cada separador como grados o minutos según corresponda, sin convertirlos innecesariamente en segundos.
-- Recordatorio pendiente de la ID 1010: cuando el usuario tenga físicamente su Casio fx-85SP X II, repetir la secuencia de entrada directa de minutos decimales. Si la calculadora real difiere, corregir el simulador. Esta comprobación práctica no bloquea el estado verde ni altera la respuesta matemática.
-- 4 tienen una resolución base preparada por el asistente, pero no han sido revisadas una por una con el usuario y por eso permanecen rojas: ID 334, 374, 735 y 970.
-- La ID 1258, junio de 2024, modelo 2, pregunta 19, quedó aprobada en verde por el usuario tras revisar la explicación, las hojas del Almanaque, el gráfico, la secuencia completa de teclas y el comportamiento de la calculadora flotante. La calculadora permanece abierta hasta que el alumno pulse `× Cerrar`; si vuelve a subir por encima del punto de entrada y baja otra vez, reaparece.
-- 3 siguen pendientes de recuperar datos o comprobar otros cartoncillos: ID 1298, 58 y 1335.
-- La ID 1336 estaba etiquetada dentro del bloque, pero trata de altura verdadera y correcciones de sextante; queda separada para corregir su clasificación sin mezclar métodos.
-- En la ID 98 se corrigió el orden de las opciones con la página 5 del PDF oficial CARM. La respuesta A es 25°27′18″ y coincide con la fórmula.
-- La ID 98 está desarrollada en amarillo siguiendo la plantilla aprobada: reconocimiento sin Almanaque, datos y signos, gráfico propio, fórmula por colores, sustitución completa, Casio interactiva específica, pasos finales, comprobación y versión rápida. Se mantiene amarilla hasta la revisión del usuario.
-- Cada pregunta verde incluye al final un recordatorio rápido, discreto y cerrado por defecto.
-- Las preguntas con recordatorio preparado permiten alternar entre explicación completa y versión rápida. La versión rápida conserva el enunciado, las opciones, cualquier dato heredado del ejercicio anterior, el recordatorio discreto, la calculadora y las hojas del Almanaque únicamente cuando el problema las necesita. La calculadora se abre y se cierra con un botón explícito. Al abrirse en la versión rápida entra directamente en modo flotante estable, sin depender de bajar la página; permanece fijada durante el desplazamiento y conserva el asa para moverla con el ratón.
+- Las 12 preguntas del procedimiento están terminadas y aprobadas por el usuario: ID 1050, 296, 1010, 98, 334, 374, 735, 970, 1298, 58, 1335 y 1258.
+- Permanecen en celeste y ordenadas según el orden de corrección acordado.
+- Incluyen explicación desde cero, datos heredados cuando proceden, Almanaque cuando hace falta, fórmula por colores, calculadora guiada, comprobación y gráfico interactivo.
+- La ID 1336 no pertenece al bloque: trata de altura verdadera y correcciones de sextante.
+- Recordatorio pendiente de la ID 1010: cuando el usuario tenga físicamente su calculadora fx-85SP X II, comprobar la entrada directa de minutos decimales. Esta comprobación práctica no altera la respuesta matemática ni el estado celeste.
+- La versión rápida conserva el enunciado, las opciones, los datos heredados, el Almanaque necesario y la calculadora.
 
 ## Condiciones para pasar una pregunta a verde
 
@@ -63,4 +54,15 @@ Una pregunta solo puede marcarse como terminada cuando cumple todo lo siguiente:
 - croquis o gráfico correcto cuando ayude a comprenderla;
 - guía de teclas de la calculadora cuando sea necesaria;
 - funcionamiento y aspecto comprobados en la web publicada.
-- visto bueno explícito del usuario después de revisarla.
+- triple revisión del resultado, la explicación, la calculadora y el aspecto publicado para pasarla a verde;
+- visto bueno explícito del usuario para pasarla de verde a celeste.
+
+## Bloque Ángulo en el Polo (P) · preparación del 2 de septiembre de 2026
+
+- Plantilla ya existente y revisada: ID 731, Marzo 2017 P12.
+- Lote preparado con el mismo orden pedagógico, calculadora propia y esfera 3D interactiva: ID 293, 414, 494, 693, 1256, 573, 258, 15, 1296, 770, 538, 218, 95 y 811.
+- Cada resolución sigue esta secuencia: identificar el tipo; reunir hG y L; aplicar Este suma/Oeste resta para hallar hL; normalizar hL entre 0° y 360° si hace falta; obtener el arco corto P entre 0° y 180°; verificar número, orientación y respuesta.
+- Incorporadas páginas reales del Almanaque para las ID 15, 95, 218, 258 y 770. Las preguntas que ya proporcionan hG no obligan a abrir páginas innecesarias.
+- Casos límite incluidos en la calculadora: resultado negativo más 360° (ID 494 y 811), resultado superior a 360° menos 360° (ID 1296), datos en segundos (ID 1256, 1296 y 811), longitud Este y Oeste, P al Este y al Oeste.
+- Auditoría especial ID 573: con los datos impresos, 317°34,6′ + 1°13,0′ = 318°47,6′ y P = 41°12,4′ E. El solucionario señala C, 41°12,6′ E. La web muestra la discrepancia editorial de 0,2′ de forma transparente; no falsea la cuenta y C continúa siendo la única opción compatible.
+- Estado tras la triple comprobación: las 15 preguntas del bloque Ángulo en el Polo, incluida la plantilla ID 731, quedan verdes. Ninguna pasa a celeste hasta recibir la revisión y aprobación expresa del usuario.

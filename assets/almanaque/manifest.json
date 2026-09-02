@@ -31,5 +31,39 @@
     "file": "assets/almanaque/2026/2026_p430_incrementos_10m.png",
     "page": 430,
     "description": "Tabla de incrementos para 10 y 11 minutos. En Junio 2026 P11 se usa la columna 10 minutos y la fila 44 segundos: incremento del Sol 2°41,0′."
+  },
+  "2016-11-19_diaria": {
+    "file": "assets/almanaque/2016/2016-11-19_diaria.png",
+    "date": "2016-11-19",
+    "description": "Página diaria real del Nautical Almanac 2016. En UT 11 se lee hG del Sol 348°38,0′. Usada junto con el incremento de 40 minutos en Noviembre 2016 P14.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2016_Nautical_Almanac.pdf"
+  },
+  "2016_incrementos_40m": {
+    "file": "assets/almanaque/2016/2016_incrementos_40m.png",
+    "description": "Tabla real de incrementos del Nautical Almanac 2016. Para 40 min 00 s, el incremento del Sol es 10°00,0′.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2016_Nautical_Almanac.pdf"
+  },
+  "2021-06-30_diaria": {
+    "file": "assets/almanaque/2021/2021-06-30_diaria.png",
+    "date": "2021-06-30",
+    "description": "Página diaria real del Nautical Almanac 2021. En UT 15 se lee hG del Sol 44°03,8′. Usada en Junio 2021 P17.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2021_Nautical_Almanac.pdf"
+  },
+  "2021-11-20_diaria": {
+    "file": "assets/almanaque/2021/2021-11-20_diaria.png",
+    "date": "2021-11-20",
+    "description": "Página diaria real del Nautical Almanac 2021. En UT 11 se lee hG del Sol 348°35,4′. Usada en Noviembre 2021 P15.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2021_Nautical_Almanac.pdf"
+  },
+  "2022-11-26_diaria": {
+    "file": "assets/almanaque/2022/2022-11-26_diaria.png",
+    "date": "2022-11-26",
+    "description": "Página diaria real del Nautical Almanac 2022. En UT 10 se lee hG del Sol 333°11,4′. Usada junto con el incremento de 15 minutos en Noviembre 2022 P14.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2022_Nautical_Almanac.pdf"
+  },
+  "2022_incrementos_15m": {
+    "file": "assets/almanaque/2022/2022_incrementos_15m.png",
+    "description": "Tabla real de incrementos del Nautical Almanac 2022. Para 15 min 00 s, el incremento del Sol es 3°45,0′.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2022_Nautical_Almanac.pdf"
   }
 }
