@@ -77,7 +77,7 @@ La fórmula aparece al final de cada paso. Cada dato obtenido cambia a un peque�
 
 En el título «Cómo convertimos hL en P» aparece al lado, en pequeño, la aclaración «hL = horario local del Sol · P = ángulo en el Polo».
 
-Las instrucciones generales utilizan siempre la palabra «calculadora», sin imponer una marca. Las secuencias de teclas y los valores intermedios se presentan con tamaño normal; solo la fórmula y el resultado importante conservan énfasis visual. El simulador concreto puede identificar su modelo por separado.
+En toda la explicación visible de esta pregunta se utiliza la palabra «calculadora», sin imponer una marca. Las secuencias de teclas y los valores intermedios se presentan con tamaño normal; solo la fórmula y el resultado importante conservan énfasis visual.
 
 Antes de operar se separan dos reglas diferentes:
 
