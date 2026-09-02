@@ -704,6 +704,15 @@ function enhanceQ98Diagram(scope){
  const firstLabel=svg.querySelector("text");if(firstLabel)firstLabel.insertAdjacentHTML("beforebegin",'<line x1="165" y1="92" x2="315" y2="285" stroke="#1976b9" stroke-width="6"/><line x1="165" y1="92" x2="525" y2="175" stroke="#e07816" stroke-width="6"/><line x1="315" y1="285" x2="525" y2="175" stroke="#15915b" stroke-width="6"/><path d="M230 151 L205 108" fill="none" stroke="#8b3fc1" stroke-width="2"/><rect x="230" y="138" width="190" height="40" rx="8" fill="#f6ebff" stroke="#8b3fc1" stroke-width="2"/>');
  Array.from(svg.querySelectorAll("text")).forEach(function(label){const value=label.textContent||"";if(value.startsWith("PN–Z")||value==="62°51′18″"||value.startsWith("Z ·"))label.setAttribute("fill","#1976b9");if(value.startsWith("PN–Sol")||value==="110°59′12″"||value.includes("☉ Sol"))label.setAttribute("fill","#a34d00");if(value.startsWith("P =")){label.setAttribute("x","245");label.setAttribute("y","164");label.setAttribute("fill","#71309f")}})
 }
+function enhancePole731Result(scope){
+ scope.querySelectorAll("div").forEach(el=>{
+  if(el.children.length===0&&el.textContent.trim()==="hL☉ = −25°09,3′ + 360° = 334°50,7′ W"){
+   el.style.border="3px solid #30945b";
+   el.style.background="#e9f8ef";
+   el.style.color="#176b43";
+  }
+ });
+}
 function compactCalculatorHTML(q){
  const calculator=calculatorHTML(q,true).replace("data-calculator-trainer","data-calculator-trainer data-force-docked=\"1\"");
  if(!calculator)return "";
@@ -772,6 +781,7 @@ $("qbox").innerHTML=`<div class="qhead"><div>${didacticBadgeHTML(q)}<div style="
 bindStudyMode($("qbox"),renderBank);
 if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("qbox"));
 enhanceQ98Diagram($("qbox"));
+enhancePole731Result($("qbox"));
 initCelestialSpheres($("qbox"));
 initPole731Sphere($("qbox"));
 document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{if(ans[q.id])return;ans[q.id]=x.dataset.l;ansConfidence[q.id]="knew";savePractice(q,x.dataset.l,"knew");renderBank()});
