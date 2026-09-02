@@ -363,7 +363,7 @@ function heightFormulaHTML(q){
  let finalHtml=withData.replace('<b>Después de calcular hL, obtén P:</b>',`${localHour}${poleConversion}<b>Regla general para obtener P:</b>`);
  const stepBadge=n=>`<span style="display:inline-block;margin:0 0 9px;padding:5px 10px;border-radius:7px;background:#173f5b;color:white;font-size:13px;font-weight:900">PASO ${n}</span><br>`;
  finalHtml=finalHtml.replace("CÓMO OBTENEMOS hL = 334°32,5′ CON LA CALCULADORA",stepBadge(2)+"CÓMO OBTENEMOS hL = 334°32,5′ CON LA CALCULADORA");
- finalHtml=finalHtml.replace("CÓMO CONVERTIMOS hL EN P",stepBadge(3)+"CÓMO CONVERTIMOS hL EN P");
+ finalHtml=finalHtml.replace("CÓMO CONVERTIMOS hL EN P",stepBadge(3)+'CÓMO CONVERTIMOS hL EN P <small style="font-size:12px;font-weight:600;color:#6b5540">(hL = horario local del Sol · P = ángulo en el Polo)</small>');
  finalHtml=finalHtml.replace("YA TENEMOS LOS DATOS NECESARIOS PARA HALLAR ae",stepBadge(4)+"YA TENEMOS LOS DATOS NECESARIOS PARA HALLAR ae");
  finalHtml=finalHtml.replace("BUSCA d Y hG EN EL ALMANAQUE NÁUTICO","OBTÉN hG, d Y LA CORRECCIÓN EN EL ALMANAQUE NÁUTICO");
  finalHtml=finalHtml.replace("Apunta el incremento <b>2°30,0′</b>.","Apunta la <b>corrección del Almanaque (incremento de hG) = 2°30,0′</b>. En esta cuenta se suma al hG de la hora entera.");
