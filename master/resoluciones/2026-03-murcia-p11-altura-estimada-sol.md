@@ -81,6 +81,8 @@ En el apartado para obtener `ae` se elimina la explicación teórica extensa sob
 
 También se elimina el rótulo `En la pantalla: sin⁻¹(Ans)`: no representa nuevas teclas que deban pulsarse y puede confundirse con otro paso. Tras la secuencia se muestra directamente el resultado `ae = 44,895188°`.
 
+Tras la revisión final del alumno, esta pregunta terminada utiliza un marco celeste para distinguirla visualmente de las demás preguntas terminadas con marco verde. Su estado editorial continúa siendo «terminada del todo».
+
 En el título «Cómo convertimos hL en P» aparece al lado, en pequeño, la aclaración «hL = horario local del Sol · P = ángulo en el Polo».
 
 En toda la explicación visible de esta pregunta se utiliza la palabra «calculadora», sin imponer una marca. Las operaciones sencillas se escriben de forma matemática normal, sin cadenas estáticas de teclas. El resultado `334°32′30″ = 334°32,5′` aparece ligeramente más grande para distinguirlo con claridad.
