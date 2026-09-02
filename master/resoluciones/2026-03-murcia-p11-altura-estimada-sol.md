@@ -73,6 +73,8 @@ Aunque la página se titula «Correcciones», el valor `2°30,0′` de la column
 
 La fórmula inicial se presenta como «Punto de partida», sin numerarla como paso: solo se sustituye `l = +35°54′`, porque es el único dato de la fórmula proporcionado directamente por el enunciado. Las dos apariciones de `d` y la `P` llevan pequeños recuadros rojos. El Paso 1 abre las páginas 82 y 430 del Almanaque, obtiene `d = −2°26,1′`, `hG = 342°42,5′` y el incremento `2°30,0′`, y vuelve a mostrar la fórmula con `d` rellenada y solo `P` en rojo. Después, el Paso 2 obtiene `hL`, el Paso 3 obtiene `P` y el Paso 4 reúne los tres datos para calcular `ae`.
 
+La fórmula aparece al final de cada paso. Cada dato obtenido cambia a un pequeño recuadro verde y cada dato pendiente permanece en rojo. Al finalizar el Paso 2, `P` continúa roja porque `hL` es todavía un resultado intermedio. Al terminar el Paso 3, `P = 25°27,5′` pasa a verde y toda la fórmula queda completa para el Paso 4.
+
 Antes de operar se separan dos reglas diferentes:
 
 - Para calcular `hL`, la longitud Este se suma a `hG` y la longitud Oeste se resta.

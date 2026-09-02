@@ -367,6 +367,11 @@ function heightFormulaHTML(q){
  finalHtml=finalHtml.replace("YA TENEMOS LOS DATOS NECESARIOS PARA HALLAR ae",stepBadge(4)+"YA TENEMOS LOS DATOS NECESARIOS PARA HALLAR ae");
  finalHtml=finalHtml.replace("cos(l) × cos(d) × cos(P)","cos(l) × cos(d) × cos(<span style=\"display:inline-block;padding:0 5px;border:2px solid #c93b46;border-radius:5px;background:#fde9eb;color:#a2222d\">P</span>)");
  finalHtml=finalHtml.replaceAll("sen(d)","sen(<span style=\"display:inline-block;padding:0 5px;border:2px solid #c93b46;border-radius:5px;background:#fde9eb;color:#a2222d\">d</span>)").replaceAll("cos(d)","cos(<span style=\"display:inline-block;padding:0 5px;border:2px solid #c93b46;border-radius:5px;background:#fde9eb;color:#a2222d\">d</span>)");
+ const green=v=>`<span style="display:inline-block;padding:0 5px;border:2px solid #30945b;border-radius:5px;background:#e9f8ef;color:#176b43">${v}</span>`;
+ const red=v=>`<span style="display:inline-block;padding:0 5px;border:2px solid #c93b46;border-radius:5px;background:#fde9eb;color:#a2222d">${v}</span>`;
+ const formulaProgress=p=>`<div style="margin-top:11px;padding:12px;border:2px solid #30945b;border-radius:9px;background:white;text-align:center;font-size:clamp(16px,2.6vw,21px);font-weight:900;color:#176b43">sen(ae) = sen(${green("+35°54′")}) × sen(${green("−2°26,1′")}) + cos(${green("+35°54′")}) × cos(${green("−2°26,1′")}) × cos(${p?green("25°27,5′"):red("P")})</div>`;
+ finalHtml=finalHtml.replace("Por tanto: hL = 334°32,5′. Este es el valor que ahora convertiremos en P.</div>",`Por tanto: hL = 334°32,5′. Este es el valor que ahora convertiremos en P.</div>${formulaProgress(false)}`);
+ finalHtml=finalHtml.replace("Resultado: P = 25°27,5′ E. Se escribe E porque el arco corto queda al Este.</div>",`Resultado: P = 25°27,5′ E. Se escribe E porque el arco corto queda al Este.</div>${formulaProgress(true)}`);
  const clean=document.createElement("div");
  clean.innerHTML=finalHtml;
  const repeatedTitles=new Set(["hL = horario local del Sol","P = ángulo en el Polo","Polo celeste","En la esfera celeste real:","En este dibujo visto desde arriba:"]);
