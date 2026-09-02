@@ -2,3 +2,6 @@
 .quick-reminder{margin-top:11px;border:1px solid #bdd5c5;border-radius:9px;background:#f7fbf8;color:#294b37}.quick-reminder summary{padding:9px 11px;cursor:pointer;font-size:13px;font-weight:800;color:#2d6846}.quick-reminder[open] summary{border-bottom:1px solid #dbe9df}.quick-reminder-body{padding:10px 12px;font-size:13px;line-height:1.55}.quick-reminder-body b{color:#1f5638}.quick-reminder-body ol{margin:6px 0 0;padding-left:20px}
 .work-item.work-finished-focus{border-color:#42a9cf;background:#eefaff;box-shadow:0 0 0 2px #c8ecf8}.work-frame.work-finished-focus{border-color:#42a9cf;background:#f7fdff;box-shadow:0 0 0 2px #c8ecf8}
 @media(max-width:620px){.work-counts{grid-template-columns:1fr}.work-item{grid-template-columns:32px 1fr}.work-frame{padding:11px}}
+
+/* Estado editorial terminado: celeste. El verde queda reservado a resultados correctos. */
+.work-ready-action{border-color:#42a9cf;background:#eefaff;color:#195785}.work-ready-action>span{background:#42a9cf}.work-ready-action:hover{background:#e2f6fd}.work-counts .ready{border-color:#42a9cf;color:#195785;background:#eefaff}.work-item.ready{border-color:#42a9cf;background:#eefaff}.work-frame.work-ready{border-color:#42a9cf;background:#f7fdff}.work-badge.ready{border-color:#42a9cf;background:#e2f6fd;color:#195785}
