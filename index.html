@@ -368,6 +368,8 @@ function heightFormulaHTML(q){
  const repeatedTitles=new Set(["hL = horario local del Sol","P = ángulo en el Polo","Polo celeste","En la esfera celeste real:","En este dibujo visto desde arriba:"]);
  clean.querySelectorAll("b").forEach(node=>{if(repeatedTitles.has(node.textContent.trim()))node.parentElement.remove()});
  Array.from(clean.querySelectorAll('div[style*="display:grid"]')).reverse().forEach(node=>{if(!node.textContent.trim()&&!node.querySelector("svg,img"))node.remove()});
+ const graphCards=Array.from(clean.querySelectorAll("svg")).map(svg=>svg.parentElement);
+ if(graphCards.length){const graphSection=document.createElement("div");graphSection.style.cssText="margin-top:18px;padding:14px;border:3px solid #537ca3;border-radius:12px;background:#f7fbff";graphSection.innerHTML='<h3 style="margin:0 0 6px;color:#173f5b">GRÁFICOS EXPLICATIVOS · DESPUÉS DE LOS PASOS</h3><div style="margin-bottom:12px;color:#4d6475">Primero resuelve siguiendo los pasos anteriores. Después utiliza estos dibujos para comprender visualmente lo que has calculado.</div>';graphCards.forEach(card=>graphSection.appendChild(card));clean.appendChild(graphSection)}
  return clean.innerHTML;
 }
 
