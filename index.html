@@ -717,10 +717,10 @@ function initPole731SphereV2(root=document){
    const projectedSun=sunMeridian.map(project),upperVisible=projectedSun.map((p,i)=>({p,i})).filter(x=>x.i>16&&x.i<74&&x.p.z>.05),labelCenter=(upperVisible.sort((a,b)=>a.p.y-b.p.y)[0]||{i:45}).i,label="SEMICÍRCULO HORARIO DEL SOL",span=48,start=Math.max(4,labelCenter-span/2),end=Math.min(projectedSun.length-5,labelCenter+span/2),forward=projectedSun[end].x>=projectedSun[start].x,chars=Array.from(label);
    /* Las etiquetas de las líneas se mantienen fijas fuera de la esfera para que nunca se solapen al girarla. */
    const badge=(x,y,width,color,bgColor,title,value)=>{ctx.fillStyle=bgColor;ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(x,y,width,54,9);ctx.fill();ctx.stroke();ctx.fillStyle=color;ctx.font="800 12px Arial";ctx.fillText(title,x+12,y+20);ctx.font="900 15px Arial";ctx.fillText(value,x+12,y+42)};
-   badge(14,14,Math.min(255,w*.44),"#704052","#faeef2","LÍNEA GRANATE","meridiano superior del lugar");
-   badge(w-Math.min(255,w*.44)-14,14,Math.min(255,w*.44),"#8a4100","#fff2df","NARANJA · ☉ SOL AMARILLO","círculo horario del Sol");
-   badge(14,h-68,Math.min(235,w*.42),"#195785","#eaf4fc","hL · RECORRIDO OESTE","334°50,7′ W");
-   badge(w-Math.min(235,w*.42)-14,h-68,Math.min(235,w*.42),"#176b43","#e9f8ef","P · ARCO MÁS CORTO","25°09,3′ E");
+   badge(14,14,Math.min(275,w*.46),"#704052","#faeef2","MERIDIANO SUPERIOR DEL LUGAR","línea granate");
+   badge(w-Math.min(275,w*.46)-14,14,Math.min(275,w*.46),"#8a4100","#fff2df","CÍRCULO HORARIO DEL SOL","línea naranja · ☉ Sol amarillo");
+   badge(14,h-68,Math.min(255,w*.44),"#195785","#eaf4fc","hL · HORARIO LOCAL DEL SOL","334°50,7′ W · recorrido Oeste");
+   badge(w-Math.min(255,w*.44)-14,h-68,Math.min(255,w*.44),"#176b43","#e9f8ef","P · ÁNGULO EN EL POLO","25°09,3′ E · arco corto");
   }
   canvas.style.cssText="display:block;width:100%;height:auto;aspect-ratio:1.47;margin-top:10px;background:#f7fbff;border-radius:10px;cursor:grab;touch-action:none";
   canvas.addEventListener("pointerdown",e=>{drag=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId);canvas.style.cursor="grabbing"});
