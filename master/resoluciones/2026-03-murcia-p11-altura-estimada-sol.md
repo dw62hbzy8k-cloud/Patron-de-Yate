@@ -77,6 +77,8 @@ La fórmula aparece al final de cada paso. Cada dato obtenido cambia a un peque�
 
 La fórmula completa se mantiene siempre en un solo renglón. Utiliza el mayor tamaño posible dentro del ancho disponible y se reduce de forma adaptable únicamente cuando la pantalla es más estrecha.
 
+En el apartado para obtener `ae` se elimina la explicación teórica extensa sobre arco seno, operación inversa, `sen⁻¹` y la ubicación de la función. Se conserva únicamente una transición breve desde `sen(ae) = 0,705812`, la secuencia necesaria y el resultado, porque el guiado interactivo de la calculadora enseña las teclas en el momento oportuno.
+
 En el título «Cómo convertimos hL en P» aparece al lado, en pequeño, la aclaración «hL = horario local del Sol · P = ángulo en el Polo».
 
 En toda la explicación visible de esta pregunta se utiliza la palabra «calculadora», sin imponer una marca. Las operaciones sencillas se escriben de forma matemática normal, sin cadenas estáticas de teclas. El resultado `334°32′30″ = 334°32,5′` aparece ligeramente más grande para distinguirlo con claridad.
