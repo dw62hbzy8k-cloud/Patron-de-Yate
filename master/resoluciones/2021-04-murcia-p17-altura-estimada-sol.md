@@ -67,3 +67,5 @@ La nueva representación es tridimensional, giratoria y se genera a partir de lo
 No se reutilizarán los antiguos dibujos planos en las siguientes preguntas. Cada futuro gráfico del triángulo deberá respetar esta geometría esférica.
 
 En toda fórmula numérica, cada valor llevará justo debajo su símbolo y significado: `l · latitud`, `d · declinación` y `P · ángulo en el Polo`. La longitud `L` solo se etiqueta en las operaciones donde realmente interviene, por ejemplo al obtener `hL`.
+
+La fórmula numérica mantiene el mismo formato de la plantilla aprobada: `sen(ae)` en un recuadro azul como parte izquierda y toda la operación en un recuadro verde como parte derecha. El comienzo del uso de teclas se anuncia con `PASO 3 · A PARTIR DE AQUÍ, UTILIZA LA CALCULADORA`; después se pide calcular toda la parte derecha verde.
