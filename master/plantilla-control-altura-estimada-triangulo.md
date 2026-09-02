@@ -21,6 +21,8 @@ Esta lista reúne las correcciones editoriales aprobadas por el alumno. Debe apl
 
 - Ningún texto, recuadro o flecha puede pisar otro elemento del gráfico.
 - Cada flecha y su explicación deben compartir color y apuntar con claridad a la línea correcta.
+- Cada recuadro debe colocarse junto al elemento que explica: `P` junto al vértice del polo y los lados junto a sus líneas. No ordenar los recuadros por comodidad si ese orden contradice la geometría.
+- Las flechas deben seguir el recorrido más corto y limpio posible. Una flecha larga que atraviesa el dibujo indica que el recuadro está mal situado.
 - La calculadora debe poder moverse, conservar su estado, permanecer dentro de la pantalla y no bloquear el desplazamiento de la página.
 - La vista normal y la rápida deben comprobarse tanto en escritorio como en pantalla estrecha.
 - Una pregunta nueva queda amarilla durante la revisión. Solo pasa a verde después del visto bueno expreso del alumno.
