@@ -691,6 +691,40 @@ function poleAngle731InteractiveHTML(){return `<div id="pole731Interactive" clas
 
 function initPole731Sphere(root=document){root.querySelectorAll('canvas[data-pole731-sphere]').forEach(canvas=>{if(canvas.dataset.ready)return;canvas.dataset.ready="1";const ctx=canvas.getContext('2d'),wrap=canvas.closest('.celestial-3d'),rad=n=>n*Math.PI/180,H=rad(334+50.7/60);let yaw=.55,pitch=.28,drag=false,lastX=0,lastY=0;const rot=v=>{let[x,y,z]=v,cy=Math.cos(yaw),sy=Math.sin(yaw);[x,y]=[x*cy-y*sy,x*sy+y*cy];const cp=Math.cos(pitch),sp=Math.sin(pitch);[y,z]=[y*cp-z*sp,y*sp+z*cp];return[x,y,z]};function draw(){const w=Math.max(320,canvas.clientWidth||800),h=Math.round(w*.66),dpr=Math.min(2,devicePixelRatio||1);if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr)}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const cx=w/2,cy=h*.49,R=Math.min(w*.34,h*.43),proj=v=>{const q=rot(v),k=1/(1.2-.2*q[1]);return{x:cx+q[0]*R*k,y:cy-q[2]*R*k,z:q[1]}};const bg=ctx.createRadialGradient(cx-R*.3,cy-R*.35,R*.05,cx,cy,R);bg.addColorStop(0,'#ffffff');bg.addColorStop(1,'#c9dfed');ctx.fillStyle=bg;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#355f87';ctx.lineWidth=2.5;ctx.stroke();const curve=(pts,color,width,alphaBack=.2,dash=false)=>{for(let pass=0;pass<2;pass++){ctx.beginPath();let started=false;for(const v of pts){const p=proj(v),front=p.z>=0;if((pass===1)!==front){started=false;continue}if(started)ctx.lineTo(p.x,p.y);else{ctx.moveTo(p.x,p.y);started=true}}ctx.strokeStyle=color;ctx.lineWidth=width;ctx.globalAlpha=pass?1:alphaBack;ctx.setLineDash(dash?[6,5]:[]);ctx.stroke()}ctx.globalAlpha=1;ctx.setLineDash([])};const circle=(axisAngle=0)=>{const pts=[];for(let i=0;i<=180;i++){const t=2*Math.PI*i/180;pts.push([Math.cos(t)*Math.cos(axisAngle),Math.cos(t)*Math.sin(axisAngle),Math.sin(t)])}return pts};const eq=[];for(let i=0;i<=240;i++){const t=2*Math.PI*i/240;eq.push([Math.cos(t),Math.sin(t),0])}curve(eq,'#718b9d',2,.25);for(let a=0;a<Math.PI;a+=Math.PI/6)curve(circle(a),'#9bb0bd',1,.13);curve(circle(0),'#c93645',4,.22);curve(circle(H),'#a22b36',4,.22);const longArc=[],shortArc=[];for(let i=0;i<=220;i++){const t=H*i/220;longArc.push([Math.cos(t),Math.sin(t),0])}for(let i=0;i<=50;i++){const t=(2*Math.PI-(2*Math.PI-H)*i/50);shortArc.push([Math.cos(t),Math.sin(t),0])}curve(longArc,'#397eb8',8,.23);curve(shortArc,'#e07816',9,.25);const pole=proj([0,0,1]),origin=proj([1,0,0]),sun=proj([Math.cos(H),Math.sin(H),0]);[[pole,'PN · polo celeste','#173f5b'],[origin,'0° / 360°','#173f5b'],[sun,'semicírculo horario del Sol','#a22b36']].forEach(([p,label,color])=>{ctx.fillStyle=color;ctx.beginPath();ctx.arc(p.x,p.y,6,0,Math.PI*2);ctx.fill();ctx.font='700 14px Arial';ctx.fillText(label,p.x+9,p.y-8)});const midLong=proj(longArc[Math.floor(longArc.length*.55)]),midShort=proj(shortArc[Math.floor(shortArc.length*.5)]);ctx.font='900 15px Arial';ctx.fillStyle='#195785';ctx.fillText('hL · 334°50,7′ W',midLong.x+8,midLong.y-9);ctx.fillStyle='#8a4100';ctx.fillText('P · 25°09,3′ E',midShort.x+8,midShort.y-9)}canvas.style.cssText='display:block;width:100%;height:auto;aspect-ratio:1.52;margin-top:10px;background:#f7fbff;border-radius:10px;cursor:grab;touch-action:none';canvas.addEventListener('pointerdown',e=>{drag=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId);canvas.style.cursor='grabbing'});canvas.addEventListener('pointermove',e=>{if(!drag)return;yaw+=(e.clientX-lastX)*.008;pitch=Math.max(-1.15,Math.min(1.15,pitch+(e.clientY-lastY)*.008));lastX=e.clientX;lastY=e.clientY;draw()});canvas.addEventListener('pointerup',()=>{drag=false;canvas.style.cursor='grab'});wrap.querySelector('[data-pole731-reset]').onclick=()=>{yaw=.55;pitch=.28;draw()};new ResizeObserver(draw).observe(canvas);draw()})}
 
+function initPole731SphereV2(root=document){
+ root.querySelectorAll('canvas[data-pole731-sphere]').forEach(canvas=>{
+  if(canvas.dataset.ready)return;canvas.dataset.ready="2";
+  const ctx=canvas.getContext("2d"),wrap=canvas.closest(".celestial-3d"),rad=n=>n*Math.PI/180,H=rad(334+50.7/60);
+  let yaw=.48,pitch=.22,drag=false,lastX=0,lastY=0;
+  const rotate=v=>{let[x,y,z]=v;const cy=Math.cos(yaw),sy=Math.sin(yaw);[x,y]=[x*cy-y*sy,x*sy+y*cy];const cp=Math.cos(pitch),sp=Math.sin(pitch);[y,z]=[y*cp-z*sp,y*sp+z*cp];return[x,y,z]};
+  function draw(){
+   const w=Math.max(320,canvas.clientWidth||800),h=Math.round(w*.68),dpr=Math.min(2,devicePixelRatio||1);
+   if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr)}
+   ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+   const cx=w/2,cy=h*.52,R=Math.min(w*.32,h*.39),project=v=>{const q=rotate(v),k=1/(1.2-.2*q[1]);return{x:cx+q[0]*R*k,y:cy-q[2]*R*k,z:q[1]}};
+   const bg=ctx.createRadialGradient(cx-R*.28,cy-R*.32,R*.06,cx,cy,R);bg.addColorStop(0,"#fff");bg.addColorStop(1,"#c9dfed");ctx.fillStyle=bg;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fill();ctx.strokeStyle="#355f87";ctx.lineWidth=2.5;ctx.stroke();
+   const curve=(pts,color,width,back=.18)=>{for(let pass=0;pass<2;pass++){ctx.beginPath();let started=false;for(const v of pts){const p=project(v),front=p.z>=0;if((pass===1)!==front){started=false;continue}if(started)ctx.lineTo(p.x,p.y);else{ctx.moveTo(p.x,p.y);started=true}}ctx.strokeStyle=color;ctx.lineWidth=width;ctx.globalAlpha=pass?1:back;ctx.stroke()}ctx.globalAlpha=1};
+   const meridian=a=>{const pts=[];for(let i=0;i<=180;i++){const t=2*Math.PI*i/180;pts.push([Math.cos(t)*Math.cos(a),Math.cos(t)*Math.sin(a),Math.sin(t)])}return pts};
+   const equator=[];for(let i=0;i<=240;i++){const t=2*Math.PI*i/240;equator.push([Math.cos(t),Math.sin(t),0])}curve(equator,"#6f8798",2,.28);
+   for(let a=Math.PI/6;a<Math.PI;a+=Math.PI/6)curve(meridian(a),"#9bb0bd",1,.1);
+   curve(meridian(0),"#173f5b",5,.22);curve(meridian(H),"#c93645",5,.22);
+   const hL=[],P=[];for(let i=0;i<=260;i++){const t=H*i/260;hL.push([Math.cos(t),Math.sin(t),0])}for(let i=0;i<=60;i++){const t=2*Math.PI-(2*Math.PI-H)*i/60;P.push([Math.cos(t),Math.sin(t),0])}curve(hL,"#2878b5",9,.23);curve(P,"#e07816",10,.25);
+   const dot=(v,color,label="")=>{const p=project(v);ctx.fillStyle=color;ctx.beginPath();ctx.arc(p.x,p.y,6,0,Math.PI*2);ctx.fill();if(label){ctx.font="900 13px Arial";ctx.fillText(label,p.x+9,p.y-8)}};
+   dot([0,0,1],"#173f5b","PN");dot([1,0,0],"#173f5b");dot([Math.cos(H),Math.sin(H),0],"#c93645");
+   const badge=(x,y,width,color,bgColor,title,value)=>{ctx.fillStyle=bgColor;ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(x,y,width,54,9);ctx.fill();ctx.stroke();ctx.fillStyle=color;ctx.font="800 12px Arial";ctx.fillText(title,x+12,y+20);ctx.font="900 15px Arial";ctx.fillText(value,x+12,y+42)};
+   badge(14,14,Math.min(235,w*.42),"#173f5b","#eef4f8","MERIDIANO DEL LUGAR","origen 0° / 360°");
+   badge(w-Math.min(250,w*.44)-14,14,Math.min(250,w*.44),"#a22b36","#fff0f1","SEMICÍRCULO DEL SOL","final común de hL y P");
+   badge(14,h-68,Math.min(235,w*.42),"#195785","#eaf4fc","hL · RECORRIDO OESTE","334°50,7′ W");
+   badge(w-Math.min(235,w*.42)-14,h-68,Math.min(235,w*.42),"#8a4100","#fff2df","P · ARCO MÁS CORTO","25°09,3′ E");
+  }
+  canvas.style.cssText="display:block;width:100%;height:auto;aspect-ratio:1.47;margin-top:10px;background:#f7fbff;border-radius:10px;cursor:grab;touch-action:none";
+  canvas.addEventListener("pointerdown",e=>{drag=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId);canvas.style.cursor="grabbing"});
+  canvas.addEventListener("pointermove",e=>{if(!drag)return;yaw+=(e.clientX-lastX)*.008;pitch=Math.max(-1.15,Math.min(1.15,pitch+(e.clientY-lastY)*.008));lastX=e.clientX;lastY=e.clientY;draw()});
+  canvas.addEventListener("pointerup",()=>{drag=false;canvas.style.cursor="grab"});
+  wrap.querySelector("[data-pole731-reset]").onclick=()=>{yaw=.48;pitch=.22;draw()};new ResizeObserver(draw).observe(canvas);draw();
+ });
+}
+
 function learningMaterialsHTML(q){
  const reminder=quickReminderHTML(q,true);
  if(compactStudy&&reminder)return `${almanacHTML(q)}${reminder}${compactCalculatorHTML(q)}`;
@@ -787,7 +821,7 @@ if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("qbox"));
 enhanceQ98Diagram($("qbox"));
 enhancePole731Result($("qbox"));
 initCelestialSpheres($("qbox"));
-initPole731Sphere($("qbox"));
+initPole731SphereV2($("qbox"));
 document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{if(ans[q.id])return;ans[q.id]=x.dataset.l;ansConfidence[q.id]="knew";savePractice(q,x.dataset.l,"knew");renderBank()});
 document.querySelectorAll("#qbox .confidence").forEach(x=>x.onclick=()=>{ansConfidence[q.id]=x.dataset.confidence;updateLatestPracticeConfidence(q,x.dataset.confidence);renderBank()})}
 refill();renderWorkTracker();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam").onchange=filterBank;$("bTopic").onchange=filterBank;$("prev").onclick=()=>{pos--;renderBank()};$("next").onclick=()=>{pos++;renderBank()};$("random").onclick=()=>{pos=Math.floor(Math.random()*pool.length);renderBank()};const directQuestionId=Number(new URLSearchParams(location.search).get("question"));if(directQuestionId){show("practice");openDidacticQuestion(directQuestionId)}
