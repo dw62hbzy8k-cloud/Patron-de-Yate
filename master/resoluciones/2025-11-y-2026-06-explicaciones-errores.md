@@ -23,7 +23,7 @@ Datos: 22-11-2025, UT 11:10; latitud 35°42′ N; longitud 24°40′ E.
 1. Para ese instante se obtiene aproximadamente `hG☉ = 350°57,6′` y `d☉ = 20°14,1′ S`.
 2. La longitud Este se suma: `hL☉ = 350°57,6′ + 24°40,0′ = 375°37,6′`.
 3. Se restan 360°: `hL☉ = 15°37,6′ W`.
-4. Se usa `sen ae = sen l · sen d + cos l · cos d · cos hL`, tomando Sur con signo negativo.
+4. Se usa `sen ae = sen l × sen d + cos l × cos d × cos hL`, tomando Sur con signo negativo.
 5. `ae = 32,139° = 32°08,4′`.
 
 Resultado: **opción C, 32°08,4′**. La opción A, `32°72,1′`, además está mal expresada porque los minutos no pueden alcanzar 60.

@@ -16,11 +16,11 @@ Como `P` ya está facilitado, HcG y L no intervienen en la fórmula de la altura
 
 Fórmula:
 
-`sen(ae*) = sen(l)·sen(d*) + cos(l)·cos(d*)·cos(P)`
+`sen(ae*) = sen(l) × sen(d*) + cos(l) × cos(d*) × cos(P)`
 
 Sustitución:
 
-`sen(ae*) = sen(31°32,2′)·sen(38°48,2′) + cos(31°32,2′)·cos(38°48,2′)·cos(13°05′46″)`
+`sen(ae*) = sen(31°32,2′) × sen(38°48,2′) + cos(31°32,2′) × cos(38°48,2′) × cos(13°05′46″)`
 
 ### Entrada en la calculadora interactiva
 
