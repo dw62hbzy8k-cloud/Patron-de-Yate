@@ -42,9 +42,28 @@ Resultado: **respuesta A · ae = 51°14,1′**.
 5. Mostrar primero `sen(ae)`, aclarando que todavía no es la altura.
 6. Obtener `ae`, convertirla al formato de las respuestas y redondear únicamente al final.
 7. Comprobación razonable.
-8. Gráfico explicativo después de todos los pasos.
+8. Esfera celeste tridimensional e interactiva después de todos los pasos.
 9. Versión rápida con datos, fórmula, sustitución y resultado.
 
 Las fórmulas completas permanecen en un solo renglón y utilizan el mayor tamaño que permite el ancho disponible. Se dice siempre «calculadora» en las instrucciones visibles. La pregunta conserva su marco verde hasta que el usuario decida otro estado.
 
 La obtención de `ae` no utiliza expresiones imprecisas como «continúa con la secuencia indicada». Especifica las teclas completas: con `0,779722` en pantalla, `SHIFT → SIN → Ans → ) → =`.
+
+La frase abstracta «P entra dentro de cos(P)» se sustituye por una instrucción explícita: en la fórmula `cos(P)`, reemplaza `P` por su valor, de modo que quede `cos(36°53,9′)`. En la calculadora solo se introduce el número; la letra `E` conserva la orientación y no se escribe como signo negativo.
+
+## Norma visual corregida
+
+Se retira la antigua vista polar plana que se presentaba como «a escala». El triángulo de posición es esférico y sus lados son arcos de círculos máximos sobre la esfera celeste; una figura plana podía inducir una interpretación incorrecta.
+
+La nueva representación es tridimensional, giratoria y se genera a partir de los datos reales de la pregunta:
+
+- `PN = (0, 0, 1)` sobre la esfera celeste.
+- `Z` se coloca mediante `l = 29°26,5′ N`.
+- El Sol se coloca mediante `d = +11°22,8′` y `P = 36°53,9′ E`.
+- Los arcos `PN–Z`, `PN–Sol` y `Z–Sol` se calculan mediante interpolación sobre círculos máximos.
+- La Tierra se muestra en el centro y el observador sobre su superficie, alineado radialmente con el cenit `Z`.
+- La parte posterior de la esfera y de los arcos se diferencia visualmente de la parte delantera.
+
+No se reutilizarán los antiguos dibujos planos en las siguientes preguntas. Cada futuro gráfico del triángulo deberá respetar esta geometría esférica.
+
+En toda fórmula numérica, cada valor llevará justo debajo su símbolo y significado: `l · latitud`, `d · declinación` y `P · ángulo en el Polo`. La longitud `L` solo se etiqueta en las operaciones donde realmente interviene, por ejemplo al obtener `hL`.
