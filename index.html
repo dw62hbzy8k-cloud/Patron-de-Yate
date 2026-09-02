@@ -656,7 +656,7 @@ function completeSolutionHTML(q){
 function calculatorHTML(q,inline=false){
  if(!/Cálculo|Ortodrómica|Rectas/i.test(q.module||""))return "";
  const directHeight=HEIGHT_DIRECT_SOLUTIONS[q.id];
-	 if(q.id===731){if(!inline)return "";return `<div style="margin-top:15px;padding:14px;border:3px solid #7657a5;border-radius:12px;background:#f4effb" data-calculation-zone><div style="margin-bottom:10px"><b style="font-size:20px;color:#493270">CALCULADORA · realiza el cálculo completo</b><div class="sub">La guía empieza con hG☉, resta la longitud Oeste, normaliza hL y termina obteniendo P.</div></div><div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-731" data-height-guide="pole-731"></div></div>`;}
+	 if(q.id===731){if(!inline)return "";return `<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-731" data-height-guide="pole-731" data-calculation-zone></div>`;}
 	 if(q.id===1258){if(!inline)return "";return `<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-1258" data-height-guide="1258"></div>`;}
 	 if(q.id===98){if(!inline)return "";return `<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-98" data-height-guide="98"></div>`;}
 	 if(q.id===334||q.id===374||q.id===735||q.id===970||q.id===1298||q.id===58||q.id===1335){if(!inline)return "";return `<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-${q.id}" data-height-guide="${q.id}"></div>`;}
