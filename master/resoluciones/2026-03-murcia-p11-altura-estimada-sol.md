@@ -97,7 +97,7 @@ Antes de operar se separan dos reglas diferentes:
    - `W`: Oeste; `E`: Este.
    - `180°`: media circunferencia; `360°`: circunferencia completa.
 
-   La explicación conceptual es que `hL` se cuenta hacia el Oeste. Hasta 180°, ese mismo recorrido es el arco más corto y por eso `P = hL W`. Cuando `hL` supera 180°, el recorrido hacia el Oeste ya es el largo; el arco corto queda al Este y mide lo que falta para cerrar la circunferencia: `P = 360° − hL E`.
+   El recuadro adicional «Qué significa cada símbolo y cada límite» se elimina por repetitivo. La operación del Paso 3, junto con las definiciones pequeñas de `hL` y `P` en su título, contiene la información necesaria sin interrumpir el recorrido.
 
    Después de terminar los pasos operativos aparecen los gráficos explicativos: una vista lateral con la Tierra dentro de la esfera celeste y una vista en planta del Ecuador celeste. Los dibujos quedan fuera del recorrido principal para no interrumpir ni confundir la secuencia de cálculo.
 

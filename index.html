@@ -378,7 +378,7 @@ function heightFormulaHTML(q){
  finalHtml=finalHtml.replace("Resultado: P = 25°27,5′ E. Se escribe E porque el arco corto queda al Este.</div>",`Resultado: P = 25°27,5′ E. Se escribe E porque el arco corto queda al Este.</div>${formulaProgress(true)}`);
  const clean=document.createElement("div");
  clean.innerHTML=finalHtml;
- const repeatedTitles=new Set(["hL = horario local del Sol","P = ángulo en el Polo","Polo celeste","En la esfera celeste real:","En este dibujo visto desde arriba:"]);
+ const repeatedTitles=new Set(["hL = horario local del Sol","P = ángulo en el Polo","Polo celeste","En la esfera celeste real:","En este dibujo visto desde arriba:","Qué significa cada símbolo y cada límite:"]);
  clean.querySelectorAll("b").forEach(node=>{if(repeatedTitles.has(node.textContent.trim()))node.parentElement.remove()});
  Array.from(clean.querySelectorAll('div[style*="display:grid"]')).reverse().forEach(node=>{if(!node.textContent.trim()&&!node.querySelector("svg,img"))node.remove()});
  const graphCards=Array.from(clean.querySelectorAll("svg")).map(svg=>svg.parentElement);
