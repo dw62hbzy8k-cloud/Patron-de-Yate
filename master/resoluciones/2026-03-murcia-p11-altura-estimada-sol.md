@@ -78,7 +78,7 @@ Antes de operar se separan dos reglas diferentes:
 
 1. `hG = 342°42,5′ + 2°30,0′ = 345°12,5′`.
 2. La longitud es Oeste, por lo que se resta: `hL = 345°12,5′ − 10°40,0′ = 334°32,5′`.
-   La web desarrolla esta resta sin saltos. Como `12,5′` es menor que `40,0′`, se toma un grado de `345°`. Puesto que `1° = 60′`, queda `345°12,5′ = 344°72,5′`. Entonces se puede restar directamente: `344°72,5′ − 10°40,0′ = 334°32,5′`.
+   La ruta principal utiliza la Casio, igual que en el examen: `345 → °′″ → 12 → . → 5 → °′″ → − → 10 → °′″ → 40 → °′″ → =`. La pantalla muestra `334°32′30″`, equivalente a `334°32,5′`. No se enseña el préstamo manual en la explicación principal.
 3. `hL` se expresa sobre el círculo completo, de 0° a 360°. `P` utiliza el arco menor, de 0° a 180°, e indica Este u Oeste. Si `hL` está entre 0° y 180°, `P = hL W`; si `hL > 180°`, `P = 360° − hL E`. En esta pregunta: `P = 360° − 334°32,5′ = 25°27,5′ E`.
 
    Símbolos y límites que deben repetirse en la web justo debajo de esta regla:

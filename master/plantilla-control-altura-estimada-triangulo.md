@@ -2,7 +2,7 @@
 
 ## Regla de continuidad numérica
 
-Ningún resultado puede aparecer por primera vez sin mostrar inmediatamente antes la operación que lo produce. Si una suma o resta de grados y minutos exige tomar prestado un grado, debe escribirse expresamente que `1° = 60′` y mostrar la transformación completa antes del resultado.
+Ningún resultado puede aparecer por primera vez sin mostrar inmediatamente antes la operación que lo produce. Para las cuentas que el alumno realizará con su Casio, la ruta principal debe enseñar la secuencia directa de teclas y el resultado de pantalla; no se añadirá el método manual si complica innecesariamente el ejercicio.
 
 Esta lista reúne las correcciones editoriales aprobadas por el alumno. Debe aplicarse antes de presentar cualquier pregunta nueva de este mismo tipo.
 
