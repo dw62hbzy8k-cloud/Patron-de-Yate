@@ -8,6 +8,8 @@ const HEIGHT_1258_STORAGE_KEY="aprobarNautica_heightEstimateTrainer_1258_v1";
 const HEIGHT_98_STORAGE_KEY="aprobarNautica_heightEstimateTrainer_98_v1";
 const HEIGHT_334_STORAGE_KEY="aprobarNautica_heightEstimateTrainer_334_v1";
 const HEIGHT_374_STORAGE_KEY="aprobarNautica_heightEstimateTrainer_374_v1";
+const HEIGHT_735_STORAGE_KEY="aprobarNautica_heightEstimateTrainer_735_v1";
+const HEIGHT_970_STORAGE_KEY="aprobarNautica_heightEstimateTrainer_970_v1";
 const DOCK_POSITION_KEY="aprobarNautica_calculatorDockPosition_v1";
 const conversionExpected=["−","4","4","=","×","6","0","="];
 const conversionDirections=[
@@ -103,6 +105,28 @@ const height334Directions=height334Expected.map(function(key,index){
  if(index===58)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
  return `Pulsa ${key}.`;
 });
+const height735Expected=[
+ "sin","3","4","°′″","1","0",".","8","°′″",")","×","sin","2","°′″","2","4",".","3","°′″",")","+",
+ "cos","3","4","°′″","1","0",".","8","°′″",")","×","cos","2","°′″","2","4",".","3","°′″",")","×",
+ "cos","2","5","°′″","9",".","3","°′″",")","=","SHIFT","sin","Ans",")","=","°′″"
+];
+const height735Directions=height735Expected.map(function(key,index){
+ if(index===0)return "Pulsa SIN para comenzar con l = 34°10,8′ N.";
+ if(index===53)return "Ya has obtenido sen(ae). Pulsa SHIFT para recuperar la altura estimada.";
+ if(index===58)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
+ return `Pulsa ${key}.`;
+});
+const height970Expected=[
+ "sin","3","0","°′″","1","0",".","7","°′″",")","×","sin","3","°′″","1","8",".","2","°′″",")","+",
+ "cos","3","0","°′″","1","0",".","7","°′″",")","×","cos","3","°′″","1","8",".","2","°′″",")","×",
+ "cos","2","7","°′″","4","0",".","2","°′″",")","=","SHIFT","sin","Ans",")","=","°′″"
+];
+const height970Directions=height970Expected.map(function(key,index){
+ if(index===0)return "Pulsa SIN para comenzar con l = 30°10,7′ N.";
+ if(index===53)return "Ya has obtenido sen(ae). Pulsa SHIFT para recuperar la altura estimada.";
+ if(index===58)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
+ return `Pulsa ${key}.`;
+});
 const modeText={
  1:"<b>Nivel 1 · Aprender:</b> solo funciona la tecla correcta y aparece iluminada en verde suave.",
  2:"<b>Nivel 2 · Practicar:</b> ninguna tecla se ilumina antes. Una tecla incorrecta no escribe nada: se pone roja y suena. La correcta funciona y se pone verde un instante.",
@@ -131,9 +155,9 @@ function saveDockPosition(position){try{localStorage.setItem(DOCK_POSITION_KEY,J
 function recommendedMode(progress){if(progress.guided<2)return 1;if(progress.practice<2)return 2;return 3}
 function trainerMarkup(guideId){
  const is296=guideId==="296";
- const is1010=guideId==="1010",is1258=guideId==="1258",is98=guideId==="98",is334=guideId==="334",is374=guideId==="374",is334Family=is334||is374,isHeight=is296||is1010||is1258||is98||is334Family||guideId==="1";
- const subtitle=is374?"Cálculo interactivo de Marzo 2020 · Modelo 2 · P15.":is334?"Cálculo interactivo de Julio 2020 · Modelo 1 · P15.":is98?"Cálculo interactivo de Noviembre 2022 · Modelo 2 · P19.":is1258?"Cálculo interactivo de Junio 2024 · pregunta 19 · Vega.":is1010?"Cálculo interactivo de Junio 2026 · Modelo 1 · P11.":is296?"Cálculo interactivo de esta pregunta: altura estimada del Sol.":guideId?"Cálculo interactivo completo de la altura estimada del Sol.":"Convertir grados decimales en grados y minutos.";
- const objective=is334Family?"Objetivo de esta pregunta: ae = 52°27,9′":is98?"Objetivo de esta pregunta: ae = 25°27′18″":is1258?"Objetivo de esta pregunta: ae* = 77°04′57″":is1010?"Objetivo de esta pregunta: ae = 63°56,2′":is296?"Objetivo de esta pregunta: ae = 51°14,1′":guideId?"Objetivo: ae = 44°53,7′":"Objetivo: 44,895188° = 44°53,7′";
+ const is1010=guideId==="1010",is1258=guideId==="1258",is98=guideId==="98",is334=guideId==="334",is374=guideId==="374",is735=guideId==="735",is970=guideId==="970",is334Family=is334||is374,isHeight=is296||is1010||is1258||is98||is334Family||is735||is970||guideId==="1";
+ const subtitle=is970?"Cálculo interactivo de Marzo 2015 · P11.":is735?"Cálculo interactivo de Marzo 2017 · P16.":is374?"Cálculo interactivo de Marzo 2020 · Modelo 2 · P15.":is334?"Cálculo interactivo de Julio 2020 · Modelo 1 · P15.":is98?"Cálculo interactivo de Noviembre 2022 · Modelo 2 · P19.":is1258?"Cálculo interactivo de Junio 2024 · pregunta 19 · Vega.":is1010?"Cálculo interactivo de Junio 2026 · Modelo 1 · P11.":is296?"Cálculo interactivo de esta pregunta: altura estimada del Sol.":guideId?"Cálculo interactivo completo de la altura estimada del Sol.":"Convertir grados decimales en grados y minutos.";
+ const objective=is970?"Objetivo de esta pregunta: ae = 52°29,7′":is735?"Cálculo: ae = 50°30,6′ · opción oficial B: 50°30,5′":is334Family?"Objetivo de esta pregunta: ae = 52°27,9′":is98?"Objetivo de esta pregunta: ae = 25°27′18″":is1258?"Objetivo de esta pregunta: ae* = 77°04′57″":is1010?"Objetivo de esta pregunta: ae = 63°56,2′":is296?"Objetivo de esta pregunta: ae = 51°14,1′":guideId?"Objetivo: ae = 44°53,7′":"Objetivo: 44,895188° = 44°53,7′";
  const steps=isHeight?"<li>Introducir l, d y P en la fórmula.</li><li>Calcular sen(ae) y recuperar ae con SHIFT → SIN.</li><li>Pasar ae a grados, minutos y segundos con °′″.</li>":"<li>Quitar los 44 grados enteros.</li><li>Multiplicar la parte decimal por 60 para convertirla en minutos.</li><li>Redondear 53,71128′ a 53,7′ y detenerse.</li>";
  const initial=is98?"Empieza por SIN: introducirás l = 27°08,7′ N, d = 20°59′12″ S y P = 44°26′20″ E.":is1258?"Empieza por SIN: vas a introducir l = 31°32,2′, d* = 38°48,2′ y P = 13°05′46″.":is1010?"Empieza por SIN: vas a introducir l = 40°34′, d = 23°13,8′ y P = 23°09,6′, exactamente como están escritos.":is296?"Empieza por SIN: vas a introducir la fórmula real con los datos de esta pregunta.":guideId?"Empieza por SIN: vas a introducir la fórmula real con l, d y P.":"La pantalla ya contiene 44,895188. Empieza por la operación indicada.";
  return `<div class="calc-trainer-head"><div><h3>Calculadora guiada · Casio fx-85SP X II</h3><p class="sub">${subtitle}</p></div><div class="calc-trainer-progress" data-ct-progress></div></div>
@@ -237,11 +261,11 @@ function mount(root){
  const guideId=root.dataset.heightGuide||"";
  root.dataset.ctMounted="1";root.innerHTML=trainerMarkup(guideId);
  const inlineTrainer=root.dataset.trainerInstance!=="principal";
- const height296=guideId==="296",height1010=guideId==="1010",height1258=guideId==="1258",height98=guideId==="98",height334=guideId==="334",height374=guideId==="374",height334Family=height334||height374,heightGuide=guideId==="1"||height296||height1010||height1258||height98||height334Family;
- const expected=height334Family?height334Expected:height98?height98Expected:height1258?height1258Expected:height1010?height1010Expected:height296?height296Expected:heightGuide?heightExpected:conversionExpected,directions=height334Family?height334Directions:height98?height98Directions:height1258?height1258Directions:height1010?height1010Directions:height296?height296Directions:heightGuide?heightDirections:conversionDirections,storageKey=height374?HEIGHT_374_STORAGE_KEY:height334?HEIGHT_334_STORAGE_KEY:height98?HEIGHT_98_STORAGE_KEY:height1258?HEIGHT_1258_STORAGE_KEY:height1010?HEIGHT_1010_STORAGE_KEY:height296?HEIGHT_296_STORAGE_KEY:heightGuide?HEIGHT_STORAGE_KEY:STORAGE_KEY;
- const finalHeightText=height334Family?"ae = 52°27′52,4″, que en las respuestas es 52°27,9′.":height98?"ae = 25°27′18,2″, que en las respuestas es 25°27′18″.":height1258?"ae* = 77°04′57,2″, que en las respuestas es 77°04′57″.":height1010?"ae = 63°56′14,1″, que en las respuestas es 63°56,2′.":height296?"ae = 51°14′06,4″, que en las respuestas es 51°14,1′.":"ae = 44°53,7′.";
- const milestones=height334Family?[{at:53,value:"0.792976"},{at:58,value:"52.464543"},{at:59,value:"52°27′52,4″"}]:height98?[{at:58,value:"0.429803"},{at:63,value:"25.455066"},{at:64,value:"25°27′18,2″"}]:height1258?[{at:58,value:"0.974693172380"},{at:63,value:"77.082554214"},{at:64,value:"77°04′57,2″"}]:height1010?[{at:50,value:"0.8983134026"},{at:55,value:"63.9372496"},{at:56,value:"63°56′14,1″"}]:height296?[{at:55,value:"0.779722"},{at:60,value:"51.235123"},{at:61,value:"51°14′06,4″"}]:[{at:61,value:"0.7058120802"},{at:66,value:"44.8951881663"},{at:70,value:"0.8951881663"},{at:74,value:"53.7112899782"}];
- const formulaEnd=height334Family?53:height98?58:height1258?58:height1010?50:height296?55:61,inverseEnd=height334Family?58:height98?63:height1258?63:height1010?55:height296?60:66;
+ const height296=guideId==="296",height1010=guideId==="1010",height1258=guideId==="1258",height98=guideId==="98",height334=guideId==="334",height374=guideId==="374",height735=guideId==="735",height970=guideId==="970",height334Family=height334||height374,heightGuide=guideId==="1"||height296||height1010||height1258||height98||height334Family||height735||height970;
+ const expected=height970?height970Expected:height735?height735Expected:height334Family?height334Expected:height98?height98Expected:height1258?height1258Expected:height1010?height1010Expected:height296?height296Expected:heightGuide?heightExpected:conversionExpected,directions=height970?height970Directions:height735?height735Directions:height334Family?height334Directions:height98?height98Directions:height1258?height1258Directions:height1010?height1010Directions:height296?height296Directions:heightGuide?heightDirections:conversionDirections,storageKey=height970?HEIGHT_970_STORAGE_KEY:height735?HEIGHT_735_STORAGE_KEY:height374?HEIGHT_374_STORAGE_KEY:height334?HEIGHT_334_STORAGE_KEY:height98?HEIGHT_98_STORAGE_KEY:height1258?HEIGHT_1258_STORAGE_KEY:height1010?HEIGHT_1010_STORAGE_KEY:height296?HEIGHT_296_STORAGE_KEY:heightGuide?HEIGHT_STORAGE_KEY:STORAGE_KEY;
+ const finalHeightText=height970?"ae = 52°29′40,6″, que en las respuestas es 52°29,7′.":height735?"ae = 50°30′35,4″ (50°30,6′); corresponde a la opción oficial B, 50°30,5′.":height334Family?"ae = 52°27′52,4″, que en las respuestas es 52°27,9′.":height98?"ae = 25°27′18,2″, que en las respuestas es 25°27′18″.":height1258?"ae* = 77°04′57,2″, que en las respuestas es 77°04′57″.":height1010?"ae = 63°56′14,1″, que en las respuestas es 63°56,2′.":height296?"ae = 51°14′06,4″, que en las respuestas es 51°14,1′.":"ae = 44°53,7′.";
+ const milestones=height970?[{at:53,value:"0.793296"},{at:58,value:"52.494625"},{at:59,value:"52°29′40,6″"}]:height735?[{at:53,value:"0.771734"},{at:58,value:"50.509830"},{at:59,value:"50°30′35,4″"}]:height334Family?[{at:53,value:"0.792976"},{at:58,value:"52.464543"},{at:59,value:"52°27′52,4″"}]:height98?[{at:58,value:"0.429803"},{at:63,value:"25.455066"},{at:64,value:"25°27′18,2″"}]:height1258?[{at:58,value:"0.974693172380"},{at:63,value:"77.082554214"},{at:64,value:"77°04′57,2″"}]:height1010?[{at:50,value:"0.8983134026"},{at:55,value:"63.9372496"},{at:56,value:"63°56′14,1″"}]:height296?[{at:55,value:"0.779722"},{at:60,value:"51.235123"},{at:61,value:"51°14′06,4″"}]:[{at:61,value:"0.7058120802"},{at:66,value:"44.8951881663"},{at:70,value:"0.8951881663"},{at:74,value:"53.7112899782"}];
+ const formulaEnd=(height970||height735||height334Family)?53:height98?58:height1258?58:height1010?50:height296?55:61,inverseEnd=(height970||height735||height334Family)?58:height98?63:height1258?63:height1010?55:height296?60:66;
  if(inlineTrainer){root.classList.add("calc-inline-trainer");const calculationZone=root.closest("[data-calculation-zone]")||root.closest('div[style*="border:3px solid #1c6ea4"]')||root.closest('div[style*="border:3px solid #d6a31c"]')||root;setupDocking(root,calculationZone)}
  const expressionEl=root.querySelector("[data-ct-expression]"),resultEl=root.querySelector("[data-ct-result]"),instructionEl=root.querySelector("[data-ct-instruction]"),feedbackEl=root.querySelector("[data-ct-feedback]"),levelEl=root.querySelector("[data-ct-level]"),modeDescriptionEl=root.querySelector("[data-ct-mode-description]"),progressEl=root.querySelector("[data-ct-progress]"),soundEl=root.querySelector("[data-ct-sound]"),keys=Array.from(root.querySelectorAll(".calc-key")),modeButtons=Array.from(root.querySelectorAll("[data-ct-mode]")),stepItems=Array.from(root.querySelectorAll("[data-ct-steps] li"));
  const startValue=heightGuide?"0":"44.895188",startExpression=heightGuide?"":"44.895188";
