@@ -149,7 +149,7 @@ function setupDocking(root,calculationZone){
    const dockHeight=Math.max(1,dock.getBoundingClientRect().height),trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),pageY=window.scrollY;
    enterScroll=Math.max(0,pageY+trainerRect.top-window.innerHeight*.72);
    exitScroll=Math.max(enterScroll+120,pageY+zoneRect.bottom-(dockHeight-1)-80);
-   root.style.minHeight="1px";
+   root.style.minHeight=Math.max(root.getBoundingClientRect().height,dockHeight)+"px";
    docked=true;root.classList.add("calc-docked");restore();
   }else{
    docked=false;root.classList.remove("calc-docked");root.style.minHeight="";
@@ -164,7 +164,7 @@ function setupDocking(root,calculationZone){
    const pageY=window.scrollY;
    if(docked){
     if(pageY<enterScroll-24){setDocked(false);return}
-    if(calculationZone.getBoundingClientRect().bottom<window.innerHeight*.62){blockRedockAtBottom=true;setDocked(false);return}
+    if(calculationZone.getBoundingClientRect().bottom<120){blockRedockAtBottom=true;setDocked(false);return}
     if(pageY>exitScroll+24){blockRedockAtBottom=true;setDocked(false);return}
     return
    }
