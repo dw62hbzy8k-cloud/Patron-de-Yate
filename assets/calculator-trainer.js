@@ -164,6 +164,7 @@ function setupDocking(root,calculationZone){
    const pageY=window.scrollY;
    if(docked){
     if(pageY<enterScroll-24){setDocked(false);return}
+    if(calculationZone.getBoundingClientRect().bottom<120){blockRedockAtBottom=true;setDocked(false);return}
     if(pageY>exitScroll+24){blockRedockAtBottom=true;setDocked(false);return}
     return
    }
