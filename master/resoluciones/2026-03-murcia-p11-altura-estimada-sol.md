@@ -71,6 +71,8 @@ Aunque la página se titula «Correcciones», el valor `2°30,0′` de la column
 
 ## Cálculo
 
+La web numera visualmente el recorrido: Paso 1 muestra `l` y `d` y destaca en rojo que falta `P`; Paso 2 obtiene `hL`; Paso 3 convierte `hL` en `P`; Paso 4 reúne en grande los tres datos completos antes de calcular `ae`.
+
 Antes de operar se separan dos reglas diferentes:
 
 - Para calcular `hL`, la longitud Este se suma a `hG` y la longitud Oeste se resta.
