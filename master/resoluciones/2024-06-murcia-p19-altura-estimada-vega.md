@@ -64,6 +64,6 @@ Nota de control: el valor `+38°48,2′` es el que reproduce exactamente la opci
 ## Revisión editorial pendiente del alumno
 
 - Se añadió al final «Resolución completa» con la misma cadena y el mismo orden de las preguntas de altura estimada ya aprobadas.
-- El recuadro morado de `P` queda junto al vértice `PN`, por encima y a la derecha; su flecha llega al ángulo mediante un recorrido corto. El recuadro azul permanece junto al lado `PN–Z`. No colocar `P` debajo del azul ni usar flechas largas que atraviesen el dibujo.
+- El recuadro morado de `P` ocupa el hueco superior izquierdo, cerca del vértice `PN`; su flecha llega al ángulo mediante un recorrido corto. El recuadro azul baja por el lado largo `PN–Z`, al que apunta con otra flecha corta. No colocar `P` debajo del azul ni enviarlo al extremo opuesto del dibujo.
 - La pregunta continúa amarilla: no pasarla a verde hasta recibir el visto bueno expreso del alumno.
 - Para las siguientes preguntas de altura estimada y triángulo se aplicará obligatoriamente `master/plantilla-control-altura-estimada-triangulo.md`.
