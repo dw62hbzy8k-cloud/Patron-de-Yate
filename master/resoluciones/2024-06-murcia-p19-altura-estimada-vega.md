@@ -61,9 +61,9 @@ Respuesta en la web: **D · 77°04′57″**.
 
 Nota de control: el valor `+38°48,2′` es el que reproduce exactamente la opción oficial. No sustituirlo por otra edición o redondeo del Almanaque sin volver a comprobar toda la pregunta.
 
-## Revisión editorial pendiente del alumno
+## Revisión editorial aprobada por el alumno
 
 - Se añadió al final «Resolución completa» con la misma cadena y el mismo orden de las preguntas de altura estimada ya aprobadas.
 - El recuadro morado de `P` ocupa el hueco superior izquierdo, cerca del vértice `PN`; su flecha llega al ángulo mediante un recorrido corto. El recuadro azul baja por el lado largo `PN–Z`, al que apunta con otra flecha corta. No colocar `P` debajo del azul ni enviarlo al extremo opuesto del dibujo.
-- La pregunta continúa amarilla: no pasarla a verde hasta recibir el visto bueno expreso del alumno.
+- Pregunta aprobada y pasada a verde por indicación expresa del alumno el 2 de septiembre de 2026.
 - Para las siguientes preguntas de altura estimada y triángulo se aplicará obligatoriamente `master/plantilla-control-altura-estimada-triangulo.md`.
