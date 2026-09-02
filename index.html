@@ -718,10 +718,10 @@ function initPole731SphereV2(root=document){
    /* Las etiquetas de las líneas se mantienen fijas fuera de la esfera para que nunca se solapen al girarla. */
    const badge=(x,y,width,color,bgColor,title,value)=>{ctx.fillStyle=bgColor;ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(x,y,width,54,9);ctx.fill();ctx.stroke();ctx.fillStyle=color;ctx.font="800 12px Arial";ctx.fillText(title,x+12,y+20);ctx.font="900 15px Arial";ctx.fillText(value,x+12,y+42)};
    const textOnCurve=(source,text,color,offset=-10)=>{let pts=source.map(project);if(pts[pts.length-1].x<pts[0].x)pts=pts.reverse();const lengths=[0];for(let i=1;i<pts.length;i++)lengths.push(lengths[i-1]+Math.hypot(pts[i].x-pts[i-1].x,pts[i].y-pts[i-1].y));const total=lengths[lengths.length-1];ctx.font="900 12px Arial";const chars=Array.from(text),widths=chars.map(ch=>ctx.measureText(ch).width+1.2),textWidth=widths.reduce((a,b)=>a+b,0);let cursor=Math.max(2,(total-textWidth)/2);chars.forEach((ch,n)=>{const target=cursor+widths[n]/2;let i=1;while(i<lengths.length-1&&lengths[i]<target)i++;const span=lengths[i]-lengths[i-1]||1,t=(target-lengths[i-1])/span,a=pts[i-1],b=pts[i],x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t,angle=Math.atan2(b.y-a.y,b.x-a.x);ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.textAlign="center";ctx.textBaseline="middle";ctx.lineWidth=4;ctx.strokeStyle="rgba(255,255,255,.96)";ctx.strokeText(ch,0,offset);ctx.fillStyle=color;ctx.fillText(ch,0,offset);ctx.restore();cursor+=widths[n]})};
-   textOnCurve(placeMeridian.slice(48,91),"MERIDIANO SUPERIOR DEL LUGAR","#704052",-11);
-   textOnCurve(sunMeridian.slice(0,43),"SEMICÍRCULO HORARIO DEL SOL","#8a4100",-11);
-   textOnCurve(hL.slice(82,145),"hL","#195785",-14);
-   textOnCurve(P.slice(8,53),"P","#176b43",-13);
+   const cleanTextOnCurve=(source,text,color,offset=-10)=>{let pts=source.map(project);if(pts[pts.length-1].x<pts[0].x)pts=pts.reverse();const lengths=[0];for(let i=1;i<pts.length;i++)lengths.push(lengths[i-1]+Math.hypot(pts[i].x-pts[i-1].x,pts[i].y-pts[i-1].y));const total=lengths[lengths.length-1];let size=12;ctx.font=`900 ${size}px Arial`;let widths=Array.from(text,ch=>ctx.measureText(ch).width+1),textWidth=widths.reduce((a,b)=>a+b,0);if(textWidth>total*.88){size=Math.max(8,size*(total*.88/textWidth));ctx.font=`900 ${size}px Arial`;widths=Array.from(text,ch=>ctx.measureText(ch).width+.8);textWidth=widths.reduce((a,b)=>a+b,0)}let cursor=(total-textWidth)/2;Array.from(text).forEach((ch,n)=>{const target=cursor+widths[n]/2;let i=1;while(i<lengths.length-1&&lengths[i]<target)i++;const span=lengths[i]-lengths[i-1]||1,t=(target-lengths[i-1])/span,a=pts[i-1],b=pts[i],x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t,angle=Math.atan2(b.y-a.y,b.x-a.x);ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.textAlign="center";ctx.textBaseline="middle";ctx.lineWidth=3.5;ctx.strokeStyle="rgba(255,255,255,.98)";ctx.strokeText(ch,0,offset);ctx.fillStyle=color;ctx.fillText(ch,0,offset);ctx.restore();cursor+=widths[n]})};
+   cleanTextOnCurve(placeMeridian.slice(49,82),"MERIDIANO SUPERIOR DEL LUGAR","#704052",-10);
+   cleanTextOnCurve(sunMeridian.slice(7,40),"SEMICÍRCULO HORARIO DEL SOL","#8a4100",-10);
+   const pMark=project(P[Math.floor(P.length/2)]);ctx.font="900 17px Arial";ctx.textAlign="center";ctx.lineWidth=5;ctx.strokeStyle="rgba(255,255,255,.98)";ctx.strokeText("P",pMark.x-10,pMark.y-13);ctx.fillStyle="#176b43";ctx.fillText("P",pMark.x-10,pMark.y-13);ctx.textAlign="start";
    if(visibleArrow){ctx.font="900 17px Arial";ctx.textAlign="center";ctx.lineWidth=5;ctx.strokeStyle="rgba(255,255,255,.98)";ctx.strokeText("hL",visibleArrow.p.x-34,visibleArrow.p.y-13);ctx.fillStyle="#195785";ctx.fillText("hL",visibleArrow.p.x-34,visibleArrow.p.y-13);ctx.textAlign="start"}
   }
   canvas.style.cssText="display:block;width:100%;height:auto;aspect-ratio:1.47;margin-top:10px;background:#f7fbff;border-radius:10px;cursor:grab;touch-action:none";
@@ -729,6 +729,37 @@ function initPole731SphereV2(root=document){
   canvas.addEventListener("pointermove",e=>{if(!drag)return;yaw+=(e.clientX-lastX)*.008;pitch=Math.max(-1.15,Math.min(1.15,pitch+(e.clientY-lastY)*.008));lastX=e.clientX;lastY=e.clientY;draw()});
   canvas.addEventListener("pointerup",()=>{drag=false;canvas.style.cursor="grab"});
   wrap.querySelector("[data-pole731-reset]").onclick=()=>{yaw=.48;pitch=.22;draw()};new ResizeObserver(draw).observe(canvas);draw();
+ });
+}
+
+function initPole731SphereV3(root=document){
+ root.querySelectorAll('canvas[data-pole731-sphere]').forEach(canvas=>{
+  if(canvas.dataset.ready)return;canvas.dataset.ready="3";
+  const ctx=canvas.getContext("2d"),wrap=canvas.closest(".celestial-3d"),toRad=n=>n*Math.PI/180,hLAngle=toRad(334+50.7/60),pAngle=2*Math.PI-hLAngle;
+  let yaw=.42,pitch=.18,drag=false,lastX=0,lastY=0;
+  const rotate=v=>{let[x,y,z]=v;const cy=Math.cos(yaw),sy=Math.sin(yaw);[x,y]=[x*cy-y*sy,x*sy+y*cy];const cp=Math.cos(pitch),sp=Math.sin(pitch);[y,z]=[y*cp-z*sp,y*sp+z*cp];return[x,y,z]};
+  function draw(){
+   const w=Math.max(320,canvas.clientWidth||800),h=Math.round(w*.68),dpr=Math.min(2,devicePixelRatio||1),cx=w/2,cy=h*.5,R=Math.min(w*.35,h*.42);
+   if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr)}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+   const project=v=>{const q=rotate(v),k=1/(1.22-.22*q[1]);return{x:cx+q[0]*R*k,y:cy-q[2]*R*k,z:q[1]}};
+   const sphere=ctx.createRadialGradient(cx-R*.28,cy-R*.3,R*.06,cx,cy,R);sphere.addColorStop(0,"#fff");sphere.addColorStop(1,"#c9dfed");ctx.fillStyle=sphere;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fill();ctx.strokeStyle="#355f87";ctx.lineWidth=2.3;ctx.stroke();
+   const drawCurve=(points,color,width,backAlpha=.15,frontDash=[])=>{for(let pass=0;pass<2;pass++){ctx.beginPath();let open=false;for(const v of points){const p=project(v),front=p.z>=0;if((pass===1)!==front){open=false;continue}if(open)ctx.lineTo(p.x,p.y);else{ctx.moveTo(p.x,p.y);open=true}}ctx.strokeStyle=color;ctx.lineWidth=width;ctx.globalAlpha=pass?1:backAlpha;ctx.setLineDash(pass?frontDash:[5,5]);ctx.stroke()}ctx.globalAlpha=1;ctx.setLineDash([])};
+   const drawOverlayCurve=(points,color,width)=>{ctx.beginPath();points.forEach((v,i)=>{const p=project(v);if(i)ctx.lineTo(p.x,p.y);else ctx.moveTo(p.x,p.y)});ctx.strokeStyle=color;ctx.lineWidth=width;ctx.setLineDash([]);ctx.stroke()};
+   const latitude=deg=>{const a=toRad(deg),pts=[];for(let i=0;i<=240;i++){const t=2*Math.PI*i/240;pts.push([Math.cos(a)*Math.cos(t),Math.cos(a)*Math.sin(t),Math.sin(a)])}return pts};
+   const meridian=a=>{const pts=[];for(let i=0;i<=240;i++){const t=2*Math.PI*i/240;pts.push([Math.cos(t)*Math.cos(a),Math.cos(t)*Math.sin(a),Math.sin(t)])}return pts};
+   [-60,-30,0,30,60].forEach(a=>drawCurve(latitude(a),a===0?"#718b9d":"#9bb0bd",a===0?1.7:1,.1));for(let a=Math.PI/6;a<Math.PI;a+=Math.PI/6)drawCurve(meridian(a),"#9bb0bd",1,.09);
+   const place=meridian(0),sunCircle=meridian(hLAngle);drawCurve(place,"#8b4a62",2.8,.16);drawCurve(sunCircle,"#e07816",3,.17);
+   const hL=[];for(let i=0;i<=300;i++){const t=hLAngle*i/300;hL.push([Math.cos(t),Math.sin(t),0])}drawCurve(hL,"#2878b5",5,.2);
+   const rho=toRad(17),P=[];for(let i=0;i<=70;i++){const a=-pAngle*i/70;P.push([Math.sin(rho)*Math.cos(a),Math.sin(rho)*Math.sin(a),Math.cos(rho)])}drawOverlayCurve(P,"#248a55",6);
+   const earth=project([0,0,0]),earthR=R*.105;ctx.fillStyle="#2f87a3";ctx.beginPath();ctx.arc(earth.x,earth.y,earthR,0,Math.PI*2);ctx.fill();ctx.strokeStyle="#174c71";ctx.lineWidth=2;ctx.stroke();ctx.fillStyle="#174c71";ctx.font="700 12px Arial";ctx.fillText("Tierra",earth.x-earthR*.55,earth.y+earthR+16);
+   const point=(v,color,r,label,dx=9,dy=-8)=>{const p=project(v);ctx.fillStyle=color;ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fill();if(label){ctx.font="800 13px Arial";ctx.fillStyle=color;ctx.fillText(label,p.x+dx,p.y+dy)}return p};
+   point([0,0,1],"#173f5b",6,"PN");const sunDec=toRad(20),sun=point([Math.cos(sunDec)*Math.cos(hLAngle),Math.cos(sunDec)*Math.sin(hLAngle),Math.sin(sunDec)],"#ffd400",8,"");ctx.font="800 13px Arial";ctx.fillStyle="#8a4100";ctx.fillText("☉ Sol",sun.x+12,sun.y+21);
+   const lineLabel=(points,index,text,color,offset)=>{const i=Math.max(2,Math.min(points.length-3,index)),p=project(points[i]),a=project(points[i-2]),b=project(points[i+2]);let angle=Math.atan2(b.y-a.y,b.x-a.x);if(angle>Math.PI/2||angle<-Math.PI/2)angle+=Math.PI;const nx=-Math.sin(angle)*offset,ny=Math.cos(angle)*offset;ctx.save();ctx.translate(p.x+nx,p.y+ny);ctx.rotate(angle);ctx.font="800 12px Arial";ctx.textAlign="center";ctx.textBaseline="middle";ctx.lineWidth=4;ctx.strokeStyle="rgba(255,255,255,.96)";ctx.strokeText(text,0,0);ctx.fillStyle=color;ctx.fillText(text,0,0);ctx.restore()};
+   const arcText=(source,text,color,offset=-10)=>{let pts=source.map(project);if(pts[pts.length-1].x<pts[0].x)pts=pts.reverse();const lengths=[0];for(let i=1;i<pts.length;i++)lengths.push(lengths[i-1]+Math.hypot(pts[i].x-pts[i-1].x,pts[i].y-pts[i-1].y));const total=lengths[lengths.length-1];let size=12;ctx.font=`900 ${size}px Arial`;let widths=Array.from(text,ch=>ctx.measureText(ch).width+1),textWidth=widths.reduce((a,b)=>a+b,0);if(textWidth>total*.9){size=Math.max(8,size*(total*.9/textWidth));ctx.font=`900 ${size}px Arial`;widths=Array.from(text,ch=>ctx.measureText(ch).width+.7);textWidth=widths.reduce((a,b)=>a+b,0)}let cursor=(total-textWidth)/2;Array.from(text).forEach((ch,n)=>{const target=cursor+widths[n]/2;let i=1;while(i<lengths.length-1&&lengths[i]<target)i++;const span=lengths[i]-lengths[i-1]||1,t=(target-lengths[i-1])/span,a=pts[i-1],b=pts[i],x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t,ang=Math.atan2(b.y-a.y,b.x-a.x);ctx.save();ctx.translate(x,y);ctx.rotate(ang);ctx.textAlign="center";ctx.textBaseline="middle";ctx.lineWidth=3.5;ctx.strokeStyle="rgba(255,255,255,.98)";ctx.strokeText(ch,0,offset);ctx.fillStyle=color;ctx.fillText(ch,0,offset);ctx.restore();cursor+=widths[n]})};arcText(place.slice(65,109),"MERIDIANO SUPERIOR DEL LUGAR","#704052",-10);arcText(sunCircle.slice(9,54),"SEMICÍRCULO HORARIO DEL SOL","#8a4100",-10);
+   const visible=hL.slice(8,-8).map((v,i)=>({i:i+8,p:project(v)})).filter(x=>x.p.z>.18).sort((a,b)=>b.p.z-a.p.z)[0];if(visible){const i=visible.i,a=project(hL[i-4]),b=project(hL[i+4]),ang=Math.atan2(b.y-a.y,b.x-a.x),size=11;ctx.save();ctx.translate(b.x,b.y);ctx.rotate(ang);ctx.fillStyle="#195785";ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(-size,-size*.58);ctx.lineTo(-size,size*.58);ctx.closePath();ctx.fill();ctx.restore();ctx.font="900 15px Arial";ctx.textAlign="center";ctx.lineWidth=4;ctx.strokeStyle="white";ctx.strokeText("hL",visible.p.x-32,visible.p.y-13);ctx.fillStyle="#195785";ctx.fillText("hL",visible.p.x-32,visible.p.y-13)}
+   const pm=project(P[Math.floor(P.length/2)]);ctx.font="900 15px Arial";ctx.textAlign="center";ctx.lineWidth=4;ctx.strokeStyle="white";ctx.strokeText("P",pm.x,pm.y-11);ctx.fillStyle="#176b43";ctx.fillText("P",pm.x,pm.y-11);ctx.textAlign="start";
+  }
+  canvas.style.cssText="display:block;width:100%;height:auto;aspect-ratio:1.47;margin-top:10px;background:#f7fbff;border-radius:10px;cursor:grab;touch-action:none";canvas.addEventListener("pointerdown",e=>{drag=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId);canvas.style.cursor="grabbing"});canvas.addEventListener("pointermove",e=>{if(!drag)return;yaw+=(e.clientX-lastX)*.008;pitch=Math.max(-1.15,Math.min(1.15,pitch+(e.clientY-lastY)*.008));lastX=e.clientX;lastY=e.clientY;draw()});canvas.addEventListener("pointerup",()=>{drag=false;canvas.style.cursor="grab"});wrap.querySelector("[data-pole731-reset]").onclick=()=>{yaw=.42;pitch=.18;draw()};new ResizeObserver(draw).observe(canvas);draw();
  });
 }
 
@@ -758,7 +789,7 @@ function enhancePole731Result(scope){
   }
  });
  const sphereNote=[...scope.querySelectorAll("#pole731Interactive div")].find(el=>el.textContent.trim().startsWith("Qué debes observar al girarla:"));
- if(sphereNote)sphereNote.innerHTML="<b>Qué debes observar al girarla:</b> la línea azul oscuro es el <b>meridiano del lugar</b>; la línea naranja es el <b>semicírculo horario del Sol</b> y el punto amarillo representa el <b>Sol</b>. Ambos semicírculos se encuentran en el polo celeste. Los arcos hL y P los separan sobre el Ecuador celeste, pero recorren sentidos opuestos.";
+ if(sphereNote)sphereNote.innerHTML="<b>Qué debes observar al girarla:</b> el <b>meridiano superior del lugar</b> está en granate; el <b>semicírculo horario del Sol</b>, en naranja; y el punto amarillo representa el <b>Sol</b>. <b>hL</b> muestra en azul el recorrido hacia el Oeste sobre el Ecuador celeste. <b>P</b> muestra en verde, junto a PN, el ángulo menor entre los dos semicírculos.";
  const pLegend=[...scope.querySelectorAll("#pole731Interactive b")].find(el=>el.textContent.trim().startsWith("P = 25°09,3′ E"));
  if(pLegend){pLegend.style.color="#176b43";pLegend.parentElement.style.borderLeftColor="#248a55";pLegend.parentElement.style.background="#e9f8ef"}
 }
@@ -832,7 +863,7 @@ if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("qbox"));
 enhanceQ98Diagram($("qbox"));
 enhancePole731Result($("qbox"));
 initCelestialSpheres($("qbox"));
-initPole731SphereV2($("qbox"));
+initPole731SphereV3($("qbox"));
 document.querySelectorAll("#qbox .opt").forEach(x=>x.onclick=()=>{if(ans[q.id])return;ans[q.id]=x.dataset.l;ansConfidence[q.id]="knew";savePractice(q,x.dataset.l,"knew");renderBank()});
 document.querySelectorAll("#qbox .confidence").forEach(x=>x.onclick=()=>{ansConfidence[q.id]=x.dataset.confidence;updateLatestPracticeConfidence(q,x.dataset.confidence);renderBank()})}
 refill();renderWorkTracker();filterBank();$("bModule").onchange=()=>{refill();filterBank()};$("bExam").onchange=filterBank;$("bTopic").onchange=filterBank;$("prev").onclick=()=>{pos--;renderBank()};$("next").onclick=()=>{pos++;renderBank()};$("random").onclick=()=>{pos=Math.floor(Math.random()*pool.length);renderBank()};const directQuestionId=Number(new URLSearchParams(location.search).get("question"));if(directQuestionId){show("practice");openDidacticQuestion(directQuestionId)}
