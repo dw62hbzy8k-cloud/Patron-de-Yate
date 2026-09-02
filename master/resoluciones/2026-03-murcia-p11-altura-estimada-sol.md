@@ -97,7 +97,7 @@ Antes de operar se separan dos reglas diferentes:
 
    Se eliminan los recuadros repetidos situados debajo del gráfico sobre `hL`, `P`, `PN`/`PS`, el polo elevado y la perspectiva de la proyección. Estos conceptos ya se explican antes junto a las operaciones; repetirlos aquí recarga y desordena el procedimiento.
 
-   Después del gráfico aparece la separación pedagógica «Hasta aquí, papel. Ahora coge la calculadora», con `l`, `d` y `P` repetidos antes de la primera operación numérica. La calculadora no debe volver a colocarse al final como si fuera un añadido independiente.
+   Antes de la calculadora aparece el título «Ya tenemos los datos necesarios para hallar ae», con «ae = altura estimada» en pequeño. Debajo se muestran `l = +35°54′`, `d = −2°26,1′` y `P = 25°27,5′ E` en tres recuadros grandes y claramente diferenciados. La calculadora no debe volver a colocarse al final como si fuera un añadido independiente.
 4. Fórmula: `sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)`.
    Inmediatamente debajo se muestran únicamente los datos disponibles hasta ese momento y la fórmula parcialmente rellenada:
    - `l = +35°54′` (Norte, positiva).
