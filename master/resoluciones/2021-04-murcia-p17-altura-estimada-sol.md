@@ -63,6 +63,9 @@ La nueva representación es tridimensional, giratoria y se genera a partir de lo
 - Los arcos `PN–Z`, `PN–Sol` y `Z–Sol` se calculan mediante interpolación sobre círculos máximos.
 - La Tierra se muestra en el centro y el observador sobre su superficie, alineado radialmente con el cenit `Z`.
 - La parte posterior de la esfera y de los arcos se diferencia visualmente de la parte delantera.
+- Los círculos de referencia y los círculos máximos que contienen cada lado se dibujan completos. Fuera de los tres lados del triángulo, sus prolongaciones continúan con el mismo color pero mucho más tenues.
+- Una línea punteada une el observador situado sobre la Tierra con su cenit `Z`.
+- La profundidad se respeta al girar la esfera: los arcos delanteros se redibujan por delante de la Tierra; los arcos posteriores quedan ocultos por ella cuando coinciden con su disco aparente.
 
 No se reutilizarán los antiguos dibujos planos en las siguientes preguntas. Cada futuro gráfico del triángulo deberá respetar esta geometría esférica.
 
