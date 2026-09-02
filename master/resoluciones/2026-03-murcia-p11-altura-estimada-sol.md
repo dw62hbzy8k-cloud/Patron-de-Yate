@@ -71,7 +71,7 @@ Aunque la página se titula «Correcciones», el valor `2°30,0′` de la column
 
 ## Cálculo
 
-La fórmula inicial se presenta como «Punto de partida», sin numerarla como paso: solo se sustituye `l = +35°54′`, porque es el único dato de la fórmula proporcionado directamente por el enunciado. Las dos apariciones de `d` y la `P` llevan pequeños recuadros rojos. El Paso 1 abre las páginas 82 y 430 del Almanaque y obtiene `d = −2°26,1′`, `hG = 342°42,5′` y la **corrección del Almanaque (incremento de hG) = 2°30,0′**. Se aclara que en esta cuenta la corrección se suma al hG de la hora entera. Después se vuelve a mostrar la fórmula con `d` rellenada y solo `P` en rojo. El Paso 2 obtiene `hL`, el Paso 3 obtiene `P` y el Paso 4 reúne los tres datos para calcular `ae`.
+La primera aparición muestra únicamente la fórmula general limpia, sin recuadros. La fórmula siguiente se presenta como «Punto de partida»: se sustituye `l = +35°54′` y las dos apariciones de `d` y la `P` llevan pequeños recuadros rojos. El Paso 1 abre las páginas 82 y 430 del Almanaque y obtiene `d = −2°26,1′`, `hG = 342°42,5′` y la **corrección del Almanaque (incremento de hG) = 2°30,0′**. Se aclara que en esta cuenta la corrección se suma al hG de la hora entera. Después se vuelve a mostrar la fórmula con `d` rellenada y solo `P` en rojo. El Paso 2 obtiene `hL`, el Paso 3 obtiene `P` y el Paso 4 reúne los tres datos para calcular `ae`.
 
 La fórmula aparece al final de cada paso. Cada dato obtenido cambia a un pequeño recuadro verde y cada dato pendiente permanece en rojo. Al finalizar el Paso 2, `P` continúa roja porque `hL` es todavía un resultado intermedio. Al terminar el Paso 3, `P = 25°27,5′` pasa a verde y toda la fórmula queda completa para el Paso 4.
 
@@ -92,7 +92,7 @@ Antes de operar se separan dos reglas diferentes:
 
 1. `hG = 342°42,5′ + 2°30,0′ = 345°12,5′`.
 2. La longitud es Oeste, por lo que se resta: `hL = 345°12,5′ − 10°40,0′ = 334°32,5′`.
-   La ruta principal utiliza la Casio, igual que en el examen: `345 → °′″ → 12 → . → 5 → °′″ → − → 10 → °′″ → 40 → °′″ → =`. La pantalla muestra `334°32′30″`, equivalente a `334°32,5′`. No se enseña el préstamo manual en la explicación principal.
+   La ruta principal muestra la operación náutica normal, identificando cada magnitud: `hL (horario local del Sol) = hG☉ − L W = 345°12,5′ − 10°40,0′ = 334°32,5′`. No se muestra una secuencia estática de teclas porque la calculadora interactiva guía la pulsación. La pantalla muestra `334°32′30″`, equivalente a `334°32,5′`. No se enseña el préstamo manual en la explicación principal.
 3. `hL` se expresa sobre el círculo completo, de 0° a 360°. `P` utiliza el arco menor, de 0° a 180°, e indica Este u Oeste. Si `hL` está entre 0° y 180°, `P = hL W`; si `hL > 180°`, `P = 360° − hL E`. En esta pregunta: `P = 360° − 334°32,5′ = 25°27,5′ E`.
    En la Casio: `360 → °′″ → − → 334 → °′″ → 32 → . → 5 → °′″ → =`. La pantalla muestra `25°27′30″`, equivalente a `25°27,5′`. Se añade `E` porque, al superar `hL` los 180°, el arco más corto queda al Este.
 
