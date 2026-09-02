@@ -379,6 +379,8 @@ function heightFormulaHTML(q){
   clean.innerHTML=html.replace("Con el resultado anterior en pantalla, continúa con la secuencia indicada.","Con <b>0,779722</b> en pantalla, pulsa en este orden: <b>SHIFT → SIN → Ans → ) → =</b>.").replace("<b>P entra dentro de cos(P):</b> utiliza 36°53,9′. La letra E conserva la orientación del ángulo, pero no se escribe como signo negativo.","<b>En la fórmula aparece cos(P).</b> Sustituye la letra P por su valor: <b>cos(P) → cos(36°53,9′)</b>. En la calculadora escribes solamente el número; la letra E indica que el ángulo está al Este y no se introduce como signo negativo.").replace("CALCULA LA PARTE DERECHA DE LA FÓRMULA","A PARTIR DE AQUÍ, UTILIZA LA CALCULADORA").replace("Ya están completos los tres datos. La calculadora te guiará desde la primera tecla.","Ya están completos los tres datos. El guiado comienza en la primera tecla.").replace("A · Sustituye y calcula:","A · CALCULA TODA LA PARTE DERECHA VERDE");
   const labelled=clean.querySelector("[data-labelled-formula]");
   Array.from(clean.querySelectorAll("div")).filter(node=>node.textContent.trim()==="sen(+29°26,5′) × sen(+11°22,8′) + cos(+29°26,5′) × cos(+11°22,8′) × cos(36°53,9′)").forEach(node=>node.replaceWith(labelled.cloneNode(true)));
+  const repeatedInCalculatorStep=clean.querySelectorAll("[data-calculation-zone] [data-labelled-formula]");
+  if(repeatedInCalculatorStep.length>1)repeatedInCalculatorStep[0].remove();
   return clean.innerHTML;
  }
  if(q.id!==1050||!html)return html;
