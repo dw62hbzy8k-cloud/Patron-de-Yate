@@ -705,8 +705,12 @@ function enhanceQ98Diagram(scope){
  Array.from(svg.querySelectorAll("text")).forEach(function(label){const value=label.textContent||"";if(value.startsWith("PN–Z")||value==="62°51′18″"||value.startsWith("Z ·"))label.setAttribute("fill","#1976b9");if(value.startsWith("PN–Sol")||value==="110°59′12″"||value.includes("☉ Sol"))label.setAttribute("fill","#a34d00");if(value.startsWith("P =")){label.setAttribute("x","245");label.setAttribute("y","164");label.setAttribute("fill","#71309f")}})
 }
 function enhancePole731Result(scope){
+ const completedResults=new Set([
+  "hL☉ = −25°09,3′ + 360° = 334°50,7′ W",
+  "P = 360°00,0′ − 334°50,7′ = 25°09,3′ E"
+ ]);
  scope.querySelectorAll("div").forEach(el=>{
-  if(el.children.length===0&&el.textContent.trim()==="hL☉ = −25°09,3′ + 360° = 334°50,7′ W"){
+  if(el.children.length===0&&completedResults.has(el.textContent.trim())){
    el.style.border="3px solid #30945b";
    el.style.background="#e9f8ef";
    el.style.color="#176b43";
