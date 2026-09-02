@@ -5,3 +5,5 @@
 
 /* Estado editorial terminado: celeste. El verde queda reservado a resultados correctos. */
 .work-ready-action{border-color:#42a9cf;background:#eefaff;color:#195785}.work-ready-action>span{background:#42a9cf}.work-ready-action:hover{background:#e2f6fd}.work-counts .ready{border-color:#42a9cf;color:#195785;background:#eefaff}.work-item.ready{border-color:#42a9cf;background:#eefaff}.work-frame.work-ready{border-color:#42a9cf;background:#f7fdff}.work-badge.ready{border-color:#42a9cf;background:#e2f6fd;color:#195785}
+.work-item.checked{border-color:#258a5c;background:#edf8f1}.work-frame.work-checked{border-color:#258a5c;background:#f9fffb}.work-badge.checked{border-color:#258a5c;background:#dff4e7;color:#176b43}
+.work-counts .checked{border-color:#258a5c;color:#176b43;background:#edf8f1}
