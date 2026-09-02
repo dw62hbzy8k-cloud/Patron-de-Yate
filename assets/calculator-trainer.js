@@ -85,7 +85,7 @@ const height98Expected=[
  "SHIFT","sin","Ans",")","=","°′″"
 ];
 const height98Directions=height98Expected.map(function(key,index){
- if(index===0)return "Pulsa SIN para comenzar con l = 27°08′42″ N.";
+ if(index===0)return "Pulsa SIN para comenzar con l = 27°08,7′ N.";
  if(index===58)return "Ya has obtenido sen(ae). Pulsa SHIFT para recuperar la altura estimada.";
  if(index===63)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
  return `Pulsa ${key}.`;
