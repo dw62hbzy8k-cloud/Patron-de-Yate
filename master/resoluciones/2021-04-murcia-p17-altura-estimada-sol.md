@@ -66,7 +66,7 @@ La nueva representación es tridimensional, giratoria y se genera a partir de lo
 - Los círculos de referencia y los círculos máximos que contienen cada lado se dibujan completos. Fuera de los tres lados del triángulo, sus prolongaciones continúan con el mismo color pero mucho más tenues.
 - Una línea punteada une el observador situado sobre la Tierra con su cenit `Z`.
 - La profundidad se respeta al girar la esfera: los arcos delanteros se redibujan por delante de la Tierra; los arcos posteriores quedan ocultos por ella cuando coinciden con su disco aparente.
-- Se incorpora tenuemente el horizonte astronómico del observador: es el círculo máximo perpendicular a la línea cenit–nadir y lleva su nombre directamente sobre la esfera. Este horizonte depende de la posición del observador; no se confunde con el horizonte visible de la mar.
+- Se incorpora tenuemente el horizonte astronómico del observador: es el círculo máximo perpendicular a la línea cenit–nadir y lleva su nombre en rojo, sin fondo blanco y paralelo a la propia línea al girar la esfera. Este horizonte depende de la posición del observador; no se confunde con el horizonte visible de la mar.
 - La leyenda nombra los círculos completos: azul, meridiano celeste del lugar; naranja, círculo horario del Sol; verde, círculo vertical del Sol.
 
 No se reutilizarán los antiguos dibujos planos en las siguientes preguntas. Cada futuro gráfico del triángulo deberá respetar esta geometría esférica.
