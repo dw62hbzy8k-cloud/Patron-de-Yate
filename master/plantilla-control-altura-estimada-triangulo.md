@@ -1,5 +1,9 @@
 # Control obligatorio · altura estimada y triángulo de posición
 
+## Regla de continuidad numérica
+
+Ningún resultado puede aparecer por primera vez sin mostrar inmediatamente antes la operación que lo produce. Si una suma o resta de grados y minutos exige tomar prestado un grado, debe escribirse expresamente que `1° = 60′` y mostrar la transformación completa antes del resultado.
+
 Esta lista reúne las correcciones editoriales aprobadas por el alumno. Debe aplicarse antes de presentar cualquier pregunta nueva de este mismo tipo.
 
 ## Orden obligatorio
