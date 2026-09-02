@@ -83,6 +83,8 @@ La numeración `Paso 1`, `Paso 2`, etc. queda reservada exclusivamente para las 
 
 Todos los rótulos de paso se colocan como bloques independientes arriba a la izquierda. El Paso 4 no debe quedar centrado aunque su título o sus datos estén centrados.
 
+Las fórmulas progresivas utilizan un tamaño ligeramente menor y se mantienen en un solo renglón. Si la pantalla fuera demasiado estrecha, el propio recuadro permite desplazamiento horizontal sin romper la fórmula.
+
 Antes de operar se separan dos reglas diferentes:
 
 - Para calcular `hL`, la longitud Este se suma a `hG` y la longitud Oeste se resta.
