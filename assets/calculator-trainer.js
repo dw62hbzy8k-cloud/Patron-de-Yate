@@ -165,8 +165,11 @@ function setupDocking(root,calculationZone){
   requestAnimationFrame(function(){
    ticking=false;
    if(forceDocked){setDocked(true);return}
-   if(manuallyClosed)return;
    const pageY=window.scrollY;
+   if(manuallyClosed){
+    if(pageY>=enterScroll-24)return;
+    manuallyClosed=false;root.classList.remove("calc-manually-closed");
+   }
    if(docked){
     if(pageY<enterScroll-24){setDocked(false);return}
     return
