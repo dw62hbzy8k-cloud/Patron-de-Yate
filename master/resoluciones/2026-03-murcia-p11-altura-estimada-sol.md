@@ -81,6 +81,8 @@ En toda la explicación visible de esta pregunta se utiliza la palabra «calcula
 
 La numeración `Paso 1`, `Paso 2`, etc. queda reservada exclusivamente para las etapas principales. Las acciones internas de cada paso se identifican con `A`, `B`, `C`, etc.; nunca puede aparecer un paso numerado dentro de otro paso numerado.
 
+Todos los rótulos de paso se colocan como bloques independientes arriba a la izquierda. El Paso 4 no debe quedar centrado aunque su título o sus datos estén centrados.
+
 Antes de operar se separan dos reglas diferentes:
 
 - Para calcular `hL`, la longitud Este se suma a `hG` y la longitud Oeste se resta.
