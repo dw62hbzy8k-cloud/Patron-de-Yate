@@ -136,6 +136,7 @@ function setupDocking(root,calculationZone){
  const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]");
  if(!dock||!handle)return;
  const forceDocked=root.dataset.forceDocked==="1";
+ const originalZonePaddingBottom=calculationZone.style.paddingBottom;
  let saved=loadDockPosition(),dragging=null,docked=false,ticking=false,enterScroll=0,exitScroll=Infinity,blockRedockAtBottom=false;
  function place(x,y,remember){
   const rect=dock.getBoundingClientRect(),maxX=Math.max(8,window.innerWidth-rect.width-8),maxY=Math.max(8,window.innerHeight-rect.height-8),left=Math.max(8,Math.min(maxX,x)),top=Math.max(8,Math.min(maxY,y));
@@ -149,10 +150,11 @@ function setupDocking(root,calculationZone){
    const dockHeight=Math.max(1,dock.getBoundingClientRect().height),trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),pageY=window.scrollY;
    enterScroll=Math.max(0,pageY+trainerRect.top-window.innerHeight*.72);
    exitScroll=Math.max(enterScroll+120,pageY+zoneRect.bottom-(dockHeight-1)-80);
-   root.style.minHeight=Math.max(root.getBoundingClientRect().height,dockHeight)+"px";
+   root.style.minHeight="1px";
+   calculationZone.style.paddingBottom=Math.min(dockHeight,window.innerHeight*.45)+"px";
    docked=true;root.classList.add("calc-docked");restore();
   }else{
-   docked=false;root.classList.remove("calc-docked");root.style.minHeight="";
+   docked=false;root.classList.remove("calc-docked");root.style.minHeight="";calculationZone.style.paddingBottom=originalZonePaddingBottom;
   }
  }
  function updateDock(){
