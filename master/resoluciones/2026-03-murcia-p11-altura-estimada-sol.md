@@ -99,11 +99,12 @@ Antes de operar se separan dos reglas diferentes:
 
    Después del gráfico aparece la separación pedagógica «Hasta aquí, papel. Ahora coge la calculadora», con `l`, `d` y `P` repetidos antes de la primera operación numérica. La calculadora no debe volver a colocarse al final como si fuera un añadido independiente.
 4. Fórmula: `sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)`.
-   Inmediatamente debajo se muestran los datos disponibles y la misma fórmula ya rellenada:
+   Inmediatamente debajo se muestran únicamente los datos disponibles hasta ese momento y la fórmula parcialmente rellenada:
    - `l = +35°54′` (Norte, positiva).
    - `d = −2°26,1′` (Sur, negativa).
-   - `P = 25°27,5′ E`.
-   - `sen(ae) = sen(+35°54′) × sen(−2°26,1′) + cos(+35°54′) × cos(−2°26,1′) × cos(25°27,5′)`.
+   - `P` todavía no está calculada; se obtiene más abajo a partir de `hL`.
+   - `sen(ae) = sen(+35°54′) × sen(−2°26,1′) + cos(+35°54′) × cos(−2°26,1′) × cos(P)`.
+   Se advierte que todavía no se debe comenzar la cuenta. Después de obtener `P = 25°27,5′ E`, se muestra la fórmula completamente rellenada.
 5. La declinación Sur entra con signo negativo.
 6. Se calcula completa la parte situada a la derecha del signo igual: `sen(+35°54′) × sen(−2°26,1′) + cos(+35°54′) × cos(−2°26,1′) × cos(25°27,5′)`.
 7. Al pulsar `=`, la parte derecha da aproximadamente `0,705812`. Por tanto, `sen(ae) = 0,705812`. Este decimal todavía no es `ae`.
