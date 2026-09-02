@@ -74,3 +74,5 @@ En toda fórmula numérica, cada valor llevará justo debajo su símbolo y signi
 La fórmula numérica mantiene el mismo formato de la plantilla aprobada: `sen(ae)` en un recuadro azul como parte izquierda y toda la operación en un recuadro verde como parte derecha. El comienzo del uso de teclas se anuncia con `PASO 3 · A PARTIR DE AQUÍ, UTILIZA LA CALCULADORA`; después se pide calcular toda la parte derecha verde.
 
 Dentro del paso 3 la fórmula se muestra una sola vez, en el apartado donde se calcula la parte derecha verde. No se repite antes de desplegar la calculadora.
+
+La calculadora guiada conserva los minutos decimales tal como aparecen en la fórmula. No transforma `29°26,5′` en `29°26′30″`: guía `29 → °′″ → 26.5 → °′″`. Aplica la misma regla a `11°22,8′` y `36°53,9′`.

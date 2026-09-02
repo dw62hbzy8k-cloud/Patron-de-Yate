@@ -35,17 +35,17 @@ const heightDirections=heightExpected.map(function(key,index){
  return `Pulsa ${key}.`;
 });
 const height296Expected=[
- "sin","2","9","°′″","2","6","°′″","3","0","°′″",")","×",
- "sin","1","1","°′″","2","2","°′″","4","8","°′″",")","+",
- "cos","2","9","°′″","2","6","°′″","3","0","°′″",")","×",
- "cos","1","1","°′″","2","2","°′″","4","8","°′″",")","×",
- "cos","3","6","°′″","5","3","°′″","5","4","°′″",")","=",
+ "sin","2","9","°′″","2","6",".","5","°′″",")","×",
+ "sin","1","1","°′″","2","2",".","8","°′″",")","+",
+ "cos","2","9","°′″","2","6",".","5","°′″",")","×",
+ "cos","1","1","°′″","2","2",".","8","°′″",")","×",
+ "cos","3","6","°′″","5","3",".","9","°′″",")","=",
  "SHIFT","sin","Ans",")","=","°′″"
 ];
 const height296Directions=height296Expected.map(function(key,index){
- if(index===0)return "Pulsa SIN para comenzar la fórmula con la latitud.";
- if(index===61)return "Ya has calculado sen(ae). Pulsa SHIFT para recuperar la altura estimada.";
- if(index===66)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
+ if(index===0)return "Pulsa SIN para comenzar la fórmula con la latitud 29°26,5′.";
+ if(index===55)return "Ya has calculado sen(ae). Pulsa SHIFT para recuperar la altura estimada.";
+ if(index===60)return "Ya tienes ae en grados decimales. Pulsa °′″ para verla en grados, minutos y segundos.";
  return `Pulsa ${key}.`;
 });
 const height1010Expected=[
@@ -227,8 +227,8 @@ function mount(root){
  const height296=guideId==="296",height1010=guideId==="1010",height1258=guideId==="1258",height98=guideId==="98",heightGuide=guideId==="1"||height296||height1010||height1258||height98;
  const expected=height98?height98Expected:height1258?height1258Expected:height1010?height1010Expected:height296?height296Expected:heightGuide?heightExpected:conversionExpected,directions=height98?height98Directions:height1258?height1258Directions:height1010?height1010Directions:height296?height296Directions:heightGuide?heightDirections:conversionDirections,storageKey=height98?HEIGHT_98_STORAGE_KEY:height1258?HEIGHT_1258_STORAGE_KEY:height1010?HEIGHT_1010_STORAGE_KEY:height296?HEIGHT_296_STORAGE_KEY:heightGuide?HEIGHT_STORAGE_KEY:STORAGE_KEY;
  const finalHeightText=height98?"ae = 25°27′18,2″, que en las respuestas es 25°27′18″.":height1258?"ae* = 77°04′57,2″, que en las respuestas es 77°04′57″.":height1010?"ae = 63°56′14,1″, que en las respuestas es 63°56,2′.":height296?"ae = 51°14′06,4″, que en las respuestas es 51°14,1′.":"ae = 44°53,7′.";
- const milestones=height98?[{at:58,value:"0.429803"},{at:63,value:"25.455066"},{at:64,value:"25°27′18,2″"}]:height1258?[{at:58,value:"0.974693172380"},{at:63,value:"77.082554214"},{at:64,value:"77°04′57,2″"}]:height1010?[{at:50,value:"0.8983134026"},{at:55,value:"63.9372496"},{at:56,value:"63°56′14,1″"}]:height296?[{at:61,value:"0.779722"},{at:66,value:"51.235123"},{at:67,value:"51°14′06,4″"}]:[{at:61,value:"0.7058120802"},{at:66,value:"44.8951881663"},{at:70,value:"0.8951881663"},{at:74,value:"53.7112899782"}];
- const formulaEnd=height98?58:height1258?58:height1010?50:61,inverseEnd=height98?63:height1258?63:height1010?55:66;
+ const milestones=height98?[{at:58,value:"0.429803"},{at:63,value:"25.455066"},{at:64,value:"25°27′18,2″"}]:height1258?[{at:58,value:"0.974693172380"},{at:63,value:"77.082554214"},{at:64,value:"77°04′57,2″"}]:height1010?[{at:50,value:"0.8983134026"},{at:55,value:"63.9372496"},{at:56,value:"63°56′14,1″"}]:height296?[{at:55,value:"0.779722"},{at:60,value:"51.235123"},{at:61,value:"51°14′06,4″"}]:[{at:61,value:"0.7058120802"},{at:66,value:"44.8951881663"},{at:70,value:"0.8951881663"},{at:74,value:"53.7112899782"}];
+ const formulaEnd=height98?58:height1258?58:height1010?50:height296?55:61,inverseEnd=height98?63:height1258?63:height1010?55:height296?60:66;
  if(inlineTrainer){root.classList.add("calc-inline-trainer");const calculationZone=root.closest("[data-calculation-zone]")||root.closest('div[style*="border:3px solid #1c6ea4"]')||root.closest('div[style*="border:3px solid #d6a31c"]')||root;setupDocking(root,calculationZone)}
  const expressionEl=root.querySelector("[data-ct-expression]"),resultEl=root.querySelector("[data-ct-result]"),instructionEl=root.querySelector("[data-ct-instruction]"),feedbackEl=root.querySelector("[data-ct-feedback]"),levelEl=root.querySelector("[data-ct-level]"),modeDescriptionEl=root.querySelector("[data-ct-mode-description]"),progressEl=root.querySelector("[data-ct-progress]"),soundEl=root.querySelector("[data-ct-sound]"),keys=Array.from(root.querySelectorAll(".calc-key")),modeButtons=Array.from(root.querySelectorAll("[data-ct-mode]")),stepItems=Array.from(root.querySelectorAll("[data-ct-steps] li"));
  const startValue=heightGuide?"0":"44.895188",startExpression=heightGuide?"":"44.895188";
