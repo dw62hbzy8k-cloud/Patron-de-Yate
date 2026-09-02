@@ -71,7 +71,7 @@ Aunque la página se titula «Correcciones», el valor `2°30,0′` de la column
 
 ## Cálculo
 
-La web numera visualmente el recorrido: Paso 1 muestra `l` y `d`; dentro de la propia fórmula, únicamente la letra `P` lleva un pequeño recuadro rojo para indicar que es el dato pendiente. No se muestra un aviso rojo grande separado. Paso 2 obtiene `hL`; Paso 3 convierte `hL` en `P`; Paso 4 reúne en grande los tres datos completos antes de calcular `ae`.
+La fórmula inicial se presenta como «Punto de partida», sin numerarla como paso: solo se sustituye `l = +35°54′`, porque es el único dato de la fórmula proporcionado directamente por el enunciado. Las dos apariciones de `d` y la `P` llevan pequeños recuadros rojos. El Paso 1 abre las páginas 82 y 430 del Almanaque, obtiene `d = −2°26,1′`, `hG = 342°42,5′` y el incremento `2°30,0′`, y vuelve a mostrar la fórmula con `d` rellenada y solo `P` en rojo. Después, el Paso 2 obtiene `hL`, el Paso 3 obtiene `P` y el Paso 4 reúne los tres datos para calcular `ae`.
 
 Antes de operar se separan dos reglas diferentes:
 
