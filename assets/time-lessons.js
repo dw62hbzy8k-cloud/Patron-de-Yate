@@ -20,8 +20,74 @@ window.TIME_DIRECT_SOLUTIONS=S;window.TIME_DIRECT_LESSON_IDS=IDS;window.TIME_CAL
 const calc=q=>`<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-${q.id}" data-height-guide="time-${q.id}"></div>`;
 window.timeDirectCalculatorHTML=function(q){return S[q.id]?calc(q):""};
 window.timeDirectTypeHTML=function(q){const s=S[q.id];if(!s)return "";return `<div class="time-type"><b>TIPO DE PROBLEMA · CONVERSIÓN DIRECTA ${s.from} → ${s.to}</b><br>Te dan una hora y una longitud, y te piden la hora correspondiente al otro meridiano. <b>No necesitas Almanaque Náutico:</b> no se busca ningún dato del Sol ni de una estrella.</div>`};
-function formula(s,filled=true){const right=filled?`${s.from} ${s.sign} tL`:`${s.from} <span style="border:2px solid #bd3340;border-radius:5px;padding:0 5px;color:#98212d">± tL</span>`;return `<div class="time-formula"><div class="time-formula-left"><small>RESULTADO</small><b>${s.to}</b></div><b style="align-self:center;text-align:center;font-size:24px">=</b><div class="time-formula-right"><small>CUENTA</small><b>${right}</b></div></div>`}
+function equation(left,right,leftLabel="RESULTADO",rightLabel="CUENTA"){return `<div class="time-formula"><div class="time-formula-left"><small>${leftLabel}</small><b>${left}</b></div><b style="align-self:center;text-align:center;font-size:24px">=</b><div class="time-formula-right"><small>${rightLabel}</small><b>${right}</b></div></div>`}
+function formula(s,filled=true){const right=filled?`${s.from} ${s.sign} tL`:`${s.from} <span style="border:2px solid #bd3340;border-radius:5px;padding:0 5px;color:#98212d">± tL</span>`;return equation(s.to,right)}
 window.timeDirectSolutionHTML=function(q){const s=S[q.id];if(!s)return "";const reverse=s.from==="HcL",rule=reverse?`Como vas de <b>HcL a HcG</b>, haces la operación contraria: longitud Este se resta y longitud Oeste se suma.`:`Como vas de <b>HcG a HcL</b>: longitud Este se suma y longitud Oeste se resta.`,dateStep=s.wrap?`La cuenta da <b>${s.raw}</b>. No existe la hora 26:55:20 en un reloj de 24 horas: resta 24 h. Queda <b>${s.final}</b> y, al haber pasado de medianoche, la fecha avanza a <b>${s.dateResult}</b>.`:`La cuenta da <b>${s.final}</b>, entre 00:00:00 y 23:59:59. Por tanto, no cruzas medianoche y la fecha queda: <b>${s.dateResult}</b>.`;return `<details class="time-lesson" open><summary>✅ Resolución completa · ${s.title}</summary><div class="time-body">${window.timeDirectTypeHTML(q)}<div class="time-symbols"><div class="time-symbol"><span>DATO DE PARTIDA</span><b>${s.from} = ${s.clock}</b><small>${s.fromName}${s.clockDate?` · ${s.clockDate}`:""}</small></div><div class="time-symbol"><span>LONGITUD</span><b>L = ${s.lon}</b><small>situación del observador</small></div><div class="time-symbol"><span>LO QUE PIDEN</span><b>${s.to}</b><small>${s.toName}</small></div></div>${formula(s,false)}<div class="time-step"><span class="time-step-number">PASO 1</span><b>CONVIERTE LA LONGITUD EN TIEMPO</b><p>La Tierra gira 360° en 24 horas; por eso gira <b>15° cada hora</b>. Divide la longitud entre 15:</p><div class="time-result" style="font-size:19px">tL = ${s.lon.replace(/ [EW]$/,"")} ÷ 15 = ${s.offset}</div><div class="time-note"><b>Cómo leer la pantalla:</b> al escribir la longitud como grados, minutos y segundos y dividir entre 15, la calculadora muestra <b>${s.offsetDms}</b>. Aquí ya no representa un ángulo: léelo como <b>${s.offset}</b>.</div></div><div class="time-step"><span class="time-step-number">PASO 2</span><b>DECIDE SI SUMAS O RESTAS</b><p>${rule}</p><div class="time-note"><b>En esta pregunta:</b> vas de ${s.from} a ${s.to} y la longitud es ${s.dir}; por tanto, <b>${s.sign==="+"?"sumas":"restas"}</b>.</div>${formula(s)}</div><div class="time-step" data-calculation-zone><span class="time-step-number">PASO 3</span><b>HAZ LA CUENTA EN LA CALCULADORA</b><div class="time-result" style="font-size:19px">${s.to} = ${s.clock} ${s.sign} ${s.offset.replaceAll(" h ",":").replaceAll(" min ",":").replace(" s","")} = ${s.raw}</div>${calc(q)}</div><div class="time-step"><span class="time-step-number">PASO 4</span><b>COMPRUEBA EL RELOJ Y LA FECHA</b><p>${dateStep}</p><div class="time-result">${s.to} = ${s.final} · ${s.dateResult}<br>Respuesta ${s.answer}</div></div><div class="time-globe-wrap"><b>GRÁFICO INTERACTIVO · Greenwich, tu meridiano y la diferencia horaria</b><p class="sub">Arrastra la esfera o mueve el control. El meridiano local queda al Este o al Oeste de Greenwich y el reloj cambia 4 minutos por cada grado.</p><canvas data-time-globe="${q.id}" aria-label="Esfera terrestre interactiva para convertir la longitud en diferencia horaria"></canvas><div class="time-globe-controls"><label>Longitud: <b data-time-longitude>${s.lon}</b></label><input type="range" min="-180" max="180" step="0.1666667" value="${s.lonDeg}" data-time-slider><button type="button" data-time-reset>Volver a los datos</button></div></div></div></details>`};
 window.timeDirectQuickHTML=function(q){const s=S[q.id];if(!s)return "";return `<div class="time-quick"><b>RECORDATORIO RÁPIDO · ${s.from} → ${s.to}</b><br>tL = ${s.lon.replace(/ [EW]$/,"")} ÷ 15 = ${s.offset}.<br>${s.to} = ${s.clock} ${s.sign} ${s.offset.replaceAll(" h ",":").replaceAll(" min ",":").replace(" s","")} = <b>${s.raw}</b>. ${s.wrap?`Resta 24 h y avanza un día: `:""}<b>${s.final} · ${s.dateResult} · ${s.answer}</b>.</div>`};
 window.initTimeGraphics=function(root){(root||document).querySelectorAll("canvas[data-time-globe]").forEach(canvas=>{if(canvas.dataset.ready)return;canvas.dataset.ready="1";const s=S[canvas.dataset.timeGlobe],ctx=canvas.getContext("2d"),wrap=canvas.closest(".time-globe-wrap"),slider=wrap.querySelector("[data-time-slider]"),label=wrap.querySelector("[data-time-longitude]");let lon=Number(slider.value),drag=false,lastX=0;function fmt(v){const dir=v>=0?"E":"W",a=Math.abs(v),d=Math.floor(a),m=Math.round((a-d)*60);return `${d}°${String(m).padStart(2,"0")}′ ${dir}`}function draw(){const dpr=window.devicePixelRatio||1,w=canvas.clientWidth||700,h=w/1.75;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const cx=w*.5,cy=h*.52,r=Math.min(w*.31,h*.38);const g=ctx.createRadialGradient(cx-r*.35,cy-r*.4,r*.05,cx,cy,r);g.addColorStop(0,"#4ab4dd");g.addColorStop(.6,"#12679a");g.addColorStop(1,"#073754");ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fill();ctx.save();ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();ctx.strokeStyle="rgba(196,235,255,.24)";ctx.lineWidth=1;for(let y=-.65;y<=.65;y+=.325){ctx.beginPath();ctx.ellipse(cx,cy+y*r,r*Math.sqrt(1-y*y),r*.16,0,0,Math.PI*2);ctx.stroke()}ctx.restore();function meridian(angle,color,width){const x=Math.sin(angle)*r*.92,front=Math.cos(angle)>=0;ctx.strokeStyle=color;ctx.lineWidth=width;ctx.setLineDash(front?[]:[6,5]);ctx.beginPath();ctx.ellipse(cx,cy,Math.abs(x)+2,r,0,Math.PI/2,Math.PI*1.5,angle<0);ctx.stroke();ctx.setLineDash([])}meridian(0,"#f5f7fa",3);const a=lon*Math.PI/180;meridian(a,"#ffb42b",5);ctx.fillStyle="#fff";ctx.font="800 14px Arial";ctx.textAlign="center";ctx.fillText("GREENWICH · 0°",cx,cy-r-14);const lx=cx+Math.sin(a)*r*.92,ly=cy-r*.72;ctx.fillStyle="#ffd36a";ctx.fillText(`MERIDIANO LOCAL · ${fmt(lon)}`,Math.max(115,Math.min(w-115,lx)),ly);ctx.strokeStyle="#83dfae";ctx.lineWidth=4;ctx.beginPath();ctx.arc(cx,cy,r+18,-Math.PI/2,-Math.PI/2+a,a<0);ctx.stroke();ctx.fillStyle="#9af1c0";ctx.font="800 16px Arial";const off=Math.abs(lon)/15,oh=Math.floor(off),om=Math.round((off-oh)*60);ctx.fillText(`tL = ${oh} h ${String(om).padStart(2,"0")} min`,cx,cy+r+45);ctx.fillStyle="#dcecff";ctx.font="14px Arial";ctx.fillText(lon>=0?"ESTE · la hora local va adelantada":"OESTE · la hora local va atrasada",cx,cy+r+67);label.textContent=fmt(lon);slider.value=lon}slider.oninput=()=>{lon=Number(slider.value);draw()};wrap.querySelector("[data-time-reset]").onclick=()=>{lon=s.lonDeg;draw()};canvas.addEventListener("pointerdown",e=>{drag=true;lastX=e.clientX;canvas.setPointerCapture(e.pointerId);canvas.style.cursor="grabbing"});canvas.addEventListener("pointermove",e=>{if(!drag)return;lon=Math.max(-180,Math.min(180,lon+(e.clientX-lastX)*.5));lastX=e.clientX;draw()});canvas.addEventListener("pointerup",()=>{drag=false;canvas.style.cursor="grab"});new ResizeObserver(draw).observe(canvas);draw()})};
+window.initTimeGraphics=function(root){
+ (root||document).querySelectorAll("canvas[data-time-globe]").forEach(canvas=>{
+  if(canvas.dataset.ready)return;
+  canvas.dataset.ready="1";
+  const s=S[canvas.dataset.timeGlobe],ctx=canvas.getContext("2d"),wrap=canvas.closest(".time-globe-wrap"),slider=wrap.querySelector("[data-time-slider]"),label=wrap.querySelector("[data-time-longitude]");
+  let lon=Number(slider.value),drag=false,lastX=0;
+  const rad=value=>value*Math.PI/180;
+  function fmt(value){
+   const direction=value>=0?"E":"W",totalMinutes=Math.round(Math.abs(value)*60),degrees=Math.floor(totalMinutes/60),minutes=totalMinutes%60;
+   return `${degrees}°${String(minutes).padStart(2,"0")}′ ${direction}`;
+  }
+  function draw(){
+   const dpr=window.devicePixelRatio||1,w=canvas.clientWidth||700,h=w/1.75;
+   canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+   const cx=w*.5,cy=h*.49,r=Math.min(w*.29,h*.36),a=rad(lon);
+   const gradient=ctx.createRadialGradient(cx-r*.36,cy-r*.4,r*.06,cx,cy,r);
+   gradient.addColorStop(0,"#55bee6");gradient.addColorStop(.58,"#1473a8");gradient.addColorStop(1,"#073b5c");
+   ctx.fillStyle=gradient;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fill();
+   ctx.save();ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();
+   ctx.strokeStyle="rgba(200,238,255,.25)";ctx.lineWidth=1;
+   [-60,-30,0,30,60].forEach(latitude=>{const y=cy-Math.sin(rad(latitude))*r,half=Math.cos(rad(latitude))*r;ctx.beginPath();ctx.moveTo(cx-half,y);ctx.lineTo(cx+half,y);ctx.stroke()});
+   [-60,-30,30,60].forEach(longitude=>drawMeridian(rad(longitude),"rgba(200,238,255,.20)",1,false));
+   drawMeridian(0,"#f4fbff",3,false);
+   drawMeridian(a,"#ffad24",5,Math.abs(lon)>90);
+   ctx.restore();
+   ctx.strokeStyle="rgba(181,225,246,.55)";ctx.lineWidth=2;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();
+
+   function drawMeridian(angle,color,width,dashed){
+    ctx.strokeStyle=color;ctx.lineWidth=width;ctx.setLineDash(dashed?[7,6]:[]);ctx.beginPath();
+    for(let latitude=-90;latitude<=90;latitude+=2){const latitudeRad=rad(latitude),x=cx+Math.sin(angle)*Math.cos(latitudeRad)*r,y=cy-Math.sin(latitudeRad)*r;if(latitude===-90)ctx.moveTo(x,y);else ctx.lineTo(x,y)}
+    ctx.stroke();ctx.setLineDash([]);
+   }
+   function arrow(x1,y1,x2,y2,color){
+    ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+    const angle=Math.atan2(y2-y1,x2-x1);ctx.beginPath();ctx.moveTo(x2,y2);ctx.lineTo(x2-12*Math.cos(angle-.5),y2-12*Math.sin(angle-.5));ctx.lineTo(x2-12*Math.cos(angle+.5),y2-12*Math.sin(angle+.5));ctx.closePath();ctx.fill();
+   }
+   const localX=cx+Math.sin(a)*r,arcY=cy,side=lon>=0?1:-1;
+   if(Math.abs(localX-cx)>5)arrow(cx,arcY,localX-side*9,arcY,"#7fe0ad");
+   ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(cx,arcY,5,0,Math.PI*2);ctx.fill();
+   ctx.fillStyle="#ffcf69";ctx.beginPath();ctx.arc(localX,arcY,6,0,Math.PI*2);ctx.fill();
+
+   ctx.textAlign="center";ctx.font="800 14px Arial";ctx.fillStyle="#f4fbff";ctx.fillText("GREENWICH · 0°",cx,cy-r-15);
+   const localLabelX=Math.max(125,Math.min(w-125,cx+side*r*.93));
+   ctx.fillStyle="#ffd26f";ctx.fillText(`MERIDIANO LOCAL · ${fmt(lon)}`,localLabelX,cy-r*.64);
+   ctx.fillStyle="#9af0c0";ctx.font="900 15px Arial";ctx.fillText(`L = ${fmt(lon)}`,Math.max(90,Math.min(w-90,(cx+localX)/2)),cy-13);
+   ctx.fillStyle="#9af0c0";ctx.font="900 17px Arial";ctx.fillText(`tL = ${s.offset}`,cx,cy+r+39);
+   ctx.fillStyle="#dcecff";ctx.font="14px Arial";ctx.fillText(lon>=0?"ESTE · el lugar lleva la hora civil adelantada respecto de Greenwich":"OESTE · el lugar lleva la hora civil atrasada respecto de Greenwich",cx,cy+r+63);
+   label.textContent=fmt(lon);slider.value=lon;
+  }
+  slider.oninput=()=>{lon=Number(slider.value);draw()};
+  wrap.querySelector("[data-time-reset]").onclick=()=>{lon=s.lonDeg;draw()};
+  canvas.addEventListener("pointerdown",event=>{drag=true;lastX=event.clientX;canvas.setPointerCapture(event.pointerId);canvas.style.cursor="grabbing"});
+  canvas.addEventListener("pointermove",event=>{if(!drag)return;lon=Math.max(-180,Math.min(180,lon+(event.clientX-lastX)*.5));lastX=event.clientX;draw()});
+  canvas.addEventListener("pointerup",()=>{drag=false;canvas.style.cursor="grab"});
+  new ResizeObserver(draw).observe(canvas);draw();
+ });
+};
+const renderSeparatedTimeSolution=window.timeDirectSolutionHTML;
+window.timeDirectSolutionHTML=function(q){
+ const s=S[q.id],html=renderSeparatedTimeSolution(q);
+ if(!s)return html;
+ const oldRow=`<div class="time-result" style="font-size:19px">tL = ${s.lon.replace(/ [EW]$/ , "")} ÷ 15 = ${s.offset}</div>`;
+ const newRow=equation("tL",`${s.lon.replace(/ [EW]$/ , "")} ÷ 15 = ${s.offset}`,"TIEMPO DE LONGITUD","CÁLCULO");
+ return html.replace(oldRow,newRow).replace("Arrastra la esfera o mueve el control.","Arrastra sobre el globo o mueve el control para cambiar la longitud.");
+};
 })();
