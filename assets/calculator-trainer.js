@@ -236,6 +236,15 @@ function buildTrueAltitudeGuide(guideId){
 function buildOrthodromicGuide(guideId){
  if(!/^orthodromic-\d+$/.test(guideId||""))return null;const id=guideId.slice(12),s=window.ORTHODROMIC_SOLUTIONS&&window.ORTHODROMIC_SOLUTIONS[id];if(!s)return null;
  const angle=parts=>poleAngleKeys(parts),trig=(name,parts)=>[name].concat(angle(parts),[")"]),decimal=value=>String(value).split("");
+ if(s.kind==="distance"){
+  const signedAngle=(parts,negative)=>negative?["(-)"].concat(angle(parts)):angle(parts),signedTrig=(name,parts,negative)=>[name].concat(signedAngle(parts,negative),[")"]),c=s.calc;
+  const distanceFormula=signedTrig("sin",c.a,c.aNeg).concat(["×"],signedTrig("sin",c.b,c.bNeg),["+"],signedTrig("cos",c.a,c.aNeg),["×"],signedTrig("cos",c.b,c.bNeg),["×"],trig("cos",c.dl),["="]);
+  const formulaEnd=distanceFormula.length,distanceAngle=distanceFormula.concat(["SHIFT","cos","Ans",")","="]),angleEnd=distanceAngle.length,expected=distanceAngle.concat(["×","6","0","="]),directions=expected.map(key=>`Pulsa ${key}.`);
+  directions[0]=`Pulsa SIN para comenzar la fórmula con lA = ${s.aMath}.`;
+  directions[formulaEnd]="Ya tienes cos(D°). Pulsa SHIFT y después COS para recuperar el ángulo central D°.";
+  directions[angleEnd]="Ya tienes D° en grados. Pulsa × 60 para convertir el arco en millas náuticas.";
+  return {kind:"orthodromic-distance",id,s,expected,directions,formulaEnd,inverseEnd:expected.length,milestones:[{at:formulaEnd,value:c.cos},{at:angleEnd,value:c.angle},{at:expected.length,value:c.miles}],storageKey:`aprobarNautica_orthodromicDistanceTrainer_${id}_v1`,finalText:`Dort = ${s.distance}. Respuesta ${s.answer}.`,subtitle:`Cálculo interactivo de ${s.title} · distancia ortodrómica.`,objective:`Objetivo: Dort = ${s.officialDistance} · respuesta ${s.answer}`,initial:`Empieza por la fórmula de distancia: pulsa SIN e introduce lA = ${s.aMath}.`,firstFeedback:`La parte derecha ha dado cos(D°) = ${s.distanceCos}. Ahora recupera D° con SHIFT y COS.`,secondFeedback:`Ángulo central terminado: D° = ${s.centralAngle}. Multiplícalo por 60 para obtener millas.`,steps:"<li>Calcular cos(D°) con las dos latitudes y ΔL.</li><li>Recuperar D° con SHIFT → COS.</li><li>Convertir D° en millas: D° × 60.</li>"};
+ }
  const a=[43,"09.6"],b=[6,"48.0"],dl=[48,"20.6"],d=decimal("55.7766749");
  const distanceFormula=trig("sin",a).concat(["×"],trig("sin",b),["+"],trig("cos",a),["×"],trig("cos",b),["×"],trig("cos",dl),["="]);
  const formulaEnd=distanceFormula.length,distanceAngle=distanceFormula.concat(["SHIFT","cos","Ans",")","="]),angleEnd=distanceAngle.length,distanceMiles=distanceAngle.concat(["×","6","0","="]),inverseEnd=distanceMiles.length;
