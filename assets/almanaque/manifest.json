@@ -1,4 +1,40 @@
 {
+  "2015_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2015/2015_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real de correcciones para obtener la altura verdadera del Almanaque Náutico Perseis 2015: Tabla A, Tabla B para el Sol, Tabla C para planetas y estrellas y correcciones adicionales de 2015. Usada en Noviembre 2015 P11 y Junio 2015 P11.",
+    "source": "https://titulosnauticosderecreo.com/a-documentos/AN2015.pdf"
+  },
+  "2017_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2017/2017_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real anual de correcciones de alturas verdaderas de 2017: Tablas A, B y C y correcciones adicionales."
+  },
+  "2018_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2018/2018_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real anual de correcciones de alturas verdaderas de 2018: Tablas A, B y C y correcciones adicionales."
+  },
+  "2019_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2019/2019_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real anual de correcciones de alturas verdaderas de 2019: Tablas A, B y C y correcciones adicionales."
+  },
+  "2021_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2021/2021_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real anual de correcciones de alturas verdaderas de 2021: Tablas A, B y C y correcciones adicionales."
+  },
+  "2024_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2024/2024_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real anual de correcciones de alturas verdaderas de 2024: Tablas A, B y C y correcciones adicionales."
+  },
+  "2025_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2025/2025_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real anual de correcciones de alturas verdaderas de 2025: Tablas A, B y C y correcciones adicionales."
+  },
   "2024_tabla_real_estrellas_vega": {
     "file": "assets/almanaque/2024/2024_tabla_real_estrellas_vega.png",
     "date": "2024-06",
