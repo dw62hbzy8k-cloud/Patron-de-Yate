@@ -89,10 +89,10 @@ function initLopAnimated(canvas){
  const stages=[
   ["Sitúate en el punto de partida","El punto azul oscuro es la situación estimada. Todas las medidas comienzan exactamente aquí."],
   ["Traza el azimut de Rosalhague","Desde la situación estimada, sigue 263°. Es una dirección casi Oeste: 270° sería Oeste exacto. La flecha azul apunta hacia Rosalhague."],
-  ["Avanza 4 millas hacia Rosalhague","Δa = +4′ es positiva. En una recta de altura, 1′ equivale a 1 milla náutica: avanza 4 millas por la flecha azul, hacia el astro, y haz una marca."],
+  ["Avanza 4 millas hacia Rosalhague","Δa = av − ae = +4′. No restas 4 a ninguna coordenada: desde la situación estimada avanzas 4 millas por la flecha azul, hacia el astro, y te detienes en la marca."],
   ["Dibuja la primera recta de altura","Por la marca azul traza una línea que corte el azimut formando 90°. Esa perpendicular es la recta de altura de Rosalhague."],
   ["Traza el azimut de Antares","Vuelve al punto estimado y sigue 214°. Está entre Sur (180°) y Oeste (270°): desde el Sur gira 34° hacia el Oeste. La flecha naranja apunta hacia Antares."],
-  ["Avanza 5 millas hacia Antares","Δa = +5′ también es positiva. Como 1′ equivale a 1 milla náutica, avanza 5 millas por la flecha naranja, hacia Antares, y haz la marca."],
+  ["Avanza 5 millas hacia Antares","Δa = av − ae = +5′. No restas 5 a ninguna coordenada: desde la situación estimada avanzas 5 millas por la flecha naranja, hacia Antares, y te detienes en la marca."],
   ["Dibuja la segunda recta de altura","Por la marca naranja dibuja otra línea que corte su azimut a 90°. Esa perpendicular es la recta de altura de Antares."],
   ["Busca el corte de las dos rectas","El barco tiene que estar sobre ambas rectas a la vez. Por eso su situación observada es el punto verde donde se cruzan."]
  ];
@@ -115,9 +115,8 @@ function initLopAnimated(canvas){
   const partialArrow=(from,to,amount,color)=>{if(amount<=0)return;const end={x:from.x+(to.x-from.x)*amount,y:from.y+(to.y-from.y)*amount};arrow(ctx,from,end,color)};
   const drawAstro=(az,intercept,color,name,azStage,markStage,lineStage)=>{
    const angle=az*Math.PI/180,u={e:Math.sin(angle),n:Math.cos(angle)},markWorld={e:u.e*intercept,n:u.n*intercept},normal={e:Math.cos(angle),n:-Math.sin(angle)},origin=toP(0,0),tip=toP(u.e*7,u.n*7),mark=toP(markWorld.e,markWorld.n),azProgress=progressFor(azStage),markProgress=progressFor(markStage),lineProgress=progressFor(lineStage);
-   partialArrow(origin,tip,azProgress,color);
-   if(azProgress>.58){const shown={x:origin.x+(tip.x-origin.x)*azProgress,y:origin.y+(tip.y-origin.y)*azProgress};label(ctx,`${name} · Zv ${az}°`,shown.x+(u.e<0?-8:8),shown.y+(name==="ROSALHAGUE"?24:22),color,u.e<0?"right":"left",12)}
-   if(markProgress>0){ctx.globalAlpha=Math.min(1,markProgress*2);ctx.fillStyle=color;ctx.beginPath();ctx.arc(mark.x,mark.y,7*Math.min(1,markProgress*1.5),0,Math.PI*2);ctx.fill();label(ctx,`MARCA +${intercept}′`,mark.x+(u.e<0?-10:10),mark.y-12,color,u.e<0?"right":"left",12);ctx.globalAlpha=1}
+   if(azProgress>0){const guideEnd={x:origin.x+(tip.x-origin.x)*azProgress,y:origin.y+(tip.y-origin.y)*azProgress};ctx.save();ctx.globalAlpha=.48;ctx.strokeStyle=color;ctx.lineWidth=2;ctx.setLineDash([7,6]);ctx.beginPath();ctx.moveTo(origin.x,origin.y);ctx.lineTo(guideEnd.x,guideEnd.y);ctx.stroke();ctx.restore();if(azProgress>.58)label(ctx,`${name} · DIRECCIÓN Zv ${az}°`,guideEnd.x+8,guideEnd.y+(name==="ROSALHAGUE"?24:22),color,"left",12)}
+   if(markProgress>0){partialArrow(origin,mark,markProgress,color);ctx.globalAlpha=Math.min(1,markProgress*2);ctx.fillStyle=color;ctx.beginPath();ctx.arc(mark.x,mark.y,7*Math.min(1,markProgress*1.5),0,Math.PI*2);ctx.fill();if(markProgress>.58)label(ctx,`Δa +${intercept}′ · TERMINA AQUÍ`,mark.x+(u.e<0?-10:10),mark.y-12,color,u.e<0?"right":"left",12);ctx.globalAlpha=1}
    if(lineProgress>0){const extent=12*lineProgress,pA=toP(markWorld.e-normal.e*extent,markWorld.n-normal.n*extent),pB=toP(markWorld.e+normal.e*extent,markWorld.n+normal.n*extent);ctx.beginPath();ctx.moveTo(pA.x,pA.y);ctx.lineTo(pB.x,pB.y);ctx.strokeStyle=color;ctx.lineWidth=5;ctx.stroke();if(lineProgress>.7){const lineOffset=name==="ROSALHAGUE"?1.1:5.2,textPoint=toP(markWorld.e+normal.e*lineOffset,markWorld.n+normal.n*lineOffset),rotation=Math.atan2(pB.y-pA.y,pB.x-pA.x);ctx.save();ctx.translate(textPoint.x,textPoint.y);ctx.rotate(rotation>Math.PI/2||rotation<-Math.PI/2?rotation+Math.PI:rotation);ctx.font="900 12px Arial";ctx.textAlign="center";ctx.lineWidth=4;ctx.strokeStyle="rgba(255,255,255,.97)";ctx.strokeText(`${name} · RECTA DE ALTURA`,0,-9);ctx.fillStyle=color;ctx.fillText(`${name} · RECTA DE ALTURA`,0,-9);ctx.restore()}}
   };
   drawAstro(263,4,"#2878b5","ROSALHAGUE",1,2,3);drawAstro(214,5,"#e07816","ANTARES",4,5,6);
