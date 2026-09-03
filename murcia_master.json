@@ -25954,9 +25954,9 @@
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "c",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial de la pregunta equivalente en el PDF CARM; correspondencia verificada por enunciado y texto de opción (el banco reordena algunas preguntas y opciones).",
+      "answer_note": "Respuesta C corregida tras verificar el PDF oficial: en el original la opción B es 116°, pero en esta base las opciones están reordenadas y 116° ocupa la opción C. El cálculo independiente da Ri = 116,09°.",
       "answer_source": "master/fuentes_oficiales/CARM_CY_Marzo_2019_Tipo1_con_respuestas.pdf"
     },
     {
