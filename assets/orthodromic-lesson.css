@@ -1,0 +1,17 @@
+.ortho-card{margin-top:12px;border:3px solid #23805b;background:#f4fcf7}
+.ortho-card>summary{cursor:pointer;font-size:17px;color:#14583f}
+.ortho-intro{padding:13px;border-radius:10px;background:#e7f5ed;line-height:1.65}
+.ortho-step{position:relative;margin-top:13px;padding:15px 14px 14px;border:2px solid #397eb8;border-radius:12px;background:#f5faff;line-height:1.65}
+.ortho-step.orange{border-color:#df861f;background:#fff8ee}.ortho-step.green{border-color:#30945b;background:#f2fbf5}.ortho-step.purple{border-color:#7657a5;background:#faf7ff}
+.ortho-step-title{display:flex;align-items:center;gap:9px;margin-bottom:9px;font-weight:900;color:#173f5b}
+.ortho-step-number{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#173f5b;color:white;font-size:18px}
+.ortho-data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:9px;margin-top:10px}
+.ortho-data{padding:11px;border-radius:9px;background:white;text-align:center;border:1px solid #c9dce8}.ortho-data small{display:block;color:#617686;font-size:11px}.ortho-data b{display:block;margin-top:4px;font-size:20px;color:#173f5b}
+.ortho-formula{display:grid;grid-template-columns:minmax(88px,120px) 20px minmax(0,1fr);gap:6px;align-items:stretch;margin:11px 0;max-width:100%}
+.ortho-formula-left,.ortho-formula-right{display:flex;flex-direction:column;justify-content:center;border-radius:9px;text-align:center}.ortho-formula-left{padding:9px 5px;border:2px solid #397eb8;background:#eaf4fc;color:#195785}.ortho-formula-right{min-width:0;padding:9px 7px;border:3px solid #30945b;background:#e9f8ef;color:#176b43;overflow:hidden}.ortho-formula-label{font-size:10px;font-weight:800}.ortho-formula-main{display:flex;justify-content:center;align-items:flex-start;gap:3px;white-space:nowrap;font-size:clamp(11px,1.42vw,18px);font-weight:900;line-height:1.05}.ortho-formula-equals{align-self:center;text-align:center;font-size:24px;font-weight:900}
+.ortho-v{display:inline-flex;flex-direction:column;align-items:center;line-height:1}.ortho-v small{margin-top:3px;font-size:8px;font-weight:800;color:#4f6b5b}.ortho-missing{display:inline-block;padding:2px 5px;border:2px solid #c93645;border-radius:6px;background:#fff0f1;color:#a22230}
+.ortho-result{padding:12px;border:3px solid #30945b;border-radius:10px;background:white;text-align:center;font-size:clamp(18px,2.3vw,25px);font-weight:900;color:#176b43}
+.ortho-warning{margin-top:10px;padding:11px;border-left:5px solid #d49a19;border-radius:8px;background:#fff4d9}
+.ortho-globe{margin-top:14px;padding:14px;border:3px solid #397eb8;border-radius:12px;background:#f7fbff}.ortho-globe-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.ortho-globe canvas{display:block;width:100%;height:auto;aspect-ratio:1.55;margin-top:10px;border-radius:10px;background:linear-gradient(#f8fcff,#eaf4fa);cursor:grab;touch-action:none}.ortho-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px;margin-top:10px}.ortho-legend>div{padding:10px;border-radius:8px;background:white;line-height:1.45;border-left:5px solid var(--legend)}
+.ortho-quick{margin-top:10px;background:#eefaf4;border:2px solid #74bb92}
+@media(max-width:720px){.ortho-formula{grid-template-columns:75px 14px minmax(0,1fr)}.ortho-formula-main{font-size:9px;gap:1px}.ortho-v small{font-size:7px}.ortho-step{padding:12px 9px}.ortho-globe{padding:10px}.ortho-globe canvas{aspect-ratio:1.05}}
