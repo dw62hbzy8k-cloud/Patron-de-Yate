@@ -25,6 +25,7 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 .visual-aid{margin-top:12px;padding:12px;border:1px solid #bdd5e3;border-radius:11px;background:#f5fbff}.visual-aid h4{margin:0 0 8px;color:#173f5b}.visual-aid svg{display:block;width:100%;height:auto;max-height:360px;background:#fff;border-radius:9px}.visual-aid text{font-family:Arial,Helvetica,sans-serif;fill:#173247}.video-link{display:flex;gap:9px;align-items:center;margin-top:9px;padding:10px;border-radius:9px;background:#fff;border:1px solid #d7e3ea;color:#0d5e82;text-decoration:none;font-weight:bold}.video-link span{font-size:20px}
 .work-item.work-finished-focus{border-color:#42a9cf;background:#eefaff;box-shadow:0 0 0 2px #c8ecf8}.work-frame.work-finished-focus{border-color:#42a9cf;background:#f7fdff;box-shadow:0 0 0 2px #c8ecf8}
 .position-triangle-concept svg>text:nth-of-type(5){transform:translateY(-10px)}
+.height-formula-layout{display:grid!important;grid-template-columns:96px 18px minmax(0,1fr)!important;gap:5px!important;align-items:stretch!important;width:100%}.height-formula-left{min-width:0!important;padding:8px 4px!important}.height-formula-left>div:last-child{font-size:19px!important}.height-formula-equals{align-self:center!important;text-align:center!important;font-size:22px!important}.height-formula-right{min-width:0!important;padding:9px 4px!important;overflow:hidden!important}.height-formula-expression,.height-formula-standalone{display:block!important;width:100%!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;line-height:1.12!important}.height-formula-expression small{font-size:9px!important;white-space:nowrap!important}
 @media(max-width:760px){main{padding:12px}.levels{grid-template-columns:1fr}.examrow{grid-template-columns:1fr}.qhead{display:block}.freq{text-align:left;margin-top:8px}.progress{grid-template-columns:repeat(5,1fr)}.daily-grid,.training-choices{grid-template-columns:1fr}.daily-count{font-size:28px}.calc-plan-stages{grid-template-columns:1fr}.bank-summary{grid-template-columns:1fr 1fr}.bank-row{grid-template-columns:1fr auto;gap:8px}.bank-row .mastery-wrap{grid-column:1/-1;grid-row:2}.bank-frequency{grid-column:2;grid-row:1}.difficulty-pill{grid-column:2;grid-row:3;justify-self:end}.bank-open{grid-column:1;grid-row:3;justify-self:start}.bank-tools select,.calculation-only{width:100%}.welcome-card{display:block}.welcome-name,.welcome-saved{margin-top:14px;align-items:stretch}.welcome-name{flex-direction:column}.welcome-name input{width:100%;min-width:0}}
 .almanac-btn{margin-top:14px;background:#eef5f8;color:#173247;border:1px solid #bfd0db;padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:bold}.almanac-wrap{display:none;margin-top:12px;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fafcfd}.almanac-wrap.open{display:block;margin-top:12px;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fafcfd}.almanac-wrap img{display:block;max-width:100%;height:auto;margin:auto;cursor:zoom-in}.almanac-wrap img.zoom{max-width:none;width:1500px;cursor:zoom-out}.almanac-scroll{overflow:auto;max-height:75vh}.almanac-scroll.almanac-real-stars{overflow:visible;max-height:none}.almanac-scroll.almanac-real-stars img{max-height:none}svg[aria-label^="Triángulo de posición de Vega"]>text:nth-of-type(3){display:none}svg[aria-label^="Triángulo de posición de Vega"]+div>div:first-child::after{content:"El observador está sobre la Tierra justo debajo del cenit Z.";display:block;margin-top:4px;font-weight:400}@media(max-width:700px){canvas[data-meridian-lat-sphere]{aspect-ratio:1.05!important}}</style><link rel="stylesheet" href="assets/calculator-trainer.css?v=movable-3"><link rel="stylesheet" href="assets/workflow-tracker.css?v=work-2"></head><body>
 <header><h1>NavegandoAndo</h1><div style="opacity:.75;font-size:13px;margin-top:4px">Formación náutica · Capitán de Yate · Murcia</div>
@@ -634,6 +635,41 @@ function heightFormulaHTML(q){
  return clean.innerHTML;
 }
 
+function fitHeightFormulaExpressions(root=document){
+ root.querySelectorAll("[data-height-formula-expression]").forEach(el=>{
+  const available=el.clientWidth;
+  if(!available)return;
+  let size=el.classList.contains("height-formula-expression")?15:18;
+  el.style.setProperty("font-size",size+"px","important");
+  while(el.scrollWidth>available&&size>5){size-=.25;el.style.setProperty("font-size",size+"px","important")}
+ });
+}
+function normalizeHeightFormulaLayout(html){
+ const holder=document.createElement("div");
+ holder.innerHTML=html;
+ holder.querySelectorAll("div").forEach(row=>{
+  const children=Array.from(row.children);
+  const left=children.find(child=>Array.from(child.children).some(item=>item.textContent.trim()==="PARTE IZQUIERDA"));
+  const right=children.find(child=>Array.from(child.children).some(item=>item.textContent.trim().startsWith("PARTE DERECHA")));
+  const equals=children.find(child=>child!==left&&child!==right&&child.textContent.trim()==="=");
+  if(!left||!right||!equals)return;
+  row.classList.add("height-formula-layout");
+  left.classList.add("height-formula-left");
+  equals.classList.add("height-formula-equals");
+  right.classList.add("height-formula-right");
+  const expression=right.lastElementChild;
+  if(expression){expression.classList.add("height-formula-expression");expression.dataset.heightFormulaExpression=""}
+ });
+ holder.querySelectorAll('div[style*="overflow-x:auto"]').forEach(expression=>{
+  if(!/^sen\(ae\*?\)\s*=/.test(expression.textContent.trim()))return;
+  expression.classList.add("height-formula-standalone");
+  expression.dataset.heightFormulaExpression="";
+ });
+ requestAnimationFrame(()=>fitHeightFormulaExpressions(document));
+ return holder.innerHTML;
+}
+window.addEventListener("resize",()=>requestAnimationFrame(()=>fitHeightFormulaExpressions(document)));
+
 function calcGuideHTML(q){
  if(!/Cálculo|Ortodrómica|Rectas/i.test(q.module||""))return "";
  if(q.id===731)return "";
@@ -936,7 +972,7 @@ function learningMaterialsHTML(q){
  if(q.id===731){let solution=completeSolutionHTML(q).replace('<div style="margin-top:12px;padding:12px;border:2px solid #d49a19;border-radius:10px;background:#fff8df"><b>PASO 2',`${calculatorHTML(q,true)}<div style="margin-top:12px;padding:12px;border:2px solid #d49a19;border-radius:10px;background:#fff8df"><b>PASO 2`);solution=solution.replace(/<div style="margin-top:14px;padding:14px;border:2px solid #537ca3[\s\S]*?<\/svg><\/div>/,poleAngle731InteractiveHTML());return `${problemTypeHTML(q)}${solution}${quickReminderHTML(q)}`;}
 	 if(POLE_ANGLE_SOLUTIONS[q.id])return `${problemTypeHTML(q)}${almanacHTML(q)}${completeSolutionHTML(q)}${quickReminderHTML(q,true)}`;
 	 if(MERIDIAN_LAT_SOLUTIONS[q.id])return `${problemTypeHTML(q)}${completeSolutionHTML(q)}${quickReminderHTML(q,true)}`;
- return `${problemTypeHTML(q)}${almanacHTML(q)}${heightFormulaHTML(q)}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${quickReminderHTML(q)}`;
+ return `${problemTypeHTML(q)}${almanacHTML(q)}${normalizeHeightFormulaLayout(heightFormulaHTML(q))}${completeSolutionHTML(q)}${calcGuideHTML(q)}${calculatorHTML(q)}${quickReminderHTML(q)}`;
 }
 function enhanceQ98Diagram(scope){
  const svg=scope.querySelector('svg[aria-label="Triángulo de posición del Sol con los datos de noviembre de 2022"]');

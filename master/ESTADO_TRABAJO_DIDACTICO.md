@@ -41,6 +41,7 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 - La ID 1336 no pertenece al bloque: trata de altura verdadera y correcciones de sextante.
 - Recordatorio pendiente de la ID 1010: cuando el usuario tenga físicamente su calculadora fx-85SP X II, comprobar la entrada directa de minutos decimales. Esta comprobación práctica no altera la respuesta matemática ni el estado celeste.
 - Orden didáctico de la ID 1010 (Junio 2026 P11): al comenzar el paso 4 aparece primero el marco morado «Hasta aquí, papel. Ahora coge la calculadora» con los tres datos ya ordenados; inmediatamente después se muestra la fórmula completa.
+- Norma general de maquetación para las fórmulas de este bloque: la parte izquierda ocupa solo el ancho necesario, la fórmula completa permanece en un único renglón y nunca muestra una barra de desplazamiento horizontal. El texto se ajusta automáticamente al espacio disponible en todas las preguntas de Altura estimada / triángulo de posición.
 - La versión rápida conserva el enunciado, las opciones, los datos heredados, el Almanaque necesario y la calculadora.
 
 ## Condiciones para pasar una pregunta a verde
