@@ -1,0 +1,37 @@
+.true-course-type,.true-course-solution{margin-top:12px;border-radius:12px}
+.true-course-type{padding:14px;border:3px solid #2878b5;background:#f3f9fd;line-height:1.65}
+.true-course-type h3,.true-course-solution h3{margin:0 0 7px;color:#173f5b}
+.true-course-symbols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
+.true-course-symbols>div{padding:10px;border:1px solid #b7cfdd;border-radius:9px;background:#fff;text-align:center}
+.true-course-symbols b{display:block;color:#195785;font-size:20px}
+.true-course-solution{border:3px solid #58a66c;background:#f3fbf5}
+.true-course-solution>summary{cursor:pointer;padding:14px;font-weight:900}
+.true-course-body{padding:0 14px 14px;line-height:1.65}
+.true-course-step{position:relative;margin-top:12px;padding:46px 12px 12px;border-radius:11px}
+.true-course-step.blue{border:2px solid #397eb8;background:#eef7ff}
+.true-course-step.yellow{border:2px solid #d49a19;background:#fff8df}
+.true-course-step.orange{border:2px solid #e07816;background:#fff2df}
+.true-course-step.purple{border:3px solid #7657a5;background:#f4effb}
+.true-course-step.green{border:2px solid #30945b;background:#e9f8ef}
+.true-course-step-label{position:absolute;left:12px;top:10px;padding:5px 10px;border-radius:7px;background:#173f5b;color:#fff;font-size:13px;font-weight:900}
+.true-course-data{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+.true-course-data>div{padding:13px;border-radius:9px;background:#fff;text-align:center}
+.true-course-data small{display:block;color:#587080;font-weight:800}
+.true-course-data b{display:block;margin-top:4px;font-size:22px;color:#173f5b}
+.true-course-formula{display:grid;grid-template-columns:minmax(72px,110px) 24px minmax(0,1fr);gap:6px;align-items:stretch;margin-top:10px}
+.true-course-formula .left,.true-course-formula .right{padding:10px 7px;border-radius:9px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.true-course-formula .left{border:2px solid #397eb8;background:#eaf4fc;color:#195785}
+.true-course-formula .right{border:3px solid #30945b;background:#e9f8ef;color:#176b43}
+.true-course-formula small{display:block;font-size:10px;font-weight:800}
+.true-course-formula strong{display:block;font-size:clamp(18px,3vw,25px);line-height:1.25}
+.true-course-formula .equals{align-self:center;text-align:center;font-size:25px;font-weight:900}
+.true-course-result{margin-top:10px;padding:12px;border:3px solid #30945b;border-radius:9px;background:#e9f8ef;text-align:center;color:#176b43;font-size:clamp(20px,3vw,27px);font-weight:900}
+.true-course-graphic{margin-top:16px;padding:14px;border:3px solid #537ca3;border-radius:12px;background:#f7fbff}
+.true-course-graphic-controls{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+.true-course-graphic-controls button{border:1px solid #94afc0;border-radius:8px;background:#fff;padding:7px 10px;color:#173f5b;font-weight:800;cursor:pointer}
+.true-course-graphic-controls button[aria-pressed="true"]{border-color:#2878b5;background:#dceefa}
+.true-course-graphic canvas{display:block;width:100%;height:auto;aspect-ratio:1.7;background:#fff;border-radius:10px}
+.true-course-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.true-course-legend>div{padding:9px;border-radius:8px;background:#fff}
+.true-course-legend .ra{border-left:6px solid #2878b5}.true-course-legend .ct{border-left:6px solid #e07816}.true-course-legend .rv{border-left:6px solid #248a55}
+@media(max-width:680px){.true-course-symbols,.true-course-data,.true-course-legend{grid-template-columns:1fr}.true-course-formula{grid-template-columns:minmax(62px,82px) 18px minmax(0,1fr)}.true-course-graphic canvas{aspect-ratio:1.12}}

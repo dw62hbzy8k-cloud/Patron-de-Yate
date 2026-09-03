@@ -290,8 +290,13 @@ function buildTimeGuide(guideId){
  if(!source)return null;
  return Object.assign({},source,{expected:[...source.expected],directions:[...source.directions],milestones:(source.milestones||[]).map(item=>Object.assign({},item))});
 }
+function buildTrueCourseGuide(guideId){
+ const source=window.TRUE_COURSE_CALCULATOR_GUIDES&&window.TRUE_COURSE_CALCULATOR_GUIDES[guideId];
+ if(!source)return null;
+ return Object.assign({},source,{expected:[...source.expected],directions:[...source.directions],milestones:(source.milestones||[]).map(item=>Object.assign({},item))});
+}
 function trainerMarkup(guideId){
-	 const poleGuide=buildPoleGuide(guideId),meridianGuide=buildMeridianGuide(guideId),trueAltitudeGuide=buildTrueAltitudeGuide(guideId),orthodromicGuide=buildOrthodromicGuide(guideId),reclassifiedGuide=buildReclassifiedGuide(guideId),timeGuide=buildTimeGuide(guideId),dynamicGuide=poleGuide||meridianGuide||trueAltitudeGuide||orthodromicGuide||reclassifiedGuide||timeGuide;
+	 const poleGuide=buildPoleGuide(guideId),meridianGuide=buildMeridianGuide(guideId),trueAltitudeGuide=buildTrueAltitudeGuide(guideId),orthodromicGuide=buildOrthodromicGuide(guideId),reclassifiedGuide=buildReclassifiedGuide(guideId),timeGuide=buildTimeGuide(guideId),trueCourseGuide=buildTrueCourseGuide(guideId),dynamicGuide=poleGuide||meridianGuide||trueAltitudeGuide||orthodromicGuide||reclassifiedGuide||timeGuide||trueCourseGuide;
  const is296=guideId==="296";
 	 const is1010=guideId==="1010",is1258=guideId==="1258",is98=guideId==="98",is334=guideId==="334",is374=guideId==="374",is735=guideId==="735",is970=guideId==="970",is1298=guideId==="1298",is58=guideId==="58",is1335=guideId==="1335",isPole731=guideId==="pole-731",is334Family=is334||is374,isHeight=is296||is1010||is1258||is98||is334Family||is735||is970||is1298||is58||is1335||isPole731||!!dynamicGuide||guideId==="1";
 	 const subtitle=dynamicGuide?dynamicGuide.subtitle:isPole731?"Cálculo interactivo de Marzo 2017 · P12 · ángulo en el Polo.":is58?"Cálculo interactivo de Marzo 2023 · P19 · Deneb.":is1335?"Cálculo interactivo de Noviembre 2023 · P16 · Vega.":is1298?"Cálculo interactivo de Marzo 2024 · P19.":is970?"Cálculo interactivo de Marzo 2015 · P11.":is735?"Cálculo interactivo de Marzo 2017 · P16.":is374?"Cálculo interactivo de Marzo 2020 · Modelo 2 · P15.":is334?"Cálculo interactivo de Julio 2020 · Modelo 1 · P15.":is98?"Cálculo interactivo de Noviembre 2022 · Modelo 2 · P19.":is1258?"Cálculo interactivo de Junio 2024 · pregunta 19 · Vega.":is1010?"Cálculo interactivo de Junio 2026 · Modelo 1 · P11.":is296?"Cálculo interactivo de esta pregunta: altura estimada del Sol.":guideId?"Cálculo interactivo completo de la altura estimada del Sol.":"Convertir grados decimales en grados y minutos.";
@@ -397,7 +402,7 @@ function formatHeightExpression(keys){let sexagesimalPart=0;return keys.map(func
 function mount(root){
  if(root.dataset.ctMounted==="1")return;
  const guideId=root.dataset.heightGuide||"";
-	 const poleGuide=buildPoleGuide(guideId),meridianGuide=buildMeridianGuide(guideId),trueAltitudeGuide=buildTrueAltitudeGuide(guideId),orthodromicGuide=buildOrthodromicGuide(guideId),reclassifiedGuide=buildReclassifiedGuide(guideId),timeGuide=buildTimeGuide(guideId),dynamicGuide=poleGuide||meridianGuide||trueAltitudeGuide||orthodromicGuide||reclassifiedGuide||timeGuide;
+	 const poleGuide=buildPoleGuide(guideId),meridianGuide=buildMeridianGuide(guideId),trueAltitudeGuide=buildTrueAltitudeGuide(guideId),orthodromicGuide=buildOrthodromicGuide(guideId),reclassifiedGuide=buildReclassifiedGuide(guideId),timeGuide=buildTimeGuide(guideId),trueCourseGuide=buildTrueCourseGuide(guideId),dynamicGuide=poleGuide||meridianGuide||trueAltitudeGuide||orthodromicGuide||reclassifiedGuide||timeGuide||trueCourseGuide;
  root.dataset.ctMounted="1";root.innerHTML=trainerMarkup(guideId);
  const inlineTrainer=root.dataset.trainerInstance!=="principal";
  const height296=guideId==="296",height1010=guideId==="1010",height1258=guideId==="1258",height98=guideId==="98",height334=guideId==="334",height374=guideId==="374",height735=guideId==="735",height970=guideId==="970",height1298=guideId==="1298",height58=guideId==="58",height1335=guideId==="1335",pole731=guideId==="pole-731",height334Family=height334||height374,heightGuide=guideId==="1"||height296||height1010||height1258||height98||height334Family||height735||height970||height1298||height58||height1335||pole731||!!dynamicGuide;
