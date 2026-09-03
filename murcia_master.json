@@ -6522,7 +6522,7 @@
       "number": 20,
       "module": "Cálculo de Navegación",
       "topic": "Ortodrómica",
-      "text": "Situados en l = 43° 09,6’ N y L = 009° 47,4’ W, calcular el rumbo inicial (Ri) y distancia ortodrómica (Dort) para navegar por círculo máximo hasta el punto P de: Ip = 06° 48’ N y Lp = 058° 08’ W.",
+      "text": "Situados en l = 43° 09,6’ N y L = 009° 47,4’ W, calcular el rumbo inicial (Ri) y distancia ortodrómica (Dort) para navegar por círculo máximo hasta el punto P de: lP = 06° 48’ N y LP = 058° 08’ W.",
       "options": [
         "Ri = 240° Dort = 3.250,2 millas.",
         "Ri = 246° Dort = 3.340,5 millas.",
