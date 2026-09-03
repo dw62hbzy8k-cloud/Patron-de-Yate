@@ -24,8 +24,8 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 
 - Bloque de Altura estimada / triángulo de posición: 12 preguntas terminadas y aprobadas expresamente por el usuario; se muestran en celeste.
 - Bloque de Ángulo en el Polo (P): 15 preguntas comprobadas tres veces por el asistente; se muestran en verde y quedan pendientes de la revisión del usuario.
-- Bloque de Latitud por meridiana: 2 de 6 preguntas preparadas y comprobadas; se muestran en verde y quedan pendientes de la revisión del usuario. Son Julio 2021 P18 (ID 257) y Noviembre 2017 P18 (ID 657).
-- Pregunta amarilla activa: ninguna. El trabajo se detiene tras estas dos primeras preguntas de Latitud por meridiana, según lo acordado con el usuario.
+- Bloque de Latitud por meridiana: 3 de 6 preguntas preparadas y comprobadas; se muestran en verde y quedan pendientes de la revisión del usuario. Son Julio 2021 P18 (ID 257), Noviembre 2017 P18 (ID 657) y Marzo 2016 P12 (ID 851).
+- Pregunta amarilla activa: ninguna. La siguiente pendiente del bloque es Junio 2019 P19 (ID 458).
 - Las preguntas verdes permanecen verdes hasta que el usuario las revise. Solo entonces pasan a celeste, una por una.
 - La web conserva separados el progreso del alumno y este estado editorial: responder una pregunta no cambia su color editorial.
 
@@ -70,9 +70,11 @@ Una pregunta solo puede marcarse como terminada cuando cumple todo lo siguiente:
 
 ## Bloque Latitud por meridiana · preparación del 3 de septiembre de 2026
 
-- Preguntas terminadas y verdes, pendientes de revisión del usuario: ID 257 (Julio 2021 P18) e ID 657 (Noviembre 2017 P18).
+- Preguntas terminadas y verdes, pendientes de revisión del usuario: ID 257 (Julio 2021 P18), ID 657 (Noviembre 2017 P18) e ID 851 (Marzo 2016 P12).
 - Las dos conservan el mismo patrón: reconocer el paso del Sol por el meridiano; reunir altura verdadera meridiana `av` y declinación `d`; obtener la distancia cenital con `z = 90° − av`; aplicar algebraicamente `l = z + d`; comprobar la respuesta oficial.
 - Incluyen explicación desde cero, fórmula por bloques, calculadora guiada y movible, versión rápida y esfera celeste 3D interactiva. En estas dos preguntas no se abre el Almanaque porque el enunciado ya proporciona `av` y `d`.
 - Resultados comprobados: ID 257, `z = 17°00,5′` y `l = 40°12,2′ N` (respuesta B); ID 657, `z = 51°58,3′` y `l = 32°06,7′ N` (respuesta A).
-- La calculadora fue recorrida tecla por tecla en ambas preguntas y terminó en `40°12′12″` y `32°06′42″`, equivalentes respectivamente a `40°12,2′ N` y `32°06,7′ N`.
+- La calculadora fue recorrida tecla por tecla en las tres preguntas y terminó en `40°12′12″`, `32°06′42″` y `29°59′30″`, equivalentes respectivamente a `40°12,2′ N`, `32°06,7′ N` y `29°59,5′ N` con los datos redondeados visibles.
+- La ID 851 continúa la pregunta 11 de su examen original. La práctica muestra directamente los dos resultados heredados que necesita: `av = 57°23,2′` y `d = −2°37,3′`. Con esos valores ya redondeados, la cuenta da `z = 32°36,8′` y `l = 29°59,5′ N`; el PDF oficial subraya B, `29°59,6′ N`. La diferencia de `0,1′` (6 segundos) es compatible con el redondeo encadenado de la altura verdadera anterior, se explica de forma visible y no se falsea la cuenta.
+- El gráfico 3D común del bloque identifica ahora sobre la propia esfera `z · distancia cenital` y los puntos `N · Norte` y `S · Sur`; también aclara la diferencia entre N y `PN` (Polo Norte celeste). El cambio se aplica a Noviembre 2017 P18 y a las preguntas siguientes del mismo tipo.
 - La clave de Junio 2019 P19 (ID 458) se corrigió provisionalmente a C tras verificar `z = 90° − 78°13,8′ = 11°46,2′` y `l = 11°46,2′ + 23°26,0′ = 35°12,2′ N`; esta pregunta sigue roja y deberá auditarse por completo antes de pasar a verde.
