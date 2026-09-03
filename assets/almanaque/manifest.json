@@ -65,5 +65,11 @@
     "file": "assets/almanaque/2022/2022_incrementos_15m.png",
     "description": "Tabla real de incrementos del Nautical Almanac 2022. Para 15 min 00 s, el incremento del Sol es 3°45,0′.",
     "source": "https://thenauticalalmanac.com/TNARegular/2022_Nautical_Almanac.pdf"
+  },
+  "2022_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real de correcciones de alturas verdaderas del Almanaque Náutico Perseis 2022: Tabla A, Tabla B para Sol y corrección adicional. Usada en Junio 2022 P14 y Abril 2022 P14.",
+    "source": "https://prokbos.com/wp-content/uploads/2025/10/ANP_2022.pdf"
   }
 }

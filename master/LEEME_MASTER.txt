@@ -79,6 +79,7 @@ ALMANAQUE:
 - 24 junio 2023, pág. 184, guardada físicamente en web/assets/almanaque/2023/ y vinculada a Junio 2023 P15.
 - Tabla de correcciones de alturas verdaderas, pág. 387 del Almanaque 2023, vinculada a Junio 2023 P17.
 - 13 junio 2026, pág. 173, guardada físicamente en web/assets/almanaque/2026/.
+- Tabla real de correcciones de alturas verdaderas, pág. 387 del Almanaque Náutico Perseis 2022, guardada físicamente en web/assets/almanaque/2022/ y vinculada a Junio 2022 P14 y Abril 2022 P14.
 
 FUNCIONES:
 - historial automático; intentos numerados; corrector por materias; botón Corregir en P40; gráfico y estadísticas.

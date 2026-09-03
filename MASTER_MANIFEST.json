@@ -279,7 +279,8 @@
     "Plan personal de Cálculo ordenado de fácil a difícil, con práctica directa por tema y semáforo de dominio basado en precisión, variedad y repetición en días distintos"
   ],
   "almanac_assets": [
-    "assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png"
+    "assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png",
+    "assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png"
   ],
   "completed_calculation_resolutions": [
     {
@@ -306,6 +307,6 @@
       "https://www.youtube.com/watch?v=R8MH3_Oh-0E"
     ]
   },
-  "last_update": "2026-08-31",
-  "last_update_note": "Se incorpora entrenamiento diario automático, repetición inteligente, panel de explicación al fallar y guías de cálculo paso a paso. Las cinco preguntas actualmente falladas por el alumno tienen explicación y esquema visual propio; Noviembre 2025 P11 y P16 incluyen teclas Casio exactas. Se mantienen íntegros los 34 exámenes, las 1.360 preguntas y todas las verificaciones anteriores."
+  "last_update": "2026-09-03",
+  "last_update_note": "Se mantienen íntegros los 34 exámenes, las 1.360 preguntas, el progreso del alumno y todas las verificaciones anteriores. El bloque Latitud por meridiana queda preparado al completo: 6 de 6 preguntas comprobadas y en verde, con calculadora guiada, gráficos 3D, versión rápida y la página 387 real del Almanaque Náutico Perseis 2022 para Junio 2022 P14 y Abril 2022 P14. Permanecen pendientes de la revisión del usuario antes de pasar a celeste."
 }

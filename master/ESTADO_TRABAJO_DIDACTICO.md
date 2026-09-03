@@ -24,8 +24,8 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 
 - Bloque de Altura estimada / triángulo de posición: 12 preguntas terminadas y aprobadas expresamente por el usuario; se muestran en celeste.
 - Bloque de Ángulo en el Polo (P): 15 preguntas comprobadas tres veces por el asistente; se muestran en verde y quedan pendientes de la revisión del usuario.
-- Bloque de Latitud por meridiana: 3 de 6 preguntas preparadas y comprobadas; se muestran en verde y quedan pendientes de la revisión del usuario. Son Julio 2021 P18 (ID 257), Noviembre 2017 P18 (ID 657) y Marzo 2016 P12 (ID 851).
-- Pregunta amarilla activa: ninguna. La siguiente pendiente del bloque es Junio 2019 P19 (ID 458).
+- Bloque de Latitud por meridiana: 6 de 6 preguntas preparadas y comprobadas; se muestran en verde y quedan pendientes de la revisión del usuario. Son Julio 2021 P18 (ID 257), Noviembre 2017 P18 (ID 657), Marzo 2016 P12 (ID 851), Junio 2019 P19 (ID 458), Junio 2022 P14 (ID 133) y Abril 2022 P14 (ID 173).
+- Pregunta amarilla activa: ninguna. El bloque completo de Latitud por meridiana queda preparado; el siguiente tipo de Cálculo se elegirá después de la revisión del usuario.
 - Las preguntas verdes permanecen verdes hasta que el usuario las revise. Solo entonces pasan a celeste, una por una.
 - La web conserva separados el progreso del alumno y este estado editorial: responder una pregunta no cambia su color editorial.
 
@@ -70,13 +70,16 @@ Una pregunta solo puede marcarse como terminada cuando cumple todo lo siguiente:
 
 ## Bloque Latitud por meridiana · preparación del 3 de septiembre de 2026
 
-- Preguntas terminadas y verdes, pendientes de revisión del usuario: ID 257 (Julio 2021 P18), ID 657 (Noviembre 2017 P18) e ID 851 (Marzo 2016 P12).
-- Las dos conservan el mismo patrón: reconocer el paso del Sol por el meridiano; reunir altura verdadera meridiana `av` y declinación `d`; obtener la distancia cenital con `z = 90° − av`; aplicar algebraicamente `l = z + d`; comprobar la respuesta oficial.
+- Preguntas terminadas y verdes, pendientes de revisión del usuario: ID 257 (Julio 2021 P18), ID 657 (Noviembre 2017 P18), ID 851 (Marzo 2016 P12), ID 458 (Junio 2019 P19), ID 133 (Junio 2022 P14) e ID 173 (Abril 2022 P14).
+- Las seis conservan el mismo patrón: reconocer el paso del Sol por el meridiano; reunir u obtener altura verdadera meridiana `av` y declinación `d`; obtener la distancia cenital con `z = 90° − av`; aplicar algebraicamente `l = z + d`; comprobar la respuesta oficial.
 - El gráfico 3D común representa también `d`: un arco magenta punteado desde el Ecuador celeste hasta el Sol, rotulado con su valor y dirección Norte o Sur.
-- Incluyen explicación desde cero, fórmula por bloques, calculadora guiada y movible, versión rápida y esfera celeste 3D interactiva. En estas dos preguntas no se abre el Almanaque porque el enunciado ya proporciona `av` y `d`.
-- Resultados comprobados: ID 257, `z = 17°00,5′` y `l = 40°12,2′ N` (respuesta B); ID 657, `z = 51°58,3′` y `l = 32°06,7′ N` (respuesta A).
-- La calculadora fue recorrida tecla por tecla en las tres preguntas y terminó en `40°12′12″`, `32°06′42″` y `29°59′30″`, equivalentes respectivamente a `40°12,2′ N`, `32°06,7′ N` y `29°59,5′ N` con los datos redondeados visibles.
+- Incluyen explicación desde cero, fórmula por bloques, calculadora guiada y movible, versión rápida y esfera celeste 3D interactiva. Las ID 133 y 173 incorporan además la página 387 real del Almanaque Náutico Perseis 2022 y enseñan la cadena `ai → ao → aa → av` antes de calcular la meridiana.
+- Resultados comprobados: ID 257, `l = 40°12,2′ N` (B); ID 657, `l = 32°06,7′ N` (A); ID 458, `l = 35°12,2′ N` (C); ID 133, `l = 37°30,9′ N` (A en nuestra base, el mismo texto que la B subrayada en el PDF); ID 173, `l = 32°46,1′ N` con los valores tabulados y `32°46,2′ N` en el solucionario (D).
+- La calculadora fue recorrida tecla por tecla en las seis preguntas y terminó, respectivamente, en `40°12′12″`, `32°06′42″`, `29°59′30″`, `35°12′12″`, `37°30′54″` y `32°46′06″`. Esas pantallas equivalen a `40°12,2′ N`, `32°06,7′ N`, `29°59,5′ N`, `35°12,2′ N`, `37°30,9′ N` y `32°46,1′ N` con los datos visibles.
 - La ID 851 continúa la pregunta 11 de su examen original. La práctica muestra directamente los dos resultados heredados que necesita: `av = 57°23,2′` y `d = −2°37,3′`. Con esos valores ya redondeados, la cuenta da `z = 32°36,8′` y `l = 29°59,5′ N`; el PDF oficial subraya B, `29°59,6′ N`. La diferencia de `0,1′` (6 segundos) es compatible con el redondeo encadenado de la altura verdadera anterior, se explica de forma visible y no se falsea la cuenta.
 - El gráfico 3D común del bloque identifica ahora sobre la propia esfera `z · distancia cenital` y los puntos `N · Norte` y `S · Sur`; también aclara la diferencia entre N y `PN` (Polo Norte celeste). El cambio se aplica a Noviembre 2017 P18 y a las preguntas siguientes del mismo tipo.
 - La explicación de la calculadora ya no dice «continúa desde z»: muestra la suma o resta completa y explica la conversión de los segundos finales a décimas de minuto; por ejemplo, en Noviembre 2017 P18, `42″ ÷ 60 = 0,7′`, por lo que `32°06′42″ = 32°06,7′ N`.
-- La clave de Junio 2019 P19 (ID 458) se corrigió provisionalmente a C tras verificar `z = 90° − 78°13,8′ = 11°46,2′` y `l = 11°46,2′ + 23°26,0′ = 35°12,2′ N`; esta pregunta sigue roja y deberá auditarse por completo antes de pasar a verde.
+- La clave de Junio 2019 P19 (ID 458) queda corregida definitivamente a C tras cotejar en el PDF oficial que la pregunta 18 aporta `av = 78°13,8′` y que la pregunta 19 subraya `35°12,2′ N`.
+- Junio 2022 P14 (ID 133): `ai = 75°18,9′`, CI `+3,0′`, depresión `−3,2′`, Tabla B `+15,9′` y adicional `−0,3′` producen `av = 75°34,3′`; después `z = 14°25,7′` y `l = 37°30,9′ N`.
+- Abril 2022 P14 (ID 173): la página 387 conduce a `av = 62°19,6′`, `z = 27°40,4′` y `l = 32°46,1′ N`; el solucionario marca `32°46,2′ N`. La diferencia de `0,1′` (6 segundos) se explica de forma transparente y D es la única opción compatible.
+- La calculadora guiada de las dos preguntas instrumentales realiza toda la cadena en tres fases: correcciones hasta `av`, `z = 90° − av` y aplicación de `d` hasta la latitud final.

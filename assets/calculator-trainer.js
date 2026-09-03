@@ -206,6 +206,16 @@ function buildPoleGuide(guideId){
 }
 function buildMeridianGuide(guideId){
  if(!/^meridian-\d+$/.test(guideId||""))return null;const id=guideId.slice(9),s=window.MERIDIAN_LAT_SOLUTIONS&&window.MERIDIAN_LAT_SOLUTIONS[id];if(!s)return null;
+ if(s.instrumental){
+  let expected=poleAngleKeys(s.aiKeys),directions=expected.map(key=>`Pulsa ${key}.`),milestones=[];
+  directions[0]=`Empieza escribiendo ai = ${s.ai}.`;
+  s.correctionOps.forEach(function(correction){expected=expected.concat([correction.key],poleAngleKeys(correction.keys),["="]);directions=directions.concat([`Aplica ${correction.label}: pulsa ${correction.key}.`,...poleAngleKeys(correction.keys).map(key=>`Pulsa ${key}.`),"Pulsa = para aplicar esta corrección."]);milestones.push({at:expected.length,value:correction.screen})});
+  const formulaEnd=expected.length;expected=expected.concat(["9","0","°′″","−","Ans","="]);directions=directions.concat(["Ya tienes av. Escribe 90° para calcular la distancia cenital z.","Completa 90°: pulsa 0.","Pulsa °′″ para indicar grados.","Pulsa −.","Pulsa Ans para utilizar la altura verdadera recién obtenida.","Pulsa = para obtener z."]);const inverseEnd=expected.length;milestones.push({at:inverseEnd,value:s.zScreen});
+  expected=expected.concat([s.operation],poleAngleKeys(s.decKeys),["="]);directions=directions.concat([`La declinación es ${s.decDir==="N"?"Norte: pulsa +":"Sur: pulsa −"} para aplicar ${s.decMagnitude}.`,...poleAngleKeys(s.decKeys).map(key=>`Pulsa ${key}.`),"Pulsa = para obtener la latitud."]);milestones.push({at:expected.length,value:s.latScreen});
+  const finalText=s.officialLat?`Con los valores tabulados: l = ${s.lat}. Respuesta oficial ${s.answer}: ${s.officialLat}.`:`l = ${s.lat}.`;
+  const objective=s.officialLat?`Cuenta: l = ${s.lat} · opción oficial ${s.answer}: ${s.officialLat}`:`Objetivo: l = ${s.lat}`;
+  return {kind:"meridian",id,s,expected,directions,formulaEnd,inverseEnd,milestones,storageKey:`aprobarNautica_meridianLatitudeTrainer_${id}_v2`,finalText,subtitle:`Cálculo interactivo de ${s.title} · desde la altura instrumental hasta la latitud.`,objective,initial:`Empieza con ai = ${s.ai}; la guía aplicará cada corrección en su orden.`,firstFeedback:`Altura verdadera terminada: av = ${s.av}. Ahora calcula z = 90° − av.`,secondFeedback:`Distancia cenital terminada: z = ${s.z}. Ahora aplica la declinación ${s.decDir==="N"?"Norte sumando":"Sur restando"} ${s.decMagnitude}.`,steps:"<li>Corregir ai para obtener av.</li><li>Calcular z = 90° − av.</li><li>Aplicar d y obtener la latitud.</li>"};
+ }
  const ninety=["9","0","°′″"],first=ninety.concat(["−"],poleAngleKeys(s.avKeys),["="]),formulaEnd=first.length,expected=first.concat([s.operation],poleAngleKeys(s.decKeys),["="]),directions=expected.map(key=>`Pulsa ${key}.`);
  directions[0]="Escribe 90° para comenzar la distancia cenital z = 90° − av.";
  directions[ninety.length]=`Pulsa − para restar av = ${s.av}.`;
@@ -369,6 +379,7 @@ function mount(root){
   if(value!==expected[cursor]){if(mode===2){flash(key,"flash-bad");beep();progress.wrong++;saveProgress(progress,storageKey)}return}
   if(mode===2)flash(key,"flash-good");history.push(value);updateHeightState();
   if(cursor===formulaEnd)feedbackEl.textContent=meridianGuide?meridianGuide.firstFeedback:poleGuide?(poleGuide.s.normalization==="add360"?`Resultado: ${poleGuide.s.rawHL}. Como es negativo, añade 360° para dejar hL entre 0° y 360°.`:poleGuide.s.normalization==="subtract360"?`Resultado: ${poleGuide.s.rawHL}. Como supera 360°, resta una vuelta completa.`:`Resultado: hL = ${poleGuide.s.hL} W.`):pole731?"Resultado: −25°09′18″. Añade 360° para escribir hL entre 0° y 360°.":`La fórmula completa ha dado sen(ae${height58||height1335||height1258?'*':''}) = ${milestones[0].value}. Ahora recupera la altura estimada con SHIFT y SIN.`;
+  if(cursor===inverseEnd&&meridianGuide&&inverseEnd<expected.length)feedbackEl.textContent=meridianGuide.secondFeedback||`Distancia cenital terminada: z = ${meridianGuide.s.z}. Ahora aplica la declinación.`;
   if(cursor===inverseEnd&&!meridianGuide)feedbackEl.textContent=poleGuide?(Number(poleGuide.s.hLDeg)>180?`Ya tienes hL = ${poleGuide.s.hL} W. Como supera 180°, réstalo a 360° para obtener el arco corto P.`:`hL = ${poleGuide.s.hL} no supera 180°: ese mismo arco es P = ${poleGuide.s.p} W.`):pole731?"Ya tienes hL = 334°50′42″. Ahora resta este valor a 360° para obtener el arco corto P.":`Ya tienes ae${height58||height1335||height1258?'*':''} = ${milestones[1].value.replace('.',',')}°. Pulsa °′″ para verla en grados, minutos y segundos.`;
   if(cursor===expected.length){display=milestones[milestones.length-1].value;feedbackEl.className="calc-feedback ok";feedbackEl.textContent=`Cálculo completo: ${finalHeightText} Pulsa AC para repetir; el siguiente nivel se elegirá según tu progreso.`;expression="CORRECTO · pulsa AC";complete()}
   render()
