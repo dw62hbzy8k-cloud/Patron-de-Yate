@@ -14364,7 +14364,7 @@
       "model": 2,
       "number": 13,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
+      "topic": "Medida del tiempo · HcG ↔ HcL",
       "text": "A hora civil del lugar (Hcl)= 120342 en situación estimada = 36° 28,6'N - 001° 44,5'W, calculan la hora civil en Greenwich (HcG) de ese instante:",
       "options": [
         "121040",
@@ -20607,7 +20607,7 @@
       "model": 1,
       "number": 11,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
+      "topic": "Medida del tiempo · HcG ↔ HcL",
       "text": "CÁLCULO DE NAVEGACIÓN. EJERCICIOS SOBRE MEDIDA DE TIEMPO. En aguas del Océano Índico cercanos a la Isla de Mauricio, al ser en Greenwich la hora civil de Greenwich (HCG)= 2230 del día 28 de Marzo, calculamos la hora civil del lugar y fecha en situación estimada= 24° 20,2’S 066° 20,0’E. Calculamos la hora civil (HCL) y fecha del lugar en dicha situación:",
       "options": [
         "025520 del 29 de Marzo de 2020.",
@@ -29570,7 +29570,7 @@
       "model": 2,
       "number": 11,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
+      "topic": "Medida del tiempo · HcG ↔ HcL",
       "text": "CÁLCULO DE NAVEGACIÓN. Mes de Marzo de 2018, la Goleta Motor-Yate Dehler de 24 metros de eslora, zarpó de la Marina de Cartagena el 6 de Marzo y navega hacia Canarias en crucero de prácticas de Capitanes de Yate. El viernes 9 de marzo de 2018, navegan en demanda del Estrecho de Gibraltar y a Hora civil del lugar HcL = 221010, su situación estimada es 36° 15’N - 005° 05'W, los alumnos de la sexta guardia del día calculan la Hora civil en Greenwich (HcG) en ese instante ...:",
       "options": [
         "HcG = 230030.",
@@ -32211,7 +32211,7 @@
       "model": 1,
       "number": 11,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
+      "topic": "Medida del tiempo · HcG ↔ HcL",
       "text": "El día 25 de Junio de 2017, el yate -Eagle- navega por aguas del Océano Indico con buena mar y ciclos despejados, cercano a la isla de Mauricio, aprovechando el monzón que el empuja hacia el NE. A hora civil del lugar (HCL) = 21:30:00, se encuentra en situación estimada = 15° 46.0'S - 056° 35.0'E, y su Capitán calcula la hora civil en Greenwich (HCG) en ese instante:",
       "options": [
         "17:43:40 del día 24 de Junio.",
@@ -38712,7 +38712,7 @@
       "model": 1,
       "number": 13,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
+      "topic": "Medida del tiempo · HcG ↔ HcL",
       "text": "EJERCICIOS DE MEDIDA DEL TIEMPO. Encontrándonos en 060° 10' E, tenemos en ese instante HCI (hora civil del lugar) = 04:10:00 del día 22 de Noviembre de 2015. ¿Cuál será la HCG (hora civil de Greenwich) en ese momento?",
       "options": [
         "00:09:20 del 22 de Noviembre.",
@@ -39902,7 +39902,7 @@
       "model": 1,
       "number": 13,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
+      "topic": "Medida del tiempo · HcG ↔ HcL",
       "text": "Ejercicios de medida del tiempo. Siendo Hora Civil en Greenwich (HcG) = 10h 10m, nos encontramos en 110°- 10'E. ¿Cuál será nuestra Hora Civil del Lugar (Hcl) en ese instante?",
       "options": [
         "02:19:20.",
@@ -41228,7 +41228,7 @@
       "model": 1,
       "number": 13,
       "module": "Cálculo de Navegación",
-      "topic": "Medida del tiempo",
+      "topic": "Medida del tiempo · HcG ↔ HcL",
       "text": "Al ser hora Civil en Greenwich (HcG) = 22:30 del día 28 de Marzo, nos encontramos en ese instante en la Longitud = 066°20' E. ¿ Qué Hora Civil del Lugar y fecha tendremos en ese momento?",
       "options": [
         "02:55:20 del día 28 de Marzo.",
@@ -41248,9 +41248,10 @@
           "similarity": 0.52
         }
       ],
-      "answer": "c",
+      "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Verificada por conversión longitud ↔ tiempo."
+      "answer_source": "master/fuentes_oficiales/CARM_CY_Marzo_2015_Tipo1_con_respuestas.pdf",
+      "answer_note": "Respuesta B comprobada en el examen oficial: 02:55:20 del día 29 de marzo. La antigua clave C del banco era errónea y queda rectificada."
     },
     {
       "id": 973,
