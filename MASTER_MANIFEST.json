@@ -276,11 +276,13 @@
     "Explicaciones pedagógicas específicas para Junio 2026 P1, P2 y P8 y Noviembre 2025 P11 y P16",
     "Esquemas visuales propios para las cinco explicaciones específicas y vídeos externos comprobados para coordenadas horarias y círculo vertical",
     "Guías de cálculo para principiantes con croquis, signos, fórmulas, unidades, comprobaciones y teclas Casio; secuencias exactas en Noviembre 2025 P11 y P16",
-    "Plan personal de Cálculo ordenado de fácil a difícil, con práctica directa por tema y semáforo de dominio basado en precisión, variedad y repetición en días distintos"
+    "Plan personal de Cálculo ordenado de fácil a difícil, con práctica directa por tema y semáforo de dominio basado en precisión, variedad y repetición en días distintos",
+    "Bloque de Altura verdadera con cadena ai → ao → aa → av, página real del Almanaque, calculadora guiada y esquema conceptual"
   ],
   "almanac_assets": [
     "assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png",
-    "assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png"
+    "assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png",
+    "assets/almanaque/2023/2023_p387_correcciones_altura_verdadera.png"
   ],
   "completed_calculation_resolutions": [
     {
@@ -291,6 +293,14 @@
       "answer": "b",
       "file": "master/resoluciones/2026-06-murcia-p11-altura-estimada-sol.md",
       "status": "COMPLETA Y VERIFICADA"
+    },
+    {
+      "question_id": 16,
+      "exam": "Junio 2023 Modelo 1",
+      "question": 17,
+      "result": "av = 63°38,5′",
+      "answer": "b",
+      "status": "COMPROBADA POR EL ASISTENTE · PENDIENTE DE REVISIÓN DEL USUARIO"
     }
   ],
   "error_explanations": {

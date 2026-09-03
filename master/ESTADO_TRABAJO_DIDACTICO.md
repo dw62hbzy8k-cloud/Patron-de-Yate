@@ -85,3 +85,14 @@ Una pregunta solo puede marcarse como terminada cuando cumple todo lo siguiente:
 - Junio 2022 P14 (ID 133): `ai = 75°18,9′`, CI `+3,0′`, depresión `−3,2′`, Tabla B `+15,9′` y adicional `−0,3′` producen `av = 75°34,3′`; después `z = 14°25,7′` y `l = 37°30,9′ N`.
 - Abril 2022 P14 (ID 173): la página 387 conduce a `av = 62°19,6′`, `z = 27°40,4′` y `l = 32°46,1′ N`; el solucionario marca `32°46,2′ N`. La diferencia de `0,1′` (6 segundos) se explica de forma transparente y D es la única opción compatible.
 - La calculadora guiada de las dos preguntas instrumentales realiza toda la cadena en tres fases: correcciones hasta `av`, `z = 90° − av` y aplicación de `d` hasta la latitud final.
+
+## Bloque Altura verdadera · inicio del 3 de septiembre de 2026
+
+- Primera pregunta preparada y verde, pendiente de revisión del usuario: ID 16, Junio 2023 P17.
+- Se reconoce por la combinación de altura instrumental `ai`, corrección de índice `CI`, elevación del observador, limbo del Sol y petición expresa de altura verdadera `av`.
+- La web muestra la cadena completa `ai → ao → aa → av` y distingue los datos que aporta el enunciado de las tres correcciones que deben buscarse en el Almanaque.
+- Se incorporó la página 387 real del Almanaque Náutico Perseis 2023. Para esta pregunta: elevación 3 m → depresión `−3,1′`; `aa = 63°23,2′` y Sol por limbo inferior → Tabla B `+15,6′`; 25 de junio → corrección adicional `−0,3′`.
+- Cálculo comprobado: `63°23,3′ + 3,0′ − 3,1′ + 15,6′ − 0,3′ = 63°38,5′`, respuesta B.
+- La calculadora guiada reproduce las cuatro correcciones en orden, termina en `63°38′30″` y explica que equivale a `63°38,5′`.
+- Incluye versión rápida y un esquema lateral que diferencia horizonte visible, horizonte verdadero, visual al limbo inferior y altura verdadera al centro del Sol. Este esquema es conceptual y declara expresamente que no está a escala.
+- La página del Almanaque se conserva con atribución visible y enlace al PDF original. Su licencia permite el uso no comercial; antes de monetizar la plataforma habrá que obtener permiso o sustituirla por material propio/licenciado para uso comercial.

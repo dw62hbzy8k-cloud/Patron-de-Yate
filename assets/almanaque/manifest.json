@@ -15,6 +15,12 @@
     "page": 184,
     "description": "Sábado 24 de junio de 2023. Sol, Luna, Aries, Venus, Marte, Júpiter y Saturno. Usada en Junio 2023, P15."
   },
+  "2023_p387_correcciones_altura_verdadera": {
+    "file": "assets/almanaque/2023/2023_p387_correcciones_altura_verdadera.png",
+    "page": 387,
+    "description": "Página real de correcciones para obtener la altura verdadera del Almanaque Náutico Perseis 2023: Tabla A, Tabla B para Sol y corrección adicional. Usada en Junio 2023 P17.",
+    "source": "https://enc.es/encvirtual/cursos/CYATE/Documentos/ANP_2023.pdf"
+  },
   "2026-06-13_p173": {
     "file": "assets/almanaque/2026/2026-06-13_p173_diaria_sol_luna_planetas.png",
     "date": "2026-06-13",
