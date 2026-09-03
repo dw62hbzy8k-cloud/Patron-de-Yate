@@ -40,6 +40,7 @@ Las preguntas terminadas de otros módulos se registran aparte para no alterar l
 - Incluyen explicación desde cero, datos heredados cuando proceden, Almanaque cuando hace falta, fórmula por colores, calculadora guiada, comprobación y gráfico interactivo.
 - La ID 1336 no pertenece al bloque: trata de altura verdadera y correcciones de sextante.
 - Recordatorio pendiente de la ID 1010: cuando el usuario tenga físicamente su calculadora fx-85SP X II, comprobar la entrada directa de minutos decimales. Esta comprobación práctica no altera la respuesta matemática ni el estado celeste.
+- Orden didáctico de la ID 1010 (Junio 2026 P11): al comenzar el paso 4 aparece primero el marco morado «Hasta aquí, papel. Ahora coge la calculadora» con los tres datos ya ordenados; inmediatamente después se muestra la fórmula completa.
 - La versión rápida conserva el enunciado, las opciones, los datos heredados, el Almanaque necesario y la calculadora.
 
 ## Condiciones para pasar una pregunta a verde
