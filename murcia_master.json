@@ -358,7 +358,7 @@
       "topic": "Ortodrómica",
       "exam_count": 34,
       "exam_percent": 100,
-      "question_count": 69,
+      "question_count": 65,
       "difficulty": 7,
       "study_value": 14
     },
@@ -7566,7 +7566,7 @@
       "model": 2,
       "number": 20,
       "module": "Cálculo de Navegación",
-      "topic": "Ortodrómica",
+      "topic": "Rectas de altura / situación",
       "text": "DOMINGO 16 DE JUNIO DE 2024. Con viento bonancible por la aleta de estribor, cielos despejados y marejada moderada del NE, navegan por la derrota ortodrómica hacia Hawái. A hora civil de Greenwich = 10:05 se encuentran en situación estimada- 30° 10,0'N - 122° 56,0'W y de forma simultánea obtienen tras la observación, los valores determinantes de las rectas de altura de las estrellas: Rosalhague (principal de la constelación de Ophidea) = Zv 263° / diferencia alturas +4'. Antares (principal de la constelación de Scorpio) = Zv= 214° / diferencia alturas +5’. Y rectifican la situación estimada por el sistema gráfico de las rectas de altura:",
       "options": [
         "30° 15’00´´ N - 122° 59’30´´W",
@@ -7574,15 +7574,15 @@
         "30° 01'10´´ N - 122° 50'00´´W",
         "30° 11 30´´ N - 123° 30'02´´W"
       ],
-      "topic_percent": 100,
-      "topic_exam_count": 34,
+      "topic_percent": 64.7,
+      "topic_exam_count": 22,
       "similar_percent": 0,
       "similar_exam_count": 0,
       "difficulty": 7,
       "similar_examples": [],
       "answer": "b",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 20 del tipo 1 CARM; correspondencia verificada por enunciado y texto de la opción en este modelo.",
+      "answer_note": "Respuesta B verificada mediante construcción gráfica y resolución independiente de las dos rectas: el corte queda aproximadamente 3,61 millas al Sur y 3,59 millas al Oeste de la situación estimada, en 30°06′27″ N - 123°00′03″ W.",
       "answer_source": "https://www.carm.es/web/descarga?ARCHIVO=CAP%20junio-2024%20Tipo%201%20con%20respuestas.pdf&ALIAS=ARCH&IDCONTENIDO=199033&IDTIPO=60&RASTRO=c$m74741"
     },
     {
@@ -18087,7 +18087,7 @@
       "model": 2,
       "number": 14,
       "module": "Cálculo de Navegación",
-      "topic": "Ortodrómica",
+      "topic": "Latitud por la Polar",
       "text": "26 de Junio 2021. Navegan sin novedad con viento y marejada del WNW y al rumbo ortodrómico, cielos parcialmente cubiertos y a hora civil de Greenwich = 0510, distinguen entre claros a la Estrella Polar y le toma altura instrumentad 47° 31’, (corrección de índice = -3' y elevación = 3m.) Situación estimada en ese instante= 47° 10,2'N - 007° 59,4'W y tras obtener el valor del horario del lugar de Aries (hlY)= 344° 03,6', con ayuda de las tablas del Almanaque Náutico para la Polar, rectifican la latitud:",
       "options": [
         "47° 05,1'N",
@@ -18095,16 +18095,22 @@
         "47° 14,8'N",
         "47° 24,3'N"
       ],
-      "topic_percent": 100,
-      "topic_exam_count": 34,
+      "topic_percent": 11.8,
+      "topic_exam_count": 4,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
-      "answer": "b",
+      "answer": "a",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 14 del PDF CARM de junio de 2021; correspondencia verificada por enunciado y texto de la opción.",
-      "answer_source": "master/fuentes_oficiales/CARM_CY_Junio_2021_Tipo1_con_respuestas.pdf"
+      "answer_note": "Respuesta A comprobada directamente en el PDF oficial CARM y reproducida con las tablas del Almanaque Náutico 2021: ai* 47°31,0′ − CI 3,0′ − depresión 3,0′ − refracción 0,8′ = av* 47°24,2′; Tabla I −19,0′, Tabla II +0,2′ y Tabla III −0,3′; latitud = 47°05,1′ N.",
+      "answer_source": "https://www.carm.es/web/pagina/descarga?ALIAS=ARCH&ARCHIVO=CAP+junio-2021+Tipo+1+con+respuestas.pdf&IDCONTENIDO=199115&IDTIPO=60",
+      "almanac_assets": [
+        "assets/almanaque/2021/2021_p387_correcciones_altura_verdadera.png",
+        "assets/almanaque/2021/2021_p382_polar_tabla_I_1.png",
+        "assets/almanaque/2021/2021_p383_polar_tabla_I_2.png",
+        "assets/almanaque/2021/2021_p384_polar_tablas_II_III.png"
+      ]
     },
     {
       "id": 254,
@@ -19536,7 +19542,7 @@
       "model": 2,
       "number": 19,
       "module": "Cálculo de Navegación",
-      "topic": "Ortodrómica",
+      "topic": "Almanaque: horario de estrella",
       "text": "Día 21 de Abril de 2021. Hora civil de Greenwich (HcG)= 02:26, se encuentran en situación estimada= 31° 32,8'N - 065° 53,3'W, continúan navegando a todo trapo por rumbo ortodrómico con viento y marejada del WNW y en ese instante el Capitán obtiene nuevo horario en Greenwich de Aries (HGY)= 245° 52,8'y calcula el horario en Greenwich de la estrella -Arcturus- (HG*), sabiendo que el ángulo sidéreo de esta estrella (A.S.) es= 145° 50,4'",
       "options": [
         "HG* = 100°30,7'.",
@@ -19544,15 +19550,15 @@
         "HG* = 018°10,2'.",
         "HG* = 031°43,2'."
       ],
-      "topic_percent": 100,
-      "topic_exam_count": 34,
+      "topic_percent": 67.6,
+      "topic_exam_count": 23,
       "similar_percent": 4,
       "similar_exam_count": 1,
       "difficulty": 7,
       "similar_examples": [],
       "answer": "d",
       "answer_status": "verificada",
-      "answer_note": "Respuesta oficial subrayada en la pregunta 19 del PDF CARM; correspondencia verificada por enunciado y texto de opción.",
+      "answer_note": "Respuesta D verificada: HG* = HGγ + A.S.* = 245°52,8′ + 145°50,4′ = 391°43,2′; al restar 360° queda 31°43,2′.",
       "answer_source": "master/fuentes_oficiales/CARM_CY_Abril_2021_Tipo1_con_respuestas.pdf"
     },
     {

@@ -31,6 +31,24 @@
     "page": 387,
     "description": "Página real anual de correcciones de alturas verdaderas de 2021: Tablas A, B y C y correcciones adicionales."
   },
+  "2021_p382_polar_tabla_I_1": {
+    "file": "assets/almanaque/2021/2021_p382_polar_tabla_I_1.png",
+    "page": 382,
+    "description": "Tabla I de correcciones de la Estrella Polar para horarios locales de Aries entre 0° y 182°.",
+    "source": "https://prokbos.com/wp-content/uploads/2025/10/ANP_2021.pdf"
+  },
+  "2021_p383_polar_tabla_I_2": {
+    "file": "assets/almanaque/2021/2021_p383_polar_tabla_I_2.png",
+    "page": 383,
+    "description": "Continuación de la Tabla I de correcciones de la Estrella Polar para horarios locales de Aries entre 182° y 360°.",
+    "source": "https://prokbos.com/wp-content/uploads/2025/10/ANP_2021.pdf"
+  },
+  "2021_p384_polar_tablas_II_III": {
+    "file": "assets/almanaque/2021/2021_p384_polar_tablas_II_III.png",
+    "page": 384,
+    "description": "Tablas II y III de correcciones de la Estrella Polar en función de la altura, el horario local de Aries y la fecha.",
+    "source": "https://prokbos.com/wp-content/uploads/2025/10/ANP_2021.pdf"
+  },
   "2024_p387_correcciones_altura_verdadera": {
     "file": "assets/almanaque/2024/2024_p387_correcciones_altura_verdadera.png",
     "page": 387,
