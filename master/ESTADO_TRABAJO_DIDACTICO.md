@@ -72,6 +72,7 @@ Una pregunta solo puede marcarse como terminada cuando cumple todo lo siguiente:
 
 - Preguntas terminadas y verdes, pendientes de revisión del usuario: ID 257 (Julio 2021 P18), ID 657 (Noviembre 2017 P18) e ID 851 (Marzo 2016 P12).
 - Las dos conservan el mismo patrón: reconocer el paso del Sol por el meridiano; reunir altura verdadera meridiana `av` y declinación `d`; obtener la distancia cenital con `z = 90° − av`; aplicar algebraicamente `l = z + d`; comprobar la respuesta oficial.
+- El gráfico 3D común representa también `d`: un arco magenta punteado desde el Ecuador celeste hasta el Sol, rotulado con su valor y dirección Norte o Sur.
 - Incluyen explicación desde cero, fórmula por bloques, calculadora guiada y movible, versión rápida y esfera celeste 3D interactiva. En estas dos preguntas no se abre el Almanaque porque el enunciado ya proporciona `av` y `d`.
 - Resultados comprobados: ID 257, `z = 17°00,5′` y `l = 40°12,2′ N` (respuesta B); ID 657, `z = 51°58,3′` y `l = 32°06,7′ N` (respuesta A).
 - La calculadora fue recorrida tecla por tecla en las tres preguntas y terminó en `40°12′12″`, `32°06′42″` y `29°59′30″`, equivalentes respectivamente a `40°12,2′ N`, `32°06,7′ N` y `29°59,5′ N` con los datos redondeados visibles.
