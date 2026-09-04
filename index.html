@@ -1363,6 +1363,7 @@ function initConceptArc5(scope=document){
 }
 function theoryVisualCard(title,aria,body,note){return `<div class="visual-aid"><h4>🖼️ ${title}</h4><svg viewBox="0 0 820 420" role="img" aria-label="${aria}"><rect x="15" y="15" width="790" height="390" rx="18" fill="#f7fbff" stroke="#c8dce9"/>${body}</svg><div style="margin-top:9px;padding:10px;border-radius:9px;background:white;border:1px solid #b9cfdd;text-align:center"><b>${note}</b></div></div>`}
 function theorySimpleVisualHTML(q){
+ if(q.id===1085)return "";
  if(q.id===1081)return theorySimpleVisualHTML({...q,id:1009});
  if(q.id===1082)return theorySimpleVisualHTML({...q,id:1044}).replace("Aries y Libra · declinación cero","Eclíptica · inclinada 23°27′ respecto al Ecuador").replace("Aries y Libra son equinoccios: el Sol cruza el Ecuador celeste y su declinación vale 0°.","La máxima separación angular entre la eclíptica y el Ecuador celeste es 23°27′.");
  if(q.id===1088)return theorySimpleVisualHTML({...q,id:1044});
