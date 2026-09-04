@@ -1482,7 +1482,7 @@ function renderModuleTraining(){
 }
 function startModuleTraining(moduleKey){
  const config=EXAM_MODULES[moduleKey],plan=moduleWeakPlan(moduleKey);if(!config||!plan.length)return;
- runKind="module-review";runQs=plan.map(x=>x.q);dailyReasons=Object.fromEntries(plan.map(x=>[String(x.q.id),x.reason]));runPos=0;runAns={};runConfidence={};runIsValidated=true;
+ runKind="module-review";runModuleKey=moduleKey;runQs=plan.map(x=>x.q);dailyReasons=Object.fromEntries(plan.map(x=>[String(x.q.id),x.reason]));runPos=0;runAns={};runConfidence={};runIsValidated=true;
  $("examResult").innerHTML="";$("backExams").textContent="← Inicio";$("finishExam").disabled=false;$("finishExam").textContent="Terminar entrenamiento";$("examTitle").textContent=`${config.title} · tus preguntas para repasar · ${runQs.length}`;show("examRun");renderRun();
 }
 function renderDailyCard(){
@@ -1592,7 +1592,7 @@ renderExamList();
 const examStrategy=DB.exams.map(e=>{const calc=DB.questions.filter(q=>q.exam_id===e.id&&q.module==="Cálculo de Navegación"),advanced=calc.filter(q=>q.difficulty>=6).length;return{convocatoria:e.convocatoria,model:e.model,without_advanced:calc.length-advanced,advanced}});
 $("strategyRows").innerHTML=examStrategy.map(x=>`<tr><td>${x.convocatoria}</td><td>${x.model}</td><td><b>${x.without_advanced}/10</b></td><td>${x.advanced}/10</td></tr>`).join("");
 
-let runQs=[],runPos=0,runAns={},runConfidence={},runIsValidated=false,runKind="official";
+let runQs=[],runPos=0,runAns={},runConfidence={},runIsValidated=false,runKind="official",runModuleKey=null;
 function startExam(id){runKind="official";runQs=DB.questions.filter(q=>q.exam_id===id).sort((a,b)=>a.number-b.number);runPos=0;runAns={};runConfidence={};runIsValidated=runQs.length===40&&runQs.every(q=>q.answer_status==="verificada"||q.answer_status==="anulada");$("examResult").innerHTML="";$("backExams").textContent="← Exámenes";$("finishExam").disabled=false;$("finishExam").textContent=runIsValidated?"Corregir examen":"Finalizar examen sin corregir";$("examTitle").textContent=runQs[0].convocatoria+" · Modelo "+runQs[0].model+(runIsValidated?"":" · Sin corrector");show("examRun");renderRun()}
 function startMistakeExam(){
  const mistakes=currentMistakes();
@@ -1601,7 +1601,7 @@ function startMistakeExam(){
  $("examResult").innerHTML="";$("backExams").textContent="← Mi progreso";$("finishExam").disabled=false;$("finishExam").textContent="Terminar repaso";$("examTitle").textContent=`Mi repaso personal · ${runQs.length} ${runQs.length===1?"pregunta":"preguntas"}`;show("examRun");renderRun();
 }
 function renderProg(){$("examProgress").innerHTML=runQs.map((q,i)=>{const a=runAns[q.id];let st="";if(a&&q.answer_status==="verificada")st=isCorrect(q,a)?"correct":"wrong";return `<div class="pnum ${st} ${i===runPos?"current":""}" data-i="${i}">${runKind==="official"?q.number:i+1}</div>`}).join("");document.querySelectorAll(".pnum").forEach(x=>x.onclick=()=>{runPos=+x.dataset.i;renderRun()})}
-function renderRun(){renderProg();$("finishExam").style.display=runPos===runQs.length-1?"inline-block":"none";const q=runQs[runPos],sel=runAns[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;const origin=runKind!=="official"?` · ${q.convocatoria} · pregunta original ${q.number}`:"",reason=(runKind==="daily"||runKind==="calculation")?`<div class="daily-pill" style="display:inline-block;margin-top:8px">Por qué aparece: ${esc(dailyReasons[String(q.id)]||"Repaso personalizado")}</div>`:"";
+function renderRun(){renderProg();$("finishExam").style.display=runPos===runQs.length-1?"inline-block":"none";const q=runQs[runPos],sel=runAns[q.id];let fb="";if(sel&&q.answer_status==="verificada")fb=isCorrect(q,sel)?'<div class="feedback ok">✓ Correcto</div>':`<div class="feedback no">✗ Incorrecto · Correcta(s): ${correctAnswerText(q)}</div>`;const origin=runKind!=="official"?` · ${q.convocatoria} · pregunta original ${q.number}`:"",reason=(runKind==="daily"||runKind==="calculation"||runKind==="module-review")?`<div class="daily-pill" style="display:inline-block;margin-top:8px">Por qué aparece: ${esc(dailyReasons[String(q.id)]||"Repaso personalizado")}</div>`:"";
 $("examQuestion").innerHTML=`<div class="sub">Pregunta ${runPos+1} de ${runQs.length} · ${q.module}${origin}</div>${reason}<div class="question">${esc(q.text)}</div>${dependencyContextHTML(q)}${q.options.map((o,i)=>optHTML(q,i,sel)).join("")}${studyModeToggleHTML(q)}${learningMaterialsHTML(q)}${fb}${correctionDetailHTML(q,sel)}${correctConceptHTML(q,sel)}${confidenceHTML(q,sel,runConfidence[q.id])}`;
 bindStudyMode($("examQuestion"),renderRun);
  if(window.CalculatorTrainer)window.CalculatorTrainer.mountAll($("examQuestion"));
@@ -1610,7 +1610,7 @@ bindStudyMode($("examQuestion"),renderRun);
  enhanceQ98Diagram($("examQuestion"));
 document.querySelectorAll("#examQuestion .opt").forEach(x=>x.onclick=()=>{if(q.answer_status==="anulada"||runAns[q.id])return;runAns[q.id]=x.dataset.l;runConfidence[q.id]="knew";$("examResult").innerHTML="";renderRun()});
 document.querySelectorAll("#examQuestion .confidence").forEach(x=>x.onclick=()=>{runConfidence[q.id]=x.dataset.confidence;renderRun()})}
-$("examPrev").onclick=()=>{runPos=Math.max(0,runPos-1);renderRun()};$("examNext").onclick=()=>{runPos=Math.min(runQs.length-1,runPos+1);renderRun()};$("backExams").onclick=()=>show(runKind==="mistakes"?"stats":(runKind==="daily"||runKind==="calculation")?"home":"exams");$("startMistakeExam").onclick=startMistakeExam;
+$("examPrev").onclick=()=>{runPos=Math.max(0,runPos-1);renderRun()};$("examNext").onclick=()=>{runPos=Math.min(runQs.length-1,runPos+1);renderRun()};$("backExams").onclick=()=>show(runKind==="mistakes"?"stats":(runKind==="daily"||runKind==="calculation"||runKind==="module-review")?"home":"exams");$("startMistakeExam").onclick=startMistakeExam;
 $("finishExam").onclick=()=>{
  const pending=runQs.filter(q=>q.answer_status!=="anulada"&&!runAns[q.id]);
  if(pending.length){
@@ -1618,13 +1618,13 @@ $("finishExam").onclick=()=>{
    $("examResult").innerHTML=`<div class="feedback no">Todavía no se puede corregir: faltan ${pending.length} ${pending.length===1?"pregunta":"preguntas"} por responder. Te he llevado a la primera pendiente.</div>`;
    return;
  }
- if(runKind==="mistakes"||runKind==="daily"||runKind==="calculation"){
+ if(runKind==="mistakes"||runKind==="daily"||runKind==="calculation"||runKind==="module-review"){
    const now=Date.now(),records=runQs.map((q,i)=>practiceRecord(q,runAns[q.id],now+i,runConfidence[q.id]||"knew",runKind));
    const correct=records.filter(x=>x.correct).length,wrong=records.length-correct;
-   savePracticeBatch(records);const remaining=currentMistakes().length;
+   savePracticeBatch(records);const remaining=runKind==="module-review"?moduleWeakPlan(runModuleKey).length:currentMistakes().length;
    $("finishExam").disabled=true;
    const unsure=records.filter(x=>x.confidence!=="knew").length;
-   $("examResult").innerHTML=`<div class="card"><h3 style="margin-top:0">${runKind==="mistakes"?"Repaso terminado":runKind==="calculation"?"Entrenamiento de Cálculo terminado":"Entrenamiento terminado"}</h3><div style="font-size:25px"><b>${correct}/${records.length} correctas</b></div><div class="sub" style="margin-top:6px">${wrong} errores · ${unsure} respuestas dudadas o adivinadas.</div><div style="margin-top:12px;padding:11px;border-radius:9px;background:${remaining?"#fff6e8":"#e5f6ec"}"><b>${remaining?`Quedan ${remaining} ${remaining===1?"pregunta que necesita":"preguntas que necesitan"} refuerzo.`:"¡Todo lo pendiente está consolidado por ahora!"}</b></div><div class="sub" style="margin-top:9px">Las acertadas no se dan por aprendidas por casualidad: la web volverá a comprobarlas en otro día.</div><button class="action" id="mistakeResultBack" style="margin-top:14px">${runKind==="mistakes"?"Volver a mi progreso":"Volver al inicio"}</button></div>`;
+   $("examResult").innerHTML=`<div class="card"><h3 style="margin-top:0">${runKind==="mistakes"?"Repaso terminado":runKind==="calculation"?"Entrenamiento de Cálculo terminado":runKind==="module-review"?`${EXAM_MODULES[runModuleKey].title} · práctica terminada`:"Entrenamiento terminado"}</h3><div style="font-size:25px"><b>${correct}/${records.length} correctas</b></div><div class="sub" style="margin-top:6px">${wrong} errores · ${unsure} respuestas dudadas o adivinadas.</div><div style="margin-top:12px;padding:11px;border-radius:9px;background:${remaining?"#fff6e8":"#e5f6ec"}"><b>${remaining?`Quedan ${remaining} ${remaining===1?"pregunta que necesita":"preguntas que necesitan"} refuerzo en este módulo.`:"¡Todo lo pendiente está consolidado por ahora!"}</b></div><div class="sub" style="margin-top:9px">Esto es una práctica personalizada, no un examen: aquí no se califica el módulo como aprobado o suspendido.</div><button class="action" id="mistakeResultBack" style="margin-top:14px">${runKind==="mistakes"?"Volver a mi progreso":"Volver al inicio"}</button></div>`;
    $("mistakeResultBack").onclick=()=>show(runKind==="mistakes"?"stats":"home");
    return;
  }
