@@ -329,6 +329,7 @@ function setupDocking(root,calculationZone){
  const dock=root.querySelector(".calc-body-wrap"),handle=root.querySelector("[data-ct-drag-handle]"),closeButton=root.querySelector("[data-ct-dock-close]");
  if(!dock||!handle)return;
  const forceDocked=root.dataset.forceDocked==="1";
+ const questionBoundary=root.closest("#qbox")||calculationZone;
  const originalBodyPaddingBottom=document.body.style.paddingBottom;
  const anchor=root.parentElement,originalAnchorPaddingBottom=anchor?anchor.style.paddingBottom:"";
  let saved=loadDockPosition(),dragging=null,docked=false,ticking=false,enterScroll=0,exitScroll=Infinity,blockRedockAtBottom=false,manuallyClosed=false;
@@ -341,13 +342,14 @@ function setupDocking(root,calculationZone){
  function setDocked(next){
   if(next===docked)return;
   if(next){
-   const dockHeight=Math.max(1,dock.getBoundingClientRect().height),trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect(),pageY=window.scrollY;
+   const dockHeight=Math.max(1,dock.getBoundingClientRect().height),trainerRect=root.getBoundingClientRect(),pageY=window.scrollY;
    enterScroll=Math.max(0,pageY+trainerRect.top-window.innerHeight*.72);
-   exitScroll=Math.max(enterScroll+120,pageY+zoneRect.bottom-(dockHeight-1)-80);
    root.style.minHeight="0";root.style.height="0";
    if(anchor)anchor.style.paddingBottom="2px";
    document.body.style.paddingBottom=Math.min(dockHeight,window.innerHeight*.45)+"px";
    docked=true;root.classList.add("calc-docked");restore();
+   const boundaryRect=questionBoundary.getBoundingClientRect();
+   exitScroll=Math.max(enterScroll+120,pageY+boundaryRect.bottom-80);
   }else{
    docked=false;root.classList.remove("calc-docked");root.style.minHeight="";root.style.height="";if(anchor)anchor.style.paddingBottom=originalAnchorPaddingBottom;document.body.style.paddingBottom=originalBodyPaddingBottom;
   }
@@ -357,7 +359,6 @@ function setupDocking(root,calculationZone){
   if(ticking)return;ticking=true;
   requestAnimationFrame(function(){
    ticking=false;
-   if(forceDocked){setDocked(true);return}
    const pageY=window.scrollY;
    if(manuallyClosed){
     if(pageY>=enterScroll-24)return;
@@ -365,9 +366,11 @@ function setupDocking(root,calculationZone){
    }
    if(docked){
     if(pageY<enterScroll-24){setDocked(false);return}
+    if(pageY>=exitScroll){setDocked(false);blockRedockAtBottom=true;return}
     return
    }
    if(blockRedockAtBottom){if(pageY>=exitScroll-140)return;blockRedockAtBottom=false}
+   if(forceDocked){setDocked(true);return}
    const trainerRect=root.getBoundingClientRect(),zoneRect=calculationZone.getBoundingClientRect();
    if(trainerRect.top<=window.innerHeight*.72&&zoneRect.bottom>80)setDocked(true)
   })
