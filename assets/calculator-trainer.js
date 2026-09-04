@@ -422,7 +422,8 @@ function mount(root){
  function updateProgress(){const recommended=recommendedMode(progress);progressEl.innerHTML=`<span class="calc-progress-pill">Guiado: ${progress.guided}</span><span class="calc-progress-pill">Práctica: ${progress.practice}</span><span class="calc-progress-pill">Solo: ${progress.solo}</span><span class="calc-progress-pill"><b>Recomendado: nivel ${recommended}</b></span>`}
  function updateSteps(){const active=stepIndex();stepItems.forEach(function(item,index){item.classList.toggle("active",index===active&&cursor<expected.length);item.classList.toggle("done",index<active||cursor>=expected.length)})}
  function updateKeyState(){keys.forEach(function(key){key.classList.remove("next-key","locked")});if(mode===1&&cursor<expected.length){keys.forEach(function(key){if(key.dataset.key===expected[cursor])key.classList.add("next-key");else key.classList.add("locked")})}}
- function activeExpected(){return mode===3&&dynamicGuide&&dynamicGuide.soloExpected?dynamicGuide.soloExpected:expected}
+function activeExpected(){return mode===3&&dynamicGuide&&dynamicGuide.soloExpected?dynamicGuide.soloExpected:expected}
+ function soloRoutes(){return dynamicGuide&&dynamicGuide.soloExpected?[dynamicGuide.soloExpected].concat(dynamicGuide.soloExpectedAlternatives||[]):[expected]}
  function render(){const route=activeExpected();expressionEl.textContent=expression;resultEl.textContent=pretty(display);expressionEl.scrollLeft=expressionEl.scrollWidth;resultEl.scrollLeft=resultEl.scrollWidth;instructionEl.textContent=cursor<route.length?(mode===3?"Modo Solo: utiliza la calculadora sin ayuda.":directions[cursor]):heightGuide?`Cálculo completo: ${finalHeightText}`:"Ejercicio terminado: 44,895188° = 44°53,7′.";updateSteps();updateKeyState();updateProgress()}
  function complete(){if(completed)return;completed=true;if(mode===1)progress.guided++;else if(mode===2)progress.practice++;else progress.solo++;saveProgress(progress,storageKey);updateProgress()}
  function reset(){cursor=0;history=[];expression=startExpression;display=startValue;stored=Number(startValue);pending=null;typing=false;completed=false;feedbackEl.className="calc-feedback";feedbackEl.textContent=dynamicGuide?dynamicGuide.initial:pole731?"Empieza escribiendo hG☉ = 11°06,0′; después restarás la longitud Oeste.":height1258?"Empieza por SIN: vas a introducir l = 31°32,2′, d* = 38°48,2′ y P = 13°05′46″.":height1010?"Empieza por SIN: vas a introducir l = 40°34′, d = 23°13,8′ y P = 23°09,6′, exactamente como están escritos.":height296?"Empieza por SIN: vas a introducir la fórmula real con los datos de esta pregunta.":heightGuide?"Empieza por SIN: vas a introducir la fórmula real con l, d y P.":mode===3?"Calculadora libre. Haz la conversión y después pulsa «Revisar resultado».":"La pantalla ya contiene 44,895188. Empieza por la operación indicada.";render()}
@@ -441,8 +442,12 @@ function mount(root){
   if(value==="S⇔D"){return true}
   return false
  }
- function updateHeightState(){
+function updateHeightState(){
  cursor=history.length;expression=formatHeightExpression(history);
+ if(mode===3&&dynamicGuide&&dynamicGuide.soloExpected){
+  display=history.length?expression:"0";
+  return;
+ }
  const reached=milestones.filter(function(item){return cursor>=item.at}).pop();
  display=reached?reached.value:"";
 }
@@ -458,12 +463,15 @@ function mount(root){
   if(cursor===expected.length){display=milestones[milestones.length-1].value;feedbackEl.className="calc-feedback ok";feedbackEl.textContent=`Cálculo completo: ${finalHeightText} Pulsa AC para repetir; el siguiente nivel se elegirá según tu progreso.`;expression="CORRECTO · pulsa AC";complete()}
   render()
  }
- function soloHeightPress(key,value){
-  const route=activeExpected();
+function soloHeightPress(key,value){
+  const routes=soloRoutes(),route=activeExpected();
   if(value==="AC"&&route[history.length]!=="AC"){setMode(mode);return}
   if(completed)return;
   history.push(value);updateHeightState();
-  if(history.length>=route.length){const mismatch=firstMismatch(route);if(mismatch===route.length&&history.length===route.length){expression="CORRECTO · pulsa AC";display=milestones[milestones.length-1].value;feedbackEl.className="calc-feedback ok";feedbackEl.textContent=`Ruta completa correcta: ${finalHeightText} Pulsa AC para comenzar otra vez.`;complete()}else{const pressed=history[mismatch]||"ninguna",wanted=route[mismatch]||"terminar";expression=`ERROR · tecla ${mismatch+1}`;display=`${pressed} ≠ ${wanted}`;feedbackEl.className="calc-feedback bad";feedbackEl.textContent=`El primer error empezó en la pulsación ${mismatch+1}: pulsaste ${pressed} y correspondía ${wanted}.`}}
+  const exact=routes.some(candidate=>candidate.length===history.length&&candidate.every((item,index)=>item===history[index]));
+  const possible=routes.some(candidate=>history.length<=candidate.length&&history.every((item,index)=>item===candidate[index]));
+  if(exact){expression="CORRECTO · pulsa AC";display=milestones[milestones.length-1].value;feedbackEl.className="calc-feedback ok";feedbackEl.textContent=`Ruta completa correcta: ${finalHeightText} Pulsa AC para comenzar otra vez.`;complete()}
+  else if(!possible){const mismatch=Math.max(0,history.length-1),pressed=history[mismatch]||"ninguna",wanted=routes.map(candidate=>candidate[mismatch]).filter(Boolean).filter((item,index,list)=>list.indexOf(item)===index).join(" o ")||"terminar";expression=`ERROR · tecla ${mismatch+1}`;display=`${pressed} ≠ ${wanted}`;feedbackEl.className="calc-feedback bad";feedbackEl.textContent=`El primer error empezó en la pulsación ${mismatch+1}: pulsaste ${pressed} y correspondía ${wanted}.`}
   render()
  }
  function guidedPress(key,value){if(value==="AC"){setMode(mode);return}if(cursor>=expected.length)return;if(value!==expected[cursor]){if(mode===2){flash(key,"flash-bad");beep();progress.wrong++;saveProgress(progress,storageKey)}return}if(mode===2)flash(key,"flash-good");useBasicKey(value);history.push(value);cursor++;if(cursor===4)feedbackEl.textContent="Pantalla: 0,895188. Es la parte decimal de grado que falta convertir en minutos.";if(cursor===expected.length){feedbackEl.className="calc-feedback ok";feedbackEl.textContent="Correcto: 53,71128′. Redondea a 53,7′ y detente; no pulses °′″ otra vez.";complete()}render()}
