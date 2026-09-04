@@ -2,6 +2,7 @@
 "use strict";
 
 const LESSONS={
+ 1259:{estimate:{lat:30+10/60,lon:-(122+56/60),label:"30°10,0′ N · 122°56,0′ W"},stars:[{name:"Rosalhague",az:263,azLabel:"263°",dh:4},{name:"Antares",az:214,azLabel:"214°",dh:5}],result:"30°06′27″ N · 123°00′03″ W",answer:"B"},
  1018:{estimate:{lat:36+17.7/60,lon:-(24+54.5/60),label:"36°17,7′ N · 024°54,5′ W"},stars:[{name:"Kochab",az:345,azLabel:"345°",dh:-2},{name:"Arcturus",az:248,azLabel:"248°",dh:3}],result:"36°15,0′ N · 024°57,2′ W",answer:"D"},
  1099:{estimate:{lat:27,lon:-(16+31.9/60),label:"27°00,0′ N · 016°31,9′ W"},stars:[{name:"Atria",az:5,azLabel:"005°",dh:-3.5},{name:"Fomalhaut",az:120,azLabel:"120°",dh:2.5}],result:"26°56,4′ N · 016°31,0′ W",answer:"A"},
  1137:{estimate:{lat:24+50.3/60,lon:150+58/60,label:"24°50,3′ N · 150°58,0′ E"},stars:[{name:"Kochab",az:346,azLabel:"N14W = 346°",dh:3},{name:"Hamal",az:75,azLabel:"N75E = 075°",dh:2}],result:"24°53,7′ N · 150°59,3′ E",answer:"A"},
