@@ -27,7 +27,8 @@ starDirections[0]="Empieza escribiendo el horario de Greenwich de Aries: HGγ = 
 starDirections[angleKeys([245,"52,8"]).length]="Pulsa + porque el ángulo sidéreo de la estrella se suma.";
 starDirections[starFirst.length]="El resultado supera 360°. Pulsa − y quita una vuelta completa de 360°.";
 
-const lopLongitudeExpected=["3",".","5","÷","cos","3","0","°′″","1","0","°′″",")","="];
+const lopCosineEnd=["3",".","5","÷","cos","3","0","°′″","1","0","°′″",")","="];
+const lopLongitudeExpected=lopCosineEnd.concat(["AC","1","2","2","°′″","5","6","°′″","+","0","°′″","4","°′″","="]);
 const lopLongitudeDirections=lopLongitudeExpected.map(key=>`Pulsa ${key}.`);
 lopLongitudeDirections[0]="Escribe las 3,5 millas que has medido hacia el Oeste: comienza por 3.";
 lopLongitudeDirections[1]="Pulsa la coma decimal.";
@@ -39,6 +40,16 @@ lopLongitudeDirections[9]="Completa los 10 minutos.";
 lopLongitudeDirections[10]="Pulsa °′″ para indicar que 10 son minutos.";
 lopLongitudeDirections[11]="Cierra el paréntesis del coseno.";
 lopLongitudeDirections[12]="Pulsa = para obtener los minutos de longitud.";
+lopLongitudeDirections[lopCosineEnd.length]="Ya tienes 4,048…′, que redondeamos a 4,0′ W. Pulsa AC para comenzar la suma con la longitud estimada.";
+lopLongitudeDirections[lopCosineEnd.length+1]="Escribe la longitud estimada 122°56,0′ W: comienza por 122.";
+lopLongitudeDirections[lopCosineEnd.length+4]="Pulsa °′″ para indicar que 122 son grados.";
+lopLongitudeDirections[lopCosineEnd.length+7]="Pulsa °′″ para indicar que 56 son minutos.";
+lopLongitudeDirections[lopCosineEnd.length+8]="Pulsa + porque el desplazamiento también es hacia el Oeste.";
+lopLongitudeDirections[lopCosineEnd.length+9]="Escribe 0°04,0′ W: comienza por 0 grados.";
+lopLongitudeDirections[lopCosineEnd.length+10]="Pulsa °′″ para indicar los 0 grados.";
+lopLongitudeDirections[lopCosineEnd.length+11]="Escribe los 4 minutos de longitud Oeste.";
+lopLongitudeDirections[lopCosineEnd.length+12]="Pulsa °′″ para indicar que 4 son minutos.";
+lopLongitudeDirections[lopCosineEnd.length+13]="Pulsa = para obtener la longitud observada.";
 
 window.RECLASSIFIED_CALCULATOR_GUIDES={
  "context-253":{expected:polarExpected,directions:polarDirections,formulaEnd:angleKeys([47,"31"]).length+correctionKeys("−","3").length+correctionKeys("−","3").length+correctionKeys("−","0,8").length,inverseEnd:polarExpected.length-correctionKeys("−","0,3").length,milestones:[
@@ -49,7 +60,7 @@ window.RECLASSIFIED_CALCULATOR_GUIDES={
   {at:polarExpected.length-correctionKeys("−","0,3").length,value:"47°05′24″"},{at:polarExpected.length,value:"47°05′06″"}],
   storageKey:"navegandoAndo_polar253_v1",finalText:"l = 47°05,1′ N · respuesta A.",subtitle:"Cálculo interactivo · latitud por la Polar.",objective:"Objetivo: l = 47°05,1′ N · respuesta A",initial:"Empieza con ai* = 47°31,0′; la guía aplicará las seis correcciones en su orden.",firstFeedback:"Ya tienes la altura verdadera de la Polar: av* = 47°24,2′. Ahora aplica las tres tablas específicas de la Polar.",secondFeedback:"Faltan las correcciones pequeñas de las Tablas II y III.",steps:"<li>Corregir la lectura del sextante y obtener av*.</li><li>Aplicar las Tablas I, II y III de la Polar.</li><li>Leer la latitud final y compararla con las opciones.</li>"},
  "context-298":{expected:starExpected,directions:starDirections,formulaEnd:starFirst.length,inverseEnd:starExpected.length,milestones:[{at:starFirst.length,value:"391°43′12″"},{at:starExpected.length,value:"31°43′12″"}],storageKey:"navegandoAndo_hgStar298_v1",finalText:"HG* = 31°43,2′ · respuesta D.",subtitle:"Cálculo interactivo · horario de Greenwich de Arcturus.",objective:"Objetivo: HG* = 31°43,2′ · respuesta D",initial:"Empieza escribiendo HGγ = 245°52,8′.",firstFeedback:"La suma da 391°43,2′. Como supera 360°, quita una vuelta completa.",steps:"<li>Sumar HGγ y el ángulo sidéreo de Arcturus.</li><li>Comprobar si el resultado supera 360°.</li><li>Restar 360° y leer HG*.</li>"},
- "context-1259":{expected:lopLongitudeExpected,directions:lopLongitudeDirections,formulaEnd:lopLongitudeExpected.length,inverseEnd:lopLongitudeExpected.length,milestones:[{at:lopLongitudeExpected.length,value:"4.048267841"}],storageKey:"navegandoAndo_lopLongitude1259_v1",finalText:"4,048′ ≈ 4,0′ de longitud Oeste.",subtitle:"Convierte el desplazamiento Oeste medido en minutos de longitud.",objective:"Objetivo: 3,5 ÷ cos(30°10′) ≈ 4,0′ W",initial:"Empieza por las 3,5 millas medidas hacia el Oeste.",steps:"<li>Escribir las 3,5 millas medidas hacia el Oeste.</li><li>Dividir entre cos(30°10′).</li><li>Redondear el resultado a 4,0′ W.</li>"}
+ "context-1259":{expected:lopLongitudeExpected,directions:lopLongitudeDirections,formulaEnd:lopCosineEnd.length,inverseEnd:lopCosineEnd.length,milestones:[{at:lopCosineEnd.length,value:"4.048267841"},{at:lopLongitudeExpected.length,value:"123°00′00″"}],storageKey:"navegandoAndo_lopLongitude1259_v2",finalText:"L = 123°00,0′ W.",subtitle:"Convierte el desplazamiento Oeste y aplícalo a la longitud estimada.",objective:"Objetivo: 3,5 ÷ cos(30°10′) ≈ 4,0′ W; después L = 123°00,0′ W",initial:"Empieza por las 3,5 millas medidas hacia el Oeste.",secondFeedback:"Ya tienes 4,048…′, que redondeamos a 4,0′ W. Ahora aplícalos a la longitud estimada.",steps:"<li>Calcular 3,5 ÷ cos(30°10′) y obtener 4,0′ W.</li><li>Sumar 0°04,0′ W a 122°56,0′ W.</li><li>Leer la longitud observada: 123°00,0′ W.</li>"}
 };
 
 window.reclassifiedTypeHTML=function(q){
