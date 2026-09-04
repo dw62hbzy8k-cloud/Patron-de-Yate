@@ -11,3 +11,5 @@
 .calc-photo-stage{contain:layout paint;background:#3156c3 url("casio-fx85spxii-frontal.png") 50% 0/215.5172% auto no-repeat}
 .calc-photo-image{display:none}
 html,body{overflow-x:hidden}
+.calc-inline-trainer .calc-trainer-controls{grid-template-columns:repeat(2,minmax(0,1fr))}
+.calculator-benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
