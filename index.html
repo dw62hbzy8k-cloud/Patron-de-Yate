@@ -290,6 +290,7 @@ DIDACTIC_WORKFLOW.completedInExecutionOrder.push(...TWO_LOP_REVIEW_ORDER.filter(
 DIDACTIC_WORKFLOW.completedInExecutionOrder.push(...MERIDIAN_ALTITUDE_REVIEW_ORDER.filter(id=>!DIDACTIC_WORKFLOW.completedInExecutionOrder.includes(id)));
 DIDACTIC_WORKFLOW.completedInExecutionOrder.push(...TIME_DIRECT_REVIEW_ORDER.filter(id=>!DIDACTIC_WORKFLOW.completedInExecutionOrder.includes(id)));
 DIDACTIC_WORKFLOW.completedInExecutionOrder.push(...[257,253].filter(id=>!DIDACTIC_WORKFLOW.completedInExecutionOrder.includes(id)));
+DIDACTIC_WORKFLOW.completedInExecutionOrder.push(...[657,851,458,133,173].filter(id=>!DIDACTIC_WORKFLOW.completedInExecutionOrder.includes(id)));
 const TWO_LOP_WORK_IDS=new Set(TWO_LOP_REVIEW_ORDER);
 DB.questions.forEach(q=>{if(POLE_ANGLE_WORK_IDS.has(q.id))q.topic="Ángulo en el Polo";});
 DB.questions.forEach(q=>{if(TRUE_ALTITUDE_WORK_IDS.has(q.id))q.topic="Altura verdadera";});
