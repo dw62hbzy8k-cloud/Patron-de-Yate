@@ -81,7 +81,7 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 <script>document.head.insertAdjacentHTML("beforeend",'<link rel="stylesheet" href="assets/contextual-lessons.css?v=contextual-11">');</script>
 <script src="assets/contextual-lessons.js?v=minutos-completos-dos-formas-1"></script>
 <script src="assets/two-lop-lessons.js?v=rectas-altura-unificadas-5"></script>
-<script src="assets/almanac-hours-lessons.js?v=horarios-astros-2"></script>
+<script src="assets/almanac-hours-lessons.js?v=horarios-astros-3"></script>
 <script src="assets/calculator-trainer.js?v=ocultar-al-salir-1"></script>
 <script>
 (function(){
@@ -366,8 +366,12 @@ const ALMANAC_ASSETS={
  174:["assets/almanaque/2022/horarios/2022-04-02.png"],
  175:["assets/almanaque/2022/horarios/2022-04-02.png","assets/almanaque/2022/horarios/2022-angulos-sidereos.png"],
  214:["assets/almanaque/2021/horarios/2021-11-17.png"],
- 297:["assets/almanaque/2021/horarios/2021-04-20.png"],
- 413:["assets/almanaque/2019/horarios/2019-11-16.png"],
+  297:["assets/almanaque/2021/horarios/2021-04-20.png"],
+  332:["assets/almanaque/2020/horarios/2020-03-29-30-sol.png","assets/almanaque/2020/horarios/2020-incrementos-20m.png"],
+  333:["assets/almanaque/2020/horarios/2020-03-29-30-aries.png","assets/almanaque/2020/horarios/2020-incrementos-40m.png"],
+  372:["assets/almanaque/2020/horarios/2020-03-29-30-sol.png","assets/almanaque/2020/horarios/2020-incrementos-20m.png"],
+  373:["assets/almanaque/2020/horarios/2020-03-29-30-aries.png","assets/almanaque/2020/horarios/2020-incrementos-40m.png"],
+  413:["assets/almanaque/2019/horarios/2019-11-16.png"],
  454:["assets/almanaque/2019/horarios/2019-06-22.png"],
  493:["assets/almanaque/2019/horarios/2019-03-22.png"],
  533:["assets/almanaque/2018/horarios/2018-11-17.png"],
@@ -379,8 +383,13 @@ const ALMANAC_ASSETS={
  692:["assets/almanaque/2017/horarios/2017-06-25.png","assets/almanaque/2017/horarios/2017-angulos-sidereos.png","assets/almanaque/2017/horarios/2017-estrellas.png"],
  730:["assets/almanaque/2017/horarios/2017-03-26.png"],
  772:["assets/almanaque/2016/horarios/2016-11-20.png"],
- 810:["assets/almanaque/2016/horarios/2016-06-26.png","assets/almanaque/2016/horarios/2016-angulos-sidereos.png"],
- 95:["assets/almanaque/2022/2022-11-26_diaria.png","assets/almanaque/2022/2022_incrementos_15m.png"],
+  810:["assets/almanaque/2016/horarios/2016-06-26.png","assets/almanaque/2016/horarios/2016-angulos-sidereos.png"],
+  894:["assets/almanaque/2015/horarios/2015-11-21-23-sol.png","assets/almanaque/2015/horarios/2015-incrementos-43m.png"],
+  895:["assets/almanaque/2015/horarios/2015-11-22-aries.png","assets/almanaque/2015/horarios/2015-incrementos-10m.png","assets/almanaque/2015/horarios/2015-estrellas-as.png"],
+  935:["assets/almanaque/2015/horarios/2015-06-21-23-sol.png","assets/almanaque/2015/horarios/2015-incrementos-30m.png"],
+  974:["assets/almanaque/2015/horarios/2015-03-29-31-sol.png","assets/almanaque/2015/horarios/2015-incrementos-20m.png"],
+  975:["assets/almanaque/2015/horarios/2015-03-29-31-aries.png","assets/almanaque/2015/horarios/2015-incrementos-40m.png"],
+  95:["assets/almanaque/2022/2022-11-26_diaria.png","assets/almanaque/2022/2022_incrementos_15m.png"],
  133:["assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png"],
  173:["assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png"],
  218:["assets/almanaque/2021/2021-11-20_diaria.png"],
@@ -429,7 +438,7 @@ function almanacHTML(q){
  ${meridianCorrectionsHelp}
  ${poleAlmanacHelp}
  ${trueAltitude2023Help}
-  ${a.map((src,i)=>{let label=`Hoja ${i+1} del Almanaque`;if(q.id===54)label="Tabla real de estrellas 2023 · busca Spica y cruza con la columna Mar: A.S.* = 158°23,6′";if(q.id===1010)label=src.includes("p173")?"1 · Página diaria 173: toma hG y declinación del Sol a UT 14 h.":"2 · Página 430, columna 10 minutos y fila 44 segundos: toma el incremento de 2°41,0′.";if(q.id===1050)label=src.includes("p82")?"1 · Página diaria 82: toma hG y declinación del Sol a UT 11 h.":"2 · Página 430, columna 10 minutos y fila 0 segundos: toma el incremento de 2°30,0′.";if(q.id===1258)label=src.includes("tabla_real")?"1 · Tabla real de estrellas 2024: busca Vega y lee Dec = +38°48,2′":"2 · Ayuda didáctica: la misma fila de Vega, ampliada y explicada";if(q.id===58)label="Página 379 del Almanaque Náutico 2023: fila Deneb · columna Mar";if(q.id===1335)label="Página 379 del Almanaque Náutico 2023: fila Vega · columna Sep";if(q.id===15)label="Página diaria del 24 de junio de 2023 · referencia de los datos heredados";if(TRUE_ALTITUDE_SOLUTIONS[q.id])label=`Página 387 real del Almanaque Náutico Perseis ${TRUE_ALTITUDE_SOLUTIONS[q.id].year} · Tablas A y ${TRUE_ALTITUDE_SOLUTIONS[q.id].tableLabel}${TRUE_ALTITUDE_SOLUTIONS[q.id].additionalCorrection?" y corrección adicional":""}`;if(q.id===133||q.id===173)label="Página 387 real del Almanaque Náutico Perseis 2022 · Tablas A y B y corrección adicional";if([95,218,258,770].includes(q.id))label=src.includes("incrementos")?`${i+1} · Tabla real de incrementos · usa el bloque indicado arriba`:`${i+1} · Página diaria real · localiza la fecha, UT y hG señalados arriba`;const fullRealTable=(q.id===1258&&src.includes("tabla_real"))||(q.id===54||q.id===58||q.id===1335||TRUE_ALTITUDE_SOLUTIONS[q.id]||q.id===133||q.id===173)?" almanac-real-stars":"";return `<div style="margin:12px 0 6px;font-weight:800;color:#173f5f">${label}</div><div class="almanac-scroll${fullRealTable}"><img src="${src}" alt="Hoja ${i+1} del Almanaque Náutico" onclick="this.classList.toggle('zoom')"></div>`}).join("")}</div>`;
+  ${a.map((src,i)=>{let label=`Hoja ${i+1} del Almanaque`;if(src.includes("incrementos"))label=`${i+1} · Tabla real de incrementos · busca los minutos y segundos de la HcG`;else if(src.includes("-aries"))label=`${i+1} · Página diaria real · columna Aries y fila de la hora UT`;else if(src.includes("-sol"))label=`${i+1} · Página diaria real · columna Sol y fila de la hora UT`;if(q.id===54)label="Tabla real de estrellas 2023 · busca Spica y cruza con la columna Mar: A.S.* = 158°23,6′";if(q.id===1010)label=src.includes("p173")?"1 · Página diaria 173: toma hG y declinación del Sol a UT 14 h.":"2 · Página 430, columna 10 minutos y fila 44 segundos: toma el incremento de 2°41,0′.";if(q.id===1050)label=src.includes("p82")?"1 · Página diaria 82: toma hG y declinación del Sol a UT 11 h.":"2 · Página 430, columna 10 minutos y fila 0 segundos: toma el incremento de 2°30,0′.";if(q.id===1258)label=src.includes("tabla_real")?"1 · Tabla real de estrellas 2024: busca Vega y lee Dec = +38°48,2′":"2 · Ayuda didáctica: la misma fila de Vega, ampliada y explicada";if(q.id===58)label="Página 379 del Almanaque Náutico 2023: fila Deneb · columna Mar";if(q.id===1335)label="Página 379 del Almanaque Náutico 2023: fila Vega · columna Sep";if(q.id===15)label="Página diaria del 24 de junio de 2023 · referencia de los datos heredados";if(TRUE_ALTITUDE_SOLUTIONS[q.id])label=`Página 387 real del Almanaque Náutico Perseis ${TRUE_ALTITUDE_SOLUTIONS[q.id].year} · Tablas A y ${TRUE_ALTITUDE_SOLUTIONS[q.id].tableLabel}${TRUE_ALTITUDE_SOLUTIONS[q.id].additionalCorrection?" y corrección adicional":""}`;if(q.id===133||q.id===173)label="Página 387 real del Almanaque Náutico Perseis 2022 · Tablas A y B y corrección adicional";if([95,218,258,770].includes(q.id))label=src.includes("incrementos")?`${i+1} · Tabla real de incrementos · usa el bloque indicado arriba`:`${i+1} · Página diaria real · localiza la fecha, UT y hG señalados arriba`;const fullRealTable=(q.id===1258&&src.includes("tabla_real"))||(q.id===54||q.id===58||q.id===1335||TRUE_ALTITUDE_SOLUTIONS[q.id]||q.id===133||q.id===173)?" almanac-real-stars":"";return `<div style="margin:12px 0 6px;font-weight:800;color:#173f5f">${label}</div><div class="almanac-scroll${fullRealTable}"><img src="${src}" alt="Hoja ${i+1} del Almanaque Náutico" onclick="this.classList.toggle('zoom')"></div>`}).join("")}</div>`;
 }
 window.almanacHTML=almanacHTML;
 

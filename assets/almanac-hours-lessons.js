@@ -32,7 +32,7 @@ const LESSONS={
  772:{kind:"sun",date:"20 de noviembre de 2016",time:"10:50:00",base:"333°34,6′",inc:"12°30,0′",result:"346°04,6′",answer:"C"},
  810:{kind:"starSeconds",date:"26 de junio de 2016",time:"22:30:00",body:"Antares",ariesBase:"245°27′10″",ariesInc:"7°31′14″",base:"252°58′24″",sha:"112°23′24″",raw:"365°21′48″",result:"005°21′48″",answer:"A",normalize:true},
  894:{kind:"sun",date:"22 de noviembre de 2015",time:"07:43:20",base:"288°30,1′",inc:"10°50,0′",result:"299°20,1′",answer:"D",carry:"El enunciado da HcL = 06:30 y L = 18°20′ W. Esa longitud equivale a 1 h 13 min 20 s; al estar al Oeste: HcG = 06:30:00 + 01:13:20 = 07:43:20."},
- 895:{kind:"star",date:"22 de noviembre de 2015",time:"08:10:00",body:"Procyon",ariesBase:"181°36,1′",ariesInc:"2°30,4′",base:"184°06,5′",sha:"244°21,4′",result:"68°27,9′",answer:"A",normalize:true},
+ 895:{kind:"star",date:"22 de noviembre de 2015",time:"08:10:00",body:"Procyon",ariesBase:"180°59,6′",ariesInc:"2°30,4′",base:"183°30,0′",sha:"244°57,9′",result:"68°27,9′",answer:"A",normalize:true},
  935:{kind:"sun",date:"21 de junio de 2015",time:"06:30:00",base:"254°35,0′",inc:"7°30,0′",result:"262°05,0′",answer:"B"},
  974:{kind:"sun",date:"29 de marzo de 2015",time:"10:20:00",base:"328°46,8′",inc:"5°00,0′",result:"333°46,8′",answer:"C"},
  975:{kind:"aries",date:"29 de marzo de 2015",time:"10:40:00",base:"336°29,6′",inc:"10°01,6′",result:"346°31,2′",answer:"D"}
@@ -46,17 +46,17 @@ const baseSolution=window.reclassifiedSolutionHTML;
 const baseQuick=window.reclassifiedQuickHTML;
 const baseGraphics=window.initReclassifiedGraphics;
 
-const angleParts=value=>{const m=String(value).match(/(\d+)°\s*(\d+)(?:[,.](\d+))?′/);return m?[m[1],m[2]+(m[3]?","+m[3]:"")]:null};
-const angleKeys=value=>{const p=angleParts(value);if(!p)return[];const out=[];p[0].split("").forEach(x=>out.push(x));out.push("°′″");p[1].split("").forEach(x=>out.push(x===","?".":x));out.push("°′″");return out};
+const angleParts=value=>{const m=String(value).match(/(\d+)°\s*(\d+)(?:[,.](\d+))?′(?:\s*(\d+(?:[,.]\d+)?)″)?/);return m?[m[1],m[2]+(m[3]?","+m[3]:""),m[4]||""]:null};
+const angleKeys=value=>{const p=angleParts(value);if(!p)return[];const out=[];p[0].split("").forEach(x=>out.push(x));out.push("°′″");p[1].split("").forEach(x=>out.push(x===","?".":x));out.push("°′″");if(p[2]){p[2].split("").forEach(x=>out.push(x===","?".":x));out.push("°′″")}return out};
 const operationFor=s=>s.kind==="local"?s.operator:"+";
 const operands=s=>s.kind==="star"||s.kind==="starSeconds"?[s.base,s.sha]:s.kind==="local"?[s.base,s.longitude]:[s.base,s.inc];
 
 Object.entries(LESSONS).forEach(([id,s])=>{
- if(!["sun","aries","star","local"].includes(s.kind))return;
+ if(!["sun","aries","star","starSeconds","local"].includes(s.kind))return;
  const [a,b]=operands(s),op=operationFor(s),expected=angleKeys(a).concat([op],angleKeys(b),["="]);
  if(s.normalize)expected.push("−","3","6","0","°′″","=");
  const directions=expected.map(k=>`Pulsa ${k}.`);
- directions[0]=s.kind==="star"?`Empieza escribiendo HGγ = ${s.base}.`:s.kind==="local"?`Empieza escribiendo HGγ = ${s.base}.`:`Empieza con el valor de la hora entera: ${s.base}.`;
+ directions[0]=s.kind==="star"||s.kind==="starSeconds"?`Empieza escribiendo hGγ = ${s.base}.`:s.kind==="local"?`Empieza escribiendo hGγ = ${s.base}.`:`Empieza con el valor de la hora entera: ${s.base}.`;
  directions[angleKeys(a).length]=op==="−"?"Pulsa − porque la longitud Oeste se resta.":"Pulsa + para añadir el segundo arco.";
  window.RECLASSIFIED_CALCULATOR_GUIDES[`almanac-${id}`]={expected,directions,formulaEnd:expected.length,inverseEnd:expected.length,milestones:[{at:expected.length,value:s.result}],storageKey:`navegandoAndo_almanac_${id}_v1`,finalText:`Resultado: ${s.result} · respuesta ${s.answer}.`,subtitle:"Cálculo guiado del horario astronómico.",objective:`Objetivo: ${s.result} · respuesta ${s.answer}`,initial:directions[0],steps:"<li>Escribir el primer valor.</li><li>Aplicar la suma o resta indicada.</li><li>Si supera 360°, quitar una vuelta completa.</li>"};
 });
@@ -89,14 +89,15 @@ function standardSolution(q,s){
  const minute=Number(s.time.slice(3,5)),incrementPage=261+Math.floor(minute/3),incrementLink=!isLocal&&(!isStar||starNeedsAries)?`<a class="almanac-btn almanac-increment-link" href="https://thenauticalalmanac.com/TNARegular/2023_Nautical_Almanac.pdf#page=${incrementPage}" target="_blank" rel="noopener">📖 Abrir la tabla real de incrementos · ${minute} minutos</a><div class="sub" style="margin-top:7px">La tabla de incrementos es universal: el valor depende de los minutos y segundos, no del año de la observación.</div>`:"";
  const firstFormula=isStar&&starNeedsAries?`${s.ariesBase} + ${s.ariesInc} = ${s.base}`:s.base;
  const ariesGivenExplanation=isStar&&s.ariesGiven?`<div class="context-note"><b>¿Qué significa hGγ y de dónde sale?</b> <b>hG</b> significa horario en Greenwich y <b>γ</b> representa el punto Aries. Juntos, <b>hGγ</b> es el horario en Greenwich del punto Aries. En esta pregunta no tienes que calcularlo ni buscarlo en el Almanaque: el propio enunciado ya proporciona <b>hGγ = ${s.base}</b>.</div>`:"";
- const graphicIntro=isStar?`El arco <b>azul</b> es <b>hGγ</b>: desde el meridiano de Greenwich hasta Aries, contado hacia el <b>Oeste</b>. Al mover el control aparece el arco <b>naranja</b>, <b>A.S.*</b>: desde Aries hasta ${s.body}, también hacia el <b>Oeste</b>. El arco <b>verde</b> reúne ambos y representa <b>${requested}</b>. Aunque el punto final quede cerca del lado Este de Greenwich, aquí no usamos el camino corto: el horario de Greenwich se expresa siempre de 0° a 360° hacia el Oeste.`:`Arrastra el control. El arco azul es el primer valor; el arco verde añade el segundo dato. Las flechas indican el sentido en que se realiza la operación.`;
- const trainer=["sun","aries","star","local"].includes(s.kind)?`<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-${q.id}" data-height-guide="almanac-${q.id}"></div>`:"";
+ const graphicHeading=isStar?`de Greenwich a ${s.body}`:isLocal?"de Greenwich al meridiano del lugar":isAries?"avance de Aries durante la hora":"avance del Sol durante la hora";
+ const graphicIntro=isStar?`El arco <b>azul</b> es <b>hGγ</b>: desde el meridiano de Greenwich hasta Aries, contado hacia el <b>Oeste</b>. Al mover el control aparece el arco <b>naranja</b>, <b>A.S.*</b>: desde Aries hasta ${s.body}, también hacia el <b>Oeste</b>. El arco <b>verde</b> reúne ambos y representa <b>${requested}</b>. Aunque el punto final quede cerca del lado Este de Greenwich, aquí no usamos el camino corto: el horario de Greenwich se expresa siempre de 0° a 360° hacia el Oeste.`:isLocal?`El arco <b>azul</b> lleva de Greenwich a Aries y representa <b>hGγ</b>. El arco <b>naranja</b> sitúa el meridiano del observador mediante su longitud. El arco <b>verde</b> se mide desde ese meridiano hasta Aries, hacia el <b>Oeste</b>, y es <b>hLγ</b>.`:isAries?`El arco <b>azul</b> es el horario de Aries a la hora entera. El tramo <b>naranja</b> es lo que Aries avanza durante los minutos y segundos. El arco <b>verde</b> es el horario final <b>hGγ</b>. Todos se cuentan desde Greenwich hacia el <b>Oeste</b>.`:`El arco <b>azul</b> es el horario del Sol a la hora entera. El tramo <b>naranja</b> es lo que el Sol avanza durante los minutos y segundos. El arco <b>verde</b> es el horario final <b>hG☉</b>. Todos se cuentan desde Greenwich hacia el <b>Oeste</b>.`;
+ const trainer=["sun","aries","star","starSeconds","local"].includes(s.kind)?`<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-${q.id}" data-height-guide="almanac-${q.id}"></div>`:"";
  return `<details class="card almanac-complete" open><summary><b>🟢 Resolución completa · comprobada varias veces</b></summary><div class="context-lesson">
  <div class="context-step blue"><span class="context-step-label">PASO 1</span><b>IDENTIFICA QUÉ PIDEN Y ORDENA LOS DATOS</b><div class="context-data-grid">${dataBox("FECHA",s.date)}${dataBox("HORA CIVIL DE GREENWICH · HcG",s.time)}${(isStar&&s.ariesGiven)||isLocal?dataBox("hGγ YA DADO",s.base):""}${dataBox("RESULTADO QUE FALTA",`${requested} = ?`,true)}</div>${ariesGivenExplanation}${s.carry?`<div class="context-note"><b>Dato recuperado del examen original:</b> ${s.carry}</div>`:""}<div class="context-note"><b>No mezcles coordenadas con este cálculo:</b> si piden un horario <b>en Greenwich</b>, la situación estimada no modifica el resultado. La longitud solo interviene cuando se pide un horario <b>del lugar</b>.</div></div>
  <div class="context-step"><span class="context-step-label">PASO 2</span><b>${isLocal?"APLICA LA LONGITUD":"ABRE LA HOJA CORRECTA DEL ALMANAQUE"}</b><p>${sheetInstruction}</p>${isLocal?"":almanacSheets(q)}${formulaRow(firstSymbol,starNeedsAries?"OBTÉN PRIMERO hGγ":"PRIMER DATO",firstFormula)}</div>
  <div class="context-step green"><span class="context-step-label">PASO 3</span><b>${isStar?"LEE EL ÁNGULO SIDÉREO DE LA ESTRELLA":isLocal?"DECIDE EL SIGNO DE LA LONGITUD":"LEE EL INCREMENTO DE MINUTOS Y SEGUNDOS"}</b><p>${incrementInstruction}</p>${incrementLink}<div class="context-data-grid">${dataBox(secondLabel,secondValue)}${s.declination&&isStar?dataBox("d* · DECLINACIÓN DE LA ESTRELLA",s.declination):""}</div>${formulaRow(requested,"FÓRMULA PREPARADA",rule)}</div>
  <div class="context-step purple" data-calculation-zone><span class="context-step-label">PASO 4</span><b>REALIZA LA CUENTA CON LA CALCULADORA</b>${formulaRow(requested,"SUSTITUCIÓN COMPLETA",calcExpression)}${rawNeedsNormalize}${trainer}${finalBox(s)}${s.note?`<div class="context-note"><b>Comprobación del original:</b> ${s.note}</div>`:""}</div>
- <div class="context-visual almanac-visual" id="almanac-graphic-${q.id}"><h3>GRÁFICO INTERACTIVO · de Greenwich al astro</h3><p>${graphicIntro}</p><canvas data-almanac-wheel data-question-id="${q.id}" aria-label="Círculo horario interactivo del ejercicio"></canvas><div class="context-controls"><label>Ver avance <input data-almanac-progress type="range" min="0" max="100" value="100" step="1"></label><button type="button" data-almanac-reset>Repetir</button></div></div>
+ <div class="context-visual almanac-visual" id="almanac-graphic-${q.id}"><h3>GRÁFICO INTERACTIVO · ${graphicHeading}</h3><p>${graphicIntro}</p><canvas data-almanac-wheel data-question-id="${q.id}" aria-label="Círculo horario interactivo del ejercicio"></canvas><div class="context-controls"><label>Ver avance <input data-almanac-progress type="range" min="0" max="100" value="100" step="1"></label><button type="button" data-almanac-reset>Repetir</button></div></div>
  <div class="context-check"><b>Comprobación independiente:</b> ${calcExpression}${s.normalize?"; después se resta 360°":""} = <b>${s.result}</b>. Coincide con la respuesta ${s.answer}.</div>
  </div></details>`;
 }
@@ -124,13 +125,13 @@ function heightSolution(q,s){return `<details class="card almanac-complete" open
 window.reclassifiedSolutionHTML=function(q){const s=LESSONS[q.id];if(!s)return baseSolution(q);if(s.kind==="pole")return poleSolution(q,s);if(s.kind==="declination")return declinationSolution(q,s);if(s.kind==="height")return heightSolution(q,s);return standardSolution(q,s)};
 window.reclassifiedQuickHTML=function(q,options={}){const s=LESSONS[q.id];if(!s)return baseQuick(q);const sheets=options.includeSheets&&["sun","aries","star","starSeconds","pole","declination"].includes(s.kind)?`<details class="context-quick"><summary><b>Hojas del Almanaque necesarias</b></summary>${almanacSheets(q)}</details>`:"";return `${sheets}<div class="context-quick"><b>Recordatorio rápido:</b> ${s.kind==="sun"?"fila de la hora entera del Sol + incremento de minutos y segundos":s.kind==="aries"?"fila de Aries + incremento propio de Aries":s.kind==="star"||s.kind==="starSeconds"?"hG* = hGγ + A.S.*; si pasa de 360°, resta 360°":s.kind==="local"?"hL = hG + longitud algebraica; Este suma y Oeste resta":s.kind==="declination"?"lee dos declinaciones consecutivas e interpola la fracción de hora":s.kind==="pole"?"hG* = hGγ + A.S.*; después hL* y finalmente P":"sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)"}. <b>${resultSymbol(s)} = ${s.result} · ${s.answer}</b>.</div>`};
 
-function deg(value){const p=angleParts(value);return p?(+p[0]+(+p[1].replace(",","."))/60):0}
+function deg(value){const p=angleParts(value);return p?(+p[0]+(+p[1].replace(",","."))/60+(p[2]?+p[2].replace(",",".")/3600:0)):0}
 function drawWheel(canvas,s,progress){
  const rect=canvas.getBoundingClientRect(),w=Math.max(320,rect.width||760),h=Math.max(500,Math.round(w*.6)),dpr=Math.min(2,devicePixelRatio||1);
  canvas.width=w*dpr;canvas.height=h*dpr;
  const c=canvas.getContext("2d");c.setTransform(dpr,0,0,dpr,0,0);
- const isStar=s.kind==="star"||s.kind==="starSeconds",cx=w*.5,cy=h*.46,r=Math.min(w*.27,h*.29),toRad=v=>(v-90)*Math.PI/180;
- const vals=operands(s),a=deg(vals[0]),b=deg(vals[1]),direction=operationFor(s)==="−"?-1:1,p=Math.max(0,Math.min(1,progress/100)),end=a+direction*b*p;
+ const isStar=s.kind==="star"||s.kind==="starSeconds",isLocal=s.kind==="local",isAries=s.kind==="aries",cx=w*.5,cy=h*.5,r=Math.min(w*.27,h*.29),toRad=v=>(v-90)*Math.PI/180;
+ const vals=operands(s),a=deg(vals[0]),b=deg(vals[1]),direction=operationFor(s)==="−"?-1:1,p=Math.max(0,Math.min(1,progress/100)),end=a+direction*b*p,resultAngle=deg(s.result);
  c.clearRect(0,0,w,h);c.fillStyle="#f7fbff";c.fillRect(0,0,w,h);
 
  c.strokeStyle="#c8dbe9";c.lineWidth=16;c.beginPath();c.arc(cx,cy,r,0,Math.PI*2);c.stroke();
@@ -153,26 +154,36 @@ function drawWheel(canvas,s,progress){
  const pointLabel=(value,title,detail,color)=>{const t=toRad(value),radius=r+38;let x=cx+Math.cos(t)*radius,y=cy+Math.sin(t)*radius;y=Math.max(105,Math.min(h-125,y));x=Math.max(78,Math.min(w-78,x));c.textAlign="center";c.fillStyle=color;c.font="900 13px Arial";c.fillText(title,x,y);c.font="700 12px Arial";c.fillText(detail,x,y+17)};
  const legend=(y,color,text)=>{c.fillStyle=color;c.fillRect(Math.max(18,cx-r),y-10,15,5);c.fillStyle="#173f5b";c.font="700 13px Arial";c.textAlign="left";c.fillText(text,Math.max(42,cx-r+24),y)};
 
- ray(0,"#516b7d",3);ray(a,"#2f73a8",3);ray(end,isStar?"#dc7a13":"#2c9a61",3);
- arcArrow(0,a,"#2f73a8",9,r);
- arcArrow(a,end,isStar?"#dc7a13":"#2c9a61",10,r);
- if(isStar)arcArrow(0,end,"#198754",5,r-22);
- dot(a,"#2f73a8");dot(end,isStar?"#ffd33d":"#2c9a61",isStar?"#dc7a13":"#ffffff");
+ const longitudeIsEast=isLocal&&/\sE$/.test(s.longitude),observerAngle=longitudeIsEast?-b:b;
+ ray(0,"#516b7d",3);ray(a,"#2f73a8",3);
+ if(isLocal){
+  ray(observerAngle,"#dc7a13",3);arcArrow(0,a,"#2f73a8",9,r);arcArrow(0,observerAngle,"#dc7a13",7,r-13);arcArrow(observerAngle,observerAngle+resultAngle*p,"#198754",7,r+14);dot(observerAngle,"#dc7a13");dot(a,"#2f73a8");
+ }else{
+  ray(end,"#dc7a13",3);arcArrow(0,a,"#2f73a8",9,r);arcArrow(a,end,"#dc7a13",10,r);arcArrow(0,resultAngle*p,"#198754",5,r-22);dot(a,"#2f73a8");dot(end,isStar?"#ffd33d":"#dc7a13",isStar?"#dc7a13":"#ffffff");
+ }
 
- c.textAlign="center";c.fillStyle="#173f5b";c.font="900 18px Arial";c.fillText(isStar?`Horario de ${s.body} · ${resultSymbol(s)} = ${s.result}`:`${resultSymbol(s)} = ${s.result}`,cx,32);
- c.font="800 13px Arial";c.fillStyle="#8a4b08";c.fillText("Todos estos horarios aumentan hacia el OESTE ↻",cx,58);
- c.fillStyle="#516b7d";c.font="700 12px Arial";c.fillText("Meridiano de Greenwich",cx,cy-r-34);
+ c.textAlign="center";c.fillStyle="#173f5b";c.font="900 18px Arial";c.fillText(isStar?`Horario de ${s.body} · ${resultSymbol(s)} = ${s.result}`:isLocal?`Horario local de Aries · hLγ = ${s.result}`:`${resultSymbol(s)} = ${s.result}`,cx,32);
+ c.font="800 13px Arial";c.fillStyle="#8a4b08";c.fillText("Los horarios se cuentan hacia el OESTE ↻",cx,58);
+ c.save();c.translate(cx+17,cy-r*.52);c.rotate(-Math.PI/2);c.fillStyle="#516b7d";c.font="700 12px Arial";c.textAlign="center";c.fillText("MERIDIANO DE GREENWICH",0,0);c.restore();
  if(isStar){
   pointLabel(a,"ARIES",`hGγ = ${s.base}`,"#225f91");
   pointLabel(end,s.body.toUpperCase(),`${resultSymbol(s)} = ${s.result}`,"#a95408");
   legend(h-73,"#2f73a8",`hGγ = ${s.base} · Greenwich → Aries · hacia el Oeste`);
   legend(h-49,"#dc7a13",`A.S.* = ${s.sha} · Aries → ${s.body} · hacia el Oeste`);
   legend(h-25,"#198754",`${resultSymbol(s)} = ${s.result} · Greenwich → ${s.body} · hacia el Oeste`);
+ }else if(isLocal){
+  pointLabel(a,"ARIES",`hGγ = ${s.base}`,"#225f91");
+  pointLabel(observerAngle,"MERIDIANO DEL LUGAR",`L = ${s.longitude}`,"#a95408");
+  legend(h-73,"#2f73a8",`hGγ = ${s.base} · Greenwich → Aries · hacia el Oeste`);
+  legend(h-49,"#dc7a13",`L = ${s.longitude} · sitúa el meridiano del observador`);
+  legend(h-25,"#198754",`hLγ = ${s.result} · meridiano del lugar → Aries · hacia el Oeste`);
  }else{
-  pointLabel(a,"PRIMER VALOR",vals[0],"#225f91");
-  pointLabel(end,"RESULTADO",s.result,"#237849");
-  legend(h-49,"#2f73a8",`Primer valor: ${vals[0]}`);
-  legend(h-25,"#2c9a61",`${operationFor(s)} ${vals[1]} → ${s.result}`);
+  const body=isAries?"ARIES":"SOL",baseSymbol=isAries?"hGγ":"hG☉",incrementName=isAries?"incremento de Aries":"incremento del Sol";
+  pointLabel(a,`${body} · HORA ENTERA`,`${baseSymbol} = ${s.base}`,"#225f91");
+  pointLabel(end,`${body} · HORA EXACTA`,`${resultSymbol(s)} = ${s.result}`,"#a95408");
+  legend(h-73,"#2f73a8",`${baseSymbol} = ${s.base} · valor a la hora entera`);
+  legend(h-49,"#dc7a13",`${incrementName} = ${s.inc} · minutos y segundos`);
+  legend(h-25,"#198754",`${resultSymbol(s)} = ${s.result} · resultado final desde Greenwich hacia el Oeste`);
  }
 }
 
