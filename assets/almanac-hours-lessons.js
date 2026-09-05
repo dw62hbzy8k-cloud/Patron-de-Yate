@@ -49,7 +49,7 @@ const baseGraphics=window.initReclassifiedGraphics;
 const angleParts=value=>{const m=String(value).match(/(\d+)°\s*(\d+)(?:[,.](\d+))?′/);return m?[m[1],m[2]+(m[3]?","+m[3]:"")]:null};
 const angleKeys=value=>{const p=angleParts(value);if(!p)return[];const out=[];p[0].split("").forEach(x=>out.push(x));out.push("°′″");p[1].split("").forEach(x=>out.push(x===","?".":x));out.push("°′″");return out};
 const operationFor=s=>s.kind==="local"?s.operator:"+";
-const operands=s=>s.kind==="star"?[s.base,s.sha]:s.kind==="local"?[s.base,s.longitude]:[s.base,s.inc];
+const operands=s=>s.kind==="star"||s.kind==="starSeconds"?[s.base,s.sha]:s.kind==="local"?[s.base,s.longitude]:[s.base,s.inc];
 
 Object.entries(LESSONS).forEach(([id,s])=>{
  if(!["sun","aries","star","local"].includes(s.kind))return;
@@ -89,13 +89,14 @@ function standardSolution(q,s){
  const minute=Number(s.time.slice(3,5)),incrementPage=261+Math.floor(minute/3),incrementLink=!isLocal&&(!isStar||starNeedsAries)?`<a class="almanac-btn almanac-increment-link" href="https://thenauticalalmanac.com/TNARegular/2023_Nautical_Almanac.pdf#page=${incrementPage}" target="_blank" rel="noopener">📖 Abrir la tabla real de incrementos · ${minute} minutos</a><div class="sub" style="margin-top:7px">La tabla de incrementos es universal: el valor depende de los minutos y segundos, no del año de la observación.</div>`:"";
  const firstFormula=isStar&&starNeedsAries?`${s.ariesBase} + ${s.ariesInc} = ${s.base}`:s.base;
  const ariesGivenExplanation=isStar&&s.ariesGiven?`<div class="context-note"><b>¿Qué significa hGγ y de dónde sale?</b> <b>hG</b> significa horario en Greenwich y <b>γ</b> representa el punto Aries. Juntos, <b>hGγ</b> es el horario en Greenwich del punto Aries. En esta pregunta no tienes que calcularlo ni buscarlo en el Almanaque: el propio enunciado ya proporciona <b>hGγ = ${s.base}</b>.</div>`:"";
+ const graphicIntro=isStar?`El arco <b>azul</b> es <b>hGγ</b>: desde el meridiano de Greenwich hasta Aries, contado hacia el <b>Oeste</b>. Al mover el control aparece el arco <b>naranja</b>, <b>A.S.*</b>: desde Aries hasta ${s.body}, también hacia el <b>Oeste</b>. El arco <b>verde</b> reúne ambos y representa <b>${requested}</b>. Aunque el punto final quede cerca del lado Este de Greenwich, aquí no usamos el camino corto: el horario de Greenwich se expresa siempre de 0° a 360° hacia el Oeste.`:`Arrastra el control. El arco azul es el primer valor; el arco verde añade el segundo dato. Las flechas indican el sentido en que se realiza la operación.`;
  const trainer=["sun","aries","star","local"].includes(s.kind)?`<div class="calc-trainer" data-calculator-trainer data-trainer-instance="pregunta-${q.id}" data-height-guide="almanac-${q.id}"></div>`:"";
  return `<details class="card almanac-complete" open><summary><b>🟢 Resolución completa · comprobada varias veces</b></summary><div class="context-lesson">
  <div class="context-step blue"><span class="context-step-label">PASO 1</span><b>IDENTIFICA QUÉ PIDEN Y ORDENA LOS DATOS</b><div class="context-data-grid">${dataBox("FECHA",s.date)}${dataBox("HORA CIVIL DE GREENWICH · HcG",s.time)}${(isStar&&s.ariesGiven)||isLocal?dataBox("hGγ YA DADO",s.base):""}${dataBox("RESULTADO QUE FALTA",`${requested} = ?`,true)}</div>${ariesGivenExplanation}${s.carry?`<div class="context-note"><b>Dato recuperado del examen original:</b> ${s.carry}</div>`:""}<div class="context-note"><b>No mezcles coordenadas con este cálculo:</b> si piden un horario <b>en Greenwich</b>, la situación estimada no modifica el resultado. La longitud solo interviene cuando se pide un horario <b>del lugar</b>.</div></div>
  <div class="context-step"><span class="context-step-label">PASO 2</span><b>${isLocal?"APLICA LA LONGITUD":"ABRE LA HOJA CORRECTA DEL ALMANAQUE"}</b><p>${sheetInstruction}</p>${isLocal?"":almanacSheets(q)}${formulaRow(firstSymbol,starNeedsAries?"OBTÉN PRIMERO hGγ":"PRIMER DATO",firstFormula)}</div>
  <div class="context-step green"><span class="context-step-label">PASO 3</span><b>${isStar?"LEE EL ÁNGULO SIDÉREO DE LA ESTRELLA":isLocal?"DECIDE EL SIGNO DE LA LONGITUD":"LEE EL INCREMENTO DE MINUTOS Y SEGUNDOS"}</b><p>${incrementInstruction}</p>${incrementLink}<div class="context-data-grid">${dataBox(secondLabel,secondValue)}${s.declination&&isStar?dataBox("d* · DECLINACIÓN DE LA ESTRELLA",s.declination):""}</div>${formulaRow(requested,"FÓRMULA PREPARADA",rule)}</div>
  <div class="context-step purple" data-calculation-zone><span class="context-step-label">PASO 4</span><b>REALIZA LA CUENTA CON LA CALCULADORA</b>${formulaRow(requested,"SUSTITUCIÓN COMPLETA",calcExpression)}${rawNeedsNormalize}${trainer}${finalBox(s)}${s.note?`<div class="context-note"><b>Comprobación del original:</b> ${s.note}</div>`:""}</div>
- <div class="context-visual almanac-visual"><h3>GRÁFICO INTERACTIVO · de la hora entera al horario final</h3><p>Arrastra el control. El arco azul es el valor de la hora entera; el arco verde añade el incremento o el segundo dato. Si se completa una vuelta, se continúa desde 0°.</p><canvas data-almanac-wheel data-question-id="${q.id}" aria-label="Círculo horario interactivo del ejercicio"></canvas><div class="context-controls"><label>Ver avance <input data-almanac-progress type="range" min="0" max="100" value="100" step="1"></label><button type="button" data-almanac-reset>Repetir</button></div></div>
+ <div class="context-visual almanac-visual" id="almanac-graphic-${q.id}"><h3>GRÁFICO INTERACTIVO · de Greenwich al astro</h3><p>${graphicIntro}</p><canvas data-almanac-wheel data-question-id="${q.id}" aria-label="Círculo horario interactivo del ejercicio"></canvas><div class="context-controls"><label>Ver avance <input data-almanac-progress type="range" min="0" max="100" value="100" step="1"></label><button type="button" data-almanac-reset>Repetir</button></div></div>
  <div class="context-check"><b>Comprobación independiente:</b> ${calcExpression}${s.normalize?"; después se resta 360°":""} = <b>${s.result}</b>. Coincide con la respuesta ${s.answer}.</div>
  </div></details>`;
 }
@@ -121,10 +122,59 @@ function heightSolution(q,s){return `<details class="card almanac-complete" open
  <div class="context-check"><b>Comprobación independiente y transparente:</b> la fórmula da <b>ae☉ ≈ 33°52,6′</b>. La opción más próxima —a solo 0,2′— es <b>33°52,4′, respuesta C</b>. No se fuerza la cuenta para fingir una coincidencia exacta.</div></div></details>`}
 
 window.reclassifiedSolutionHTML=function(q){const s=LESSONS[q.id];if(!s)return baseSolution(q);if(s.kind==="pole")return poleSolution(q,s);if(s.kind==="declination")return declinationSolution(q,s);if(s.kind==="height")return heightSolution(q,s);return standardSolution(q,s)};
-window.reclassifiedQuickHTML=function(q){const s=LESSONS[q.id];if(!s)return baseQuick(q);const sheets=["sun","aries","star","starSeconds","pole","declination"].includes(s.kind)?`<details class="context-quick"><summary><b>Hojas del Almanaque necesarias</b></summary>${almanacSheets(q)}</details>`:"";return `${sheets}<div class="context-quick"><b>Recordatorio rápido:</b> ${s.kind==="sun"?"fila de la hora entera del Sol + incremento de minutos y segundos":s.kind==="aries"?"fila de Aries + incremento propio de Aries":s.kind==="star"||s.kind==="starSeconds"?"hG* = hGγ + A.S.*; si pasa de 360°, resta 360°":s.kind==="local"?"hL = hG + longitud algebraica; Este suma y Oeste resta":s.kind==="declination"?"lee dos declinaciones consecutivas e interpola la fracción de hora":s.kind==="pole"?"hG* = hGγ + A.S.*; después hL* y finalmente P":"sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)"}. <b>${resultSymbol(s)} = ${s.result} · ${s.answer}</b>.</div>`};
+window.reclassifiedQuickHTML=function(q,options={}){const s=LESSONS[q.id];if(!s)return baseQuick(q);const sheets=options.includeSheets&&["sun","aries","star","starSeconds","pole","declination"].includes(s.kind)?`<details class="context-quick"><summary><b>Hojas del Almanaque necesarias</b></summary>${almanacSheets(q)}</details>`:"";return `${sheets}<div class="context-quick"><b>Recordatorio rápido:</b> ${s.kind==="sun"?"fila de la hora entera del Sol + incremento de minutos y segundos":s.kind==="aries"?"fila de Aries + incremento propio de Aries":s.kind==="star"||s.kind==="starSeconds"?"hG* = hGγ + A.S.*; si pasa de 360°, resta 360°":s.kind==="local"?"hL = hG + longitud algebraica; Este suma y Oeste resta":s.kind==="declination"?"lee dos declinaciones consecutivas e interpola la fracción de hora":s.kind==="pole"?"hG* = hGγ + A.S.*; después hL* y finalmente P":"sen(ae) = sen(l) × sen(d) + cos(l) × cos(d) × cos(P)"}. <b>${resultSymbol(s)} = ${s.result} · ${s.answer}</b>.</div>`};
 
 function deg(value){const p=angleParts(value);return p?(+p[0]+(+p[1].replace(",","."))/60):0}
-function drawWheel(canvas,s,progress){const rect=canvas.getBoundingClientRect(),w=Math.max(320,rect.width||760),h=Math.max(330,Math.round(w*.48)),dpr=Math.min(2,devicePixelRatio||1);canvas.width=w*dpr;canvas.height=h*dpr;const c=canvas.getContext("2d");c.setTransform(dpr,0,0,dpr,0,0);const cx=w*.5,cy=h*.53,r=Math.min(w*.31,h*.37);c.clearRect(0,0,w,h);c.fillStyle="#f7fbff";c.fillRect(0,0,w,h);c.strokeStyle="#bed7ea";c.lineWidth=18;c.beginPath();c.arc(cx,cy,r,0,Math.PI*2);c.stroke();for(let a=0;a<360;a+=30){const t=(a-90)*Math.PI/180;c.strokeStyle="#6f8798";c.lineWidth=a%90===0?3:1.5;c.beginPath();c.moveTo(cx+Math.cos(t)*(r-12),cy+Math.sin(t)*(r-12));c.lineTo(cx+Math.cos(t)*(r+12),cy+Math.sin(t)*(r+12));c.stroke();c.fillStyle="#173f5b";c.font="800 12px Arial";c.textAlign="center";c.fillText(`${a}°`,cx+Math.cos(t)*(r+31),cy+Math.sin(t)*(r+31)+4)}const vals=operands(s),a=deg(vals[0]),b=deg(vals[1]),p=Math.max(0,Math.min(1,progress/100)),end=a+(operationFor(s)==="−"?-b:b)*p;const arc=(from,to,color,width)=>{c.strokeStyle=color;c.lineWidth=width;c.lineCap="round";c.beginPath();c.arc(cx,cy,r,(from-90)*Math.PI/180,(to-90)*Math.PI/180,to<from);c.stroke()};arc(0,a,"#2f73a8",9);arc(a,end,"#2c9a61",10);const dot=(v,color)=>{const t=(v-90)*Math.PI/180;c.fillStyle=color;c.beginPath();c.arc(cx+Math.cos(t)*r,cy+Math.sin(t)*r,8,0,Math.PI*2);c.fill()};dot(a,"#2f73a8");dot(end,"#2c9a61");c.fillStyle="#173f5b";c.font="900 18px Arial";c.textAlign="center";c.fillText(`${resultSymbol(s)} = ${s.result}`,cx,36);c.font="700 13px Arial";c.fillText("0° / 360°",cx,cy-r-20);c.fillStyle="#2f73a8";c.fillText(`azul · primer valor ${vals[0]}`,cx,cy-8);c.fillStyle="#237849";c.fillText(`verde · ${operationFor(s)} ${vals[1]}`,cx,cy+16)}
+function drawWheel(canvas,s,progress){
+ const rect=canvas.getBoundingClientRect(),w=Math.max(320,rect.width||760),h=Math.max(500,Math.round(w*.6)),dpr=Math.min(2,devicePixelRatio||1);
+ canvas.width=w*dpr;canvas.height=h*dpr;
+ const c=canvas.getContext("2d");c.setTransform(dpr,0,0,dpr,0,0);
+ const isStar=s.kind==="star"||s.kind==="starSeconds",cx=w*.5,cy=h*.46,r=Math.min(w*.27,h*.29),toRad=v=>(v-90)*Math.PI/180;
+ const vals=operands(s),a=deg(vals[0]),b=deg(vals[1]),direction=operationFor(s)==="−"?-1:1,p=Math.max(0,Math.min(1,progress/100)),end=a+direction*b*p;
+ c.clearRect(0,0,w,h);c.fillStyle="#f7fbff";c.fillRect(0,0,w,h);
+
+ c.strokeStyle="#c8dbe9";c.lineWidth=16;c.beginPath();c.arc(cx,cy,r,0,Math.PI*2);c.stroke();
+ c.strokeStyle="#7d93a3";c.lineWidth=1.5;c.beginPath();c.arc(cx,cy,r-8,0,Math.PI*2);c.stroke();
+ for(let value=0;value<360;value+=30){
+  const t=toRad(value),major=value%90===0;
+  c.strokeStyle=major?"#516b7d":"#90a6b5";c.lineWidth=major?3:1.3;c.beginPath();c.moveTo(cx+Math.cos(t)*(r-13),cy+Math.sin(t)*(r-13));c.lineTo(cx+Math.cos(t)*(r+13),cy+Math.sin(t)*(r+13));c.stroke();
+  if(major){c.fillStyle="#173f5b";c.font="800 12px Arial";c.textAlign="center";const label=value===0?"0° / 360°":value===90?"90° W":value===180?"180°": "270° W";c.fillText(label,cx+Math.cos(t)*(r+34),cy+Math.sin(t)*(r+34)+4)}
+ }
+
+ const ray=(value,color,width)=>{const t=toRad(value);c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(cx+Math.cos(t)*22,cy+Math.sin(t)*22);c.lineTo(cx+Math.cos(t)*(r+4),cy+Math.sin(t)*(r+4));c.stroke()};
+ const arcArrow=(from,to,color,width,radius)=>{
+  const clockwise=to>=from,start=toRad(from),finish=toRad(to);
+  c.strokeStyle=color;c.lineWidth=width;c.lineCap="round";c.beginPath();c.arc(cx,cy,radius,start,finish,!clockwise);c.stroke();
+  if(Math.abs(to-from)<2)return;
+  const theta=finish,tangent=theta+(clockwise?Math.PI/2:-Math.PI/2),x=cx+Math.cos(theta)*radius,y=cy+Math.sin(theta)*radius,size=10;
+  c.fillStyle=color;c.beginPath();c.moveTo(x+Math.cos(tangent)*size,y+Math.sin(tangent)*size);c.lineTo(x+Math.cos(tangent+2.45)*size,y+Math.sin(tangent+2.45)*size);c.lineTo(x+Math.cos(tangent-2.45)*size,y+Math.sin(tangent-2.45)*size);c.closePath();c.fill();
+ };
+ const dot=(value,fill,stroke="#ffffff")=>{const t=toRad(value),x=cx+Math.cos(t)*r,y=cy+Math.sin(t)*r;c.fillStyle=fill;c.strokeStyle=stroke;c.lineWidth=3;c.beginPath();c.arc(x,y,8,0,Math.PI*2);c.fill();c.stroke()};
+ const pointLabel=(value,title,detail,color)=>{const t=toRad(value),radius=r+38;let x=cx+Math.cos(t)*radius,y=cy+Math.sin(t)*radius;y=Math.max(105,Math.min(h-125,y));x=Math.max(78,Math.min(w-78,x));c.textAlign="center";c.fillStyle=color;c.font="900 13px Arial";c.fillText(title,x,y);c.font="700 12px Arial";c.fillText(detail,x,y+17)};
+ const legend=(y,color,text)=>{c.fillStyle=color;c.fillRect(Math.max(18,cx-r),y-10,15,5);c.fillStyle="#173f5b";c.font="700 13px Arial";c.textAlign="left";c.fillText(text,Math.max(42,cx-r+24),y)};
+
+ ray(0,"#516b7d",3);ray(a,"#2f73a8",3);ray(end,isStar?"#dc7a13":"#2c9a61",3);
+ arcArrow(0,a,"#2f73a8",9,r);
+ arcArrow(a,end,isStar?"#dc7a13":"#2c9a61",10,r);
+ if(isStar)arcArrow(0,end,"#198754",5,r-22);
+ dot(a,"#2f73a8");dot(end,isStar?"#ffd33d":"#2c9a61",isStar?"#dc7a13":"#ffffff");
+
+ c.textAlign="center";c.fillStyle="#173f5b";c.font="900 18px Arial";c.fillText(isStar?`Horario de ${s.body} · ${resultSymbol(s)} = ${s.result}`:`${resultSymbol(s)} = ${s.result}`,cx,32);
+ c.font="800 13px Arial";c.fillStyle="#8a4b08";c.fillText("Todos estos horarios aumentan hacia el OESTE ↻",cx,58);
+ c.fillStyle="#516b7d";c.font="700 12px Arial";c.fillText("Meridiano de Greenwich",cx,cy-r-34);
+ if(isStar){
+  pointLabel(a,"ARIES",`hGγ = ${s.base}`,"#225f91");
+  pointLabel(end,s.body.toUpperCase(),`${resultSymbol(s)} = ${s.result}`,"#a95408");
+  legend(h-73,"#2f73a8",`hGγ = ${s.base} · Greenwich → Aries · hacia el Oeste`);
+  legend(h-49,"#dc7a13",`A.S.* = ${s.sha} · Aries → ${s.body} · hacia el Oeste`);
+  legend(h-25,"#198754",`${resultSymbol(s)} = ${s.result} · Greenwich → ${s.body} · hacia el Oeste`);
+ }else{
+  pointLabel(a,"PRIMER VALOR",vals[0],"#225f91");
+  pointLabel(end,"RESULTADO",s.result,"#237849");
+  legend(h-49,"#2f73a8",`Primer valor: ${vals[0]}`);
+  legend(h-25,"#2c9a61",`${operationFor(s)} ${vals[1]} → ${s.result}`);
+ }
+}
 
 window.initReclassifiedGraphics=function(root){baseGraphics?.(root);root.querySelectorAll("[data-almanac-wheel]").forEach(canvas=>{if(canvas.dataset.ready)return;canvas.dataset.ready="1";const s=LESSONS[+canvas.dataset.questionId];if(!s||!["sun","aries","star","starSeconds","local"].includes(s.kind))return;const block=canvas.closest(".almanac-visual"),range=block.querySelector("[data-almanac-progress]"),reset=block.querySelector("[data-almanac-reset]");const render=()=>drawWheel(canvas,s,+range.value);range.addEventListener("input",render);reset.addEventListener("click",()=>{range.value=0;render();let v=0;const timer=setInterval(()=>{v+=4;range.value=Math.min(100,v);render();if(v>=100)clearInterval(timer)},28)});new ResizeObserver(render).observe(canvas);render()})};
 })();
