@@ -284,6 +284,7 @@ const ORTHODROMIC_CONTEXT_REVIEW_ORDER=[253,293,298];
 const ORTHODROMIC_CONTEXT_WORK_IDS=new Set(ORTHODROMIC_CONTEXT_REVIEW_ORDER);
 const TWO_LOP_REVIEW_ORDER=[1259,1018,1099,1137,1177,1217,179,299,617,778,854,896];
 DIDACTIC_WORKFLOW.completedInExecutionOrder.push(...TWO_LOP_REVIEW_ORDER.filter(id=>!DIDACTIC_WORKFLOW.completedInExecutionOrder.includes(id)));
+DIDACTIC_WORKFLOW.completedInExecutionOrder.push(...[850].filter(id=>!DIDACTIC_WORKFLOW.completedInExecutionOrder.includes(id)));
 const TWO_LOP_WORK_IDS=new Set(TWO_LOP_REVIEW_ORDER);
 DB.questions.forEach(q=>{if(POLE_ANGLE_WORK_IDS.has(q.id))q.topic="Ángulo en el Polo";});
 DB.questions.forEach(q=>{if(TRUE_ALTITUDE_WORK_IDS.has(q.id))q.topic="Altura verdadera";});
