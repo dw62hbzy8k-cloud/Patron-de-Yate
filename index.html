@@ -81,7 +81,7 @@ main{max-width:1180px;margin:auto;padding:22px}.hidden{display:none}.card{backgr
 <script>document.head.insertAdjacentHTML("beforeend",'<link rel="stylesheet" href="assets/contextual-lessons.css?v=contextual-11">');</script>
 <script src="assets/contextual-lessons.js?v=minutos-completos-dos-formas-1"></script>
 <script src="assets/two-lop-lessons.js?v=rectas-altura-unificadas-5"></script>
-<script src="assets/almanac-hours-lessons.js?v=horarios-astros-3"></script>
+<script src="assets/almanac-hours-lessons.js?v=horarios-astros-4"></script>
 <script src="assets/calculator-trainer.js?v=ocultar-al-salir-1"></script>
 <script>
 (function(){
@@ -242,6 +242,7 @@ const june2019MeridianAltitude=DB.questions.find(q=>q.id===457);if(june2019Merid
 const november2017MeridianAltitude=DB.questions.find(q=>q.id===656);if(november2017MeridianAltitude)Object.assign(november2017MeridianAltitude,{text:"20 de noviembre de 2017. A la misma HcL y situación estimada del ejercicio anterior del examen original (HcL = 11:45:42; l = 32°12,8′ N; L = 118°41,3′ W), coincidiendo con el paso del Sol por el meridiano móvil del yate Discovery, toman altura instrumental del Sol (limbo inferior) en meridiana = 37°47,7′. La elevación del observador es 3 m y la corrección de índice es 2′ a la derecha. Calcular la altura verdadera.",answer_note:"Respuesta oficial comprobada en el PDF CARM y reproducida con la página 387 de 2017: 37°47,7′ + 2,0′ − 3,1′ + 14,9′ + 0,2′ = 38°01,7′."});
 const march2016MeridianAltitude=DB.questions.find(q=>q.id===850);if(march2016MeridianAltitude)Object.assign(march2016MeridianAltitude,{text:"CÁLCULO DE NAVEGACIÓN · ALTURA MERIDIANA OBSERVADA AL SOL. Sábado 12 de marzo de 2016. A HcG = 13:16:17, en situación estimada l = 30°00,6′ N y L = 016°40,2′ W, se produce el paso del Sol por el meridiano móvil del yate. Con elevación del observador de 4 m, corrección de índice de 2′ a la derecha y altura meridiana del Sol (limbo inferior) = 57°09,3′, calcular la altura verdadera meridiana del Sol.",answer_note:"Respuesta B comprobada en el PDF oficial CARM y con la página 387 auténtica del Almanaque Náutico Perseis 2016: av = 57°23,2′."});
 const june2019Meridian=DB.questions.find(q=>q.id===458);if(june2019Meridian){june2019Meridian.answer="c";june2019Meridian.answer_note="Respuesta C verificada directamente en el PDF oficial: con av = 78°13,8′ y d = +23°26,0′ se obtiene l = 35°12,2′ N.";}
+const november2022Declination=DB.questions.find(q=>q.id===94);if(november2022Declination)Object.assign(november2022Declination,{answer:"c",answer_note:"Respuesta C comprobada directamente con la hoja diaria del Almanaque: a UT 10 la declinación solar es S 20°58,1′, a UT 11 es S 20°58,6′ y la interpolación de 10 minutos da S 20°58′11″."});
 const march2019OrthodromicCourse=DB.questions.find(q=>q.id===492);if(march2019OrthodromicCourse){march2019OrthodromicCourse.answer="c";march2019OrthodromicCourse.answer_note="Respuesta C corregida tras verificar el PDF oficial: en el original la opción B es 116°, pero en esta base las opciones están reordenadas y 116° ocupa la opción C. El cálculo independiente da Ri = 116,09°.";}
 const november2022TrueAltitude=DB.questions.find(q=>q.id===97);if(november2022TrueAltitude){november2022TrueAltitude.answer="d";november2022TrueAltitude.answer_note="Respuesta D verificada directamente en el PDF oficial: 25°40′41″. Se corrige la correspondencia antigua, que señalaba por error la letra B.";}
 const november2015TrueAltitude=DB.questions.find(q=>q.id===890);if(november2015TrueAltitude){november2015TrueAltitude.text="CÁLCULO DE NAVEGACIÓN · EJERCICIOS SOBRE EL TRIÁNGULO DE POSICIÓN. Observado el Sol (limbo inferior) el día 22 de noviembre de 2015 con altura instrumental = 32°20,6′, elevación del observador = 4 metros y corrección de índice = 2′ a la derecha, calcular la altura verdadera.";november2015TrueAltitude.options=["32°27,3′.","32°33,8′.","32°36,6′.","32°42,5′."];}
@@ -354,48 +355,48 @@ const ALMANAC_ASSETS={
   532:["assets/almanaque/2018/2018_p387_correcciones_altura_verdadera.png"],
   890:["assets/almanaque/2015/2015_p387_correcciones_altura_verdadera.png"],
   930:["assets/almanaque/2015/2015_p387_correcciones_altura_verdadera.png"],
- 13:["assets/almanaque/2023/2023-06-24_p184_diaria_sol_luna_planetas-188.png"],
+ 13:["assets/almanaque/2023/2023-06-24_p184_diaria_sol_luna_planetas-188.png","assets/almanaque/comun/incrementos-267.png"],
  15:["assets/almanaque/2023/2023-06-24_p184_diaria_sol_luna_planetas-188.png"],
- 53:["assets/almanaque/2023/horarios/2023-03-24-diaria.png"],
+ 53:["assets/almanaque/2023/horarios/2023-03-24-diaria.png","assets/almanaque/comun/incrementos-264.png"],
  54:["assets/almanaque/2023/horarios/2023-angulos-sidereos.png"],
- 55:["assets/almanaque/2023/horarios/2023-03-25.png","assets/almanaque/2023/horarios/2023-angulos-sidereos.png"],
+ 55:["assets/almanaque/2023/horarios/2023-angulos-sidereos.png"],
  94:["assets/almanaque/2022/2022-11-26_diaria.png"],
- 134:["assets/almanaque/2022/horarios/2022-07-01.png"],
- 137:["assets/almanaque/2022/horarios/2022-07-02.png"],
- 138:["assets/almanaque/2022/horarios/2022-07-02.png","assets/almanaque/2022/horarios/2022-angulos-sidereos.png"],
+ 134:["assets/almanaque/2022/horarios/2022-07-01.png","assets/almanaque/comun/incrementos-267.png"],
+ 137:["assets/almanaque/2022/horarios/2022-07-02.png","assets/almanaque/comun/incrementos-267.png"],
+ 138:["assets/almanaque/2022/horarios/2022-angulos-sidereos.png"],
  174:["assets/almanaque/2022/horarios/2022-04-02.png"],
- 175:["assets/almanaque/2022/horarios/2022-04-02.png","assets/almanaque/2022/horarios/2022-angulos-sidereos.png"],
- 214:["assets/almanaque/2021/horarios/2021-11-17.png"],
+ 175:["assets/almanaque/2022/horarios/2022-angulos-sidereos.png"],
+ 214:["assets/almanaque/2021/horarios/2021-11-17.png","assets/almanaque/comun/incrementos-261.png"],
   297:["assets/almanaque/2021/horarios/2021-04-20.png"],
-  332:["assets/almanaque/2020/horarios/2020-03-29-30-sol.png","assets/almanaque/2020/horarios/2020-incrementos-20m.png"],
-  333:["assets/almanaque/2020/horarios/2020-03-29-30-aries.png","assets/almanaque/2020/horarios/2020-incrementos-40m.png"],
-  372:["assets/almanaque/2020/horarios/2020-03-29-30-sol.png","assets/almanaque/2020/horarios/2020-incrementos-20m.png"],
-  373:["assets/almanaque/2020/horarios/2020-03-29-30-aries.png","assets/almanaque/2020/horarios/2020-incrementos-40m.png"],
-  413:["assets/almanaque/2019/horarios/2019-11-16.png"],
- 454:["assets/almanaque/2019/horarios/2019-06-22.png"],
- 493:["assets/almanaque/2019/horarios/2019-03-22.png"],
- 533:["assets/almanaque/2018/horarios/2018-11-17.png"],
- 571:["assets/almanaque/2018/horarios/2018-06-12.png"],
- 611:["assets/almanaque/2018/horarios/2018-03-09.png"],
- 613:["assets/almanaque/2018/horarios/2018-03-10.png","assets/almanaque/2018/horarios/2018-angulos-sidereos.png"],
- 651:["assets/almanaque/2017/horarios/2017-11-20.png"],
- 691:["assets/almanaque/2017/horarios/2017-06-25.png"],
- 692:["assets/almanaque/2017/horarios/2017-06-25.png","assets/almanaque/2017/horarios/2017-angulos-sidereos.png","assets/almanaque/2017/horarios/2017-estrellas.png"],
- 730:["assets/almanaque/2017/horarios/2017-03-26.png"],
- 772:["assets/almanaque/2016/horarios/2016-11-20.png"],
-  810:["assets/almanaque/2016/horarios/2016-06-26.png","assets/almanaque/2016/horarios/2016-angulos-sidereos.png"],
-  894:["assets/almanaque/2015/horarios/2015-11-21-23-sol.png","assets/almanaque/2015/horarios/2015-incrementos-43m.png"],
-  895:["assets/almanaque/2015/horarios/2015-11-22-aries.png","assets/almanaque/2015/horarios/2015-incrementos-10m.png","assets/almanaque/2015/horarios/2015-estrellas-as.png"],
-  935:["assets/almanaque/2015/horarios/2015-06-21-23-sol.png","assets/almanaque/2015/horarios/2015-incrementos-30m.png"],
-  974:["assets/almanaque/2015/horarios/2015-03-29-31-sol.png","assets/almanaque/2015/horarios/2015-incrementos-20m.png"],
-  975:["assets/almanaque/2015/horarios/2015-03-29-31-aries.png","assets/almanaque/2015/horarios/2015-incrementos-40m.png"],
+  332:["assets/almanaque/2020/horarios/2020-03-29-30-sol.png","assets/almanaque/comun/incrementos-267.png"],
+  333:["assets/almanaque/2020/horarios/2020-03-29-30-aries.png","assets/almanaque/comun/incrementos-274.png"],
+  372:["assets/almanaque/2020/horarios/2020-03-29-30-sol.png","assets/almanaque/comun/incrementos-267.png"],
+  373:["assets/almanaque/2020/horarios/2020-03-29-30-aries.png","assets/almanaque/comun/incrementos-274.png"],
+  413:["assets/almanaque/2019/horarios/2019-11-16.png","assets/almanaque/comun/incrementos-266.png"],
+ 454:["assets/almanaque/2019/horarios/2019-06-22.png","assets/almanaque/comun/incrementos-274.png"],
+ 493:["assets/almanaque/2019/horarios/2019-03-22.png","assets/almanaque/comun/incrementos-264.png"],
+ 571:["assets/almanaque/2018/horarios/2018-06-12.png","assets/almanaque/comun/incrementos-261.png"],
+ 611:["assets/almanaque/2018/horarios/2018-03-09.png","assets/almanaque/comun/incrementos-261.png"],
+ 613:["assets/almanaque/2018/horarios/2018-angulos-sidereos.png"],
+ 651:["assets/almanaque/2017/horarios/2017-11-20.png","assets/almanaque/comun/incrementos-271.png"],
+ 691:["assets/almanaque/2017/horarios/2017-06-25.png","assets/almanaque/comun/incrementos-275.png"],
+ 692:["assets/almanaque/2017/horarios/2017-angulos-sidereos.png","assets/almanaque/2017/horarios/2017-estrellas.png"],
+ 730:["assets/almanaque/2017/horarios/2017-03-26.png","assets/almanaque/comun/incrementos-277.png"],
+ 772:["assets/almanaque/2016/horarios/2016-11-20.png","assets/almanaque/comun/incrementos-277.png"],
+  810:["assets/almanaque/2016/horarios/2016-06-26.png","assets/almanaque/comun/incrementos-271.png","assets/almanaque/2016/horarios/2016-angulos-sidereos.png"],
+  894:["assets/almanaque/2015/horarios/2015-11-21-23-sol.png","assets/almanaque/comun/incrementos-275.png"],
+  895:["assets/almanaque/2015/horarios/2015-11-22-aries.png","assets/almanaque/comun/incrementos-264.png","assets/almanaque/2015/horarios/2015-estrellas-as.png"],
+  935:["assets/almanaque/2015/horarios/2015-06-21-23-sol.png","assets/almanaque/comun/incrementos-271.png"],
+  974:["assets/almanaque/2015/horarios/2015-03-29-31-sol.png","assets/almanaque/comun/incrementos-267.png"],
+  975:["assets/almanaque/2015/horarios/2015-03-29-31-aries.png","assets/almanaque/comun/incrementos-274.png"],
   95:["assets/almanaque/2022/2022-11-26_diaria.png","assets/almanaque/2022/2022_incrementos_15m.png"],
  133:["assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png"],
  173:["assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png"],
  218:["assets/almanaque/2021/2021-11-20_diaria.png"],
  258:["assets/almanaque/2021/2021-06-30_diaria.png"],
- 770:["assets/almanaque/2016/2016-11-19_diaria.png","assets/almanaque/2016/2016_incrementos_40m.png"]
+  770:["assets/almanaque/2016/2016-11-19_diaria.png","assets/almanaque/2016/2016_incrementos_40m.png"]
 };
+window.NAV_ALMANAC_ASSETS=ALMANAC_ASSETS;
 
 function almanacHTML(q){
  const a=[...(q.almanac_assets||[])];

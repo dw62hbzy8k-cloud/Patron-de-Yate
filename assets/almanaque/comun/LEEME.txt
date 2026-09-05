@@ -1,0 +1,6 @@
+TABLAS DE INCREMENTOS
+
+Estas hojas proceden de un Almanaque Náutico real y son universales: el
+incremento depende de los minutos y segundos transcurridos, no del año de la
+observación. Se conservan localmente para que las lecciones funcionen sin
+depender de enlaces externos.

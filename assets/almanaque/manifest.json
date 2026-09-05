@@ -132,6 +132,54 @@
     "description": "Tabla real de incrementos del Nautical Almanac 2022. Para 15 min 00 s, el incremento del Sol es 3°45,0′.",
     "source": "https://thenauticalalmanac.com/TNARegular/2022_Nautical_Almanac.pdf"
   },
+  "incrementos_universales_p261": {
+    "file": "assets/almanaque/comun/incrementos-261.png",
+    "page": 261,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
+  "incrementos_universales_p264": {
+    "file": "assets/almanaque/comun/incrementos-264.png",
+    "page": 264,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
+  "incrementos_universales_p266": {
+    "file": "assets/almanaque/comun/incrementos-266.png",
+    "page": 266,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
+  "incrementos_universales_p267": {
+    "file": "assets/almanaque/comun/incrementos-267.png",
+    "page": 267,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
+  "incrementos_universales_p271": {
+    "file": "assets/almanaque/comun/incrementos-271.png",
+    "page": 271,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
+  "incrementos_universales_p274": {
+    "file": "assets/almanaque/comun/incrementos-274.png",
+    "page": 274,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
+  "incrementos_universales_p275": {
+    "file": "assets/almanaque/comun/incrementos-275.png",
+    "page": 275,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
+  "incrementos_universales_p277": {
+    "file": "assets/almanaque/comun/incrementos-277.png",
+    "page": 277,
+    "description": "Tabla real universal de incrementos y correcciones. Se muestra únicamente en las preguntas cuyos minutos y segundos corresponden a esta página.",
+    "source": "https://thenauticalalmanac.com/TNARegular/2020_Nautical_Almanac.pdf"
+  },
   "2022_p387_correcciones_altura_verdadera": {
     "file": "assets/almanaque/2022/2022_p387_correcciones_altura_verdadera.png",
     "page": 387,
