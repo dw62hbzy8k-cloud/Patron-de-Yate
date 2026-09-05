@@ -88,6 +88,12 @@ window.timeDirectSolutionHTML=function(q){
  if(!s)return html;
  const oldRow=`<div class="time-result" style="font-size:19px">tL = ${s.lon.replace(/ [EW]$/ , "")} ÷ 15 = ${s.offset}</div>`;
  const newRow=equation("tL",`${s.lon.replace(/ [EW]$/ , "")} ÷ 15 = ${s.offset}`,"TIEMPO DE LONGITUD","CÁLCULO");
- return html.replace(oldRow,newRow).replace("Arrastra la esfera o mueve el control.","Arrastra sobre el globo o mueve el control para cambiar la longitud.");
+ const bothDirections=`<div class="time-note"><b>RECORDATORIO · LOS DOS SENTIDOS</b><br><b>De HcG a HcL:</b> longitud Este se suma · longitud Oeste se resta.<br><b>De HcL a HcG:</b> longitud Este se resta · longitud Oeste se suma.<br><small>El segundo camino es el inverso del primero; por eso se invierten las operaciones.</small></div>`;
+ return html.replace(oldRow,newRow).replace('<div class="time-note"><b>En esta pregunta:</b>',`${bothDirections}<div class="time-note"><b>En esta pregunta:</b>`).replace("Arrastra la esfera o mueve el control.","Arrastra sobre el globo o mueve el control para cambiar la longitud.");
+};
+const renderTimeQuickWithDirection=window.timeDirectQuickHTML;
+window.timeDirectQuickHTML=function(q){
+ const html=renderTimeQuickWithDirection(q);
+ return html.replace('</b><br>tL =','</b><br><b>HcG → HcL:</b> E suma, W resta · <b>HcL → HcG:</b> E resta, W suma.<br>tL =');
 };
 })();
