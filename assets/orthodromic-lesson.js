@@ -96,7 +96,7 @@ function formula(left,right){return equation(left,"=",right)}
 function orthodromicSignReminder(compact=false){
  const text=compact
   ? `<b>Regla propia de la ortodrómica:</b> latitud N = + y latitud S = −. Para hallar ΔL, longitudes del mismo nombre (E/E o W/W) se restan; de distinto nombre (E/W) se suman. Si el resultado supera 180°, utiliza 360° − resultado.`
-  : `<b>RECUERDA · REGLA DE SIGNOS DE LA ORTODRÓMICA</b><br><b>Latitud:</b> Norte entra con signo positivo (+) y Sur con signo negativo (−) en las fórmulas.<br><b>Diferencia de longitud ΔL:</b> si las dos longitudes tienen el mismo nombre (E/E o W/W), resta la menor de la mayor. Si tienen distinto nombre (E/W), súmalas. Si el resultado supera 180°, utiliza el arco corto: 360° − resultado.<br><small>Esta regla es para la ortodrómica. En los cálculos de horas y horarios, Este y Oeste pueden indicar otra operación según el sentido de la conversión.</small>`;
+  : `<b>RECUERDA · REGLA DE SIGNOS DE LA ORTODRÓMICA</b><br><b>Latitud:</b> Norte entra con signo positivo (+) y Sur con signo negativo (−) en las fórmulas.<br><b>Diferencia de longitud ΔL:</b> si las dos longitudes tienen el mismo nombre (E/E o W/W), resta la menor de la mayor. Si tienen distinto nombre (E/W), súmalas. Si el resultado supera 180°, utiliza el arco corto: 360° − resultado.<br><small><b>No utilices esta regla para convertir horas:</b><br>De <b>HcG</b> (hora de Greenwich) a <b>HcL</b> (hora del lugar): longitud Este suma y longitud Oeste resta.<br>De <b>HcL</b> a <b>HcG</b>: longitud Este resta y longitud Oeste suma.</small>`;
  return `<div class="ortho-warning">${text}</div>`;
 }
 
